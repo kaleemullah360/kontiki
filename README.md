@@ -1,8 +1,6 @@
 The Contiki Operating System V.3 (Kontiki)
 ============================
 
-[![Build Status](https://travis-ci.org/contiki-os/contiki.svg?branch=master)](https://travis-ci.org/contiki-os/contiki/branches)
-
 Kontiki (Contiki) is clone of Contiki Operating System version 3.
 Kontiki is for Educational purposes. Do your stuff enjoy the spirit of opensource :)
 
