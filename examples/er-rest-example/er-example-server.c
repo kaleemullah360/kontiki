@@ -144,25 +144,25 @@ PROCESS_THREAD(er_example_server, ev, data)
   rest_activate_resource(&res_toggle, "actuators/toggle");
 #endif
 #if PLATFORM_HAS_LIGHT
-  rest_activate_resource(&res_light, "sensors/light"); 
-  SENSORS_ACTIVATE(light_sensor);  
+  rest_activate_resource(&res_light, "sensors/light");
+  SENSORS_ACTIVATE(light_sensor);
 #endif
 #if PLATFORM_HAS_BATTERY
-  rest_activate_resource(&res_battery, "sensors/battery");  
-  SENSORS_ACTIVATE(battery_sensor);  
+  rest_activate_resource(&res_battery, "sensors/battery");
+  SENSORS_ACTIVATE(battery_sensor);
 #endif
 #if PLATFORM_HAS_TEMPERATURE
-  rest_activate_resource(&res_temperature, "sensors/temperature");  
-  SENSORS_ACTIVATE(temperature_sensor);  
+  rest_activate_resource(&res_temperature, "sensors/temperature");
+  SENSORS_ACTIVATE(temperature_sensor);
 #endif
 /*
 #if PLATFORM_HAS_RADIO
-  rest_activate_resource(&res_radio, "sensors/radio");  
-  SENSORS_ACTIVATE(radio_sensor);  
+  rest_activate_resource(&res_radio, "sensors/radio");
+  SENSORS_ACTIVATE(radio_sensor);
 #endif
 #if PLATFORM_HAS_SHT11
-  rest_activate_resource(&res_sht11, "sensors/sht11");  
-  SENSORS_ACTIVATE(sht11_sensor);  
+  rest_activate_resource(&res_sht11, "sensors/sht11");
+  SENSORS_ACTIVATE(sht11_sensor);
 #endif
 */
 
