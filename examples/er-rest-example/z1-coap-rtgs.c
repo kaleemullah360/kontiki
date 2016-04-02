@@ -96,6 +96,7 @@
 
 #if PLATFORM_HAS_ZSADXL_THB
 extern resource_t res_z1_coap_rtgs; // <--- This
+extern resource_t res_z1_coap_obs_rtgs; // <--- This
 #endif
 
 
@@ -142,12 +143,13 @@ PROCESS_THREAD(er_example_server, ev, data)
 
 #if PLATFORM_HAS_ZSADXL_THB   // <--- This
    rest_activate_resource(&res_z1_coap_rtgs, "sensor/monitor");
+   rest_activate_resource(&res_z1_coap_obs_rtgs, "sensor/obsmonitor");
 #endif
 
   /* Define application-specific events here. */
    while(1) {
     PROCESS_WAIT_EVENT();
-#if PLATFORM_HAS_BUTTON
+    #if PLATFORM_HAS_BUTTON
     if(ev == sensors_event && data == &button_sensor) {
       PRINTF("*******BUTTON*******\n");
 

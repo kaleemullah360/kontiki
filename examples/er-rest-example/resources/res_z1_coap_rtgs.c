@@ -49,6 +49,7 @@
 
 #include <string.h>
 #include "rest-engine.h"
+#include "er-coap.h"
 
 #include "dev/adxl345.h"
 #include <math.h>

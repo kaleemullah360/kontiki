@@ -2,7 +2,6 @@
 #include <stdio.h>
 
 //------- custom libs ------
-#include "dev/cc2420/cc2420.h"
 #include "dev/adxl345.h"
 #include <math.h>
 #include "dev/leds.h"
