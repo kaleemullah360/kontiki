@@ -85,12 +85,12 @@ static int pos;
     blen += snprintf(&buf[blen], sizeof(buf) - blen, __VA_ARGS__);      \
   } while(0)
 
-void 
+void
 predict(){
     double mag[sampleNo-1],sum=0,max=0,std=0,mean=0,tmp=0;
     double result1,result2,result3,result4;
     int i;
-    for(i=1;i<sampleNo;i++){    
+    for(i=1;i<sampleNo;i++){
   mag[i-1]=sqrt(pow(sample[0][i]-sample[0][i-1],2)+pow(sample[1][i]-sample[1][i-1],2)+pow(sample[2][i]-sample[2][i-1],2));
   sum=sum+mag[i-1];
   if(mag[i-1]>max)max=mag[i-1];
@@ -109,8 +109,8 @@ predict(){
     double std2=30, mean2=37, max2=5.74;
     double std3=68, mean3=83, max3=22;
     double std4=96, mean4=34, max4=42;
-    double a1=1,a2=1,a3=0;          
-    result1 = sqrt(a1*pow((std-std1),2)+a2*pow((mean-mean1),2)+a3*pow((max-max1),2)); 
+    double a1=1,a2=1,a3=0;
+    result1 = sqrt(a1*pow((std-std1),2)+a2*pow((mean-mean1),2)+a3*pow((max-max1),2));
     result2 = sqrt(a1*pow((std-std2),2)+a2*pow((mean-mean2),2)+a3*pow((max-max2),2));
     result3 = sqrt(a1*pow((std-std3),2)+a2*pow((mean-mean3),2)+a3*pow((max-max3),2));
     result4 = sqrt(a1*pow((std-std4),2)+a2*pow((mean-mean4),2)+a3*pow((max-max4),2));
@@ -123,7 +123,7 @@ predict(){
     }
 }
 /*---------------------------------------------------------------------------*/
-/* As several interrupts can be mapped to one interrupt pin, when interrupt 
+/* As several interrupts can be mapped to one interrupt pin, when interrupt
     strikes, the adxl345 interrupt source register is read. This function prints
     out which interrupts occurred. Note that this will include all interrupts,
     even those mapped to 'the other' pin, and those that will always signal even if
@@ -221,7 +221,7 @@ PT_THREAD(send_values(struct httpd_state *s))
   printf("sending %s\n",STATUS_PT);
     ADD("<h1>accm</h1>\n"
   "<img src=\"http://130.64.221.16:8080/my_app/dbchange.jsp?id=11&status=%s&timestamp=2014/12/15",STATUS_PT);
-  ADD("\">");   
+  ADD("\">");
   ADD("<META HTTP-EQUIV=\"Refresh\" CONTENT=\"3\">");
   SEND_STRING(&s->sout, buf);
 
@@ -259,10 +259,10 @@ PROCESS_THREAD(accel_process, ev, data) {
     //ACCM_REGISTER_INT1_CB(accm_ff_cb);
     ACCM_REGISTER_INT2_CB(accm_tap_cb);
 
-    /* Set what strikes the corresponding interrupts. Several interrupts per pin is 
+    /* Set what strikes the corresponding interrupts. Several interrupts per pin is
       possible. For the eight possible interrupts, see adxl345.h and adxl345 datasheet. */
     accm_set_irq(ADXL345_INT_FREEFALL, ADXL345_INT_TAP + ADXL345_INT_DOUBLETAP);
-    
+
     while (1) {
       x = accm_read_axis(X_AXIS);
       y = accm_read_axis(Y_AXIS);
