@@ -1,3 +1,18 @@
+/*
+* \file
+*         Motion Detector with Zolertia Z1.
+          Erbium (Er) REST Engine example.
+* \author
+*         Kaleem Ullah    <MSCS14059@ITU.EDU.PK>
+*
+* \Short Description:
+*
+*    Track Motion eg. Walking, Standing, Falling, Running
+* this application uses Zolertia adxl345 sensor.
+* The sensor produced x, y, z axis values upone actuation.
+* then using these values a predict(); function output state of the sensor node.
+*/
+
 #include "contiki.h"
 #include <stdio.h>
 
