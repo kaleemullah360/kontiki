@@ -1,0 +1,301 @@
+[16:59:41 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[16:59:42 - AWT-EventQueue-1] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[16:59:42 - AWT-EventQueue-1] [Cooja.java:2885] [INFO] - External tools user settings: /home/superuser/.cooja.user.properties
+[16:59:53 - Thread-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[16:59:53 - Thread-1] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[16:59:54 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[16:59:54 - Thread-1] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[16:59:55 - Thread-1] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:00:38 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:00:38 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:00:39 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[17:01:02 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[17:01:09 - Thread-2] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[17:01:09 - Thread-4] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:01:27 - Thread-5] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1459598487028
+[17:18:53 - Thread-2] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:18:53 - Thread-5] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1459599533976	Duration: 1046948 ms	Simulated time 1046531 ms	Ratio 0.9996016994158258
+[17:18:53 - Thread-4] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:18:53 - Thread-4] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:18:54 - Thread-6] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[17:18:54 - Thread-6] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:18:54 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[17:18:55 - Thread-6] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:19:09 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:19:09 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:19:10 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make er-example-observe-client.z1 TARGET=z1 
+[17:19:24 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/er-example-observe-client.z1
+[17:19:39 - Thread-9] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1459599579147
+[17:19:52 - Thread-7] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[17:19:52 - Thread-10] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:20:44 - Thread-10] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:20:44 - Thread-10] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:20:44 - Thread-7] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:20:44 - Thread-9] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1459599644519	Duration: 65372 ms	Simulated time 65354 ms	Ratio 0.9997093601333884
+[17:20:44 - Thread-11] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[17:20:44 - Thread-11] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:20:44 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[17:20:45 - Thread-11] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:21:07 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:21:07 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make er-example-client.z1 TARGET=z1 
+[17:21:22 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/er-example-client.z1
+[17:21:27 - Thread-14] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1459599687232
+[17:21:33 - Thread-15] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:21:33 - Thread-12] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[17:22:34 - Thread-12] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:22:34 - Thread-15] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:22:34 - Thread-15] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:22:34 - Thread-14] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1459599754882	Duration: 67650 ms	Simulated time 67615 ms	Ratio 0.9994530834269497
+[17:22:35 - Thread-16] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[17:22:35 - Thread-16] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:22:35 - Thread-16] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[17:22:35 - Thread-16] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:23:06 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:23:06 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make er-example-server.z1 TARGET=z1 
+[17:23:23 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/er-example-server.z1
+[17:23:26 - Thread-19] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1459599806032
+[17:23:29 - Thread-17] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[17:23:29 - Thread-20] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:40:55 - Thread-17] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:40:55 - Thread-20] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:40:55 - Thread-20] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:40:55 - Thread-19] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1459600855712	Duration: 1049680 ms	Simulated time 1049596 ms	Ratio 0.9999199756116149
+[17:40:56 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[17:40:56 - Thread-21] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:40:56 - Thread-21] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[17:40:56 - Thread-21] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:41:10 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:41:10 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:41:10 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[17:41:27 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[17:41:31 - Thread-24] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1459600891433
+[17:41:42 - Thread-22] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[17:41:42 - Thread-25] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:42:38 - Thread-24] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1459600958110	Duration: 66677 ms	Simulated time 66675 ms	Ratio 0.9999700046492793
+[17:59:52 - Thread-25] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:59:52 - Thread-25] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:59:52 - Thread-22] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:59:52 - Thread-26] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[17:59:52 - Thread-26] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[17:59:52 - Thread-26] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[17:59:53 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:154:13: error: ‘PT_YIELD_FLAG’ undeclared (first use in this function)
+[17:59:53 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:154:13: note: each undeclared identifier is reported only once for each function it appears in
+[17:59:53 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:154:13: error: ‘process_pt’ undeclared (first use in this function)
+[17:59:53 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:154:13: error: case label not within a switch statement
+[17:59:53 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:154:13: warning: ‘return’ with a value, in function returning void [enabled by default]
+[17:59:53 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:157:17: error: case label not within a switch statement
+[17:59:53 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:157:17: warning: ‘return’ with a value, in function returning void [enabled by default]
+[17:59:53 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res_z1_coap_obs_rtgs.o' failed
+[17:59:53 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res_z1_coap_obs_rtgs.o] Error 1
+[17:59:53 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[17:59:53 - Thread-26] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:01:20 - Thread-26] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:01:20 - Thread-26] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:01:20 - Thread-26] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:01:20 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:154:13: error: ‘PT_YIELD_FLAG’ undeclared (first use in this function)
+[18:01:20 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:154:13: note: each undeclared identifier is reported only once for each function it appears in
+[18:01:20 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:154:13: error: ‘process_pt’ undeclared (first use in this function)
+[18:01:20 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:154:13: error: case label not within a switch statement
+[18:01:20 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:154:13: warning: ‘return’ with a value, in function returning void [enabled by default]
+[18:01:20 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:157:17: error: case label not within a switch statement
+[18:01:20 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:157:17: warning: ‘return’ with a value, in function returning void [enabled by default]
+[18:01:20 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res_z1_coap_obs_rtgs.o] Error 1
+[18:01:20 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res_z1_coap_obs_rtgs.o' failed
+[18:01:20 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:01:20 - Thread-26] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:02:37 - Thread-26] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:02:37 - Thread-26] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:02:37 - Thread-26] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:02:37 - Thread-26] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[18:02:38 - Thread-26] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[18:02:38 - Thread-26] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:08:54 - Thread-29] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:08:54 - Thread-30] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:08:54 - Thread-30] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:08:54 - Thread-30] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:08:55 - Thread-30] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[18:08:55 - Thread-30] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[18:08:56 - Thread-30] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:08:58 - Thread-32] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1459602538687
+[18:09:04 - Thread-31] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[18:09:04 - Thread-33] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[18:12:58 - Thread-33] [SerialSocketServer.java:497] [INFO] - Socket closed
+[18:12:58 - Thread-33] [SerialSocketServer.java:501] [INFO] - End of Stream
+[18:12:58 - Thread-31] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:12:58 - Thread-32] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1459602778012	Duration: 239325 ms	Simulated time 239303 ms	Ratio 0.9999080747936906
+[18:12:58 - Thread-34] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:12:58 - Thread-34] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:12:58 - Thread-34] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:12:58 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[18:12:59 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[18:12:59 - Thread-34] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:12:59 - Thread-36] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1459602779813
+[18:13:02 - Thread-35] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[18:13:02 - Thread-37] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[18:14:42 - Thread-36] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1459602882862	Duration: 103049 ms	Simulated time 103034 ms	Ratio 0.999854438179895
+[18:27:54 - Thread-35] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:27:54 - Thread-37] [SerialSocketServer.java:497] [INFO] - Socket closed
+[18:27:54 - Thread-37] [SerialSocketServer.java:501] [INFO] - End of Stream
+[18:27:54 - Thread-38] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:27:54 - Thread-38] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:27:54 - Thread-38] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:27:54 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:66:13: warning: ‘last’ defined but not used [-Wunused-variable]
+[18:27:54 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:76:16: warning: ‘x’ defined but not used [-Wunused-variable]
+[18:27:54 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:76:18: warning: ‘y’ defined but not used [-Wunused-variable]
+[18:27:54 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:76:20: warning: ‘z’ defined but not used [-Wunused-variable]
+[18:27:54 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:77:12: warning: ‘sample’ defined but not used [-Wunused-variable]
+[18:27:54 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:78:12: warning: ‘pos’ defined but not used [-Wunused-variable]
+[18:27:54 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:80:22: warning: ‘et’ defined but not used [-Wunused-variable]
+[18:27:54 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res_z1_coap_obs_rtgs.o] Error 1
+[18:27:54 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res_z1_coap_obs_rtgs.o' failed
+[18:27:54 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:27:54 - Thread-38] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:31:51 - Thread-38] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:31:51 - Thread-38] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:31:51 - Thread-38] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:31:51 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c: At top level:
+[18:31:51 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:61:14: warning: ‘WALKING’ defined but not used [-Wunused-variable]
+[18:31:51 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:62:14: warning: ‘STANDING’ defined but not used [-Wunused-variable]
+[18:31:51 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:63:14: warning: ‘RUNNING’ defined but not used [-Wunused-variable]
+[18:31:51 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:77:12: warning: ‘sample’ defined but not used [-Wunused-variable]
+[18:31:51 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:78:12: warning: ‘pos’ defined but not used [-Wunused-variable]
+[18:31:51 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:80:22: warning: ‘et’ defined but not used [-Wunused-variable]
+[18:31:51 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res_z1_coap_obs_rtgs.o' failed
+[18:31:51 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res_z1_coap_obs_rtgs.o] Error 1
+[18:31:51 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:31:51 - Thread-38] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:34:06 - Thread-38] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:34:06 - Thread-38] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:34:06 - Thread-38] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:34:06 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c: At top level:
+[18:34:06 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:61:14: warning: ‘WALKING’ defined but not used [-Wunused-variable]
+[18:34:06 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:62:14: warning: ‘STANDING’ defined but not used [-Wunused-variable]
+[18:34:06 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:63:14: warning: ‘RUNNING’ defined but not used [-Wunused-variable]
+[18:34:06 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:77:12: warning: ‘sample’ defined but not used [-Wunused-variable]
+[18:34:06 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:78:12: warning: ‘pos’ defined but not used [-Wunused-variable]
+[18:34:06 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:80:22: warning: ‘et’ defined but not used [-Wunused-variable]
+[18:34:06 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res_z1_coap_obs_rtgs.o] Error 1
+[18:34:06 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res_z1_coap_obs_rtgs.o' failed
+[18:34:06 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:34:06 - Thread-38] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:34:57 - Thread-38] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:34:57 - Thread-38] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:34:57 - Thread-38] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:34:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c: At top level:
+[18:34:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:61:14: warning: ‘WALKING’ defined but not used [-Wunused-variable]
+[18:34:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:62:14: warning: ‘STANDING’ defined but not used [-Wunused-variable]
+[18:34:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:63:14: warning: ‘RUNNING’ defined but not used [-Wunused-variable]
+[18:34:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:77:12: warning: ‘sample’ defined but not used [-Wunused-variable]
+[18:34:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:78:12: warning: ‘pos’ defined but not used [-Wunused-variable]
+[18:34:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:80:22: warning: ‘et’ defined but not used [-Wunused-variable]
+[18:34:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res_z1_coap_obs_rtgs.o] Error 1
+[18:34:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res_z1_coap_obs_rtgs.o' failed
+[18:34:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:34:57 - Thread-38] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:35:21 - Thread-38] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:35:21 - Thread-38] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:35:21 - Thread-38] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:35:22 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c: At top level:
+[18:35:22 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:61:14: warning: ‘WALKING’ defined but not used [-Wunused-variable]
+[18:35:22 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:62:14: warning: ‘STANDING’ defined but not used [-Wunused-variable]
+[18:35:22 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:63:14: warning: ‘RUNNING’ defined but not used [-Wunused-variable]
+[18:35:22 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:77:12: warning: ‘sample’ defined but not used [-Wunused-variable]
+[18:35:22 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:78:12: warning: ‘pos’ defined but not used [-Wunused-variable]
+[18:35:22 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:80:22: warning: ‘et’ defined but not used [-Wunused-variable]
+[18:35:22 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res_z1_coap_obs_rtgs.o' failed
+[18:35:22 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res_z1_coap_obs_rtgs.o] Error 1
+[18:35:22 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:35:22 - Thread-38] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:36:04 - Thread-38] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:36:04 - Thread-38] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:36:04 - Thread-38] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:36:04 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
+[18:36:04 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res_z1_coap_obs_rtgs.c
+[18:36:04 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c: In function ‘res_periodic_handler’:
+[18:36:04 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:145:3: error: expected ‘)’ before ‘if’
+[18:36:04 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:158:1: error: expected expression before ‘}’ token
+[18:36:04 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c: At top level:
+[18:36:04 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:80:22: warning: ‘et’ defined but not used [-Wunused-variable]
+[18:36:04 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res_z1_coap_obs_rtgs.o' failed
+[18:36:04 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res_z1_coap_obs_rtgs.o] Error 1
+[18:36:04 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:36:04 - Thread-38] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:36:57 - Thread-38] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:36:57 - Thread-38] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:36:57 - Thread-38] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:36:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:148:9: error: ‘PT_YIELD_FLAG’ undeclared (first use in this function)
+[18:36:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:148:9: note: each undeclared identifier is reported only once for each function it appears in
+[18:36:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:148:9: error: ‘process_pt’ undeclared (first use in this function)
+[18:36:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:148:9: error: case label not within a switch statement
+[18:36:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:148:9: warning: ‘return’ with a value, in function returning void [enabled by default]
+[18:36:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:151:13: error: case label not within a switch statement
+[18:36:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:151:13: warning: ‘return’ with a value, in function returning void [enabled by default]
+[18:36:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res_z1_coap_obs_rtgs.o] Error 1
+[18:36:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res_z1_coap_obs_rtgs.o' failed
+[18:36:57 - Thread-38] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:36:57 - Thread-38] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:39:35 - Thread-38] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:39:35 - Thread-38] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:39:36 - Thread-38] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:39:36 - Thread-38] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[18:39:36 - Thread-38] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[18:39:37 - Thread-38] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:40:49 - Thread-46] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:40:49 - Thread-47] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:40:49 - Thread-47] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:40:49 - Thread-47] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:40:50 - Thread-47] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[18:40:50 - Thread-47] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[18:40:51 - Thread-47] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:42:04 - Thread-48] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:42:05 - Thread-49] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:42:05 - Thread-49] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:42:05 - Thread-49] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:42:05 - Thread-49] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[18:42:05 - Thread-49] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[18:42:06 - Thread-49] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:42:58 - Thread-50] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:42:58 - Thread-51] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:42:58 - Thread-51] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:42:58 - Thread-51] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:42:59 - Thread-51] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
+[18:42:59 - Thread-51] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res_z1_coap_obs_rtgs.c
+[18:42:59 - Thread-51] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c: In function ‘print_int’:
+[18:42:59 - Thread-51] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:88:30: error: ‘res_z1_coap_obs_rtgs’ undeclared (first use in this function)
+[18:42:59 - Thread-51] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:88:30: note: each undeclared identifier is reported only once for each function it appears in
+[18:42:59 - Thread-51] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c: At top level:
+[18:42:59 - Thread-51] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res_z1_coap_obs_rtgs.c:80:22: warning: ‘et’ defined but not used [-Wunused-variable]
+[18:42:59 - Thread-51] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res_z1_coap_obs_rtgs.o] Error 1
+[18:42:59 - Thread-51] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res_z1_coap_obs_rtgs.o' failed
+[18:42:59 - Thread-51] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:42:59 - Thread-51] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:45:15 - Thread-51] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:45:15 - Thread-51] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:45:16 - Thread-51] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:45:16 - Thread-51] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[18:45:16 - Thread-51] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[18:45:17 - Thread-51] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:46:59 - Thread-53] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:47:00 - Thread-54] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:47:00 - Thread-54] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:47:00 - Thread-54] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:47:00 - Thread-54] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[18:47:00 - Thread-54] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[18:47:01 - Thread-54] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:47:09 - Thread-55] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:47:09 - Thread-56] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:47:09 - Thread-56] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:47:10 - Thread-56] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:47:10 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[18:47:10 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[18:47:11 - Thread-56] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:48:21 - Thread-57] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:48:21 - Thread-58] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:48:21 - Thread-58] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[18:48:21 - Thread-58] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[18:48:22 - Thread-58] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[18:48:22 - Thread-58] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[18:48:23 - Thread-58] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:48:27 - Thread-60] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1459604907745
+[18:48:33 - Thread-59] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[18:48:33 - Thread-61] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
