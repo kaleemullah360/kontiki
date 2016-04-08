@@ -63,9 +63,9 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
    REST.set_header_max_age(response, res_z1_coap_obs_rtgs.periodic->period / CLOCK_SECOND);
   //  MessageID, UpTime, ClockTime, Temperature, Battery  //<-- This
   // "%lu,%lu,%lu,%ld.%03d,%ld.%03d", mid,upt,clk,tem.tem,bat.bat
-  //  snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%ld.%03d,%ld.%03d", mid,upt,clk,(long)tem,(unsigned)((tem - floor(tem)) * 1000),(long)bat_mv,(unsigned)((bat_mv - floor(bat_mv)) * 1000));
+  //  snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%ld.%03d,%ld.%03d", mid,upt,clk,(long)tem,(unsigned)((tem - obsfloor(tem)) * 1000),(long)bat_mv,(unsigned)((bat_mv - obsfloor(bat_mv)) * 1000));
   // "%lu,%lu,%lu,%ld.%03d,%ld.%03d", mid,upt,clk,tem,bat
-    snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%ld,%03d", mid,upt,clk,(long)tem,(unsigned)((bat_mv - floor(bat_mv)) * 1000));
+    snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%ld,%03d", mid,upt,clk,(long)tem,(unsigned)((bat_mv - obsfloor(bat_mv)) * 1000));
 
   /* The REST.subscription_handler() will be called for observable resources by the REST framework. */
  }
