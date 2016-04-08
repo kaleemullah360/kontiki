@@ -4,40 +4,16 @@
 #include "er-coap.h"
 
 //--- Libs for E-MCH-APP ----
-#include "dev/temperature-sensor.h"
 #include "dev/battery-sensor.h"
+#include "dev/i2cmaster.h"
+#include "dev/tmp102.h"
 //---End Libs for E-MCH-APP ---
-//--- Function & Variable for E-MCH-APP ----
-static int32_t mid = 0;  // MessageID
-static int32_t upt = 0;  // UpTime
-static int32_t clk = 0;  // ClockTime
-static float tem = 0;  // Temperature
-static uint16_t bat_v = 0; // Battery in Volts
-static float bat_mv = 0; // Battery in MilliVolts
-static uint8_t ttem = 0;  // temporary Temperature
 
-float obsfloor(float x){
-  if(x >= 0.0f) {
-    return (float)((int)x);
-  } else {
-    return (float)((int)x - 1);
-  }
-}
-static float stmp(void){
-  return (float)(((temperature_sensor.value(0) * 2.500) / 4096) - 0.986) * 282;
-}
-static int sbat_v(void){
-  return battery_sensor.value(0);
-}
-static float sbat_mv(bat_v){
-  return (bat_v * 2.500 * 2) / 4096;
-}
-//---End Function & Variable for E-MCH-APP ---
 
 static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
 static void res_periodic_handler(void);
 
-PERIODIC_RESOURCE(res_z1_coap_obs_rtgs,
+PERIODIC_RESOURCE(res_z1_coap_obs_emch,
   "title=\"Periodic demo\";obs",
   res_get_handler,
   NULL,
@@ -49,10 +25,17 @@ PERIODIC_RESOURCE(res_z1_coap_obs_rtgs,
 /*
  * Use local resource state that is accessed by res_get_handler() and altered by res_periodic_handler() or PUT or POST.
  */
+ 
+ static int32_t mid = 0;  // MessageID
+ static int32_t upt = 0;  // UpTime
+ static int32_t clk = 0;  // ClockTime
+ static uint8_t tem = 0;  // Temperature
+ static uint8_t bat = 0;  // Battery
 
-static void
-res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
-{
+ static uint8_t ttem = 0;  // temporary Temperature
+ static void
+ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
+ {
   /*
    * For minimal complexity, request query and options should be ignored for GET on observable resources.
    * Otherwise the requests must be stored with the observer list and passed by REST.notify_subscribers().
@@ -60,12 +43,10 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
    */
 
    REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
-   REST.set_header_max_age(response, res_z1_coap_obs_rtgs.periodic->period / CLOCK_SECOND);
+   REST.set_header_max_age(response, res_z1_coap_obs_emch.periodic->period / CLOCK_SECOND);
   //  MessageID, UpTime, ClockTime, Temperature, Battery  //<-- This
-  // "%lu,%lu,%lu,%ld.%03d,%ld.%03d", mid,upt,clk,tem.tem,bat.bat
-  //  snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%ld.%03d,%ld.%03d", mid,upt,clk,(long)tem,(unsigned)((tem - floor(tem)) * 1000),(long)bat_mv,(unsigned)((bat_mv - floor(bat_mv)) * 1000));
-  // "%lu,%lu,%lu,%ld.%03d,%ld.%03d", mid,upt,clk,tem,bat
-    snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%ld,%03d", mid,upt,clk,(long)tem,(unsigned)((bat_mv - floor(bat_mv)) * 1000));
+  // "%lu,%lu,%lu,%u,%u", mid,upt,clk,tem,bat
+   REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size, "%lu,%lu,%lu,%u,%u", mid,upt,clk,tem,bat));
 
   /* The REST.subscription_handler() will be called for observable resources by the REST framework. */
  }
@@ -77,19 +58,19 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
  res_periodic_handler()
  {	
 //----- Get Data Instance -------
+  tmp102_init();  // Init Sensor
   ++mid;  // MessageID
   upt = clock_seconds();  // UpTime
   clk = clock_time(); // ClockTime
-  tem = stmp();  // Temperature
-  bat_v = sbat_v(); // Get Battery in Volts
-  bat_mv = sbat_mv(bat_v);  //Get Battery in MilliVolts
+  tem = tmp102_read_temp_x100();  // Temperature
+  bat = battery_sensor.value(0);  // Battery
 //----- End Get Data -------
 
  /* Do a periodic task here, e.g., sampling a sensor. */
   /* Usually a condition is defined under with subscribers are notified, e.g., large enough delta in sensor reading. */
-  if(ttem != bat_v) {
-    ttem = bat_v;   // update the temporary valruable with fresh value
+  if(ttem != bat) {
+    ttem = bat;   // update the temporary valruable with fresh value
     /* Notify the registered observers which will trigger the res_get_handler to create the response. */
-    REST.notify_subscribers(&res_z1_coap_obs_rtgs);
+    REST.notify_subscribers(&res_z1_coap_obs_emch);
   }
 }

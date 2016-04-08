@@ -5,7 +5,6 @@
 #include "contiki-net.h"
 #include "rest-engine.h"
 
-#include "dev/temperature-sensor.h"
 #include "dev/battery-sensor.h"
 
 #define DEBUG 0
@@ -33,10 +32,10 @@ extern resource_t
   res_b1_sep_b2;
 
 
-extern resource_t res_z1_coap_rtgs;
-extern resource_t res_z1_coap_obs_rtgs;
+extern resource_t res_z1_coap_emch;
+extern resource_t res_z1_coap_obs_emch;
 
-PROCESS(er_example_server, "RTGS Server");
+PROCESS(er_example_server, "e-MCH-APp Server");
 AUTOSTART_PROCESSES(&er_example_server);
 
 PROCESS_THREAD(er_example_server, ev, data)
@@ -45,7 +44,7 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   PROCESS_PAUSE();
 
-  PRINTF("RTGS Server\n");
+  PRINTF("e-MCH Server\n");
 
 #ifdef RF_CHANNEL
   PRINTF("RF channel: %u\n", RF_CHANNEL);
@@ -61,12 +60,9 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   /* Initialize the REST engine. */
   rest_init_engine();
-  // Activate Temperature and Battery Sensors  
   SENSORS_ACTIVATE(battery_sensor);
-  SENSORS_ACTIVATE(temperature_sensor);
-
-  rest_activate_resource(&res_z1_coap_rtgs, "sens/mote");
-  rest_activate_resource(&res_z1_coap_obs_rtgs, "obs/mote");
+  rest_activate_resource(&res_z1_coap_emch, "sens/mote");
+  rest_activate_resource(&res_z1_coap_obs_emch, "obs/mote");
 
   /* Define application-specific events here. */
   while(1) {
