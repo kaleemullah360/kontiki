@@ -5,7 +5,10 @@
 #include "contiki-net.h"
 #include "rest-engine.h"
 
-#include "dev/battery-sensor.h"
+// Set the Radio performance
+#include <cc2420.h>
+uint8_t radioChannel = 26;  // default channel
+uint8_t radioChannel_tx_power = 31; // default power
 
 #define DEBUG 0
 #if DEBUG
@@ -33,7 +36,6 @@ extern resource_t
 
 
 extern resource_t res_z1_coap_emch;
-extern resource_t res_z1_coap_obs_emch;
 
 PROCESS(er_example_server, "e-MCH-APp Server");
 AUTOSTART_PROCESSES(&er_example_server);
@@ -44,7 +46,7 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   PROCESS_PAUSE();
 
-  PRINTF("e-MCH Server\n");
+  PRINTF("e-MCH-APp\n");
 
 #ifdef RF_CHANNEL
   PRINTF("RF channel: %u\n", RF_CHANNEL);
@@ -60,11 +62,12 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   /* Initialize the REST engine. */
   rest_init_engine();
-  SENSORS_ACTIVATE(battery_sensor);
+
   rest_activate_resource(&res_z1_coap_emch, "sens/mote");
-  rest_activate_resource(&res_z1_coap_obs_emch, "obs/mote");
 
   /* Define application-specific events here. */
+  cc2420_set_channel(radioChannel); // channel 26
+  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
   while(1) {
     PROCESS_WAIT_EVENT();
 

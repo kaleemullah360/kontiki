@@ -44,36 +44,86 @@
 #include "dev/button-sensor.h"
 #include "dev/leds.h"
 #include <string.h>
-//--- Libs for E-MCH-APP ----
-#include "dev/temperature-sensor.h"
-#include "dev/battery-sensor.h"
-//---End Libs for E-MCH-APP ---
-//--- Function & Variable for E-MCH-APP ----
-static int32_t mid = 0;  // MessageID
-static int32_t upt = 0;  // UpTime
-static int32_t clk = 0;  // ClockTime
-static float tem = 0;  // Temperature
-static uint16_t bat_v = 0; // Battery in Volts
-static float bat_mv = 0; // Battery in MilliVolts
-static uint8_t ttem = 1;  // temporary Temperature
+// Set the Radio performance
+#include <cc2420.h>
+uint8_t radioChannel = 26;  // default channel
+uint8_t radioChannel_tx_power = 31; // default power
+//--- Libs for e-MCH-APp ----
 
-float floor(float x){
-  if(x >= 0.0f) {
-    return (float)((int)x);
-  } else {
-    return (float)((int)x - 1);
+#include "dev/battery-sensor.h"
+#include "dev/i2cmaster.h"
+#include "dev/tmp102.h"
+
+//---End Libs for e-MCH-APp ---
+
+//--- Variable Declaration for e-MCH-APp ----
+
+ static int32_t mid = 0;  // MessageID
+ static int32_t upt = 0;  // UpTime
+ static int32_t clk = 0;  // ClockTime
+
+  // temperature function variables 
+ static int16_t tempint;
+ static uint16_t tempfrac;
+ static int16_t raw;
+ static uint16_t absraw;
+ static int16_t sign;
+ static char minus = ' ';
+
+  // Battery function variables 
+ static uint16_t bat_v = 0;
+ static float bat_mv = 0; 
+
+//---End Variable Declaration e-MCH-APp ---
+
+//--- Function Deffinitions for e-MCH-APp ----
+
+// function to return floor of float value
+ float floor(float x){
+  if(x >= 0.0f){ // check the value of x is +eve
+    return (float)((int) x);
+  }else{ // if value of x is -eve
+    // x = -2.2
+    // -3.2 = (-2.2) - 1
+    // -3  = (int)(-3.2)
+    //return -3.0 = (float)(-3)
+    return(float) ((int) x - 1);   
+  } //end if-else
+
+} //end floor function
+
+static void get_sensor_time(){
+  upt = clock_seconds();  // UpTime
+  clk = clock_time(); // ClockTime
+}
+
+static void get_sensor_temperature(){
+  tmp102_init();  // Init Sensor
+  sign = 1;
+  raw = tmp102_read_temp_x100(); // tmp102_read_temp_raw();
+  absraw = raw;
+    if(raw < 0) {   // Perform 2C's if sensor returned negative data
+      absraw = (raw ^ 0xFFFF) + 1;
+    sign = -1;
   }
-}
-static float stmp(void){
-  return (float)(((temperature_sensor.value(0) * 2.500) / 4096) - 0.986) * 282;
-}
-static int sbat_v(void){
-  return battery_sensor.value(0);
-}
-static float sbat_mv(bat_v){
-  return (bat_v * 2.500 * 2) / 4096;
-}
-//---End Function & Variable for E-MCH-APP ---
+  tempint = (absraw >> 8) * sign;
+    tempfrac = ((absraw >> 4) % 16) * 625;  // Info in 1/10000 of degree
+    minus = ((tempint == 0) & (sign == -1)) ? '-' : ' ';
+    //printf("Temp = %c%d.%04d\n", minus, tempint, tempfrac);
+  }
+
+  static void get_sensor_battery(){
+  // Activate Temperature and Battery Sensors  
+    SENSORS_ACTIVATE(battery_sensor);
+  // prints as fast as possible (with no delay) the battery level.
+    bat_v = battery_sensor.value(0);
+  // When working with the ADC you need to convert the ADC integers in milliVolts. 
+  // This is done with the following formula:
+    bat_mv = (bat_v * 2.500 * 2) / 4096;
+  //printf("Battery Analog Data Value: %i , milli Volt= (%ld.%03d mV)\n", bat_v, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
+  }
+
+//---End Function Deffinitions e-MCH-APp ---
 /*---------------------------------------------------------------------------*/
 /*
  * Publish to a local MQTT broker (e.g. mosquitto) running on the host
@@ -141,7 +191,7 @@ static float sbat_mv(bat_v){
 #define DEFAULT_EVENT_TYPE_ID       "status"
 #define DEFAULT_SUBSCRIBE_CMD_TYPE  "+"
 #define DEFAULT_BROKER_PORT         1883
-#define DEFAULT_PUBLISH_INTERVAL    (2 * CLOCK_SECOND)   // <----------- SET Publishing Interval
+#define DEFAULT_PUBLISH_INTERVAL    (1 * CLOCK_SECOND)   // <----------- SET Publishing Interval
 #define DEFAULT_KEEP_ALIVE_TIMER    60
 #define DEFAULT_RSSI_MEAS_INTERVAL  (CLOCK_SECOND * 30)
 /*---------------------------------------------------------------------------*/
@@ -171,8 +221,6 @@ static float sbat_mv(bat_v){
 /*---------------------------------------------------------------------------*/
 /* Maximum TCP segment size for outgoing segments of our socket */
 #define MAX_TCP_SEGMENT_SIZE    32
-/*---------------------------------------------------------------------------*/
-#define STATUS_LED LEDS_GREEN
 /*---------------------------------------------------------------------------*/
 /*
  * Buffers for Client ID and Topic.
@@ -248,7 +296,7 @@ echo_reply_handler(uip_ipaddr_t *source, uint8_t ttl, uint8_t *data,
 static void
 publish_led_off(void *d)
 {
-  leds_off(STATUS_LED);
+  //leds_off(STATUS_LED);
 }
 /*---------------------------------------------------------------------------*/
 static void
@@ -453,38 +501,33 @@ static void
 publish(void)
 {
   //----- Get Data Instance -------
-  ++mid;  // MessageID
-  upt = clock_seconds();  // UpTime
-  clk = clock_time(); // ClockTime
-  tem = stmp();  // Temperature
-  bat_v = sbat_v(); // Get Battery in Volts
-  bat_mv = sbat_mv(bat_v);  //Get Battery in MilliVolts
+++mid;  // MessageID
+get_sensor_temperature();
+get_sensor_time();
+get_sensor_battery();
 //----- End Get Data -------
   /* Publish MQTT topic in IBM quickstart format */
-  int len;
-  int remaining = APP_BUFFER_SIZE;
+int len;
+int remaining = APP_BUFFER_SIZE;
   //int16_t value;
 
-  buf_ptr = app_buffer;
-  //  MessageID, UpTime, ClockTime, Temperature, Battery  //<-- This
-  // "%lu,%lu,%lu,%ld.%03d,%ld.%03d", mid,upt,clk,tem.tem,bat.bat
-  //ADD("%lu,%lu,%lu,%ld.%03d,%ld.%03d", mid,upt,clk,(long)tem,(unsigned)((tem - floor(tem)) * 1000),(long)bat_mv,(unsigned)((bat_mv - floor(bat_mv)) * 1000));
-  // "%lu,%lu,%lu,%ld.%03d,%ld.%03d", mid,upt,clk,tem,bat
-  len = snprintf(buf_ptr, remaining,"%lu,%lu,%lu,%ld,%03d", mid,upt,clk,(long)tem,(unsigned)((bat_mv - floor(bat_mv)) * 1000));
+buf_ptr = app_buffer;
 
-  if(len < 0 || len >= remaining) {
-    printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
-    return;
-  }
+len = snprintf(buf_ptr, remaining,"%lu,%lu,%lu,%c%d.%04d,%ld.%03d", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
+
+if(len < 0 || len >= remaining) {
+  printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
+  return;
+}
   /* Put our Default route's string representation in a buffer */
-  char def_rt_str[64];
-  memset(def_rt_str, 0, sizeof(def_rt_str));
-  ipaddr_sprintf(def_rt_str, sizeof(def_rt_str), uip_ds6_defrt_choose());
+char def_rt_str[64];
+memset(def_rt_str, 0, sizeof(def_rt_str));
+ipaddr_sprintf(def_rt_str, sizeof(def_rt_str), uip_ds6_defrt_choose());
 
-  mqtt_publish(&conn, NULL, pub_topic, (uint8_t *)app_buffer,
+mqtt_publish(&conn, NULL, pub_topic, (uint8_t *)app_buffer,
                strlen(app_buffer), MQTT_QOS_LEVEL_0, MQTT_RETAIN_OFF);	// <------ Set QoS
 
-  DBG("APP - Publish!\n");
+DBG("APP - Publish!\n");
 }
 /*---------------------------------------------------------------------------*/
 static void
@@ -546,14 +589,12 @@ state_machine(void)
       ping_parent();
       connect_to_broker();
     } else {
-      leds_on(STATUS_LED);
       ctimer_set(&ct, NO_NET_LED_DURATION, publish_led_off, NULL);
     }
     etimer_set(&publish_periodic_timer, NET_CONNECT_PERIODIC);
     return;
     break;
     case STATE_CONNECTING:
-    leds_on(STATUS_LED);
     ctimer_set(&ct, CONNECTING_LED_DURATION, publish_led_off, NULL);
     /* Not connected yet. Wait */
     DBG("Connecting (%u)\n", connect_attempt);
@@ -581,20 +622,20 @@ state_machine(void)
         subscribe();
         state = STATE_PUBLISHING;
       } else {
-        leds_on(STATUS_LED);
         ctimer_set(&ct, PUBLISH_LED_ON_DURATION, publish_led_off, NULL);
-        if(ttem != bat_mv) {
+        publish();
+  /*      if(ttem != bat_mv) {
     ttem = bat_mv;   // update the temporary valruable with fresh value
      publish();  // <-- This
+   } */
+
    }
+   etimer_set(&publish_periodic_timer, conf.pub_interval);
 
- }
- etimer_set(&publish_periodic_timer, conf.pub_interval);
-
- DBG("Publishing\n");
+   DBG("Publishing\n");
       /* Return here so we don't end up rescheduling the timer */
- return;
-} else {
+   return;
+ } else {
       /*
        * Our publish timer fired, but some MQTT packet is already in flight
        * (either not sent at all, or sent but not fully ACKd).
@@ -638,7 +679,6 @@ state_machine(void)
   return;
   case STATE_ERROR:
   default:
-  leds_on(STATUS_LED);
     /*
      * 'default' should never happen.
      *
@@ -657,11 +697,9 @@ state_machine(void)
  {
 
   PROCESS_BEGIN();
-
+  cc2420_set_channel(radioChannel); // channel 26
+  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
   printf("eMCH-APp\n");
-    // Activate Temperature and Battery Sensors  
-  SENSORS_ACTIVATE(battery_sensor);
-  SENSORS_ACTIVATE(temperature_sensor);
 
   if(init_config() != 1) {
     PROCESS_EXIT();

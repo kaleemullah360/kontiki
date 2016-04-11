@@ -55,8 +55,9 @@ obj_z1/res_z1_coap_obs_rtgs.o: resources/res_z1_coap_obs_rtgs.c \
  ../../core/./net/rime/rucb.h ../../core/./net/rime/timesynch.h \
  ../../core/./net/rime/trickle.h ../../core/./net/netstack.h \
  ../../apps/er-coap/er-coap-constants.h ../../apps/er-coap/er-coap-conf.h \
- ../../platform/z1/./dev/temperature-sensor.h ../../core/./lib/sensors.h \
- ../../core/./dev/battery-sensor.h
+ ../../core/./dev/battery-sensor.h ../../core/./lib/sensors.h \
+ ../../platform/z1/./dev/i2cmaster.h ../../platform/z1/./dev/tmp102.h \
+ ../../platform/z1/./dev/i2cmaster.h
 resources/res_z1_coap_obs_rtgs.c :
  ../../apps/rest-engine/rest-engine.h ../../core/./contiki.h :
  ../../core/./contiki-version.h ../../platform/z1/./contiki-conf.h :
@@ -114,5 +115,6 @@ resources/res_z1_coap_obs_rtgs.c :
  ../../core/./net/rime/rucb.h ../../core/./net/rime/timesynch.h :
  ../../core/./net/rime/trickle.h ../../core/./net/netstack.h :
  ../../apps/er-coap/er-coap-constants.h ../../apps/er-coap/er-coap-conf.h :
- ../../platform/z1/./dev/temperature-sensor.h ../../core/./lib/sensors.h :
- ../../core/./dev/battery-sensor.h :
+ ../../core/./dev/battery-sensor.h ../../core/./lib/sensors.h :
+ ../../platform/z1/./dev/i2cmaster.h ../../platform/z1/./dev/tmp102.h :
+ ../../platform/z1/./dev/i2cmaster.h :

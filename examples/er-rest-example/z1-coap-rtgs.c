@@ -5,8 +5,10 @@
 #include "contiki-net.h"
 #include "rest-engine.h"
 
-#include "dev/temperature-sensor.h"
-#include "dev/battery-sensor.h"
+// Set the Radio performance
+#include <cc2420.h>
+uint8_t radioChannel = 26;  // default channel
+uint8_t radioChannel_tx_power = 31; // default power
 
 #define DEBUG 0
 #if DEBUG
@@ -33,7 +35,6 @@ extern resource_t
   res_b1_sep_b2;
 
 
-extern resource_t res_z1_coap_rtgs;
 extern resource_t res_z1_coap_obs_rtgs;
 
 PROCESS(er_example_server, "RTGS Server");
@@ -61,14 +62,12 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   /* Initialize the REST engine. */
   rest_init_engine();
-  // Activate Temperature and Battery Sensors  
-  SENSORS_ACTIVATE(battery_sensor);
-  SENSORS_ACTIVATE(temperature_sensor);
 
-  rest_activate_resource(&res_z1_coap_rtgs, "sens/mote");
   rest_activate_resource(&res_z1_coap_obs_rtgs, "obs/mote");
 
   /* Define application-specific events here. */
+  cc2420_set_channel(radioChannel); // channel 26
+  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
   while(1) {
     PROCESS_WAIT_EVENT();
 
