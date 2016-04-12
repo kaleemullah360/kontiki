@@ -1,163 +1,522 @@
-[15:03:41 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[15:03:42 - AWT-EventQueue-1] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[15:03:42 - AWT-EventQueue-1] [Cooja.java:2885] [INFO] - External tools user settings: /home/superuser/.cooja.user.properties
-[15:03:46 - Thread-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:03:47 - Thread-1] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[15:03:47 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[15:03:47 - Thread-1] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[15:03:48 - Thread-1] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:04:12 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:04:13 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.z1 TARGET=z1 
-[15:04:27 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.z1
-[15:05:14 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:05:14 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:05:15 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
-[15:05:30 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
-[15:05:50 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:05:50 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.z1 TARGET=z1 
-[15:06:05 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.z1
-[15:06:31 - AWT-EventQueue-1] [Cooja.java:3489] [INFO] - Saved to file: /home/superuser/kontiki/examples/ipv6/rpl-border-router/mch-border-router.csc
-[15:06:43 - Thread-2] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:06:43 - Thread-6] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:06:49 - Thread-6] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:06:49 - Thread-6] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:06:49 - Thread-2] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:06:49 - Thread-7] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:06:49 - Thread-7] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[15:06:49 - Thread-7] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.z1 TARGET=z1 
-[15:06:50 - Thread-7] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
-[15:06:51 - Thread-7] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.z1 TARGET=z1 
-[15:06:51 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[15:06:51 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.z1
-[15:06:51 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
-[15:06:52 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.z1
-[15:06:52 - Thread-7] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:06:53 - Thread-9] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460369213537
-[15:09:16 - Thread-8] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:09:16 - Thread-10] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:10:11 - Thread-8] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:10:11 - Thread-10] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:10:11 - Thread-10] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:10:11 - Thread-9] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460369411625	Duration: 198088 ms	Simulated time 195298 ms	Ratio 0.9859153507532006
-[15:10:11 - Thread-11] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:10:11 - Thread-11] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[15:10:12 - Thread-11] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.z1 TARGET=z1 
-[15:10:12 - Thread-11] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
-[15:10:12 - Thread-11] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.z1 TARGET=z1 
-[15:10:12 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[15:10:12 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.z1
-[15:10:12 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
-[15:10:13 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.z1
-[15:10:13 - Thread-11] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:10:13 - Thread-13] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460369413915
-[15:10:18 - Thread-14] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:10:18 - Thread-12] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:16:30 - Thread-13] [Simulation.java:292] [FATAL] - Simulation stopped due to error: -1
-java.lang.ArrayIndexOutOfBoundsException: -1
-	at se.sics.mspsim.core.MSP430Core$1.write(MSP430Core.java:171)
-	at se.sics.mspsim.core.MSP430Core.serviceInterrupt(MSP430Core.java:913)
-	at se.sics.mspsim.core.MSP430Core.emulateOP(MSP430Core.java:970)
-	at se.sics.mspsim.core.MSP430.stepMicros(MSP430.java:256)
-	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:337)
-	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:298)
-	at org.contikios.cooja.motes.AbstractWakeupMote$1.execute(AbstractWakeupMote.java:47)
-	at org.contikios.cooja.Simulation.run(Simulation.java:280)
-	at java.lang.Thread.run(Thread.java:745)
-[15:16:32 - Thread-13] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460369792004	Duration: 378089 ms	Simulated time 344404 ms	Ratio 0.9109072202576642
-[15:18:51 - Thread-12] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:18:51 - Thread-14] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:18:51 - Thread-14] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:18:51 - Thread-16] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:18:51 - Thread-16] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[15:18:52 - Thread-16] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.z1 TARGET=z1 
-[15:18:52 - Thread-16] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
-[15:18:52 - Thread-16] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.z1 TARGET=z1 
-[15:18:52 - Thread-16] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[15:18:52 - Thread-16] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.z1
-[15:18:53 - Thread-16] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
-[15:18:53 - Thread-16] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.z1
-[15:18:53 - Thread-16] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:19:02 - Thread-17] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:19:02 - Thread-18] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:19:02 - Thread-18] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[15:19:02 - Thread-18] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.z1 TARGET=z1 
-[15:19:02 - Thread-18] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
-[15:19:03 - Thread-18] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.z1 TARGET=z1 
-[15:19:03 - Thread-18] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[15:19:03 - Thread-18] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.z1
-[15:19:03 - Thread-18] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
-[15:19:03 - Thread-18] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.z1
-[15:19:04 - Thread-18] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:21:55 - Thread-19] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:21:56 - Thread-20] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:21:56 - Thread-20] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[15:21:56 - Thread-20] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.z1 TARGET=z1 
-[15:21:56 - Thread-20] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
-[15:21:56 - Thread-20] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.z1 TARGET=z1 
-[15:21:56 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[15:21:56 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.z1
-[15:21:57 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
-[15:21:57 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.z1
-[15:21:57 - Thread-20] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:22:00 - Thread-22] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460370120593
-[15:22:23 - Thread-21] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:22:23 - Thread-23] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:23:08 - Thread-22] [Simulation.java:292] [FATAL] - Simulation stopped due to error: null
-java.lang.ArrayIndexOutOfBoundsException
-[15:23:13 - Thread-22] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460370193244	Duration: 72651 ms	Simulated time 64529 ms	Ratio 0.8882052552614554
-[15:29:07 - Thread-21] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:29:07 - Thread-23] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:29:07 - Thread-23] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:29:07 - Thread-25] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:29:07 - Thread-25] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[15:29:07 - Thread-25] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.z1 TARGET=z1 
-[15:29:07 - Thread-25] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
-[15:29:08 - Thread-25] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.z1 TARGET=z1 
-[15:29:08 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[15:29:08 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.z1
-[15:29:08 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
-[15:29:09 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.z1
-[15:29:09 - Thread-25] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:29:10 - Thread-27] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460370550447
-[15:29:14 - Thread-26] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:29:14 - Thread-28] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:40:59 - Thread-28] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:40:59 - Thread-28] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:40:59 - Thread-26] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:40:59 - Thread-27] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460371259603	Duration: 709156 ms	Simulated time 649530 ms	Ratio 0.9159197694160383
-[15:41:00 - Thread-29] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:41:00 - Thread-29] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[15:41:00 - Thread-29] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.z1 TARGET=z1 
-[15:41:00 - Thread-29] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
-[15:41:00 - Thread-29] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.z1 TARGET=z1 
-[15:41:00 - Thread-29] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[15:41:00 - Thread-29] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.z1
-[15:41:01 - Thread-29] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
-[15:41:01 - Thread-29] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.z1
-[15:41:02 - Thread-29] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:41:02 - Thread-31] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460371262033
-[15:41:07 - Thread-30] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:41:07 - Thread-32] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:46:04 - Thread-31] [Simulation.java:292] [FATAL] - Simulation stopped due to error: null
-java.lang.ArrayIndexOutOfBoundsException
-[15:46:07 - Thread-31] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460371567288	Duration: 305255 ms	Simulated time 276779 ms	Ratio 0.9067140587377767
-[15:55:44 - Thread-32] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:55:44 - Thread-32] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:55:44 - Thread-30] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:55:45 - Thread-34] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:55:45 - Thread-34] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[15:55:45 - Thread-34] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.z1 TARGET=z1 
-[15:55:45 - Thread-34] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
-[15:55:45 - Thread-34] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.z1 TARGET=z1 
-[15:55:45 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[15:55:46 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.z1
-[15:55:46 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
-[15:55:46 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.z1
-[15:55:47 - Thread-34] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:55:49 - Thread-36] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460372149007
-[15:55:54 - Thread-35] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:55:54 - Thread-37] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[16:02:53 - Thread-36] [Simulation.java:292] [FATAL] - Simulation stopped due to error: null
-java.lang.ArrayIndexOutOfBoundsException
-[16:02:54 - Thread-36] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460372574800	Duration: 425793 ms	Simulated time 391404 ms	Ratio 0.9192354031184167
-[16:17:09 - Thread-37] [SerialSocketServer.java:501] [INFO] - End of Stream
+[10:49:15 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[10:49:15 - AWT-EventQueue-1] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[10:49:15 - AWT-EventQueue-1] [Cooja.java:2885] [INFO] - External tools user settings: /home/superuser/.cooja.user.properties
+[10:49:18 - Thread-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[10:49:18 - Thread-1] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[10:49:18 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[10:49:19 - Thread-1] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[10:49:19 - Thread-1] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[10:49:40 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[10:49:40 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[10:49:41 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[10:53:59 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[10:54:04 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[10:54:07 - Thread-4] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460440447834
+[10:54:14 - Thread-4] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460440454787	Duration: 6953 ms	Simulated time 6706 ms	Ratio 0.9644757658564649
+[11:14:32 - Thread-2] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[11:14:32 - Thread-5] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:14:32 - Thread-5] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[11:14:32 - Thread-5] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:14:33 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[11:14:33 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:14:34 - Thread-5] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[11:14:35 - Thread-7] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460441675191
+[11:14:37 - Thread-7] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460441677580	Duration: 2389 ms	Simulated time 2389 ms	Ratio 1.0
+[11:15:09 - Thread-6] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[11:15:09 - Thread-8] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:15:09 - Thread-8] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[11:15:09 - Thread-8] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:15:10 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[11:15:10 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:15:10 - Thread-8] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[11:15:11 - Thread-10] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460441711327
+[11:15:13 - Thread-10] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460441713886	Duration: 2559 ms	Simulated time 2559 ms	Ratio 1.0
+[11:17:22 - Thread-9] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[11:17:22 - Thread-11] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:17:22 - Thread-11] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[11:17:23 - Thread-11] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:17:23 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        test-battery.c
+[11:17:23 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
+[11:17:23 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        test-battery.z1
+[11:17:23 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> contiki-z1.a(powertrace.o): In function `powertrace_sniff':
+[11:17:23 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> /home/superuser/kontiki/examples/zolertia/z1/../../../apps/powertrace/powertrace.c:357: undefined reference to `ADD'
+[11:17:23 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: error: ld returned 1 exit status
+[11:17:23 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:280: recipe for target 'test-battery.z1' failed
+[11:17:23 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> rm test-battery.co obj_z1/contiki-z1-main.o
+[11:17:23 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[11:17:23 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.z1] Error 1
+[11:17:23 - Thread-11] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[11:17:32 - Thread-11] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:17:32 - Thread-11] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[11:17:32 - Thread-11] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/test-battery.z1 with /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[11:17:32 - Thread-11] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:17:32 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[11:17:32 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:17:33 - Thread-11] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[11:20:11 - Thread-13] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[11:20:11 - Thread-14] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:20:11 - Thread-14] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[11:20:11 - Thread-14] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:20:11 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[11:20:12 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:20:12 - Thread-14] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[11:20:14 - Thread-16] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460442014678
+[11:20:20 - Thread-16] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460442020072	Duration: 5394 ms	Simulated time 5394 ms	Ratio 1.0
+[11:22:40 - Thread-15] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[11:22:40 - Thread-17] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:22:40 - Thread-17] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[11:22:40 - Thread-17] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:22:41 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[11:22:41 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:22:41 - Thread-17] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[11:22:43 - Thread-19] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460442163188
+[11:22:45 - Thread-19] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460442165953	Duration: 2765 ms	Simulated time 2756 ms	Ratio 0.996745027124774
+[11:24:10 - Thread-18] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[11:24:10 - Thread-20] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:24:10 - Thread-20] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[11:24:10 - Thread-20] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:24:10 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[11:24:11 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:24:11 - Thread-20] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[11:24:12 - Thread-22] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460442252954
+[11:24:15 - Thread-22] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460442255873	Duration: 2919 ms	Simulated time 2915 ms	Ratio 0.9986296676944159
+[11:25:17 - Thread-21] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[11:25:17 - Thread-23] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:25:17 - Thread-23] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[11:25:17 - Thread-23] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:25:17 - Thread-23] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[11:25:18 - Thread-23] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:25:18 - Thread-23] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[11:25:20 - Thread-25] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460442320397
+[11:25:22 - Thread-25] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460442322785	Duration: 2388 ms	Simulated time 2386 ms	Ratio 0.9991624790619765
+[11:25:55 - Thread-24] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[11:26:00 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:26:11 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[11:26:11 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[11:26:12 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:26:23 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:26:24 - Thread-27] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460442384924
+[11:26:28 - Thread-27] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460442388852	Duration: 3928 ms	Simulated time 13528 ms	Ratio 3.443991853360489
+[11:29:51 - Thread-28] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:29:51 - Thread-28] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:29:51 - Thread-28] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:118:138: warning: value computed is not used [-Wunused-value]
+[11:29:51 - Thread-28] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:118:138: warning: value computed is not used [-Wunused-value]
+[11:29:51 - Thread-28] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:118:138: warning: value computed is not used [-Wunused-value]
+[11:29:51 - Thread-28] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:118:138: warning: value computed is not used [-Wunused-value]
+[11:29:51 - Thread-28] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:118:138: warning: value computed is not used [-Wunused-value]
+[11:29:51 - Thread-28] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:118:138: warning: value computed is not used [-Wunused-value]
+[11:29:51 - Thread-28] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:118:3: warning: ‘return’ with a value, in function returning void [enabled by default]
+[11:29:51 - Thread-28] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/z1-powertrace.o' failed
+[11:29:51 - Thread-28] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/z1-powertrace.o] Error 1
+[11:29:51 - Thread-28] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[11:29:51 - Thread-28] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[11:30:24 - Thread-28] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:30:24 - Thread-28] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:30:24 - Thread-28] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:30:24 - Thread-28] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:30:37 - Thread-30] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:30:37 - Thread-30] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:30:37 - Thread-30] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:30:37 - Thread-30] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:31:20 - Thread-31] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:31:20 - Thread-31] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:31:20 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[11:31:20 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> > make test-battery.z1 TARGET=z1 
+[11:31:20 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        test-battery.c
+[11:31:20 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: In function ‘process_thread_test_battery_process’:
+[11:31:20 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:73:4: error: invalid use of void expression
+[11:31:20 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[11:31:20 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[11:31:20 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[11:31:20 - Thread-31] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[11:32:01 - Thread-31] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:32:01 - Thread-31] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:32:01 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:117:138: warning: value computed is not used [-Wunused-value]
+[11:32:01 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:117:138: warning: value computed is not used [-Wunused-value]
+[11:32:01 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:117:138: warning: value computed is not used [-Wunused-value]
+[11:32:01 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:117:138: warning: value computed is not used [-Wunused-value]
+[11:32:01 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:117:138: warning: value computed is not used [-Wunused-value]
+[11:32:01 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:117:138: warning: value computed is not used [-Wunused-value]
+[11:32:01 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:117:138: warning: value computed is not used [-Wunused-value]
+[11:32:01 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/z1-powertrace.o' failed
+[11:32:01 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/z1-powertrace.o] Error 1
+[11:32:01 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[11:32:01 - Thread-31] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[11:33:01 - Thread-31] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:33:01 - Thread-31] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:33:02 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[11:33:02 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> > make test-battery.z1 TARGET=z1 
+[11:33:02 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/powertrace/z1-powertrace.c
+[11:33:02 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >>   AR        contiki-z1.a
+[11:33:02 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        test-battery.c
+[11:33:02 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: In function ‘process_thread_test_battery_process’:
+[11:33:02 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:73:8: error: void value not ignored as it ought to be
+[11:33:02 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[11:33:02 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[11:33:02 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[11:33:02 - Thread-31] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[11:33:22 - Thread-31] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:33:22 - Thread-31] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:33:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:73:1: warning: conflicting types for ‘powertrace_print’ [enabled by default]
+[11:33:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> In file included from ../../../apps/powertrace/z1-powertrace.c:43:0:
+[11:33:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.h:55:6: note: previous declaration of ‘powertrace_print’ was here
+[11:33:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >>   AR        contiki-z1.a
+[11:33:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        test-battery.c
+[11:33:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: In function ‘process_thread_test_battery_process’:
+[11:33:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:73:8: error: void value not ignored as it ought to be
+[11:33:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[11:33:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[11:33:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[11:33:22 - Thread-31] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[11:35:30 - Thread-31] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:35:30 - Thread-31] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:35:31 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:35:31 - Thread-31] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:36:30 - Thread-36] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:36:30 - Thread-36] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:36:30 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[11:36:30 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> > make test-battery.z1 TARGET=z1 
+[11:36:30 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        test-battery.c
+[11:36:30 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: In function ‘process_thread_test_battery_process’:
+[11:36:30 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:75:4: error: invalid use of void expression
+[11:36:30 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[11:36:30 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[11:36:30 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[11:36:30 - Thread-36] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[11:36:55 - Thread-36] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:36:55 - Thread-36] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:36:55 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> > make test-battery.z1 TARGET=z1 
+[11:36:55 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/powertrace/z1-powertrace.c
+[11:36:55 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:73:1: error: conflicting types for ‘powertrace_print’
+[11:36:55 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> In file included from ../../../apps/powertrace/z1-powertrace.c:43:0:
+[11:36:55 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.h:55:6: note: previous declaration of ‘powertrace_print’ was here
+[11:36:55 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c: In function ‘powertrace_print’:
+[11:36:55 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/powertrace/z1-powertrace.c:192:1: warning: control reaches end of non-void function [-Wreturn-type]
+[11:36:55 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/z1-powertrace.o' failed
+[11:36:55 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/z1-powertrace.o] Error 1
+[11:36:55 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[11:36:55 - Thread-36] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[11:37:32 - Thread-36] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:37:32 - Thread-36] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:37:32 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[11:37:32 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> > make test-battery.z1 TARGET=z1 
+[11:37:32 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/powertrace/z1-powertrace.c
+[11:37:32 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >>   AR        contiki-z1.a
+[11:37:32 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        test-battery.c
+[11:37:32 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: In function ‘process_thread_test_battery_process’:
+[11:37:32 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:75:34: error: expected ‘)’ before ‘powertrace’
+[11:37:32 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[11:37:32 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[11:37:32 - Thread-36] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[11:37:32 - Thread-36] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[11:37:57 - Thread-36] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:37:57 - Thread-36] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:37:58 - Thread-36] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:37:58 - Thread-36] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:50:09 - Thread-40] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:50:09 - Thread-40] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:50:09 - Thread-40] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:50:10 - Thread-40] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:50:12 - Thread-41] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460443812938
+[11:50:16 - Thread-41] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460443816200	Duration: 3262 ms	Simulated time 12037 ms	Ratio 3.690067443286327
+[11:50:28 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:50:36 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[11:50:37 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:50:48 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:50:50 - Thread-43] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460443850538
+[11:50:53 - Thread-43] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460443853034	Duration: 2496 ms	Simulated time 9326 ms	Ratio 3.7363782051282053
+[11:52:32 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:52:42 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[11:52:42 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:52:57 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:52:58 - Thread-45] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460443978689
+[11:53:02 - Thread-45] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460443982514	Duration: 3825 ms	Simulated time 14048 ms	Ratio 3.6726797385620915
+[11:54:12 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[11:54:22 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[11:54:22 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[11:54:23 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[11:54:35 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[11:54:37 - Thread-47] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460444077121
+[11:54:43 - Thread-47] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460444083792	Duration: 6671 ms	Simulated time 22541 ms	Ratio 3.3789536801079296
+[12:00:29 - Thread-48] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:00:29 - Thread-48] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:00:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
+[12:00:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        test-battery.z1
+[12:00:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> contiki-z1.a(powertrace.o): In function `powertrace_sniff':
+[12:00:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> /home/superuser/kontiki/examples/zolertia/z1/../../../apps/powertrace/powertrace.c:352: multiple definition of `powertrace_print'
+[12:00:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.co:/home/superuser/kontiki/examples/zolertia/z1/test-battery.c:232: first defined here
+[12:00:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: error: ld returned 1 exit status
+[12:00:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:280: recipe for target 'test-battery.z1' failed
+[12:00:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.z1] Error 1
+[12:00:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> rm test-battery.co obj_z1/contiki-z1-main.o
+[12:00:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:00:30 - Thread-48] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:01:52 - Thread-48] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:01:52 - Thread-48] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/test-battery.z1 with /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[12:01:52 - Thread-48] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:01:53 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
+[12:01:53 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        test-battery.z1
+[12:01:53 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> contiki-z1.a(powertrace.o): In function `powertrace_sniff':
+[12:01:53 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> /home/superuser/kontiki/examples/zolertia/z1/../../../apps/powertrace/powertrace.c:352: multiple definition of `powertrace_print'
+[12:01:53 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.co:/home/superuser/kontiki/examples/zolertia/z1/test-battery.c:232: first defined here
+[12:01:53 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: error: ld returned 1 exit status
+[12:01:53 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:280: recipe for target 'test-battery.z1' failed
+[12:01:53 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.z1] Error 1
+[12:01:53 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> rm test-battery.co obj_z1/contiki-z1-main.o
+[12:01:53 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:01:53 - Thread-48] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:02:11 - Thread-48] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:02:11 - Thread-48] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/test-battery.z1 with /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[12:02:11 - Thread-48] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:02:11 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:02:11 - Thread-48] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:02:17 - Thread-51] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460444537774
+[12:02:21 - Thread-51] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460444541861	Duration: 4087 ms	Simulated time 14956 ms	Ratio 3.659407878639589
+[12:02:37 - Thread-52] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:02:37 - Thread-52] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:02:37 - Thread-52] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:02:37 - Thread-52] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:02:41 - Thread-53] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460444561445
+[12:02:44 - Thread-53] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460444564605	Duration: 3160 ms	Simulated time 11222 ms	Ratio 3.55126582278481
+[12:05:16 - Thread-54] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:05:16 - Thread-54] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:05:16 - Thread-54] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:05:16 - Thread-54] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:05:47 - Thread-55] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:05:47 - Thread-55] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:05:47 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[12:05:47 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> > make test-battery.z1 TARGET=z1 
+[12:05:47 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        test-battery.c
+[12:05:47 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: In function ‘powertrace_print’:
+[12:05:47 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:156:21: error: ‘stats_list’ undeclared (first use in this function)
+[12:05:47 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:156:21: note: each undeclared identifier is reported only once for each function it appears in
+[12:05:47 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[12:05:47 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[12:05:47 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:05:47 - Thread-55] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:06:00 - Thread-55] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:06:00 - Thread-55] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:06:00 - Thread-55] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:06:00 - Thread-55] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:06:57 - Thread-57] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:06:57 - Thread-57] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:06:57 - Thread-57] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:06:58 - Thread-57] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:07:26 - Thread-58] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:07:26 - Thread-58] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:07:26 - Thread-58] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:07:26 - Thread-58] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:07:31 - Thread-59] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460444851524
+[12:07:36 - Thread-59] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460444856971	Duration: 5447 ms	Simulated time 19452 ms	Ratio 3.5711400771066644
+[12:14:50 - Thread-60] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:14:50 - Thread-60] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:14:51 - Thread-60] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:14:51 - Thread-60] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:14:54 - Thread-61] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460445294656
+[12:14:55 - Thread-61] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460445295741	Duration: 1085 ms	Simulated time 3671 ms	Ratio 3.383410138248848
+[12:15:00 - Thread-62] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460445300655
+[12:15:03 - Thread-62] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460445303428	Duration: 2773 ms	Simulated time 13219 ms	Ratio 4.767039307609088
+[12:17:19 - Thread-63] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:17:19 - Thread-63] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:17:20 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:17:20 - Thread-63] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:17:33 - Thread-64] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460445453247
+[12:17:34 - Thread-64] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460445454229	Duration: 982 ms	Simulated time 3850 ms	Ratio 3.920570264765784
+[12:17:40 - Thread-65] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460445460713
+[12:17:43 - Thread-65] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460445463052	Duration: 2339 ms	Simulated time 11790 ms	Ratio 5.0406156477126975
+[12:17:47 - Thread-66] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460445467588
+[12:17:49 - Thread-66] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460445469297	Duration: 1709 ms	Simulated time 17781 ms	Ratio 10.404330017554125
+[12:17:55 - Thread-67] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460445475779
+[12:17:58 - Thread-67] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460445478019	Duration: 2240 ms	Simulated time 25063 ms	Ratio 11.188839285714286
+[12:18:26 - Thread-68] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:18:26 - Thread-68] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:18:27 - Thread-68] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:18:27 - Thread-68] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:19:33 - Thread-69] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:19:33 - Thread-69] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:19:33 - Thread-69] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:19:34 - Thread-69] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:19:38 - Thread-70] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:19:38 - Thread-70] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:19:39 - Thread-70] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:19:39 - Thread-70] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:19:41 - Thread-71] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460445581246
+[12:19:54 - Thread-71] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460445594382	Duration: 13136 ms	Simulated time 46647 ms	Ratio 3.5510809987819734
+[12:20:43 - Thread-72] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:20:43 - Thread-72] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:20:43 - Thread-72] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:131:3: error: ‘radio’ undeclared (first use in this function)
+[12:20:43 - Thread-72] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:131:3: note: each undeclared identifier is reported only once for each function it appears in
+[12:20:43 - Thread-72] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:134:3: error: ‘all_radio’ undeclared (first use in this function)
+[12:20:43 - Thread-72] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: In function ‘process_thread_test_battery_process’:
+[12:20:43 - Thread-72] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:192:4: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘struct memb’ [-Wformat]
+[12:20:43 - Thread-72] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: At top level:
+[12:20:43 - Thread-72] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:91:1: warning: ‘stats_list’ defined but not used [-Wunused-variable]
+[12:20:43 - Thread-72] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[12:20:43 - Thread-72] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[12:20:43 - Thread-72] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:20:43 - Thread-72] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:21:01 - Thread-72] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:21:01 - Thread-72] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:21:01 - Thread-72] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:21:02 - Thread-72] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:21:27 - Thread-74] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:21:27 - Thread-74] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:21:27 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:132:3: error: ‘radio’ undeclared (first use in this function)
+[12:21:27 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:132:3: note: each undeclared identifier is reported only once for each function it appears in
+[12:21:27 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:135:3: error: ‘all_radio’ undeclared (first use in this function)
+[12:21:27 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: In function ‘process_thread_test_battery_process’:
+[12:21:27 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:193:4: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘struct memb’ [-Wformat]
+[12:21:27 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: At top level:
+[12:21:27 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:91:1: warning: ‘stats_list’ defined but not used [-Wunused-variable]
+[12:21:27 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[12:21:27 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[12:21:27 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:21:27 - Thread-74] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:21:37 - Thread-74] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:21:37 - Thread-74] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:21:38 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:135:3: error: ‘all_radio’ undeclared (first use in this function)
+[12:21:38 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:135:3: note: each undeclared identifier is reported only once for each function it appears in
+[12:21:38 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:106:33: warning: variable ‘radio’ set but not used [-Wunused-but-set-variable]
+[12:21:38 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: In function ‘process_thread_test_battery_process’:
+[12:21:38 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:193:4: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘struct memb’ [-Wformat]
+[12:21:38 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: At top level:
+[12:21:38 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:91:1: warning: ‘stats_list’ defined but not used [-Wunused-variable]
+[12:21:38 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[12:21:38 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[12:21:38 - Thread-74] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:21:38 - Thread-74] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:22:21 - Thread-74] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:22:21 - Thread-74] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:22:22 - Thread-74] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:22:22 - Thread-74] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:22:26 - Thread-77] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460445746421
+[12:22:29 - Thread-77] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460445749609	Duration: 3188 ms	Simulated time 10945 ms	Ratio 3.4331869510664994
+[12:22:29 - Thread-78] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:22:29 - Thread-78] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:22:29 - Thread-78] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:22:30 - Thread-78] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:22:30 - Thread-79] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460445750304
+[12:22:34 - Thread-79] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460445754275	Duration: 3971 ms	Simulated time 13128 ms	Ratio 3.3059682699571895
+[12:22:46 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:23:02 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[12:23:03 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:23:23 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:23:37 - Thread-81] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:23:37 - Thread-81] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:23:37 - Thread-81] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:23:37 - Thread-81] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:25:42 - Thread-82] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:25:42 - Thread-82] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:25:42 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[12:25:42 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> > make test-battery.z1 TARGET=z1 
+[12:25:42 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        test-battery.c
+[12:25:42 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:90:50: error: macro "MEMB" requires 3 arguments, but only 2 given
+[12:25:42 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:90:1: warning: data definition has no type or storage class [enabled by default]
+[12:25:42 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:90:1: warning: type defaults to ‘int’ in declaration of ‘MEMB’ [-Wimplicit-int]
+[12:25:42 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[12:25:42 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[12:25:42 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:25:42 - Thread-82] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:26:02 - Thread-82] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:26:02 - Thread-82] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:26:02 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:90:1: error: expected identifier or ‘(’ before ‘void’
+[12:26:02 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:90:1: error: expected ‘)’ before numeric constant
+[12:26:02 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:90:1: error: pasting ")" and "_memb_mem" does not give a valid preprocessing token
+[12:26:02 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:90:1: error: expected identifier or ‘(’ before ‘void’
+[12:26:02 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:90:1: error: expected ‘)’ before numeric constant
+[12:26:02 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:90:1: error: pasting ")" and "_memb_count" does not give a valid preprocessing token
+[12:26:02 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:90:1: error: pasting ")" and "_memb_mem" does not give a valid preprocessing token
+[12:26:02 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[12:26:02 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[12:26:02 - Thread-82] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:26:02 - Thread-82] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:27:32 - Thread-82] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:27:32 - Thread-82] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:27:32 - Thread-82] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:27:33 - Thread-82] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:27:37 - Thread-85] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460446057931
+[12:27:40 - Thread-85] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460446060394	Duration: 2463 ms	Simulated time 8375 ms	Ratio 3.4003248071457572
+[12:27:42 - Thread-86] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:27:42 - Thread-86] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:27:42 - Thread-86] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:27:42 - Thread-86] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:27:44 - Thread-87] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460446064539
+[12:27:46 - Thread-87] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460446066634	Duration: 2095 ms	Simulated time 7313 ms	Ratio 3.4906921241050117
+[12:29:16 - Thread-88] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:29:16 - Thread-88] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:29:16 - Thread-88] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:29:16 - Thread-88] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:29:22 - Thread-89] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460446162794
+[12:29:26 - Thread-89] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460446166266	Duration: 3472 ms	Simulated time 11744 ms	Ratio 3.3824884792626726
+[12:29:33 - Thread-90] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460446173440
+[12:29:37 - Thread-90] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460446177837	Duration: 4397 ms	Simulated time 26406 ms	Ratio 6.005458267000227
+[12:30:30 - Thread-91] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:30:30 - Thread-91] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:30:30 - Thread-91] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:30:31 - Thread-91] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:30:34 - Thread-92] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460446234546
+[12:30:36 - Thread-92] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460446236310	Duration: 1764 ms	Simulated time 5648 ms	Ratio 3.201814058956916
+[12:30:46 - Thread-93] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:30:46 - Thread-93] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:30:46 - Thread-93] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[12:30:46 - Thread-93] [AbstractMspMoteType.java:152] [FATAL] - >> > make test-battery.z1 TARGET=z1 
+[12:30:46 - Thread-93] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        test-battery.c
+[12:30:46 - Thread-93] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:87:19: error: expected ‘)’ before ‘struct’
+[12:30:46 - Thread-93] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[12:30:46 - Thread-93] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[12:30:46 - Thread-93] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:30:46 - Thread-93] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:30:58 - Thread-93] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:30:58 - Thread-93] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:30:58 - Thread-93] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:30:58 - Thread-93] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:31:02 - Thread-95] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460446262201
+[12:31:05 - Thread-95] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460446265561	Duration: 3360 ms	Simulated time 11456 ms	Ratio 3.4095238095238094
+[12:57:13 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:57:33 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[12:57:33 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[12:57:34 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[12:57:46 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[12:57:47 - Thread-97] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460447867758
+[12:57:49 - Thread-97] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460447869574	Duration: 1816 ms	Simulated time 6372 ms	Ratio 3.5088105726872247
+[12:57:51 - Thread-98] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460447871902
+[12:57:56 - Thread-98] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460447876806	Duration: 4904 ms	Simulated time 22382 ms	Ratio 4.564029363784665
+[13:01:35 - Thread-99] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[13:01:35 - Thread-99] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[13:01:35 - Thread-99] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        test-battery.c
+[13:01:35 - Thread-99] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: In function ‘powertrace_print’:
+[13:01:35 - Thread-99] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:83:34: warning: unused variable ‘s’ [-Wunused-variable]
+[13:01:35 - Thread-99] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c: In function ‘process_thread_test_battery_process’:
+[13:01:35 - Thread-99] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:172:4: error: ‘s’ undeclared (first use in this function)
+[13:01:35 - Thread-99] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:172:4: note: each undeclared identifier is reported only once for each function it appears in
+[13:01:35 - Thread-99] [AbstractMspMoteType.java:152] [FATAL] - >> test-battery.c:175:3: error: expected ‘;’ before ‘}’ token
+[13:01:35 - Thread-99] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'test-battery.co' failed
+[13:01:35 - Thread-99] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [test-battery.co] Error 1
+[13:01:35 - Thread-99] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[13:01:35 - Thread-99] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[13:01:53 - Thread-99] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[13:01:53 - Thread-99] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[13:01:53 - Thread-99] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[13:01:54 - Thread-99] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[13:01:57 - Thread-101] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[13:01:57 - Thread-101] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[13:01:57 - Thread-101] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[13:01:57 - Thread-101] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[13:03:46 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[13:03:57 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:03:57 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:03:58 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:03:58 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-battery.z1 TARGET=z1 
+[13:04:10 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-battery.z1
+[13:04:12 - Thread-103] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460448252357
+[13:04:18 - Thread-103] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460448258971	Duration: 6614 ms	Simulated time 22390 ms	Ratio 3.385243423042032
+[14:24:29 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[14:24:50 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[14:24:50 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[14:24:50 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make powertrace.z1 TARGET=z1 
+[14:25:41 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[14:25:41 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[14:25:42 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-z1-sensor.z1 TARGET=z1 
+[14:25:54 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/test-z1-sensor.z1
+[14:25:56 - Thread-105] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460453156082
+[14:26:01 - Thread-105] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460453161121	Duration: 5039 ms	Simulated time 16781 ms	Ratio 3.3302242508434214

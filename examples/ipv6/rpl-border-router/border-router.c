@@ -50,6 +50,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+ // Set the Radio performance
+#include <cc2420.h>
+uint8_t radioChannel = 25;  // default channel
+uint8_t radioChannel_tx_power = 1; // default power
 
 #define DEBUG DEBUG_NONE
 #include "net/ip/uip-debug.h"
@@ -335,7 +339,8 @@ set_prefix_64(uip_ipaddr_t *prefix_64)
 PROCESS_THREAD(border_router_process, ev, data)
 {
   static struct etimer et;
-
+  cc2420_set_channel(radioChannel); // channel 26
+  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
   PROCESS_BEGIN();
 
 /* While waiting for the prefix to be sent through the SLIP connection, the future

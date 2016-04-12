@@ -40,10 +40,6 @@
 #include "contiki.h"
 #include "dev/battery-sensor.h"
 #include <stdio.h>
- #include <powertrace.h>
- 
- int t1 =0;
-  int t2 =0;
 /*---------------------------------------------------------------------------*/
 float
 floor(float x)
@@ -62,18 +58,14 @@ PROCESS_THREAD(test_battery_process, ev, data)
 {
 
   PROCESS_BEGIN();
-powertrace_start(CLOCK_SECOND * 5);
+
   SENSORS_ACTIVATE(battery_sensor);
 
   while(1) {
-    powertrace_print("your label");
-    t1 = clock_time();
     uint16_t bateria = battery_sensor.value(0);
     float mv = (bateria * 2.500 * 2) / 4096;
     printf("Battery: %i (%ld.%03d mV)\n", bateria, (long)mv,
            (unsigned)((mv - floor(mv)) * 1000));
-    t2 = clock_time();
-    printf("%u",( (t2-t1) * 1000 )/( 2*128 ));
   }
 
   SENSORS_DEACTIVATE(battery_sensor);
