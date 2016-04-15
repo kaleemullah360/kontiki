@@ -42,20 +42,20 @@
 #include "powertrace.h"
 
 /*---------------------------------------------------------------------------*/
-PROCESS(test_battery_process, "Sensor Power Test");
-AUTOSTART_PROCESSES(&test_battery_process);
+ PROCESS(test_battery_process, "Sensor Power Test");
+ AUTOSTART_PROCESSES(&test_battery_process);
 /*---------------------------------------------------------------------------*/
-PROCESS_THREAD(test_battery_process, ev, data)
-{
+ PROCESS_THREAD(test_battery_process, ev, data)
+ {
+ 	PROCESS_BEGIN();
+ 	
+ 	while(1) {
+	powertrace_start(CLOCK_SECOND * 1);
+ 	powertrace_print("");
+ 	powertrace_stop();
+ 	}
 
-  PROCESS_BEGIN();
-  powertrace_start(CLOCK_SECOND * 10);
 
-  while(1) {
-    powertrace_print("results");
-  }
-
-
-  PROCESS_END();
-}
+ 	PROCESS_END();
+ }
 /*---------------------------------------------------------------------------*/

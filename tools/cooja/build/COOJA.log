@@ -1,373 +1,153 @@
-[10:29:45 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[10:29:45 - AWT-EventQueue-1] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[10:29:45 - AWT-EventQueue-1] [Cooja.java:2885] [INFO] - External tools user settings: /home/superuser/.cooja.user.properties
-[10:29:48 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:29:48 - AWT-EventQueue-1] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[10:30:00 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:30:01 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:30:25 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:30:25 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:30:32 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:30:32 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:30:33 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-z1-sensor-mote.z1 TARGET=z1 
-[10:30:46 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:30:46 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:30:46 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make prediction.z1 TARGET=z1 
-[10:32:56 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:32:56 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:32:56 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
-[10:33:27 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:33:27 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:33:27 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.z1 TARGET=z1 
-[10:33:43 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:33:43 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:33:43 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:33:43 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:34:03 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:34:03 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:34:03 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:34:04 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:34:04 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-sht11.z1 TARGET=z1 
-[10:34:20 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:34:20 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:34:21 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-pwm.z1 TARGET=z1 
-[10:34:47 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:34:48 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:34:48 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make test-sht25.z1 TARGET=z1 
-[10:35:58 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:35:58 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:35:58 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:35:58 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:36:08 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:36:08 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:36:09 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:36:09 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:36:09 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:36:20 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:36:22 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460698582290
-[10:36:25 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460698585387	Duration: 3097 ms	Simulated time 7718 ms	Ratio 2.492089118501776
-[10:38:13 - Thread-4] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:38:13 - Thread-4] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:38:13 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:38:13 - Thread-4] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[10:38:40 - Thread-5] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:38:40 - Thread-5] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:38:40 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:38:40 - Thread-5] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[10:38:42 - Thread-6] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460698722227
-[10:38:46 - Thread-6] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460698726210	Duration: 3983 ms	Simulated time 14063 ms	Ratio 3.530755711775044
-[10:39:11 - Thread-7] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:39:11 - Thread-7] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:39:11 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:39:11 - Thread-7] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[10:39:13 - Thread-8] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460698753290
-[10:39:15 - Thread-8] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460698755650	Duration: 2360 ms	Simulated time 8677 ms	Ratio 3.676694915254237
-[10:39:22 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:39:33 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:39:33 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:39:35 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:39:35 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:39:36 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:40:01 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:40:01 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:40:01 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:40:22 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:40:22 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:40:22 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:40:22 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:40:23 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:40:34 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:40:35 - Thread-10] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460698835759
-[10:40:37 - Thread-10] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460698837449	Duration: 1690 ms	Simulated time 5794 ms	Ratio 3.428402366863905
-[10:42:56 - Thread-11] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:42:56 - Thread-11] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:42:56 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:42:56 - Thread-11] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[10:42:58 - Thread-12] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460698978456
-[10:43:01 - Thread-12] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460698981560	Duration: 3104 ms	Simulated time 11828 ms	Ratio 3.810567010309278
-[10:47:02 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:47:02 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:47:02 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:47:03 - Thread-13] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[10:47:04 - Thread-14] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460699224687
-[10:47:07 - Thread-14] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460699227694	Duration: 3007 ms	Simulated time 11497 ms	Ratio 3.8234120385766546
-[10:47:19 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:47:29 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:47:29 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:47:46 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:47:46 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:47:47 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:47:57 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:47:58 - Thread-16] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460699278515
-[10:48:00 - Thread-16] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460699280124	Duration: 1610 ms	Simulated time 6258 ms	Ratio 3.8869565217391306
-[10:49:33 - Thread-17] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:49:33 - Thread-17] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:49:33 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:49:33 - Thread-17] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[10:49:35 - Thread-18] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460699375220
-[10:49:36 - Thread-18] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460699376251	Duration: 1031 ms	Simulated time 4287 ms	Ratio 4.158098933074685
-[10:49:42 - Thread-19] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:49:42 - Thread-19] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:49:43 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:49:43 - Thread-19] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[10:50:41 - Thread-20] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:50:41 - Thread-20] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:50:42 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:50:42 - Thread-20] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[10:50:43 - Thread-21] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460699443813
-[10:50:46 - Thread-21] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460699446669	Duration: 2856 ms	Simulated time 10779 ms	Ratio 3.774159663865546
-[10:50:59 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:51:09 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:51:09 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:51:10 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:51:19 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:51:21 - Thread-23] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460699481083
-[10:51:22 - Thread-23] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460699482356	Duration: 1273 ms	Simulated time 4800 ms	Ratio 3.7706205813040063
-[10:52:54 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:53:05 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:53:05 - AWT-EventQueue-1] [AbstractCompileDialog.java:295] [FATAL] - Clean failed: Bad return value
-org.contikios.cooja.MoteType$MoteTypeCreationException: Bad return value
-	at org.contikios.cooja.dialogs.CompileContiki.compile(CompileContiki.java:269)
-	at org.contikios.cooja.dialogs.CompileContiki.compile(CompileContiki.java:100)
-	at org.contikios.cooja.dialogs.AbstractCompileDialog$6.actionPerformed(AbstractCompileDialog.java:284)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
-	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
-	at java.awt.Component.processMouseEvent(Component.java:6535)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6300)
-	at java.awt.Container.processEvent(Container.java:2236)
-	at java.awt.Component.dispatchEventImpl(Component.java:4891)
-	at java.awt.Container.dispatchEventImpl(Container.java:2294)
-	at java.awt.Component.dispatchEvent(Component.java:4713)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
-	at java.awt.Container.dispatchEventImpl(Container.java:2280)
-	at java.awt.Window.dispatchEventImpl(Window.java:2750)
-	at java.awt.Component.dispatchEvent(Component.java:4713)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.awt.EventQueue$4.run(EventQueue.java:729)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
-	at org.GNOME.Accessibility.AtkWrapper$5.dispatchEvent(AtkWrapper.java:697)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:109)
-	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:184)
-	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:229)
-	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:227)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:227)
-	at java.awt.Dialog.show(Dialog.java:1084)
-	at java.awt.Component.show(Component.java:1673)
-	at java.awt.Component.setVisible(Component.java:1625)
-	at java.awt.Window.setVisible(Window.java:1014)
-	at java.awt.Dialog.setVisible(Dialog.java:1005)
-	at org.contikios.cooja.mspmote.MspCompileDialog.showDialog(MspCompileDialog.java:58)
-	at org.contikios.cooja.mspmote.AbstractMspMoteType.configureAndInit(AbstractMspMoteType.java:114)
-	at org.contikios.cooja.Cooja.doCreateMoteType(Cooja.java:2177)
-	at org.contikios.cooja.Cooja.doCreateMoteType(Cooja.java:2156)
-	at org.contikios.cooja.Cooja$GUIEventHandler.actionPerformed(Cooja.java:2937)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
-	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
-	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
-	at java.awt.Component.processMouseEvent(Component.java:6535)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6300)
-	at java.awt.Container.processEvent(Container.java:2236)
-	at java.awt.Component.dispatchEventImpl(Component.java:4891)
-	at java.awt.Container.dispatchEventImpl(Container.java:2294)
-	at java.awt.Component.dispatchEvent(Component.java:4713)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
-	at java.awt.Container.dispatchEventImpl(Container.java:2280)
-	at java.awt.Window.dispatchEventImpl(Window.java:2750)
-	at java.awt.Component.dispatchEvent(Component.java:4713)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.awt.EventQueue$4.run(EventQueue.java:729)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
-	at org.GNOME.Accessibility.AtkWrapper$5.dispatchEvent(AtkWrapper.java:697)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-Caused by: org.contikios.cooja.MoteType$MoteTypeCreationException: 
-	at org.contikios.cooja.dialogs.CompileContiki$3.run(CompileContiki.java:218)
-	at java.lang.Thread.run(Thread.java:745)
-[10:53:05 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:53:05 - AWT-EventQueue-1] [AbstractCompileDialog.java:295] [FATAL] - Clean failed: Bad return value
-org.contikios.cooja.MoteType$MoteTypeCreationException: Bad return value
-	at org.contikios.cooja.dialogs.CompileContiki.compile(CompileContiki.java:269)
-	at org.contikios.cooja.dialogs.CompileContiki.compile(CompileContiki.java:100)
-	at org.contikios.cooja.dialogs.AbstractCompileDialog$6.actionPerformed(AbstractCompileDialog.java:284)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
-	at java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:289)
-	at java.awt.Component.processMouseEvent(Component.java:6535)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6300)
-	at java.awt.Container.processEvent(Container.java:2236)
-	at java.awt.Component.dispatchEventImpl(Component.java:4891)
-	at java.awt.Container.dispatchEventImpl(Container.java:2294)
-	at java.awt.Component.dispatchEvent(Component.java:4713)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
-	at java.awt.Container.dispatchEventImpl(Container.java:2280)
-	at java.awt.Window.dispatchEventImpl(Window.java:2750)
-	at java.awt.Component.dispatchEvent(Component.java:4713)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.awt.EventQueue$4.run(EventQueue.java:729)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
-	at org.GNOME.Accessibility.AtkWrapper$5.dispatchEvent(AtkWrapper.java:697)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:109)
-	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:184)
-	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:229)
-	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:227)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:227)
-	at java.awt.Dialog.show(Dialog.java:1084)
-	at java.awt.Component.show(Component.java:1673)
-	at java.awt.Component.setVisible(Component.java:1625)
-	at java.awt.Window.setVisible(Window.java:1014)
-	at java.awt.Dialog.setVisible(Dialog.java:1005)
-	at org.contikios.cooja.mspmote.MspCompileDialog.showDialog(MspCompileDialog.java:58)
-	at org.contikios.cooja.mspmote.AbstractMspMoteType.configureAndInit(AbstractMspMoteType.java:114)
-	at org.contikios.cooja.Cooja.doCreateMoteType(Cooja.java:2177)
-	at org.contikios.cooja.Cooja.doCreateMoteType(Cooja.java:2156)
-	at org.contikios.cooja.Cooja$GUIEventHandler.actionPerformed(Cooja.java:2937)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
-	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
-	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
-	at java.awt.Component.processMouseEvent(Component.java:6535)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6300)
-	at java.awt.Container.processEvent(Container.java:2236)
-	at java.awt.Component.dispatchEventImpl(Component.java:4891)
-	at java.awt.Container.dispatchEventImpl(Container.java:2294)
-	at java.awt.Component.dispatchEvent(Component.java:4713)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
-	at java.awt.Container.dispatchEventImpl(Container.java:2280)
-	at java.awt.Window.dispatchEventImpl(Window.java:2750)
-	at java.awt.Component.dispatchEvent(Component.java:4713)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.awt.EventQueue$4.run(EventQueue.java:729)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
-	at org.GNOME.Accessibility.AtkWrapper$5.dispatchEvent(AtkWrapper.java:697)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-Caused by: org.contikios.cooja.MoteType$MoteTypeCreationException: 
-	at org.contikios.cooja.dialogs.CompileContiki$3.run(CompileContiki.java:218)
-	at java.lang.Thread.run(Thread.java:745)
-[10:53:06 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:53:43 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:53:44 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:53:56 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:53:56 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[10:53:57 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:54:07 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[10:54:09 - Thread-25] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460699649135
-[10:54:10 - Thread-25] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460699650505	Duration: 1370 ms	Simulated time 4997 ms	Ratio 3.6474452554744525
-[10:58:51 - Thread-26] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:58:51 - Thread-26] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:58:51 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:11: error: ‘all_lpm’ undeclared (first use in this function)
-[10:58:51 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:20: error: ‘all_transmit’ undeclared (first use in this function)
-[10:58:51 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:34: error: ‘all_listen’ undeclared (first use in this function)
-[10:58:51 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:46: error: ‘cpu’ undeclared (first use in this function)
-[10:58:51 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:51: error: ‘lpm’ undeclared (first use in this function)
-[10:58:51 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:56: error: ‘transmit’ undeclared (first use in this function)
-[10:58:51 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:66: error: ‘listen’ undeclared (first use in this function)
-[10:58:51 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'z1-mote-energy-mW.co' failed
-[10:58:51 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-mote-energy-mW.co] Error 1
-[10:58:51 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[10:58:51 - Thread-26] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[10:58:54 - Thread-26] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[10:58:54 - Thread-26] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[10:58:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:11: error: ‘all_lpm’ undeclared (first use in this function)
-[10:58:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:20: error: ‘all_transmit’ undeclared (first use in this function)
-[10:58:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:34: error: ‘all_listen’ undeclared (first use in this function)
-[10:58:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:46: error: ‘cpu’ undeclared (first use in this function)
-[10:58:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:51: error: ‘lpm’ undeclared (first use in this function)
-[10:58:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:56: error: ‘transmit’ undeclared (first use in this function)
-[10:58:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> z1-mote-energy-mW.c:58:66: error: ‘listen’ undeclared (first use in this function)
-[10:58:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-mote-energy-mW.co] Error 1
-[10:58:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:260: recipe for target 'z1-mote-energy-mW.co' failed
-[10:58:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[10:58:55 - Thread-26] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[11:01:57 - Thread-26] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[11:01:57 - Thread-26] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[11:01:58 - Thread-26] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[11:01:58 - Thread-26] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[11:01:59 - Thread-29] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460700119651
-[11:02:00 - Thread-29] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460700120768	Duration: 1117 ms	Simulated time 3851 ms	Ratio 3.44762757385855
-[11:05:04 - Thread-30] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460700304566
-[11:05:10 - Thread-30] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460700310292	Duration: 5726 ms	Simulated time 18530 ms	Ratio 3.2361159622773314
-[11:05:10 - Thread-31] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[11:05:10 - Thread-31] [CompileContiki.java:140] [INFO] - > make z1-mote-energy-mW.z1 TARGET=z1 
-[11:05:10 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/z1-mote-energy-mW.z1
-[11:05:11 - Thread-31] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[11:05:11 - Thread-32] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460700311249
-[11:05:14 - Thread-32] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460700314259	Duration: 3010 ms	Simulated time 10434 ms	Ratio 3.4664451827242524
-[11:05:25 - Thread-33] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460700325073
-[11:05:28 - Thread-33] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460700328440	Duration: 3367 ms	Simulated time 22132 ms	Ratio 6.573210573210573
+[15:16:13 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[15:16:13 - AWT-EventQueue-1] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[15:16:13 - AWT-EventQueue-1] [Cooja.java:2885] [INFO] - External tools user settings: /home/superuser/.cooja.user.properties
+[15:16:23 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[15:16:23 - AWT-EventQueue-1] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[15:16:47 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make sky-websense.z1 TARGET=z1 
+[15:16:52 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:16:52 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:16:52 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make sky-websense.z1 TARGET=z1 
+[15:17:11 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:17:18 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[15:17:44 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:17:44 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:17:45 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[15:17:54 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[15:18:10 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:18:11 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make sky-websense.z1 TARGET=z1 
+[15:18:22 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:18:32 - AWT-EventQueue-1] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[15:18:39 - Thread-5] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[15:18:39 - Thread-6] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[15:18:43 - Thread-7] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460715523253
+[15:19:31 - Thread-7] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460715571536	Duration: 48283 ms	Simulated time 2387129 ms	Ratio 49.44036203218524
+[15:19:35 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:19:35 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:19:35 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:19:35 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:19:35 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:19:35 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:19:35 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:19:35 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:19:35 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:19:35 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:20:48 - Thread-5] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[15:20:48 - Thread-6] [SerialSocketServer.java:497] [INFO] - Socket closed
+[15:20:48 - Thread-6] [SerialSocketServer.java:501] [INFO] - End of Stream
+[15:20:48 - Thread-8] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[15:20:48 - Thread-8] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[15:20:49 - Thread-8] [CompileContiki.java:140] [INFO] - > make sky-websense.z1 TARGET=z1 
+[15:20:49 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[15:20:49 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:20:49 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:20:49 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:20:49 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:20:50 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:20:50 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:20:50 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:20:50 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:20:50 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:20:50 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:20:50 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/sky-websense.z1
+[15:20:50 - Thread-8] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[15:20:50 - Thread-8] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[15:20:54 - Thread-9] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[15:20:54 - Thread-10] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[15:20:56 - Thread-11] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460715656782
+[15:29:34 - Thread-11] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460716174083	Duration: 517301 ms	Simulated time 731494 ms	Ratio 1.4140587394959607
+[15:33:57 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:33:57 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:33:58 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:33:58 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:34:05 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:34:05 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:34:05 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:34:05 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:36:25 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:36:25 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:36:26 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
+[15:36:41 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:36:41 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:36:41 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:36:41 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:36:42 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:36:42 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:36:42 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:36:42 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:36:42 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:36:43 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:46:42 - Thread-9] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[15:46:42 - Thread-10] [SerialSocketServer.java:497] [INFO] - Socket closed
+[15:46:42 - Thread-10] [SerialSocketServer.java:501] [INFO] - End of Stream
+[15:46:43 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[15:49:15 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:49:15 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:49:16 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[15:49:28 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[15:49:39 - AWT-EventQueue-1] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[15:50:15 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:50:15 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:50:16 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
+[15:52:17 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
+[15:52:19 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
+[15:54:52 - Thread-18] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[15:54:53 - Thread-20] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[15:54:53 - Thread-20] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[15:54:53 - Thread-20] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
+[15:54:54 - Thread-20] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        z1-http-emch.c
+[15:54:54 - Thread-20] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.c: In function ‘process_thread_web_sense_process’:
+[15:54:54 - Thread-20] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.c:90:3: error: ‘sensors_pos’ undeclared (first use in this function)
+[15:54:54 - Thread-20] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.c:90:3: note: each undeclared identifier is reported only once for each function it appears in
+[15:54:54 - Thread-20] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.c: At top level:
+[15:54:54 - Thread-20] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.c:64:13: warning: ‘buf’ defined but not used [-Wunused-variable]
+[15:54:54 - Thread-20] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.c:65:12: warning: ‘blen’ defined but not used [-Wunused-variable]
+[15:54:54 - Thread-20] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../../../Makefile.include:260: recipe for target 'z1-http-emch.co' failed
+[15:54:54 - Thread-20] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[15:54:54 - Thread-20] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-http-emch.co] Error 1
+[15:54:54 - Thread-20] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[15:56:08 - Thread-20] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[15:56:08 - Thread-20] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[15:56:09 - Thread-20] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
+[15:56:09 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[15:56:09 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
+[15:56:10 - Thread-20] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[15:56:10 - Thread-20] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[15:56:19 - Thread-23] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460717779777
+[15:56:22 - Thread-23] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460717782120	Duration: 2343 ms	Simulated time 195452 ms	Ratio 83.41954758856167
+[15:57:44 - Thread-22] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[15:57:44 - Thread-24] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[15:57:44 - Thread-24] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[15:57:44 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
+[15:57:45 - Thread-24] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[15:57:45 - Thread-24] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
+[15:57:45 - Thread-24] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[15:57:45 - Thread-24] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[15:57:47 - Thread-26] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460717867764
+[15:57:49 - Thread-26] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460717869964	Duration: 2200 ms	Simulated time 183812 ms	Ratio 83.55090909090909
+[15:57:59 - Thread-25] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[15:57:59 - Thread-27] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[15:58:02 - Thread-28] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460717882721
+[15:58:55 - Thread-28] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460717935160	Duration: 52439 ms	Simulated time 4602310 ms	Ratio 87.76502221628941
+[15:58:58 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
+[15:58:58 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
+[15:58:58 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
+[15:58:58 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
+[15:59:56 - Thread-27] [SerialSocketServer.java:497] [INFO] - Socket closed
+[15:59:56 - Thread-27] [SerialSocketServer.java:501] [INFO] - End of Stream
+[15:59:56 - Thread-25] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[15:59:57 - Thread-29] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[15:59:57 - Thread-29] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[15:59:57 - Thread-29] [CompileContiki.java:140] [INFO] - > make z1-http-emch.z1 TARGET=z1 
+[15:59:57 - Thread-29] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[15:59:58 - Thread-29] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
+[15:59:58 - Thread-29] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
+[15:59:58 - Thread-29] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
+[15:59:58 - Thread-29] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
+[15:59:58 - Thread-29] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.z1
+[15:59:58 - Thread-29] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[15:59:58 - Thread-29] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[15:59:59 - Thread-31] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1460717999604
+[16:00:03 - Thread-30] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[16:00:03 - Thread-32] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[16:01:12 - Thread-31] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1460718072138	Duration: 72534 ms	Simulated time 493611 ms	Ratio 6.805236165108776
+[16:03:00 - Thread-32] [SerialSocketServer.java:501] [INFO] - End of Stream

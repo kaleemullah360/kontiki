@@ -43,6 +43,7 @@
 #include "powertrace.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 PROCESS(powertrace_process, "Periodic power output");
 /*---------------------------------------------------------------------------*/
@@ -54,7 +55,6 @@ powertrace_print(char *str)
   uint32_t cpu, lpm, transmit, listen;
 
   energest_flush();
-
   all_cpu = energest_type_time(ENERGEST_TYPE_CPU);
   all_lpm = energest_type_time(ENERGEST_TYPE_LPM);
   all_transmit = energest_type_time(ENERGEST_TYPE_TRANSMIT);
@@ -72,7 +72,7 @@ powertrace_print(char *str)
   last_transmit = energest_type_time(ENERGEST_TYPE_TRANSMIT);
   last_listen = energest_type_time(ENERGEST_TYPE_LISTEN);
 
-  printf("%lu %lu %lu %lu %lu %lu %lu %lu\n",
+  printf("%lu,%lu,%lu,%lu,%lu,%lu,%lu,%lu\n",
 	 all_cpu, all_lpm, all_transmit, all_listen, cpu, lpm, transmit, listen);
 }
 /*---------------------------------------------------------------------------*/

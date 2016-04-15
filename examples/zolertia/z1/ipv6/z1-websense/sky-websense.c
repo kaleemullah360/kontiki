@@ -39,94 +39,16 @@
 
 #include "contiki.h"
 #include "httpd-simple.h"
+#include "dev/sht11/sht11-sensor.h"
+#include "dev/light-sensor.h"
+#include "dev/leds.h"
 #include <stdio.h>
-// Set the Radio performance
-#include <cc2420.h>
-uint8_t radioChannel = 25;  // default channel
-uint8_t radioChannel_tx_power = 31; // default power
-//--- Libs for e-MCH-APp ----
 
-#include "dev/battery-sensor.h"
-#include "dev/i2cmaster.h"
-#include "dev/tmp102.h"
-
-//---End Libs for e-MCH-APp ---
-
-//--- Variable Declaration for e-MCH-APp ----
-
- static int32_t mid = 0;  // MessageID
- static int32_t upt = 0;  // UpTime
- static int32_t clk = 0;  // ClockTime
-
-  // temperature function variables 
- static int16_t tempint;
- static uint16_t tempfrac;
- static int16_t raw;
- static uint16_t absraw;
- static int16_t sign;
- static char minus = ' ';
-
-  // Battery function variables 
- static uint16_t bat_v = 0;
- static float bat_mv = 0; 
-
-//---End Variable Declaration e-MCH-APp ---
-
-//--- Function Deffinitions for e-MCH-APp ----
-
-// function to return floor of float value
- float floor(float x){
-  if(x >= 0.0f){ // check the value of x is +eve
-    return (float)((int) x);
-  }else{ // if value of x is -eve
-    // x = -2.2
-    // -3.2 = (-2.2) - 1
-    // -3  = (int)(-3.2)
-    //return -3.0 = (float)(-3)
-    return(float) ((int) x - 1);   
-  } //end if-else
-
-} //end floor function
-
-static void get_sensor_time(){
-  upt = clock_seconds();  // UpTime
-  clk = clock_time(); // ClockTime
-}
-
-static void get_sensor_temperature(){
-  tmp102_init();  // Init Sensor
-  sign = 1;
-  raw = tmp102_read_temp_x100(); // tmp102_read_temp_raw();
-  absraw = raw;
-    if(raw < 0) {   // Perform 2C's if sensor returned negative data
-      absraw = (raw ^ 0xFFFF) + 1;
-    sign = -1;
-  }
-  tempint = (absraw >> 8) * sign;
-    tempfrac = ((absraw >> 4) % 16) * 625;  // Info in 1/10000 of degree
-    minus = ((tempint == 0) & (sign == -1)) ? '-' : ' ';
-    //printf("Temp = %c%d.%04d\n", minus, tempint, tempfrac);
-  }
-
-  static void get_sensor_battery(){
-  // Activate Temperature and Battery Sensors  
-    SENSORS_ACTIVATE(battery_sensor);
-  // prints as fast as possible (with no delay) the battery level.
-    bat_v = battery_sensor.value(0);
-  // When working with the ADC you need to convert the ADC integers in milliVolts. 
-  // This is done with the following formula:
-    bat_mv = (bat_v * 2.500 * 2) / 4096;
-  //printf("Battery Analog Data Value: %i , milli Volt= (%ld.%03d mV)\n", bat_v, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
-  }
-
-//---End Function Deffinitions e-MCH-APp ---
 PROCESS(web_sense_process, "Sense Web Demo");
 PROCESS(webserver_nogui_process, "Web server");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
   PROCESS_BEGIN();
-  cc2420_set_channel(radioChannel); // channel 26
-  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
 
   httpd_init();
 
@@ -139,7 +61,26 @@ PROCESS_THREAD(webserver_nogui_process, ev, data)
 }
 AUTOSTART_PROCESSES(&web_sense_process,&webserver_nogui_process);
 
+#define HISTORY 16
+static int temperature[HISTORY];
+static int light1[HISTORY];
+static int sensors_pos;
 
+/*---------------------------------------------------------------------------*/
+static int
+get_light(void)
+{
+  return 10 * light_sensor.value(LIGHT_SENSOR_PHOTOSYNTHETIC) / 7;
+}
+/*---------------------------------------------------------------------------*/
+static int
+get_temp(void)
+{
+  return ((sht11_sensor.value(SHT11_SENSOR_TEMP) / 10) - 396) / 10;
+}
+/*---------------------------------------------------------------------------*/
+static const char *TOP = "<html><head><title>Contiki Web Sense</title></head><body>\n";
+static const char *BOTTOM = "</body></html>\n";
 /*---------------------------------------------------------------------------*/
 /* Only one single request at time */
 static char buf[256];
@@ -147,26 +88,63 @@ static int blen;
 #define ADD(...) do {                                                   \
     blen += snprintf(&buf[blen], sizeof(buf) - blen, __VA_ARGS__);      \
   } while(0)
-
+static void
+generate_chart(const char *title, const char *unit, int min, int max, int *values)
+{
+  int i;
+  blen = 0;
+  ADD("<h1>%s</h1>\n"
+      "<img src=\"http://chart.apis.google.com/chart?"
+      "cht=lc&chs=400x300&chxt=x,x,y,y&chxp=1,50|3,50&"
+      "chxr=2,%d,%d|0,0,30&chds=%d,%d&chxl=1:|Time|3:|%s&chd=t:",
+      title, min, max, min, max, unit);
+  for(i = 0; i < HISTORY; i++) {
+    ADD("%s%d", i > 0 ? "," : "", values[(sensors_pos + i) % HISTORY]);
+  }
+  ADD("\">");
+}
 static
 PT_THREAD(send_values(struct httpd_state *s))
 {
-//----- Get Data Instance -------
-++mid;  // MessageID
-get_sensor_temperature();
-get_sensor_time();
-get_sensor_battery();
-//----- End Get Data -------
-PSOCK_BEGIN(&s->sout);
-blen = 0;
+  PSOCK_BEGIN(&s->sout);
 
-ADD(" ");
+  SEND_STRING(&s->sout, TOP);
 
-ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
-ADD(" ");
+  if(strncmp(s->filename, "/index", 6) == 0 ||
+     s->filename[1] == '\0') {
+    /* Default page: show latest sensor values as text (does not
+       require Internet connection to Google for charts). */
+    blen = 0;
+    ADD("<h1>Current readings</h1>\n"
+        "Light: %u<br>"
+        "Temperature: %u&deg; C",
+        get_light(), get_temp());
+    SEND_STRING(&s->sout, buf);
 
-SEND_STRING(&s->sout, buf);
-PSOCK_END(&s->sout);
+  } else if(s->filename[1] == '0') {
+    /* Turn off leds */
+    leds_off(LEDS_ALL);
+    SEND_STRING(&s->sout, "Turned off leds!");
+
+  } else if(s->filename[1] == '1') {
+    /* Turn on leds */
+    leds_on(LEDS_ALL);
+    SEND_STRING(&s->sout, "Turned on leds!");
+
+  } else {
+    if(s->filename[1] != 't') {
+      generate_chart("Light", "Light", 0, 500, light1);
+      SEND_STRING(&s->sout, buf);
+    }
+    if(s->filename[1] != 'l') {
+      generate_chart("Temperature", "Celsius", 15, 50, temperature);
+      SEND_STRING(&s->sout, buf);
+    }
+  }
+
+  SEND_STRING(&s->sout, BOTTOM);
+
+  PSOCK_END(&s->sout);
 }
 /*---------------------------------------------------------------------------*/
 httpd_simple_script_t
@@ -180,14 +158,19 @@ PROCESS_THREAD(web_sense_process, ev, data)
   static struct etimer timer;
   PROCESS_BEGIN();
 
+  sensors_pos = 0;
 
   etimer_set(&timer, CLOCK_SECOND * 2);
-
+  SENSORS_ACTIVATE(light_sensor);
+  SENSORS_ACTIVATE(sht11_sensor);
 
   while(1) {
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
     etimer_reset(&timer);
 
+    light1[sensors_pos] = get_light();;
+    temperature[sensors_pos] = get_temp();
+    sensors_pos = (sensors_pos + 1) % HISTORY;
   }
 
   PROCESS_END();

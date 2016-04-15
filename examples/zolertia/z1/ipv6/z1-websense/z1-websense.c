@@ -46,6 +46,10 @@
 #include "cc2420.h"
 #include "dev/leds.h"
 #include <stdio.h>
+// Set the Radio performance
+#include <cc2420.h>
+uint8_t radioChannel = 25;  // default channel
+uint8_t radioChannel_tx_power = 31; // default power
 /*---------------------------------------------------------------------------*/
 float
 floor(float x)
@@ -167,8 +171,9 @@ PROCESS_THREAD(web_sense_process, ev, data)
 {
   static struct etimer timer;
   PROCESS_BEGIN();
-  cc2420_set_txpower(31);
 
+    cc2420_set_channel(radioChannel); // channel 26
+  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
   sensors_pos = 0;
   process_start(&webserver_nogui_process, NULL);
 
