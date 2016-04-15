@@ -109,7 +109,7 @@ static uint8_t state;
 #define DEFAULT_EVENT_TYPE_ID       "status"
 #define DEFAULT_SUBSCRIBE_CMD_TYPE  "+"
 #define DEFAULT_BROKER_PORT         1883
-#define DEFAULT_PUBLISH_INTERVAL    (15 * CLOCK_SECOND)
+#define DEFAULT_PUBLISH_INTERVAL    (3 * CLOCK_SECOND)
 #define DEFAULT_KEEP_ALIVE_TIMER    60
 #define DEFAULT_RSSI_MEAS_INTERVAL  (CLOCK_SECOND * 30)
 /*---------------------------------------------------------------------------*/

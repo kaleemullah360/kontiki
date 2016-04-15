@@ -2315,7 +2315,7 @@ LOAD /opt/msp430-47/bin/../lib/gcc/msp430/4.7.0/mcpu-430x/mmpy-16/msr20/mc20/lib
  .any.text.handle_probing_timer
                 0x0000f32c      0x108 contiki-z1.a(rpl-timers.o)
 
-.rodata         0x0000f434      0x64b
+.rodata         0x0000f434      0x643
                 0x0000f434                . = ALIGN (0x2)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.mqtt_event
@@ -2329,92 +2329,92 @@ LOAD /opt/msp430-47/bin/../lib/gcc/msp430/4.7.0/mcpu-430x/mmpy-16/msr20/mc20/lib
  .rodata.autostart_processes
                 0x0000f67a        0x4 mqtt-demo.co
                 0x0000f67a                autostart_processes
- .rodata        0x0000f67e      0x115 obj_z1/contiki-z1-main.o
+ .rodata        0x0000f67e      0x10b obj_z1/contiki-z1-main.o
  .rodata.process_thread_mqtt_process
-                0x0000f793        0x7 contiki-z1.a(mqtt.o)
- .rodata        0x0000f79a        0xd contiki-z1.a(mqtt.o)
- *fill*         0x0000f7a7        0x1 00
+                0x0000f789        0x7 contiki-z1.a(mqtt.o)
+ .rodata        0x0000f790        0xd contiki-z1.a(mqtt.o)
+ *fill*         0x0000f79d        0x3 00
  .rodata.get_value
-                0x0000f7a8       0x44 contiki-z1.a(cc2420.o)
+                0x0000f7a0       0x44 contiki-z1.a(cc2420.o)
  .rodata.set_value
-                0x0000f7ec       0x20 contiki-z1.a(cc2420.o)
+                0x0000f7e4       0x20 contiki-z1.a(cc2420.o)
  .rodata.cc2420_driver
-                0x0000f80c       0x38 contiki-z1.a(cc2420.o)
-                0x0000f80c                cc2420_driver
- .rodata        0x0000f844        0xe contiki-z1.a(cc2420.o)
+                0x0000f804       0x38 contiki-z1.a(cc2420.o)
+                0x0000f804                cc2420_driver
+ .rodata        0x0000f83c        0xe contiki-z1.a(cc2420.o)
  .rodata.output_power
-                0x0000f852       0x10 contiki-z1.a(cc2420.o)
- .rodata        0x0000f862        0x8 contiki-z1.a(sensors.o)
- .rodata        0x0000f86a        0x7 contiki-z1.a(button-sensor.o)
- *fill*         0x0000f871        0x1 00
+                0x0000f84a       0x10 contiki-z1.a(cc2420.o)
+ .rodata        0x0000f85a        0x8 contiki-z1.a(sensors.o)
+ .rodata        0x0000f862        0x7 contiki-z1.a(button-sensor.o)
+ *fill*         0x0000f869        0x1 00
  .rodata.button_sensor
-                0x0000f872        0xe contiki-z1.a(button-sensor.o)
-                0x0000f872                button_sensor
- .rodata        0x0000f880        0xd contiki-z1.a(sht25.o)
- *fill*         0x0000f88d        0x1 00
- .rodata.sht25  0x0000f88e        0xe contiki-z1.a(sht25.o)
-                0x0000f88e                sht25
- .rodata        0x0000f89c       0x16 contiki-z1.a(adxl345.o)
- .rodata        0x0000f8b2        0xf contiki-z1.a(ctimer.o)
- .rodata        0x0000f8c1        0xc contiki-z1.a(etimer.o)
- *fill*         0x0000f8cd        0x3 00
+                0x0000f86a        0xe contiki-z1.a(button-sensor.o)
+                0x0000f86a                button_sensor
+ .rodata        0x0000f878        0xd contiki-z1.a(sht25.o)
+ *fill*         0x0000f885        0x1 00
+ .rodata.sht25  0x0000f886        0xe contiki-z1.a(sht25.o)
+                0x0000f886                sht25
+ .rodata        0x0000f894       0x16 contiki-z1.a(adxl345.o)
+ .rodata        0x0000f8aa        0xf contiki-z1.a(ctimer.o)
+ .rodata        0x0000f8b9        0xc contiki-z1.a(etimer.o)
+ *fill*         0x0000f8c5        0x3 00
  .rodata.uip_process
-                0x0000f8d0       0x40 contiki-z1.a(uip6.o)
- .rodata        0x0000f910        0xb contiki-z1.a(sicslowpan.o)
- *fill*         0x0000f91b        0x1 00
+                0x0000f8c8       0x40 contiki-z1.a(uip6.o)
+ .rodata        0x0000f908        0xb contiki-z1.a(sicslowpan.o)
+ *fill*         0x0000f913        0x1 00
  .rodata.sicslowpan_driver
-                0x0000f91c        0xa contiki-z1.a(sicslowpan.o)
-                0x0000f91c                sicslowpan_driver
+                0x0000f914        0xa contiki-z1.a(sicslowpan.o)
+                0x0000f914                sicslowpan_driver
  .rodata.llprefix
-                0x0000f926        0x2 contiki-z1.a(sicslowpan.o)
-                0x0000f926                llprefix
+                0x0000f91e        0x2 contiki-z1.a(sicslowpan.o)
+                0x0000f91e                llprefix
  .rodata.unc_mxconf
-                0x0000f928        0x4 contiki-z1.a(sicslowpan.o)
-                0x0000f928                unc_mxconf
+                0x0000f920        0x4 contiki-z1.a(sicslowpan.o)
+                0x0000f920                unc_mxconf
  .rodata.unc_ctxconf
-                0x0000f92c        0x4 contiki-z1.a(sicslowpan.o)
-                0x0000f92c                unc_ctxconf
+                0x0000f924        0x4 contiki-z1.a(sicslowpan.o)
+                0x0000f924                unc_ctxconf
  .rodata.unc_llconf
-                0x0000f930        0x4 contiki-z1.a(sicslowpan.o)
-                0x0000f930                unc_llconf
+                0x0000f928        0x4 contiki-z1.a(sicslowpan.o)
+                0x0000f928                unc_llconf
  .rodata.ttl_values
-                0x0000f934        0x4 contiki-z1.a(sicslowpan.o)
+                0x0000f92c        0x4 contiki-z1.a(sicslowpan.o)
  .rodata.newdata
-                0x0000f938       0x32 contiki-z1.a(tcp-socket.o)
+                0x0000f930       0x32 contiki-z1.a(tcp-socket.o)
  .rodata.process_thread_tcp_socket_process
-                0x0000f96a       0x54 contiki-z1.a(tcp-socket.o)
- .rodata        0x0000f9be       0x13 contiki-z1.a(tcp-socket.o)
- .rodata        0x0000f9d1        0xd contiki-z1.a(tcpip.o)
+                0x0000f962       0x54 contiki-z1.a(tcp-socket.o)
+ .rodata        0x0000f9b6       0x13 contiki-z1.a(tcp-socket.o)
+ .rodata        0x0000f9c9        0xd contiki-z1.a(tcpip.o)
  .rodata.uip_debug_ipaddr_print
-                0x0000f9de       0x28 contiki-z1.a(uip-debug.o)
+                0x0000f9d6       0x28 contiki-z1.a(uip-debug.o)
  .rodata.linkaddr_null
-                0x0000fa06        0x8 contiki-z1.a(linkaddr.o)
-                0x0000fa06                linkaddr_null
+                0x0000f9fe        0x8 contiki-z1.a(linkaddr.o)
+                0x0000f9fe                linkaddr_null
  .rodata.framer_802154
-                0x0000fa0e        0xc contiki-z1.a(framer-802154.o)
-                0x0000fa0e                framer_802154
- .rodata        0x0000fa1a        0x5 contiki-z1.a(csma.o)
- *fill*         0x0000fa1f        0x1 00
+                0x0000fa06        0xc contiki-z1.a(framer-802154.o)
+                0x0000fa06                framer_802154
+ .rodata        0x0000fa12        0x5 contiki-z1.a(csma.o)
+ *fill*         0x0000fa17        0x1 00
  .rodata.csma_driver
-                0x0000fa20       0x1a contiki-z1.a(csma.o)
-                0x0000fa20                csma_driver
+                0x0000fa18       0x1a contiki-z1.a(csma.o)
+                0x0000fa18                csma_driver
  .rodata.CSWTCH.16
-                0x0000fa3a        0x2 contiki-z1.a(frame802154.o)
- .rodata        0x0000fa3c        0x8 contiki-z1.a(nullrdc.o)
+                0x0000fa32        0x2 contiki-z1.a(frame802154.o)
+ .rodata        0x0000fa34        0x8 contiki-z1.a(nullrdc.o)
  .rodata.nullrdc_driver
-                0x0000fa44       0x1e contiki-z1.a(nullrdc.o)
-                0x0000fa44                nullrdc_driver
- .rodata        0x0000fa62        0x8 contiki-z1.a(nullsec.o)
+                0x0000fa3c       0x1e contiki-z1.a(nullrdc.o)
+                0x0000fa3c                nullrdc_driver
+ .rodata        0x0000fa5a        0x8 contiki-z1.a(nullsec.o)
  .rodata.nullsec_driver
-                0x0000fa6a        0xe contiki-z1.a(nullsec.o)
-                0x0000fa6a                nullsec_driver
+                0x0000fa62        0xe contiki-z1.a(nullsec.o)
+                0x0000fa62                nullsec_driver
  .rodata.vuprintf
-                0x0000fa78        0x7 /opt/msp430-47/bin/../lib/gcc/msp430/4.7.0/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(vuprintf.o)
+                0x0000fa70        0x7 /opt/msp430-47/bin/../lib/gcc/msp430/4.7.0/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(vuprintf.o)
  *(.near.rodata .near.rodata.*)
-                0x0000fa80                . = ALIGN (0x2)
-                0x0000fa80                _etext = .
+                0x0000fa78                . = ALIGN (0x2)
+                0x0000fa78                _etext = .
 
-.data           0x00001100      0x14a load address 0x0000fa80
+.data           0x00001100      0x14a load address 0x0000fa78
                 0x00001100                . = ALIGN (0x2)
                 0x00001100                __data_start = .
  *(.data .data.* .gnu.linkonce.d.*)
@@ -2514,10 +2514,10 @@ LOAD /opt/msp430-47/bin/../lib/gcc/msp430/4.7.0/mcpu-430x/mmpy-16/msr20/mc20/lib
  *(.near.data .near.data.*)
                 0x0000124a                . = ALIGN (0x2)
                 0x0000124a                _edata = .
-                0x0000fa80                __data_load_start = LOADADDR (.data)
+                0x0000fa78                __data_load_start = LOADADDR (.data)
                 0x0000014a                __data_size = SIZEOF (.data)
 
-.bss            0x0000124a     0x19ea load address 0x0000fbca
+.bss            0x0000124a     0x19ea load address 0x0000fbc2
                 0x0000124a                __bss_start = .
  *(.bss .bss.*)
  .bss.def_rt_rssi
@@ -2911,7 +2911,7 @@ LOAD /opt/msp430-47/bin/../lib/gcc/msp430/4.7.0/mcpu-430x/mmpy-16/msr20/mc20/lib
                 0x00002c34                __bss_end = .
                 0x000019ea                __bss_size = SIZEOF (.bss)
 
-.noinit         0x00002c34        0x2 load address 0x0000fbca
+.noinit         0x00002c34        0x2 load address 0x0000fbc2
                 0x00002c34                . = ALIGN (0x2)
                 0x00002c34                __noinit_start = .
  *(.noinit .noinit.*)
@@ -3418,8 +3418,8 @@ LOAD /opt/msp430-47/bin/../lib/gcc/msp430/4.7.0/mcpu-430x/mmpy-16/msr20/mc20/lib
  .debug_ranges  0x00000108       0x10 /opt/msp430-47/bin/../lib/gcc/msp430/4.7.0/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(memset.o)
  .debug_ranges  0x00000118       0x10 /opt/msp430-47/bin/../lib/gcc/msp430/4.7.0/../../../../msp430/lib/mcpu-430x/mmpy-16/msr20/mc20/libc.a(strncasecmp.o)
                 0x00003100                PROVIDE (__stack, (ORIGIN (ram) + 0x2000))
-                0x0000fa80                __data_start_rom = _etext
-                0x0000fbca                __data_end_rom = (_etext + SIZEOF (.data))
+                0x0000fa78                __data_start_rom = _etext
+                0x0000fbc2                __data_end_rom = (_etext + SIZEOF (.data))
 OUTPUT(mqtt-demo.z1 elf32-msp430)
 
 .gnu.attributes

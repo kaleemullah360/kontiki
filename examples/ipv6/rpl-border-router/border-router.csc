@@ -22,9 +22,9 @@
       org.contikios.cooja.mspmote.Z1MoteType
       <identifier>z11</identifier>
       <description>Border-Router-Z1</description>
-      <source EXPORT="discard">[CONTIKI_DIR]/examples/ipv6/rpl-border-router/border-router.c</source>
-      <commands EXPORT="discard">make border-router.z1 TARGET=z1</commands>
-      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/ipv6/rpl-border-router/border-router.z1</firmware>
+      <source EXPORT="discard">[CONTIKI_DIR]/examples/ipv6/rpl-border-router/z1-border-router.c</source>
+      <commands EXPORT="discard">make z1-border-router.z1 TARGET=z1</commands>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/ipv6/rpl-border-router/z1-border-router.z1</firmware>
       <moteinterface>org.contikios.cooja.interfaces.Position</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>org.contikios.cooja.interfaces.IPAddress</moteinterface>

@@ -8,7 +8,7 @@
 // Set the Radio performance
 #include <cc2420.h>
 uint8_t radioChannel = 25;  // default channel
-uint8_t radioChannel_tx_power = 1; // default power
+uint8_t radioChannel_tx_power = 31; // default power
 
 #define DEBUG 0
 #if DEBUG

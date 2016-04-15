@@ -43,8 +43,7 @@ $(CONTIKI)/tools/tunslip6:	$(CONTIKI)/tools/tunslip6.c
 	(cd $(CONTIKI)/tools && $(MAKE) tunslip6)
 
 connect-router:	$(CONTIKI)/tools/tunslip6
-	sudo $(CONTIKI)/tools/tunslip6 -v4 $(PREFIX)
+	sudo $(CONTIKI)/tools/tunslip6 $(PREFIX)
 
 connect-router-cooja:	$(CONTIKI)/tools/tunslip6
-	sudo $(CONTIKI)/tools/tunslip6 -v4 -a 127.0.0.1 $(PREFIX)
-	 # sudo contiki/tools/tunslip6 -a localhost -p 60001 -t tun0 aaaa::1/64 -v4
+	sudo $(CONTIKI)/tools/tunslip6 -a 127.0.0.1 $(PREFIX)
