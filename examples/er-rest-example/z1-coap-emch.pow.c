@@ -6,7 +6,7 @@
 #include "rest-engine.h"
  
 // Powertracing
-#include "powertrace.h"
+#include "powertrace-z1.h"
 
 // Set the Radio performance
 #include <cc2420.h>

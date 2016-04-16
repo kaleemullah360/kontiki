@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013, Institute for Pervasive Computing, ETH Zurich
+ * Copyright (c) 2010, Swedish Institute of Computer Science.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -26,30 +26,31 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * This file is part of the Contiki operating system.
  */
 
 /**
  * \file
- *      Example resource
+ *         Light and temperatur sensor web demo
  * \author
- *      Matthias Kovatsch <kovatsch@inf.ethz.ch>
+ *         Niclas Finne    <nfi@sics.se>
+ *         Joakim Eriksson <joakime@sics.se>
+ *         Joel Hoglund    <joel@sics.se>
  */
 
 #include "contiki.h"
-
-#if PLATFORM_HAS_BATTERY
-
-#include <string.h>
-#include "rest-engine.h"
+#include "httpd-simple.h"
+#include <stdio.h>
 
 // Powertracing
 #include "powertrace-z1.h"
 char *powertrace_result();
 char *pow_str = "";
 
+// Set the Radio performance
+#include <cc2420.h>
+uint8_t radioChannel = 25;  // default channel
+uint8_t radioChannel_tx_power = 31; // default power
 //--- Libs for e-MCH-APp ----
-
 #include "dev/battery-sensor.h"
 #include "dev/i2cmaster.h"
 #include "dev/tmp102.h"
@@ -124,37 +125,79 @@ static void get_sensor_temperature(){
   }
 
 //---End Function Deffinitions e-MCH-APp ---
+PROCESS(web_sense_process, "e-MCH-APp");
+PROCESS(webserver_nogui_process, "e-MCH server");
+PROCESS_THREAD(webserver_nogui_process, ev, data)
+{
+  PROCESS_BEGIN();
+  cc2420_set_channel(radioChannel); // channel 26
+  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
 
- static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
+  httpd_init();
 
-/* A simple getter example. Returns the reading from light sensor with a simple etag */
- RESOURCE(res_z1_coap_emch,
- 	"title=\"Sensor\";rt=\"status\"",
- 	res_get_handler,
- 	NULL,
- 	NULL,
- 	NULL);
+  while(1) {
+    PROCESS_WAIT_EVENT_UNTIL(ev == tcpip_event);
+    httpd_appcall(data);
+  }
 
- static void
- res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
- {
- 	
- //----- Get Data Instance -------
+  PROCESS_END();
+}
+AUTOSTART_PROCESSES(&web_sense_process,&webserver_nogui_process);
+
+
+/*---------------------------------------------------------------------------*/
+/* Only one single request at time */
+static char buf[256];
+static int blen;
+#define ADD(...) do {                                                   \
+    blen += snprintf(&buf[blen], sizeof(buf) - blen, __VA_ARGS__);      \
+  } while(0)
+
+static
+PT_THREAD(send_values(struct httpd_state *s))
+{
+//----- Get Data Instance -------
 ++mid;  // MessageID
 get_sensor_temperature();
 get_sensor_time();
 get_sensor_battery();
+
 //----- End Get Data -------
-pow_str = powertrace_result();
+PSOCK_BEGIN(&s->sout);
+blen = 0;
 
- 	unsigned int accept = -1;
- 	REST.get_header_accept(request, &accept);
+ADD(" ");
 
- 	if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
- 		REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
- 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000),pow_str);
+ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), pow_str);
+ADD(" ");
 
- 		REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
- 	}
- }
-#endif /* PLATFORM_HAS_BATTERY */
+SEND_STRING(&s->sout, buf);
+PSOCK_END(&s->sout);
+}
+/*---------------------------------------------------------------------------*/
+httpd_simple_script_t
+httpd_simple_get_script(const char *name)
+{
+  return send_values;
+}
+/*---------------------------------------------------------------------------*/
+PROCESS_THREAD(web_sense_process, ev, data)
+{
+  static struct etimer timer;
+  PROCESS_BEGIN();
+  powertrace_start(CLOCK_SECOND * 1);
+
+
+  etimer_set(&timer, CLOCK_SECOND * 2);
+
+
+  while(1) {
+    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+    etimer_reset(&timer);
+    pow_str = powertrace_result();
+	//printf("%s\n", pow_str);
+  }
+  powertrace_stop();
+  PROCESS_END();
+}
+/*---------------------------------------------------------------------------*/

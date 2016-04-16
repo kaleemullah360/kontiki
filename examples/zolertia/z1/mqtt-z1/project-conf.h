@@ -44,7 +44,7 @@
 #define MQTT_DEMO_STATUS_LED      LEDS_GREEN
 #define MQTT_DEMO_PUBLISH_TRIGGER &button_right_sensor
 #define MQTT_Z1_BROKER_IP_ADDR "aaaa::1"
-#define BOARD_STRING "SuperUser"
+#define BOARD_STRING "SU"	//SuperUser
 #undef NETSTACK_CONF_RDC
 #define NETSTACK_CONF_RDC     nullrdc_driver
 /*---------------------------------------------------------------------------*/

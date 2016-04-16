@@ -69,7 +69,7 @@
 
 /* Increase rpl-border-router IP-buffer when using more than 64. */
 #undef REST_MAX_CHUNK_SIZE
-#define REST_MAX_CHUNK_SIZE            128 //<-- This // 48 //change payload size
+#define REST_MAX_CHUNK_SIZE            256 //<-- This // 48 //change payload size
 
 /* Estimate your header size, especially when using Proxy-Uri. */
 /*

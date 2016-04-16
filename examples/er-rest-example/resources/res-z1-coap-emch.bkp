@@ -42,12 +42,6 @@
 
 #include <string.h>
 #include "rest-engine.h"
-
-// Powertracing
-#include "powertrace-z1.h"
-char *powertrace_result();
-char *pow_str = "";
-
 //--- Libs for e-MCH-APp ----
 
 #include "dev/battery-sensor.h"
@@ -145,14 +139,13 @@ get_sensor_temperature();
 get_sensor_time();
 get_sensor_battery();
 //----- End Get Data -------
-pow_str = powertrace_result();
 
  	unsigned int accept = -1;
  	REST.get_header_accept(request, &accept);
 
  	if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
  		REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
- 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000),pow_str);
+ 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%c%d.%04d,%ld.%03d", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
 
  		REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
  	}

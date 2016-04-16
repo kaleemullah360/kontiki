@@ -1,4 +1,4 @@
-powertrace_src = powertrace.c
+powertrace_src = powertrace-z1.c
 ifndef POWERTRACE_TOOLS_MAKEFILE_INCLUDED
 POWERTRACE_TOOLS_MAKEFILE_INCLUDED = 1
 -include $(CONTIKI)/tools/powertrace/Makefile.powertrace
