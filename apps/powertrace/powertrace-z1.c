@@ -45,7 +45,7 @@
 #include <stdio.h>
 #include <string.h>
 
-char powertrace_results_str[78];
+char powertrace_results_str[80];
 
 struct powertrace_sniff_stats {
   struct powertrace_sniff_stats *next;
@@ -118,7 +118,7 @@ powertrace_result()
   all_radio = energest_type_time(ENERGEST_TYPE_LISTEN) +
     energest_type_time(ENERGEST_TYPE_TRANSMIT);
 
-  sprintf(powertrace_results_str, "%s %lu P %d.%d %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu (radio %d.%02d%% / %d.%02d%% tx %d.%02d%% / %d.%02d%% listen %d.%02d%% / %d.%02d%%)\n",
+  sprintf(powertrace_results_str, "%s %lu P %d.%d %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu (%d.%02d%% / %d.%02d%% tx %d.%02d%% / %d.%02d%% rx %d.%02d%% / %d.%02d%%)\n",
          str,
          clock_time(), linkaddr_node_addr.u8[0], linkaddr_node_addr.u8[1], seqno,
          all_cpu, all_lpm, all_transmit, all_listen, all_idle_transmit, all_idle_listen,

@@ -46,7 +46,7 @@
 // Set the Radio performance
 #include <cc2420.h>
 uint8_t radioChannel = 25;  // default channel
-uint8_t radioChannel_tx_power = 31; // default power
+uint8_t radioChannel_tx_power = 0; // default power
 
 #define UDP_CLIENT_PORT 8775
 #define UDP_SERVER_PORT 5688

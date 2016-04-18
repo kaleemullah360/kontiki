@@ -48,7 +48,7 @@
 // Powertracing
 #include "powertrace-z1.h"
 char *powertrace_result();
-char *pow_str = "";
+//char *pow_str = "";
 
 // Set the Radio performance
 #include <cc2420.h>
@@ -519,7 +519,7 @@ int remaining = APP_BUFFER_SIZE;
 
 buf_ptr = app_buffer;
 
-len = snprintf(buf_ptr, remaining,"%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), pow_str);
+len = snprintf(buf_ptr, remaining,"%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), powertrace_result());
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
@@ -722,7 +722,7 @@ state_machine(void)
   /* Main loop */
   while(1) {
 
-    pow_str = powertrace_result();
+    //pow_str = powertrace_result();
   //printf("%s\n", pow_str);
     PROCESS_YIELD();
 

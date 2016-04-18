@@ -44,12 +44,12 @@
 // Powertracing
 #include "powertrace-z1.h"
 char *powertrace_result();
-char *pow_str = "";
+//char *pow_str = "";
 
 // Set the Radio performance
 #include <cc2420.h>
 uint8_t radioChannel = 25;  // default channel
-uint8_t radioChannel_tx_power = 31; // default power
+uint8_t radioChannel_tx_power = 0; // default power
 //--- Libs for e-MCH-APp ----
 #include "dev/battery-sensor.h"
 #include "dev/i2cmaster.h"
@@ -168,7 +168,7 @@ blen = 0;
 
 ADD(" ");
 
-ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), pow_str);
+ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), powertrace_result());
 ADD(" ");
 
 SEND_STRING(&s->sout, buf);
@@ -194,7 +194,7 @@ PROCESS_THREAD(web_sense_process, ev, data)
   while(1) {
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
     etimer_reset(&timer);
-    pow_str = powertrace_result();
+  //pow_str = powertrace_result();
 	//printf("%s\n", pow_str);
   }
   powertrace_stop();
