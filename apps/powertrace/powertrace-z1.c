@@ -139,6 +139,7 @@ powertrace_result()
 
   for(s = list_head(stats_list); s != NULL; s = list_item_next(s)) {
 
+/*
 #if ! NETSTACK_CONF_WITH_IPV6
     printf("%s %lu SP %d.%d %lu %u %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu (channel %d radio %d.%02d%% / %d.%02d%%)\n",
            str, clock_time(), linkaddr_node_addr.u8[0], linkaddr_node_addr.u8[1], seqno,
@@ -186,6 +187,7 @@ powertrace_result()
                            s->last_output_rxtime + s->last_output_txtime))) /
                  radio));
 #endif
+*/
     s->last_input_txtime = s->input_txtime;
     s->last_input_rxtime = s->input_rxtime;
     s->last_output_txtime = s->output_txtime;

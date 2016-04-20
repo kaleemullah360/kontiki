@@ -53,7 +53,7 @@ char *powertrace_result();
 // Set the Radio performance
 #include <cc2420.h>
 uint8_t radioChannel = 25;  // default channel
-uint8_t radioChannel_tx_power = 31; // default power
+uint8_t radioChannel_tx_power = 0; // default power
 //--- Libs for e-MCH-APp ----
 
 #include "dev/battery-sensor.h"
@@ -197,7 +197,7 @@ static void get_sensor_temperature(){
 #define DEFAULT_EVENT_TYPE_ID       "status"
 #define DEFAULT_SUBSCRIBE_CMD_TYPE  "+"
 #define DEFAULT_BROKER_PORT         1883
-#define DEFAULT_PUBLISH_INTERVAL    (1 * CLOCK_SECOND)   // <----------- SET Publishing Interval
+#define DEFAULT_PUBLISH_INTERVAL    (10 * CLOCK_SECOND)   // <----------- SET Publishing Interval
 #define DEFAULT_KEEP_ALIVE_TIMER    60
 #define DEFAULT_RSSI_MEAS_INTERVAL  (CLOCK_SECOND * 30)
 /*---------------------------------------------------------------------------*/
