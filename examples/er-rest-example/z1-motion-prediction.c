@@ -10,7 +10,7 @@
 *    Track Motion eg. Walking, Standing, Falling, Running
 * this application uses Zolertia adxl345 sensor.
 * The sensor produced x, y, z axis values upone actuation.
-* then using these values a predict(); function output state of the sensor node.
+* then using these values a predictor(); function output state of the sensor node.
 */
 
 #include "contiki.h"
@@ -33,7 +33,7 @@ static char *STATUS_PT = NULL;
 static char last;
 
 // declare the pridiction function.
-void predict();
+void predictor();
 
 #define HISTORY 16
 
@@ -84,7 +84,7 @@ PROCESS_THREAD(my_hi_world_process, ev, data){
     sample[1][pos]=(int)y;
     sample[2][pos]=(int)z;
 
-      if(pos==(sampleNo-1))predict();
+      if(pos==(sampleNo-1))predictor();
       pos=(pos+1)%sampleNo;
             etimer_set(&et, ACCM_READ_INTERVAL);
             PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));
@@ -99,7 +99,7 @@ PROCESS_THREAD(my_hi_world_process, ev, data){
 }
 
 /*--- - Human Body Posture Detection and Prediction ---------------*/
-void predict(){
+void predictor(){
   double mag[sampleNo-1],sum=0,max=0,std=0,mean=0,tmp=0;
   double result1,result2,result3,result4;
   int i;

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011, Zolertia(TM) is a trademark by Advancare,SL
+ * Copyright (c) 2010, Swedish Institute of Computer Science.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,26 +27,25 @@
  * SUCH DAMAGE.
  *
  */
-/*---------------------------------------------------------------------------*/
+
 /**
  * \file
- *         Battery and Temperature IPv6 Demo for Zolertia Z1
+ *         Light and temperatur sensor web demo
  * \author
  *         Niclas Finne    <nfi@sics.se>
  *         Joakim Eriksson <joakime@sics.se>
  *         Joel Hoglund    <joel@sics.se>
- *         Enric M. Calvo  <ecalvo@zolertia.com>
  */
-/*---------------------------------------------------------------------------*/
+
 #include "contiki.h"
 #include "httpd-simple.h"
-#include "webserver-nogui.h"
+#include <stdio.h>
+
 // Set the Radio performance
 #include <cc2420.h>
 uint8_t radioChannel = 26;  // default channel
 uint8_t radioChannel_tx_power = 31; // default power
 //--- Libs for e-MCH-APp ----
-
 #include "dev/battery-sensor.h"
 #include "dev/i2cmaster.h"
 #include "dev/tmp102.h"
@@ -121,34 +120,50 @@ static void get_sensor_temperature(){
   }
 
 //---End Function Deffinitions e-MCH-APp ---
-/*---------------------------------------------------------------------------*/
+PROCESS(web_sense_process, "rTGS");
+PROCESS(webserver_nogui_process, "rTGS server");
+PROCESS_THREAD(webserver_nogui_process, ev, data)
+{
+  PROCESS_BEGIN();
+  cc2420_set_channel(radioChannel); // channel 26
+  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
 
-  PROCESS(web_sense_process, "rTGS");
-  AUTOSTART_PROCESSES(&web_sense_process);
+  httpd_init();
+
+  while(1) {
+    PROCESS_WAIT_EVENT_UNTIL(ev == tcpip_event);
+    httpd_appcall(data);
+  }
+
+  PROCESS_END();
+}
+AUTOSTART_PROCESSES(&web_sense_process,&webserver_nogui_process);
+
+
 /*---------------------------------------------------------------------------*/
 /* Only one single request at time */
-  static int sensors_pos;
-  static char buf[256];
-  static int blen;
-#define ADD(...) do { \
-  blen += snprintf(&buf[blen], sizeof(buf) - blen, __VA_ARGS__); \
-} while(0)
-/*---------------------------------------------------------------------------*/
+static char buf[256];
+static int blen;
+#define ADD(...) do {                                                   \
+    blen += snprintf(&buf[blen], sizeof(buf) - blen, __VA_ARGS__);      \
+  } while(0)
+
 static
 PT_THREAD(send_values(struct httpd_state *s))
 {
-   //----- Get Data Instance -------
+//----- Get Data Instance -------
 ++mid;  // MessageID
 get_sensor_temperature();
 get_sensor_time();
 get_sensor_battery();
+
 //----- End Get Data -------
 PSOCK_BEGIN(&s->sout);
 blen = 0;
 
 ADD(" ");
 
-ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
+ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), "1");
 ADD(" ");
 
 SEND_STRING(&s->sout, buf);
@@ -163,22 +178,14 @@ httpd_simple_get_script(const char *name)
 /*---------------------------------------------------------------------------*/
 PROCESS_THREAD(web_sense_process, ev, data)
 {
-  cc2420_set_channel(radioChannel); // channel 26
-  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
   static struct etimer timer;
   PROCESS_BEGIN();
-
-  sensors_pos = 0;
-  process_start(&webserver_nogui_process, NULL);
-
   etimer_set(&timer, CLOCK_SECOND * 2);
-
 
   while(1) {
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
     etimer_reset(&timer);
   }
-
   PROCESS_END();
 }
 /*---------------------------------------------------------------------------*/

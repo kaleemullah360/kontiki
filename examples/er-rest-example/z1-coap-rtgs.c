@@ -36,6 +36,7 @@ extern resource_t
 
 
 extern resource_t res_z1_coap_obs_rtgs;
+extern resource_t res_z1_coap_sens_rtgs;
 
 PROCESS(er_example_server, "RTGS Server");
 AUTOSTART_PROCESSES(&er_example_server);
@@ -64,7 +65,7 @@ PROCESS_THREAD(er_example_server, ev, data)
   rest_init_engine();
 
   rest_activate_resource(&res_z1_coap_obs_rtgs, "obs/mote");
-
+  rest_activate_resource(&res_z1_coap_sens_rtgs, "sens/mote");
   /* Define application-specific events here. */
   cc2420_set_channel(radioChannel); // channel 26
   cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
