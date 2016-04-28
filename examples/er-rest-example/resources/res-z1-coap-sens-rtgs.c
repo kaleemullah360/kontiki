@@ -123,16 +123,16 @@ static void get_sensor_temperature(){
 
 /* A simple getter example. Returns the reading from light sensor with a simple etag */
  RESOURCE(res_z1_coap_sens_rtgs,
- 	"title=\"Sensor\";rt=\"status\"",
- 	res_get_handler,
- 	NULL,
- 	NULL,
- 	NULL);
+  "title=\"Sensor\";rt=\"status\"",
+  res_get_handler,
+  NULL,
+  NULL,
+  NULL);
 
  static void
  res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
  {
- 	
+  
  //----- Get Data Instance -------
 ++mid;  // MessageID
 get_sensor_temperature();
@@ -140,14 +140,14 @@ get_sensor_time();
 get_sensor_battery();
 //----- End Get Data -------
 
- 	unsigned int accept = -1;
- 	REST.get_header_accept(request, &accept);
+  unsigned int accept = -1;
+  REST.get_header_accept(request, &accept);
 
- 	if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
- 		REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
- 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE,  "%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floorsens(bat_mv)) * 1000),status_str);
+  if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
+    REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
+    snprintf((char *)buffer, REST_MAX_CHUNK_SIZE,  "%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floorsens(bat_mv)) * 1000),status_str);
 
- 		REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
- 	}
+    REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
+  }
  }
 #endif /* PLATFORM_HAS_BATTERY */

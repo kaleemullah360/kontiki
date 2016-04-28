@@ -16,20 +16,23 @@
 #include "contiki.h"
 #include <stdio.h>
 
-//------- custom libs ------
+//------- prediction custom libs ------
 #include "dev/adxl345.h"
 #include <math.h>
 #include "dev/leds.h"
+//------- End prediction custom libs ------
 
+//------- prediction functions ------
 // set the sensor value get interval
 #define ACCM_READ_INTERVAL    CLOCK_SECOND/50
 
 // define Status
-static char *WALKING = "WALKING";
-static char *STANDING = "STANDING";
-static char *RUNNING= "RUNNING";
-static char *FALLING = "FALLING";
+static char *STANDING = "1"; //STANDING
+static char *WALKING = "2";   //WALKING
+static char *RUNNING= "3";    //RUNNING
+static char *FALLING = "4";   //FALLING
 static char *STATUS_PT = NULL;
+static char *status_str = "1"; //STANDING
 static char last;
 
 // declare the pridiction function.
@@ -48,22 +51,24 @@ static struct etimer et;
 
 void print_int(uint16_t reg){
 #define ANNOYING_ALWAYS_THERE_ANYWAY_OUTPUT 0
-  if(reg && ADXL345_INT_FREEFALL) {last=*STATUS_PT;STATUS_PT=FALLING;if(last!=*STATUS_PT){printf("falling\n");leds_toggle(LEDS_RED);}}
+  if(reg && ADXL345_INT_FREEFALL) {last=*STATUS_PT;STATUS_PT=FALLING;if(last!=*STATUS_PT){status_str = "4"; printf("falling\n");leds_toggle(LEDS_RED);}}
 }
 
 /* accelerometer free fall detection callback */
 void accm_ff_cb(uint8_t reg){
   print_int(reg);
 }
+
+//-------End prediction functions ------
 /*---------------------------------------------------------------------------*/
 
-PROCESS(my_hi_world_process, "hi five from me");
+PROCESS(motion_tracking_process, "Motion Tracker");
 
-AUTOSTART_PROCESSES(&my_hi_world_process);
+AUTOSTART_PROCESSES(&motion_tracking_process);
 
-PROCESS_THREAD(my_hi_world_process, ev, data){
+PROCESS_THREAD(motion_tracking_process, ev, data){
   PROCESS_BEGIN();
-
+//----------- Init ADXL Sensor ------------
   /* Start and setup the accelerometer with default values, eg no interrupts enabled. */
   accm_init();
 
@@ -71,12 +76,12 @@ PROCESS_THREAD(my_hi_world_process, ev, data){
      possible. For the eight possible interrupts, see adxl345.h and adxl345 datasheet. */
   accm_set_irq(ADXL345_INT_FREEFALL, ADXL345_INT_TAP + ADXL345_INT_DOUBLETAP);
   ACCM_REGISTER_INT1_CB(accm_ff_cb);
-
-  printf("program instantiated\n");
+//-----------End Init ADXL Sensor ------------
+  printf("Motion Tracking Started\n");
 
   int counter = 0;
   while(counter < 200){
-
+//------------ Prediction (read values) ------------------
     x = accm_read_axis(X_AXIS);
     y = accm_read_axis(Y_AXIS);
     z = accm_read_axis(Z_AXIS);
@@ -92,9 +97,11 @@ PROCESS_THREAD(my_hi_world_process, ev, data){
       if(STATUS_PT==FALLING){
           etimer_set(&et, 15);
                 PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));}
-
+//------------ End Prediction (read values) ------------------
+  printf("FinalStatus: %s\n", status_str);
+ 
   }
-  printf("program terminated\n");
+  printf("Motion Tracking Terminated\n");
 
   PROCESS_END();
 }
@@ -127,8 +134,8 @@ void predict(){
   result3 = sqrt(a1*pow((std-std3),2)+a2*pow((mean-mean3),2)+a3*pow((max-max3),2));
   result4 = sqrt(a1*pow((std-std4),2)+a2*pow((mean-mean4),2)+a3*pow((max-max4),2));
   //printf("This is four results:%d,%d,%d,%d\n",(int)result1,(int)result2,(int)result3,(int)result4);
-  if(result1<result2 && result1<result3 && result1<result4){last=*STATUS_PT;STATUS_PT=STANDING;if(last!=*STATUS_PT){printf("standing\n");leds_toggle(LEDS_BLUE);}}
-  if(result2<result1 && result2<result3 && result2<result4){last=*STATUS_PT;STATUS_PT=WALKING;if(last!=*STATUS_PT){printf("walking\n");leds_toggle(LEDS_GREEN);}}
-  if(result3<result1 && result3<result2 && result3<result4){last=*STATUS_PT;STATUS_PT=RUNNING;if(last!=*STATUS_PT){printf("running\n");leds_toggle(LEDS_GREEN);}}
+  if(result1<result2 && result1<result3 && result1<result4){last=*STATUS_PT;STATUS_PT=STANDING;if(last!=*STATUS_PT){status_str = "1"; printf("standing\n");leds_toggle(LEDS_BLUE);}}
+  if(result2<result1 && result2<result3 && result2<result4){last=*STATUS_PT;STATUS_PT=WALKING;if(last!=*STATUS_PT){status_str = "2"; printf("walking\n");leds_toggle(LEDS_GREEN);}}
+  if(result3<result1 && result3<result2 && result3<result4){last=*STATUS_PT;STATUS_PT=RUNNING;if(last!=*STATUS_PT){status_str = "3"; printf("running\n");leds_toggle(LEDS_GREEN);}}
 }
 /*---- End Human Body Posture Detection and Prediction ---------------*/
