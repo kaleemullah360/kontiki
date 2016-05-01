@@ -32,9 +32,8 @@
  * \file
  *         Light and temperatur sensor web demo
  * \author
- *         Niclas Finne    <nfi@sics.se>
- *         Joakim Eriksson <joakime@sics.se>
- *         Joel Hoglund    <joel@sics.se>
+ *         Kaleem Ullah    <kaleemullah360@live.com>|<mscs14059@itu.edu.pk>
+
  */
 
 #include "contiki.h"
