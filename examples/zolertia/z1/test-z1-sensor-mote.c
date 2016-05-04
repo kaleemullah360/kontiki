@@ -45,10 +45,20 @@
 
 #include <string.h>
 
-
 #include "contiki-lib.h"
 #include "sys/compower.h"
 #include <powertrace.h>
+/*
+#if WEBSERVER_CONF_LOADTIME
+  static clock_time_t numticks;
+  numticks = clock_time();
+#endif
+	
+#if WEBSERVER_CONF_LOADTIME
+  numticks = clock_time() - numticks + 1;
+  ADD(" <i>(%u.%02u sec)</i>",numticks/CLOCK_SECOND,(100*(numticks%CLOCK_SECOND))/CLOCK_SECOND));
+#endif
+*/
  struct powertrace_sniff_stats {
  	struct powertrace_sniff_stats *next;
  	unsigned long num_input, num_output;
@@ -158,6 +168,14 @@
 
  	while(1) {
  		powertrace_print("powertrace results");
+/*
+before sending the packet: t1 = clock_time();
+after receiving reply: t2 = clock_time();
+Two way latency (in seconds) is : (t2-t1)/128 where 128 is the clock resolution of the cpu. 
+You have to check the platform-conf.h of your platform for "CLOCK_CONF_SECOND". 
+For SKY target CLOCK_CONF_SECOND is 128.
+One way latency (in milliseconds) is : ( (t2-t1) * 1000 )/( 2*128 )
+*/
 
  		t1 = clock_time();
  		uint16_t bateria = battery_sensor.value(0);
