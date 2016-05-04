@@ -210,7 +210,7 @@ blen = 0;
 
 ADD(" ");
 
-ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floorfun(bat_mv)) * 1000), "1");
+ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floorfun(bat_mv)) * 1000), status_str);
 ADD(" ");
 
 SEND_STRING(&s->sout, buf);
@@ -250,8 +250,8 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
 //-----------End Init ADXL Sensor ------------
   printf("Motion Tracking Started\n");
 
-  int counter = 0;
-  while(counter < 200){
+
+  while(1){
 //------------ Prediction (read values) ------------------
     x = accm_read_axis(X_AXIS);
     y = accm_read_axis(Y_AXIS);
@@ -268,9 +268,9 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
       if(STATUS_PT==FALLING){
           etimer_set(&et, 15);
                 PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));}
-//------------ End Prediction (read values) ------------------
-  //printf("FinalStatus: %s\n", status_str);
- 
+
+  printf("FinalStatus: %s\n", status_str);
+//------------ End Prediction (read values) ------------------ 
   }
   printf("Motion Tracking Terminated\n");
 

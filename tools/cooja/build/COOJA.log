@@ -1,463 +1,198 @@
-[12:30:46 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[12:30:46 - AWT-EventQueue-1] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[12:30:46 - AWT-EventQueue-1] [Cooja.java:2885] [INFO] - External tools user settings: /home/superuser/.cooja.user.properties
-[12:30:54 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:30:54 - AWT-EventQueue-1] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[12:30:58 - AWT-EventQueue-1] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/ipv6/z1-websense/z1-http-rtgs-pre.c with /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-rtgs-pre.c (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
-[12:31:22 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:31:22 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:31:22 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:31:33 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[12:31:41 - AWT-EventQueue-1] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:32:05 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:32:06 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:32:06 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:32:18 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
-[12:32:24 - Thread-5] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1461828744091
-[12:32:26 - Thread-6] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[12:32:26 - Thread-3] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[12:33:53 - Thread-6] [SerialSocketServer.java:497] [INFO] - Socket closed
-[12:33:53 - Thread-6] [SerialSocketServer.java:501] [INFO] - End of Stream
-[12:33:53 - Thread-3] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[12:33:53 - Thread-5] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1461828833984	Duration: 89893 ms	Simulated time 1759703 ms	Ratio 19.57552868410221
-[12:33:54 - Thread-7] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:33:54 - Thread-7] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:33:54 - Thread-7] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:33:55 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[12:33:56 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
-[12:33:56 - Thread-7] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[12:33:56 - Thread-7] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:33:56 - Thread-9] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1461828836884
-[12:35:57 - Thread-8] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[12:35:57 - Thread-9] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1461828957271	Duration: 120387 ms	Simulated time 120371 ms	Ratio 0.9998670952843746
-[12:35:57 - Thread-10] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:35:57 - Thread-10] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:35:57 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:35:57 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:212:3: error: expected identifier or ‘(’ before ‘while’
-[12:35:57 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:233:10: error: expected declaration specifiers or ‘...’ before string constant
-[12:35:57 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:147:16: warning: ‘x’ defined but not used [-Wunused-variable]
-[12:35:57 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:147:18: warning: ‘y’ defined but not used [-Wunused-variable]
-[12:35:57 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:147:20: warning: ‘z’ defined but not used [-Wunused-variable]
-[12:35:57 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:149:12: warning: ‘pos’ defined but not used [-Wunused-variable]
-[12:35:57 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:151:22: warning: ‘et’ defined but not used [-Wunused-variable]
-[12:35:57 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:35:57 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:35:57 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:35:57 - Thread-10] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:39:05 - Thread-10] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:39:05 - Thread-10] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:39:05 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:39:05 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:209:10: error: expected declaration specifiers or ‘...’ before string constant
-[12:39:05 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:212:3: error: expected identifier or ‘(’ before ‘while’
-[12:39:05 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:234:10: error: expected declaration specifiers or ‘...’ before string constant
-[12:39:05 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:147:16: warning: ‘x’ defined but not used [-Wunused-variable]
-[12:39:05 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:147:18: warning: ‘y’ defined but not used [-Wunused-variable]
-[12:39:05 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:147:20: warning: ‘z’ defined but not used [-Wunused-variable]
-[12:39:05 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:149:12: warning: ‘pos’ defined but not used [-Wunused-variable]
-[12:39:05 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:151:22: warning: ‘et’ defined but not used [-Wunused-variable]
-[12:39:05 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:39:05 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:39:05 - Thread-10] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:42:14 - Thread-10] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:42:14 - Thread-10] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:42:14 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:42:15 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
-[12:42:15 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
-[12:42:15 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: In function ‘process_thread_motion_tracking_process’:
-[12:42:15 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:272:1: error: expected declaration or statement at end of input
-[12:42:15 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:272:1: error: expected declaration or statement at end of input
-[12:42:15 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:272:1: error: expected declaration or statement at end of input
-[12:42:15 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:272:1: warning: control reaches end of non-void function [-Wreturn-type]
-[12:42:15 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:42:15 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:42:15 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:42:15 - Thread-10] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:42:35 - Thread-10] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:42:35 - Thread-10] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:42:35 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:42:36 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:42:36 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
-[12:42:36 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
-[12:42:36 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:41:0: error: unterminated #if
-[12:42:36 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:42:36 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:42:36 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:42:36 - Thread-10] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:42:54 - Thread-10] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:42:54 - Thread-10] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:42:54 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:42:55 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[12:42:55 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
-[12:42:55 - Thread-10] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[12:42:56 - Thread-10] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:42:56 - Thread-16] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1461829376203
-[12:43:24 - Thread-15] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[12:43:24 - Thread-16] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1461829404652	Duration: 28449 ms	Simulated time 28444 ms	Ratio 0.9998242468979578
-[12:43:24 - Thread-17] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:43:24 - Thread-17] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:43:24 - Thread-17] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:43:25 - Thread-17] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:213:3: error: expected identifier or ‘(’ before ‘while’
-[12:43:25 - Thread-17] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:234:10: error: expected declaration specifiers or ‘...’ before string constant
-[12:43:25 - Thread-17] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:147:16: warning: ‘x’ defined but not used [-Wunused-variable]
-[12:43:25 - Thread-17] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:147:18: warning: ‘y’ defined but not used [-Wunused-variable]
-[12:43:25 - Thread-17] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:147:20: warning: ‘z’ defined but not used [-Wunused-variable]
-[12:43:25 - Thread-17] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:149:12: warning: ‘pos’ defined but not used [-Wunused-variable]
-[12:43:25 - Thread-17] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:151:22: warning: ‘et’ defined but not used [-Wunused-variable]
-[12:43:25 - Thread-17] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:43:25 - Thread-17] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:43:25 - Thread-17] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:43:25 - Thread-17] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:44:12 - Thread-17] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:44:12 - Thread-17] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:44:12 - Thread-17] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:44:13 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[12:44:13 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
-[12:44:13 - Thread-17] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[12:44:14 - Thread-17] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:44:14 - Thread-20] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1461829454156
-[12:44:17 - Thread-20] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1461829457034	Duration: 2878 ms	Simulated time 2876 ms	Ratio 0.9993050729673384
-[12:54:47 - Thread-19] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[12:54:47 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:54:47 - Thread-21] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:54:47 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:54:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:204:13: error: ‘PT_YIELD_FLAG’ undeclared (first use in this function)
-[12:54:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:204:13: note: each undeclared identifier is reported only once for each function it appears in
-[12:54:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:204:13: error: ‘process_pt’ undeclared (first use in this function)
-[12:54:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:204:13: error: case label not within a switch statement
-[12:54:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:204:13: warning: ‘return’ with a value, in function returning void [enabled by default]
-[12:54:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:207:17: error: case label not within a switch statement
-[12:54:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:207:17: warning: ‘return’ with a value, in function returning void [enabled by default]
-[12:54:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:54:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:54:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:54:48 - Thread-21] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:55:31 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:55:31 - Thread-21] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:55:31 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:55:32 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: In function ‘res_get_handler’:
-[12:55:32 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:180:1: error: invalid storage class for function ‘process_thread_motion_tracking_process’
-[12:55:32 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:180:1: error: ‘process_thread_motion_tracking_process’ undeclared (first use in this function)
-[12:55:32 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:180:1: note: each undeclared identifier is reported only once for each function it appears in
-[12:55:32 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:182:1: error: invalid storage class for function ‘process_thread_motion_tracking_process’
-[12:55:32 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:181:1: warning: unused variable ‘_dummy’ [-Wunused-variable]
-[12:55:32 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:180:1: warning: unused variable ‘motion_tracking_process’ [-Wunused-variable]
-[12:55:32 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:55:32 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:55:32 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:55:32 - Thread-21] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:56:01 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:56:01 - Thread-21] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:56:01 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:56:01 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:56:01 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
-[12:56:01 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
-[12:56:01 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: In function ‘res_get_handler’:
-[12:56:01 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:182:1: error: invalid storage class for function ‘process_thread_motion_tracking_process’
-[12:56:01 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: At top level:
-[12:56:01 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:146:1: warning: ‘process_thread_motion_tracking_process’ used but never defined [enabled by default]
-[12:56:01 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:56:01 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:56:01 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:56:01 - Thread-21] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:56:27 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:56:27 - Thread-21] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:56:27 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:56:27 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: At top level:
-[12:56:27 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:146:1: warning: ‘process_thread_motion_tracking_process’ used but never defined [enabled by default]
-[12:56:27 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:149:16: warning: ‘x’ defined but not used [-Wunused-variable]
-[12:56:27 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:149:18: warning: ‘y’ defined but not used [-Wunused-variable]
-[12:56:27 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:149:20: warning: ‘z’ defined but not used [-Wunused-variable]
-[12:56:27 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:151:12: warning: ‘pos’ defined but not used [-Wunused-variable]
-[12:56:27 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:153:22: warning: ‘et’ defined but not used [-Wunused-variable]
-[12:56:27 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:56:27 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:56:27 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:56:27 - Thread-21] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:56:32 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:56:32 - Thread-21] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:56:32 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:56:33 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:56:33 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
-[12:56:33 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
-[12:56:33 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: In function ‘res_get_handler’:
-[12:56:33 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:182:1: error: invalid storage class for function ‘process_thread_motion_tracking_process’
-[12:56:33 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: At top level:
-[12:56:33 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:146:1: warning: ‘process_thread_motion_tracking_process’ used but never defined [enabled by default]
-[12:56:33 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:56:33 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:56:33 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:56:33 - Thread-21] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:56:44 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:56:44 - Thread-21] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:56:45 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:56:45 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: At top level:
-[12:56:45 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:146:1: warning: ‘process_thread_motion_tracking_process’ used but never defined [enabled by default]
-[12:56:45 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:149:16: warning: ‘x’ defined but not used [-Wunused-variable]
-[12:56:45 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:149:18: warning: ‘y’ defined but not used [-Wunused-variable]
-[12:56:45 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:149:20: warning: ‘z’ defined but not used [-Wunused-variable]
-[12:56:45 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:151:12: warning: ‘pos’ defined but not used [-Wunused-variable]
-[12:56:45 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:153:22: warning: ‘et’ defined but not used [-Wunused-variable]
-[12:56:45 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:56:45 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:56:45 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:56:45 - Thread-21] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:57:07 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:57:07 - Thread-21] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:57:07 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:57:07 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:57:07 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
-[12:57:07 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
-[12:57:07 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: In function ‘res_get_handler’:
-[12:57:07 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:182:1: error: invalid storage class for function ‘process_thread_motion_tracking_process’
-[12:57:07 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: At top level:
-[12:57:07 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:146:1: warning: ‘process_thread_motion_tracking_process’ used but never defined [enabled by default]
-[12:57:07 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:57:07 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:57:07 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:57:07 - Thread-21] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:57:49 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:57:49 - Thread-21] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:57:49 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:57:50 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:57:50 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
-[12:57:50 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
-[12:57:50 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: In function ‘res_get_handler’:
-[12:57:50 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:182:1: error: invalid storage class for function ‘process_thread_motion_tracking_process’
-[12:57:50 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: At top level:
-[12:57:50 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:146:1: warning: ‘process_thread_motion_tracking_process’ used but never defined [enabled by default]
-[12:57:50 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:57:50 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:57:50 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:57:50 - Thread-21] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:58:16 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:58:16 - Thread-21] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:58:17 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:58:17 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:58:17 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
-[12:58:17 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
-[12:58:17 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: In function ‘res_get_handler’:
-[12:58:17 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:184:1: error: invalid storage class for function ‘process_thread_motion_tracking_process’
-[12:58:17 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: At top level:
-[12:58:17 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:148:1: warning: ‘process_thread_motion_tracking_process’ used but never defined [enabled by default]
-[12:58:17 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:58:17 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:58:17 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:58:17 - Thread-21] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:59:15 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:59:15 - Thread-21] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:59:15 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:59:15 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:59:15 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
-[12:59:15 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
-[12:59:15 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: In function ‘res_get_handler’:
-[12:59:15 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:186:1: error: invalid storage class for function ‘process_thread_motion_tracking_process’
-[12:59:15 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: At top level:
-[12:59:15 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:150:1: warning: ‘process_thread_motion_tracking_process’ used but never defined [enabled by default]
-[12:59:15 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:59:15 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:59:15 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:59:15 - Thread-21] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:59:47 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:59:47 - Thread-21] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:59:48 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[12:59:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:59:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
-[12:59:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
-[12:59:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: In function ‘res_get_handler’:
-[12:59:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:182:1: error: invalid storage class for function ‘process_thread_motion_tracking_process’
-[12:59:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: At top level:
-[12:59:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:146:1: warning: ‘process_thread_motion_tracking_process’ used but never defined [enabled by default]
-[12:59:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[12:59:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[12:59:48 - Thread-21] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:59:48 - Thread-21] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[13:01:49 - Thread-33] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[13:01:49 - Thread-33] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-border-router/z1-border-router.z1 with /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
-[13:01:49 - Thread-33] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[13:01:49 - Thread-33] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[13:01:50 - Thread-33] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[14:32:45 - Thread-34] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[14:32:45 - Thread-35] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:32:45 - Thread-35] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:32:45 - Thread-35] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:32:46 - Thread-35] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[14:33:11 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[14:33:11 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[14:33:11 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[14:33:12 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[14:34:39 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[14:38:05 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[14:38:05 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[14:38:33 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[14:38:34 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[14:39:29 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[14:50:57 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[14:51:19 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
-[14:51:21 - Thread-38] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1461837081560
-[14:51:22 - Thread-38] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1461837082538	Duration: 978 ms	Simulated time 972 ms	Ratio 0.9938650306748467
-[14:51:23 - Thread-36] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[14:51:23 - Thread-39] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:51:23 - Thread-39] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:51:23 - Thread-39] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[14:51:23 - Thread-39] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:51:24 - Thread-39] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
-[14:51:24 - Thread-39] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[14:54:42 - Thread-40] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[14:54:43 - Thread-41] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:54:43 - Thread-41] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:54:43 - Thread-41] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[14:54:43 - Thread-41] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:54:43 - Thread-41] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
-[14:54:44 - Thread-41] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[14:54:46 - Thread-43] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1461837286042
-[14:54:55 - Thread-43] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1461837295597	Duration: 9555 ms	Simulated time 9546 ms	Ratio 0.9990580847723705
-[14:56:10 - Thread-42] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[14:56:10 - Thread-44] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:56:10 - Thread-44] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:56:10 - Thread-44] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[14:56:10 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[14:56:10 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
-[14:56:10 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
-[14:56:10 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: In function ‘res_get_handler’:
-[14:56:10 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:184:1: error: invalid storage class for function ‘process_thread_sens_motion_preditcion’
-[14:56:10 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: At top level:
-[14:56:10 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:165:1: warning: ‘process_thread_sens_motion_preditcion’ used but never defined [enabled by default]
-[14:56:10 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[14:56:10 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[14:56:10 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[14:56:10 - Thread-44] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[14:56:47 - Thread-44] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:56:47 - Thread-44] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:56:47 - Thread-44] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[14:56:47 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:208:5: warning: ‘return’ with a value, in function returning void [enabled by default]
-[14:56:47 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:222:13: warning: ‘return’ with a value, in function returning void [enabled by default]
-[14:56:47 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:225:17: warning: ‘return’ with a value, in function returning void [enabled by default]
-[14:56:47 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:288:1: error: expected declaration or statement at end of input
-[14:56:47 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:288:1: error: expected declaration or statement at end of input
-[14:56:47 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c: At top level:
-[14:56:47 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:165:1: warning: ‘process_thread_sens_motion_preditcion’ used but never defined [enabled by default]
-[14:56:47 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[14:56:47 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[14:56:47 - Thread-44] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[14:56:47 - Thread-44] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[14:58:17 - Thread-44] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:58:17 - Thread-44] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:58:17 - Thread-44] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[14:58:17 - Thread-44] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:58:17 - Thread-44] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
-[14:58:18 - Thread-44] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:05:29 - Thread-47] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:05:29 - Thread-48] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:05:29 - Thread-48] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:05:29 - Thread-48] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[15:05:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:191:13: error: ‘PT_YIELD_FLAG’ undeclared (first use in this function)
-[15:05:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:191:13: note: each undeclared identifier is reported only once for each function it appears in
-[15:05:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:191:13: error: ‘process_pt’ undeclared (first use in this function)
-[15:05:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:191:13: error: case label not within a switch statement
-[15:05:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:191:13: warning: ‘return’ with a value, in function returning void [enabled by default]
-[15:05:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:194:17: error: case label not within a switch statement
-[15:05:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:194:17: warning: ‘return’ with a value, in function returning void [enabled by default]
-[15:05:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[15:05:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[15:05:30 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[15:05:30 - Thread-48] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[15:05:54 - Thread-48] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:05:54 - Thread-48] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:05:55 - Thread-48] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[15:05:55 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:190:13: error: ‘PT_YIELD_FLAG’ undeclared (first use in this function)
-[15:05:55 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:190:13: note: each undeclared identifier is reported only once for each function it appears in
-[15:05:55 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:190:13: error: ‘process_pt’ undeclared (first use in this function)
-[15:05:55 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:190:13: error: case label not within a switch statement
-[15:05:55 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:190:13: warning: ‘return’ with a value, in function returning void [enabled by default]
-[15:05:55 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:193:17: error: case label not within a switch statement
-[15:05:55 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:193:17: warning: ‘return’ with a value, in function returning void [enabled by default]
-[15:05:55 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[15:05:55 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[15:05:55 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[15:05:55 - Thread-48] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[15:07:04 - Thread-48] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:07:04 - Thread-48] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:07:04 - Thread-48] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[15:07:04 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[15:07:04 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
-[15:07:04 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
-[15:07:04 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        z1-coap-rtgs.c
-[15:07:04 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> z1-coap-rtgs.c: In function ‘process_thread_er_example_server’:
-[15:07:04 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> z1-coap-rtgs.c:55:3: error: ‘accm_ff_cb’ undeclared (first use in this function)
-[15:07:04 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> z1-coap-rtgs.c:55:3: note: each undeclared identifier is reported only once for each function it appears in
-[15:07:04 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-coap-rtgs.co] Error 1
-[15:07:04 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:260: recipe for target 'z1-coap-rtgs.co' failed
-[15:07:04 - Thread-48] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[15:07:04 - Thread-48] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[15:07:39 - Thread-48] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:07:39 - Thread-48] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:07:39 - Thread-48] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[15:07:40 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[15:07:40 - Thread-48] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
-[15:07:41 - Thread-48] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:07:42 - Thread-53] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1461838062505
-[15:09:26 - Thread-52] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:09:26 - Thread-54] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:09:31 - Thread-53] [Simulation.java:292] [FATAL] - Simulation stopped due to error: null
-org.contikios.cooja.ContikiError
-	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:341)
-	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:298)
-	at org.contikios.cooja.motes.AbstractWakeupMote$1.execute(AbstractWakeupMote.java:47)
-	at org.contikios.cooja.Simulation.run(Simulation.java:280)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: se.sics.mspsim.core.EmulationException: Reading outside memory: 0x80000
-	at se.sics.mspsim.core.MSP430Core$1.read(MSP430Core.java:162)
-	at se.sics.mspsim.core.MSP430Core.emulateOP(MSP430Core.java:1003)
-	at se.sics.mspsim.core.MSP430.stepMicros(MSP430.java:256)
-	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:337)
-	... 4 more
-[15:09:34 - Thread-53] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1461838174450	Duration: 111945 ms	Simulated time 108927 ms	Ratio 0.9730403323060431
-[15:09:36 - Thread-52] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:09:36 - Thread-54] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:09:36 - Thread-54] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:09:37 - Thread-56] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:09:37 - Thread-56] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:09:37 - Thread-56] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[15:09:37 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[15:09:38 - Thread-56] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
-[15:09:38 - Thread-56] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:09:41 - Thread-58] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1461838181771
-[15:09:44 - Thread-57] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:09:44 - Thread-59] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:09:48 - Thread-58] [Simulation.java:292] [FATAL] - Simulation stopped due to error: null
-org.contikios.cooja.ContikiError
-	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:341)
-	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:298)
-	at org.contikios.cooja.motes.AbstractWakeupMote$1.execute(AbstractWakeupMote.java:47)
-	at org.contikios.cooja.Simulation.run(Simulation.java:280)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: se.sics.mspsim.core.EmulationException: Reading outside memory: 0x80000
-	at se.sics.mspsim.core.MSP430Core$1.read(MSP430Core.java:162)
-	at se.sics.mspsim.core.MSP430Core.emulateOP(MSP430Core.java:1003)
-	at se.sics.mspsim.core.MSP430.stepMicros(MSP430.java:256)
-	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:337)
-	... 4 more
-[15:09:52 - Thread-58] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1461838192755	Duration: 10984 ms	Simulated time 6927 ms	Ratio 0.6306445739257102
-[15:12:16 - Thread-59] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:12:16 - Thread-59] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:12:16 - Thread-57] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:12:17 - Thread-61] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:12:17 - Thread-61] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:12:17 - Thread-61] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[15:12:17 - Thread-61] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:262:15: error: redefinition of ‘get_sensor_battery’
-[15:12:17 - Thread-61] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:109:15: note: previous definition of ‘get_sensor_battery’ was here
-[15:12:17 - Thread-61] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:278:2: error: redefinition of ‘res_z1_coap_sens_rtgs’
-[15:12:17 - Thread-61] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:125:2: note: previous definition of ‘res_z1_coap_sens_rtgs’ was here
-[15:12:17 - Thread-61] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:286:2: error: redefinition of ‘res_get_handler’
-[15:12:17 - Thread-61] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:133:2: note: previous definition of ‘res_get_handler’ was here
-[15:12:17 - Thread-61] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:286:2: warning: ‘res_get_handler’ defined but not used [-Wunused-function]
-[15:12:17 - Thread-61] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
-[15:12:17 - Thread-61] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
-[15:12:17 - Thread-61] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[15:12:17 - Thread-61] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[15:12:48 - Thread-61] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:12:48 - Thread-61] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:12:48 - Thread-61] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
-[15:12:48 - Thread-61] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[15:12:48 - Thread-61] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
-[15:12:49 - Thread-61] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[23:33:40 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[23:33:40 - AWT-EventQueue-1] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[23:33:40 - AWT-EventQueue-1] [Cooja.java:2885] [INFO] - External tools user settings: /home/superuser/.cooja.user.properties
+[23:33:45 - AWT-EventQueue-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:33:45 - AWT-EventQueue-1] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[23:34:48 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[23:34:49 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[23:34:49 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:36:01 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:36:39 - AWT-EventQueue-1] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:36:43 - AWT-EventQueue-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[23:36:44 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462300604487
+[23:37:05 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462300625116	Duration: 20629 ms	Simulated time 2220219 ms	Ratio 107.62610887585438
+[23:39:03 - Thread-3] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:39:03 - Thread-3] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:39:03 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[23:39:04 - Thread-3] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[23:39:05 - Thread-4] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462300745406
+[23:39:23 - Thread-4] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462300763754	Duration: 18348 ms	Simulated time 1992348 ms	Ratio 108.58665794637018
+[23:39:23 - Thread-5] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:39:23 - Thread-5] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:39:23 - Thread-5] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[23:39:23 - Thread-5] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
+[23:39:23 - Thread-5] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        z1-coap-rtgs.c
+[23:39:23 - Thread-5] [AbstractMspMoteType.java:152] [FATAL] - >> z1-coap-rtgs.c: In function ‘process_thread_er_example_server’:
+[23:39:23 - Thread-5] [AbstractMspMoteType.java:152] [FATAL] - >> z1-coap-rtgs.c:78:1: error: expected declaration or statement at end of input
+[23:39:23 - Thread-5] [AbstractMspMoteType.java:152] [FATAL] - >> z1-coap-rtgs.c:78:1: error: expected declaration or statement at end of input
+[23:39:23 - Thread-5] [AbstractMspMoteType.java:152] [FATAL] - >> z1-coap-rtgs.c:78:1: warning: control reaches end of non-void function [-Wreturn-type]
+[23:39:23 - Thread-5] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-coap-rtgs.co] Error 1
+[23:39:23 - Thread-5] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:260: recipe for target 'z1-coap-rtgs.co' failed
+[23:39:23 - Thread-5] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[23:39:23 - Thread-5] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[23:42:29 - Thread-5] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:42:29 - Thread-5] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:42:29 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[23:42:30 - Thread-5] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[23:42:30 - Thread-7] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462300950384
+[23:42:31 - Thread-7] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462300951408	Duration: 1024 ms	Simulated time 67806 ms	Ratio 66.216796875
+[23:42:33 - Thread-8] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462300953285
+[23:42:39 - Thread-8] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462300959609	Duration: 6324 ms	Simulated time 779051 ms	Ratio 123.18959519291587
+[23:44:59 - Thread-9] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:44:59 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:44:59 - Thread-9] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:176:43: error: macro "RESOURCE" requires 6 arguments, but only 3 given
+[23:44:59 - Thread-9] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:176:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+[23:44:59 - Thread-9] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:80:16: warning: ‘x’ defined but not used [-Wunused-variable]
+[23:44:59 - Thread-9] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:80:18: warning: ‘y’ defined but not used [-Wunused-variable]
+[23:44:59 - Thread-9] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:80:20: warning: ‘z’ defined but not used [-Wunused-variable]
+[23:44:59 - Thread-9] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:82:12: warning: ‘pos’ defined but not used [-Wunused-variable]
+[23:44:59 - Thread-9] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:84:22: warning: ‘et’ defined but not used [-Wunused-variable]
+[23:44:59 - Thread-9] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
+[23:44:59 - Thread-9] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[23:44:59 - Thread-9] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
+[23:44:59 - Thread-9] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[23:45:09 - Thread-9] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:45:09 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:45:10 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[23:45:10 - Thread-9] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[23:47:41 - Thread-11] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:47:41 - Thread-11] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:47:41 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:187:3: error: expected identifier or ‘(’ before ‘while’
+[23:47:41 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:206:10: error: expected declaration specifiers or ‘...’ before string constant
+[23:47:41 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:80:16: warning: ‘x’ defined but not used [-Wunused-variable]
+[23:47:41 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:80:18: warning: ‘y’ defined but not used [-Wunused-variable]
+[23:47:41 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:80:20: warning: ‘z’ defined but not used [-Wunused-variable]
+[23:47:41 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:82:12: warning: ‘pos’ defined but not used [-Wunused-variable]
+[23:47:41 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:84:22: warning: ‘et’ defined but not used [-Wunused-variable]
+[23:47:41 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
+[23:47:41 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[23:47:41 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
+[23:47:41 - Thread-11] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[23:50:03 - Thread-11] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:50:03 - Thread-11] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:50:03 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[23:50:03 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
+[23:50:03 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
+[23:50:03 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        z1-coap-rtgs.c
+[23:50:03 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> z1-coap-rtgs.c:44:1: error: redefinition of ‘autostart_processes’
+[23:50:03 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> In file included from z1-coap-rtgs.c:8:0:
+[23:50:03 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> z1-motion-prediction.c:62:1: note: previous definition of ‘autostart_processes’ was here
+[23:50:03 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-coap-rtgs.co] Error 1
+[23:50:03 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:260: recipe for target 'z1-coap-rtgs.co' failed
+[23:50:03 - Thread-11] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[23:50:03 - Thread-11] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[23:51:33 - Thread-11] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:51:33 - Thread-11] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:51:33 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[23:51:34 - Thread-11] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[23:51:36 - Thread-14] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462301496898
+[23:54:18 - Thread-14] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462301658273	Duration: 161375 ms	Simulated time 6261477 ms	Ratio 38.800786986831916
+[23:54:18 - Thread-15] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:54:18 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:54:18 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[23:54:19 - Thread-15] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[23:54:19 - Thread-16] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462301659357
+[23:54:33 - Thread-16] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462301673368	Duration: 14011 ms	Simulated time 1514285 ms	Ratio 108.07829562486617
+[23:54:33 - Thread-17] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:54:33 - Thread-17] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:54:33 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[23:54:34 - Thread-17] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[23:54:34 - Thread-18] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462301674567
+[23:55:11 - Thread-18] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462301711323	Duration: 36756 ms	Simulated time 4038977 ms	Ratio 109.88619545108281
+[23:55:11 - Thread-19] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:55:11 - Thread-19] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:55:11 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[23:55:12 - Thread-19] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[23:55:12 - Thread-20] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462301712477
+[23:55:33 - Thread-20] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462301733885	Duration: 21408 ms	Simulated time 2376337 ms	Ratio 111.00228886397609
+[23:55:33 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:55:33 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:55:34 - Thread-21] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[23:55:34 - Thread-21] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[23:55:34 - Thread-22] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462301734949
+[23:56:04 - Thread-22] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462301764682	Duration: 29733 ms	Simulated time 3273755 ms	Ratio 110.10510207513538
+[23:56:04 - Thread-23] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:56:04 - Thread-23] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:56:05 - Thread-23] [AbstractMspMoteType.java:152] [FATAL] - >> /home/superuser/kontiki/examples/er-rest-example/./resources/res-z1-coap-sens-rtgs.c:134: multiple definition of `predictor'
+[23:56:05 - Thread-23] [AbstractMspMoteType.java:152] [FATAL] - >> obj_z1/z1-motion-prediction.o:/home/superuser/kontiki/examples/er-rest-example/./resources/z1-motion-prediction.c:64: first defined here
+[23:56:05 - Thread-23] [AbstractMspMoteType.java:152] [FATAL] - >> obj_z1/res-z1-coap-sens-rtgs.o: In function `res_get_handler':
+[23:56:05 - Thread-23] [AbstractMspMoteType.java:152] [FATAL] - >> /home/superuser/kontiki/examples/er-rest-example/./resources/res-z1-coap-sens-rtgs.c:134: multiple definition of `my_hi_world_process'
+[23:56:05 - Thread-23] [AbstractMspMoteType.java:152] [FATAL] - >> obj_z1/z1-motion-prediction.o:/home/superuser/kontiki/examples/er-rest-example/./resources/z1-motion-prediction.c:64: first defined here
+[23:56:05 - Thread-23] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: error: ld returned 1 exit status
+[23:56:05 - Thread-23] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:280: recipe for target 'z1-coap-rtgs.z1' failed
+[23:56:05 - Thread-23] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-coap-rtgs.z1] Error 1
+[23:56:05 - Thread-23] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[23:56:05 - Thread-23] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o z1-coap-rtgs.co obj_z1/z1-motion-prediction.o
+[23:56:05 - Thread-23] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[23:56:17 - Thread-23] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:56:17 - Thread-23] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/z1-coap-rtgs.z1 with /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[23:56:17 - Thread-23] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:56:18 - Thread-23] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[23:56:18 - Thread-23] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[23:56:18 - Thread-25] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462301778976
+[23:56:46 - Thread-25] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462301806046	Duration: 27071 ms	Simulated time 2959624 ms	Ratio 109.32821100070186
+[23:56:46 - Thread-26] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[23:56:46 - Thread-26] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[23:56:46 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./z1-motion-prediction.c:62:1: warning: unused variable ‘_dummy’ [-Wunused-variable]
+[23:56:46 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./z1-motion-prediction.c:60:1: warning: unused variable ‘my_hi_world_process’ [-Wunused-variable]
+[23:56:46 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> In file included from ./z1-motion-prediction.c:20:0,
+[23:56:46 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >>                  from ./resources/res-z1-coap-sens-rtgs.c:135:
+[23:56:46 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ../../platform/z1/./dev/adxl345.h:286:36: warning: unused variable ‘int2_event’ [-Wunused-variable]
+[23:56:46 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ../../platform/z1/./dev/adxl345.h:286:24: warning: unused variable ‘int1_event’ [-Wunused-variable]
+[23:56:46 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ../../platform/z1/./dev/adxl345.h:282:15: warning: unused variable ‘accm_int2_cb’ [-Wunused-variable]
+[23:56:46 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
+[23:56:46 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[23:56:46 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> null
+[23:56:46 - Thread-26] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[00:04:54 - Thread-26] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[00:04:54 - Thread-26] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[00:04:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[00:04:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-coap-rtgs.z1 TARGET=z1 
+[00:04:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ./resources/res-z1-coap-sens-rtgs.c
+[00:04:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:135:14: error: redefinition of ‘status_str’
+[00:04:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:74:15: note: previous definition of ‘status_str’ was here
+[00:04:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:74:15: warning: ‘status_str’ defined but not used [-Wunused-variable]
+[00:04:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
+[00:04:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
+[00:04:55 - Thread-26] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[00:04:55 - Thread-26] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[00:05:22 - Thread-26] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[00:05:22 - Thread-26] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[00:05:23 - Thread-26] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[00:05:23 - Thread-26] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[00:05:23 - Thread-29] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462302323784
+[00:05:25 - Thread-29] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462302325972	Duration: 2188 ms	Simulated time 204311 ms	Ratio 93.37797074954297
+[00:05:27 - Thread-30] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462302327033
+[00:06:47 - Thread-30] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462302407207	Duration: 80174 ms	Simulated time 9244609 ms	Ratio 115.30682016613865
+[00:06:47 - Thread-31] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[00:06:47 - Thread-31] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[00:06:47 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:184:3: error: expected identifier or ‘(’ before ‘while’
+[00:06:47 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:203:10: error: expected declaration specifiers or ‘...’ before string constant
+[00:06:47 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:145:16: warning: ‘x’ defined but not used [-Wunused-variable]
+[00:06:47 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:145:18: warning: ‘y’ defined but not used [-Wunused-variable]
+[00:06:47 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:145:20: warning: ‘z’ defined but not used [-Wunused-variable]
+[00:06:47 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:147:12: warning: ‘pos’ defined but not used [-Wunused-variable]
+[00:06:47 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:149:22: warning: ‘et’ defined but not used [-Wunused-variable]
+[00:06:47 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
+[00:06:47 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[00:06:47 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
+[00:06:47 - Thread-31] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[00:08:22 - Thread-31] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[00:08:22 - Thread-31] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[00:08:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:177:3: error: expected identifier or ‘(’ before ‘while’
+[00:08:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:196:10: error: expected declaration specifiers or ‘...’ before string constant
+[00:08:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:145:16: warning: ‘x’ defined but not used [-Wunused-variable]
+[00:08:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:145:18: warning: ‘y’ defined but not used [-Wunused-variable]
+[00:08:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:145:20: warning: ‘z’ defined but not used [-Wunused-variable]
+[00:08:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:147:12: warning: ‘pos’ defined but not used [-Wunused-variable]
+[00:08:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ./resources/res-z1-coap-sens-rtgs.c:149:22: warning: ‘et’ defined but not used [-Wunused-variable]
+[00:08:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> ../../Makefile.include:240: recipe for target 'obj_z1/res-z1-coap-sens-rtgs.o' failed
+[00:08:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/res-z1-coap-sens-rtgs.o] Error 1
+[00:08:22 - Thread-31] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[00:08:22 - Thread-31] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[00:09:36 - Thread-31] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[00:09:36 - Thread-31] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.z1 TARGET=z1 
+[00:09:36 - Thread-31] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-rtgs.z1
+[00:09:37 - Thread-31] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[00:09:37 - Thread-34] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1462302577454
+[00:09:40 - Thread-34] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1462302580057	Duration: 2603 ms	Simulated time 265129 ms	Ratio 101.85516711486746
