@@ -1,0 +1,14 @@
+0.sudo mv ~/mspgcc-4.7.3 /opt/mspgcc-4.7.3
+
+1.sudo vim /etc/sudoers
+secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mspgcc-4.7.3/bin"
+
+for force writing: :wq!
+
+2.sudo vim ~/.bashrc
+export PATH=/opt/mspgcc-4.7.3/bin:$PATH
+
+for PythonSerial Module:
+https://launchpad.net/ubuntu/+archive/primary/+files/pyserial_2.7.orig.tar.gz
+sudo python setup.py install
+
