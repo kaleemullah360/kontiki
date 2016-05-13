@@ -78,8 +78,8 @@ char *pow_str = "";
 
 //--- Function Deffinitions for e-MCH-APp ----
 
-// function to return floor of float value
- float floorobs(float x){
+// function to return floor_emch of float value
+ float floor_emch(float x){
   if(x >= 0.0f){ // check the value of x is +eve
     return (float)((int) x);
   }else{ // if value of x is -eve
@@ -90,7 +90,7 @@ char *pow_str = "";
     return(float) ((int) x - 1);   
   } //end if-else
 
-} //end floor function
+} //end floor_emch function
 
 static void get_sensor_time(){
   upt = clock_seconds();  // UpTime
@@ -120,7 +120,7 @@ static void get_sensor_temperature(){
   // When working with the ADC you need to convert the ADC integers in milliVolts. 
   // This is done with the following formula:
     bat_mv = (bat_v * 2.500 * 2) / 4096;
-  //printf("Battery Analog Data Value: %i , milli Volt= (%ld.%03d mV)\n", bat_v, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
+  //printf("Battery Analog Data Value: %i , milli Volt= (%ld.%03d mV)\n", bat_v, (long) bat_mv, (unsigned) ((bat_mv - floor_emch(bat_mv)) * 1000));
   }
 
 //---End Function Deffinitions e-MCH-APp ---
@@ -152,7 +152,7 @@ pow_str = powertrace_result();
 
  	if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
  		REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
- 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000),pow_str);
+ 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor_emch(bat_mv)) * 1000),pow_str);
 
  		REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
  	}
