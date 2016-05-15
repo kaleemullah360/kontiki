@@ -174,3 +174,4 @@ res_periodic_handler()
   ++event_counter;
 	notify();
 }
+

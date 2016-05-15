@@ -40,7 +40,7 @@
 *    Track Motion eg. Walking, Standing, Falling, Running
 * this application uses Zolertia adxl345 sensor and CoAP protocol on Application layer.
 * The sensor produced x, y, z axis values upone actuation.
-* then using these values a predict(); function output state of the sensor node.
+* then using these values a predict_adxl(); function output state of the sensor node.
 */
 
 #include "contiki.h"
@@ -69,7 +69,7 @@ static char *STATUS_PT = NULL;
 static char last;
 
 // declare the pridiction function.
-void predict();
+void predict_adxl();
 
 /*-------------------------End Motion Tracking --------------------------*/
 
@@ -95,8 +95,8 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
   sample[0][pos]=(int)x;
   sample[1][pos]=(int)y;
   sample[2][pos]=(int)z;
-  predict();
-  if(pos==(sampleNo-1))predict();
+  predict_adxl();
+  if(pos==(sampleNo-1))predict_adxl();
   pos=(pos+1)%sampleNo;
 
   unsigned int accept = -1;
@@ -114,7 +114,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
  * this function get the Sensor X, Y, Z Coordinate values and predicts different states
  */
  
- void predict(){
+ void predict_adxl(){
 
   double mag[sampleNo-1],sum=0,max=0,std=0,mean=0,tmp=0;
   double result1,result2,result3,result4;
@@ -130,7 +130,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
     tmp = tmp + pow( ( 1 - mean ), 2);
   }
   std=sqrt(tmp/80);
-  //printf("This is data from predict:%d,%d\n",(int)std,(int)mean);
+  //printf("This is data from predict_adxl:%d,%d\n",(int)std,(int)mean);
   if(std>1000)return;
   double std1=3, mean1=2.2, max1=0.7;
   double std2=30, mean2=37, max2=5.74;

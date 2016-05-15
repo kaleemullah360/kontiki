@@ -44,8 +44,8 @@
 #include "rest-engine.h"
 
 // Powertracing
-#include "powertrace-z1.h"
-char *powertrace_result();
+//#include "powertrace-z1.h"
+char *powertrace_result(){return "test";};
 char *pow_str = "";
 
 //--- Libs for e-MCH-APp ----

@@ -55,7 +55,50 @@ uint8_t radioChannel_tx_power = 31; // default power
 #include "dev/tmp102.h"
 
 //---End Libs for e-MCH-APp ---
+//------- prediction custom libs ------
+#include "dev/adxl345.h"
+#include <math.h>
+#include "dev/leds.h"
+//------- End prediction custom libs ------
 
+//------- prediction functions ------
+// set the sensor value get interval
+#define ACCM_READ_INTERVAL    CLOCK_SECOND/50
+
+// define Status
+static char *STANDING = "1"; //STANDING
+static char *WALKING = "2";   //WALKING
+static char *RUNNING= "3";    //RUNNING
+static char *FALLING = "4";   //FALLING
+static char *STATUS_PT = NULL;
+static char *status_str = "1"; //STANDING
+static char last;
+
+// declare the pridiction function.
+void predict();
+
+#define HISTORY 16
+
+/*---------------------------------------------------------------------------*/
+
+#define sampleNo 81
+static int16_t x,y,z;
+static int sample[3][sampleNo];
+static int pos;
+
+static struct etimer et;
+
+void print_int(uint16_t reg){
+#define ANNOYING_ALWAYS_THERE_ANYWAY_OUTPUT 0
+  if(reg && ADXL345_INT_FREEFALL) {last=*STATUS_PT;STATUS_PT=FALLING;if(last!=*STATUS_PT){status_str = "4"; printf("falling\n");leds_toggle(LEDS_RED);}}
+}
+
+/* accelerometer free fall detection callback */
+void accm_ff_cb(uint8_t reg){
+  print_int(reg);
+}
+
+//-------End prediction functions ------
 //--- Variable Declaration for e-MCH-APp ----
 
  static int32_t mid = 0;  // MessageID
@@ -78,8 +121,8 @@ uint8_t radioChannel_tx_power = 31; // default power
 
 //--- Function Deffinitions for e-MCH-APp ----
 
-// function to return floor of float value
- float floor(float x){
+// function to return floor_mq of float value
+ float floor_mq(float x){
   if(x >= 0.0f){ // check the value of x is +eve
     return (float)((int) x);
   }else{ // if value of x is -eve
@@ -90,7 +133,7 @@ uint8_t radioChannel_tx_power = 31; // default power
     return(float) ((int) x - 1);   
   } //end if-else
 
-} //end floor function
+} //end floor_mq function
 
 static void get_sensor_time(){
   upt = clock_seconds();  // UpTime
@@ -120,7 +163,7 @@ static void get_sensor_temperature(){
   // When working with the ADC you need to convert the ADC integers in milliVolts. 
   // This is done with the following formula:
     bat_mv = (bat_v * 2.500 * 2) / 4096;
-  //printf("Battery Analog Data Value: %i , milli Volt= (%ld.%03d mV)\n", bat_v, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
+  //printf("Battery Analog Data Value: %i , milli Volt= (%ld.%03d mV)\n", bat_v, (long) bat_mv, (unsigned) ((bat_mv - floor_mq(bat_mv)) * 1000));
   }
 
 //---End Function Deffinitions e-MCH-APp ---
@@ -129,7 +172,7 @@ static void get_sensor_temperature(){
  * Publish to a local MQTT broker (e.g. mosquitto) running on the host
  */
  static const char *broker_ip = MQTT_Z1_BROKER_IP_ADDR;
-#define DEFAULT_ORG_ID "eMCH-APp"
+#define DEFAULT_ORG_ID "rTGS-APp"
 /*---------------------------------------------------------------------------*/
 /*
  * A timeout used when waiting for something to happen (e.g. to connect or to
@@ -201,8 +244,54 @@ static void get_sensor_temperature(){
 /* Payload length of ICMPv6 echo requests used to measure RSSI with def rt */
 #define ECHO_REQ_PAYLOAD_LEN   20
 /*---------------------------------------------------------------------------*/
- PROCESS_NAME(mqtt_z1_client_process);  
- AUTOSTART_PROCESSES(&mqtt_z1_client_process);
+ PROCESS_NAME(mqtt_z1_client_process);
+/*---------------------------------------------------------------------------*/
+
+PROCESS(motion_tracking_process, "Motion Tracker");
+
+AUTOSTART_PROCESSES(&motion_tracking_process, &mqtt_z1_client_process);
+
+PROCESS_THREAD(motion_tracking_process, ev, data){
+  PROCESS_BEGIN();
+//----------- Init ADXL Sensor ------------
+  /* Start and setup the accelerometer with default values, eg no interrupts enabled. */
+  accm_init();
+
+  /* Set what strikes the corresponding interrupts. Several interrupts per pin is
+     possible. For the eight possible interrupts, see adxl345.h and adxl345 datasheet. */
+  accm_set_irq(ADXL345_INT_FREEFALL, ADXL345_INT_TAP + ADXL345_INT_DOUBLETAP);
+  ACCM_REGISTER_INT1_CB(accm_ff_cb);
+//-----------End Init ADXL Sensor ------------
+  printf("Motion Tracking Started\n");
+
+  int counter = 0;
+  while(counter < 200){
+//------------ Prediction (read values) ------------------
+    x = accm_read_axis(X_AXIS);
+    y = accm_read_axis(Y_AXIS);
+    z = accm_read_axis(Z_AXIS);
+
+    sample[0][pos]=(int)x;
+    sample[1][pos]=(int)y;
+    sample[2][pos]=(int)z;
+
+      if(pos==(sampleNo-1))predict();
+      pos=(pos+1)%sampleNo;
+            etimer_set(&et, ACCM_READ_INTERVAL);
+            PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));
+      if(STATUS_PT==FALLING){
+          etimer_set(&et, 15);
+                PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));}
+//------------ End Prediction (read values) ------------------
+  printf("FinalStatus: %s\n", status_str);
+ 
+  }
+  printf("Motion Tracking Terminated\n");
+
+  PROCESS_END();
+}
+
+
 /*---------------------------------------------------------------------------*/
 /**
  * \brief Data structure declaration for the MQTT client configuration
@@ -257,7 +346,7 @@ static void get_sensor_temperature(){
 /*---------------------------------------------------------------------------*/
  static mqtt_client_config_t conf;
 /*---------------------------------------------------------------------------*/
- PROCESS(mqtt_z1_client_process, "eMCH-APp");
+ PROCESS(mqtt_z1_client_process, "rTGS-APp");
 /*---------------------------------------------------------------------------*/
  int
  ipaddr_sprintf(char *buf, uint8_t buf_len, const uip_ipaddr_t *addr)
@@ -513,7 +602,7 @@ int remaining = APP_BUFFER_SIZE;
 
 buf_ptr = app_buffer;
 
-len = snprintf(buf_ptr, remaining,"%lu,%lu,%lu,%c%d.%04d,%ld.%03d", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
+len = snprintf(buf_ptr, remaining,"%lu,%lu,%lu,%c%d.%04d,%ld.%03d", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor_mq(bat_mv)) * 1000));
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
@@ -738,6 +827,40 @@ state_machine(void)
 
 PROCESS_END();
 }
+
+/*--- - Human Body Posture Detection and Prediction ---------------*/
+void predict(){
+  double mag[sampleNo-1],sum=0,max=0,std=0,mean=0,tmp=0;
+  double result1,result2,result3,result4;
+  int i;
+  for(i=1;i<sampleNo;i++){
+    mag[i-1]=sqrt(pow(sample[0][i]-sample[0][i-1],2)+pow(sample[1][i]-sample[1][i-1],2)+pow(sample[2][i]-sample[2][i-1],2));
+    sum=sum+mag[i-1];
+    if(mag[i-1]>max)max=mag[i-1];
+  }
+
+  mean =(sum/sampleNo);
+  for(i=0;i<sampleNo-1;i++){
+    tmp = tmp + pow( ( 1 - mean ), 2);
+  }
+  std=sqrt(tmp/80);
+  //printf("This is data from predict:%d,%d\n",(int)std,(int)mean);
+  if(std>1000)return;
+  double std1=3, mean1=2.2, max1=0.7;
+  double std2=30, mean2=37, max2=5.74;
+  double std3=68, mean3=83, max3=22;
+  double std4=96, mean4=34, max4=42;
+  double a1=1,a2=1,a3=0;
+  result1 = sqrt(a1*pow((std-std1),2)+a2*pow((mean-mean1),2)+a3*pow((max-max1),2));
+  result2 = sqrt(a1*pow((std-std2),2)+a2*pow((mean-mean2),2)+a3*pow((max-max2),2));
+  result3 = sqrt(a1*pow((std-std3),2)+a2*pow((mean-mean3),2)+a3*pow((max-max3),2));
+  result4 = sqrt(a1*pow((std-std4),2)+a2*pow((mean-mean4),2)+a3*pow((max-max4),2));
+  //printf("This is four results:%d,%d,%d,%d\n",(int)result1,(int)result2,(int)result3,(int)result4);
+  if(result1<result2 && result1<result3 && result1<result4){last=*STATUS_PT;STATUS_PT=STANDING;if(last!=*STATUS_PT){status_str = "1"; printf("standing\n");leds_toggle(LEDS_BLUE);}}
+  if(result2<result1 && result2<result3 && result2<result4){last=*STATUS_PT;STATUS_PT=WALKING;if(last!=*STATUS_PT){status_str = "2"; printf("walking\n");leds_toggle(LEDS_GREEN);}}
+  if(result3<result1 && result3<result2 && result3<result4){last=*STATUS_PT;STATUS_PT=RUNNING;if(last!=*STATUS_PT){status_str = "3"; printf("running\n");leds_toggle(LEDS_GREEN);}}
+}
+/*---- End Human Body Posture Detection and Prediction ---------------*/
 /*---------------------------------------------------------------------------*/
 /**
  * @}
