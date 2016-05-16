@@ -4,6 +4,7 @@
 #include "contiki.h"
 #include "contiki-net.h"
 #include "rest-engine.h"
+#include "dev/adxl345.h"
 
 // Set the Radio performance
 #include <cc2420.h>
@@ -63,6 +64,15 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   /* Initialize the REST engine. */
   rest_init_engine();
+
+  //----------- Init ADXL Sensor ------------
+  /* Start and setup the accelerometer with default values, eg no interrupts enabled. */
+  accm_init();
+
+  /* Set what strikes the corresponding interrupts. Several interrupts per pin is
+     possible. For the eight possible interrupts, see adxl345.h and adxl345 datasheet. */
+  accm_set_irq(ADXL345_INT_FREEFALL, ADXL345_INT_TAP + ADXL345_INT_DOUBLETAP);
+  //-----------End Init ADXL Sensor ------------
 
   rest_activate_resource(&res_z1_coap_obs_rtgs, "obs/mote");
   rest_activate_resource(&res_z1_coap_sens_rtgs, "sens/mote");

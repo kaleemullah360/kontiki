@@ -64,16 +64,22 @@
 
 // declare/define the pridiction function.
 void predict();
-void standing(){ status_str = "1"; printf("standing\n"); leds_on(LEDS_BLUE);  leds_off(LEDS_RED); leds_off(LEDS_GREEN); }
-void walking() { status_str = "2"; printf("walking\n");  leds_on(LEDS_GREEN); leds_off(LEDS_RED); leds_off(LEDS_BLUE);  }
-void running() { status_str = "3"; printf("running\n");  leds_on(LEDS_GREEN); leds_on(LEDS_RED);  leds_off(LEDS_BLUE);  }
-void falling() { status_str = "4"; printf("falling\n");  leds_on(LEDS_RED);   leds_off(LEDS_BLUE);leds_off(LEDS_GREEN); }
+//	viola ! these are actions to be fired on each event. 
+//	i.e set status 1, print walking, turn on blue LED and off other LEDs when WALKING is fired.
+void standing(){ status_str = STANDING; printf("standing\n"); leds_on(LEDS_BLUE);  leds_off(LEDS_RED); leds_off(LEDS_GREEN); }
+void walking() { status_str = WALKING; printf("walking\n");  leds_on(LEDS_GREEN); leds_off(LEDS_RED); leds_off(LEDS_BLUE);  }
+void running() { status_str = RUNNING; printf("running\n");  leds_on(LEDS_GREEN); leds_on(LEDS_RED);  leds_off(LEDS_BLUE);  }
+void falling() { status_str = FALLING; printf("falling\n");  leds_on(LEDS_RED);   leds_off(LEDS_BLUE);leds_off(LEDS_GREEN); }
 
 #define HISTORY 16
 #define sampleNo 81
-static int16_t x,y,z;
-static int16_t sample[3][sampleNo];
-static int16_t pos;
+// Why I'm using int8_t ? (finally I discovered, I don't know)
+/* c Type			|		stdint.h Type	|	Bits |  Signed	|		Range			|
+ signed char	|			int8_t			|	 8	 |	Signed	| -128 .. 127 | */
+
+static int8_t x,y,z;
+static int8_t sample[3][sampleNo];
+static int8_t pos;
 
 static struct etimer et;
 
@@ -109,9 +115,9 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
     z = accm_read_axis(Z_AXIS);
 
     //printf("%d : %d : %d \n", x, y, z);
-    sample[0][pos]=(int16_t)x;
-    sample[1][pos]=(int16_t)y;
-    sample[2][pos]=(int16_t)z;
+    sample[0][pos]=(int8_t)x;
+    sample[1][pos]=(int8_t)y;
+    sample[2][pos]=(int8_t)z;
 
     if(pos==(sampleNo-1))predict();
     pos=(pos+1)%sampleNo;
@@ -160,3 +166,4 @@ void predict(){
   if(result3<result1 && result3<result2 && result3<result4){ last=*STATUS_PT;STATUS_PT=RUNNING;  if(last!=*STATUS_PT){ running(); } }
 }
 /*---- End Human Body Posture Detection and Prediction ---------------*/
+
