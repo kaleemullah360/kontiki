@@ -74,8 +74,8 @@ void falling() { status_str = FALLING; printf("falling\n");  leds_on(LEDS_RED); 
 #define HISTORY 16
 #define sampleNo 81
 // Why I'm using int8_t ? (finally I discovered, I don't know)
-/* c Type			|		stdint.h Type	|	Bits |  Signed	|		Range			|
- signed char	|			int8_t			|	 8	 |	Signed	| -128 .. 127 | */
+/* c Type   |stdint.h Type|Bits|Signed| Range     |
+ signed char| int8_t      | 8  |Signed|-128 .. 127| */
 
 static int8_t x,y,z;
 static int8_t sample[3][sampleNo];
