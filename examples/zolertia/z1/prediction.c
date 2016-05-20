@@ -73,13 +73,13 @@ void falling() { status_str = FALLING; printf("falling\n");  leds_on(LEDS_RED); 
 
 #define HISTORY 16
 #define sampleNo 81
-// Why I'm using int8_t ? (finally I discovered, I don't know)
-/* c Type   |stdint.h Type|Bits|Signed| Range     |
- signed char| int8_t      | 8  |Signed|-128 .. 127| */
+// Why I'm using int16_t ? (finally I discovered, I don't know)
+/* c Type   |stdint.h Type|Bits|Signed| Range           |
+ signed char| int16_t     | 16 |Signed|-32,768 .. 32,767| */
 
-static int8_t x,y,z;
-static int8_t sample[3][sampleNo];
-static int8_t pos;
+static int16_t x,y,z;
+static int16_t sample[3][sampleNo];
+static int16_t pos;
 
 static struct etimer et;
 
@@ -115,9 +115,9 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
     z = accm_read_axis(Z_AXIS);
 
     //printf("%d : %d : %d \n", x, y, z);
-    sample[0][pos]=(int8_t)x;
-    sample[1][pos]=(int8_t)y;
-    sample[2][pos]=(int8_t)z;
+    sample[0][pos]=(int16_t)x;
+    sample[1][pos]=(int16_t)y;
+    sample[2][pos]=(int16_t)z;
 
     if(pos==(sampleNo-1))predict();
     pos=(pos+1)%sampleNo;
@@ -166,4 +166,3 @@ void predict(){
   if(result3<result1 && result3<result2 && result3<result4){ last=*STATUS_PT;STATUS_PT=RUNNING;  if(last!=*STATUS_PT){ running(); } }
 }
 /*---- End Human Body Posture Detection and Prediction ---------------*/
-

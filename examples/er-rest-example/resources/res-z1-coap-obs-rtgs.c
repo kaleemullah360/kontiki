@@ -40,11 +40,6 @@
 #include "rest-engine.h"
 #include "er-coap.h"
 
-//--- Libs for rTGS-APp ----
-#include "dev/battery-sensor.h"
-#include "dev/i2cmaster.h"
-#include "dev/tmp102.h"
-//---End Libs for rTGS-APp ---
 
 //------- prediction custom libs ------
 #include "dev/adxl345.h"
@@ -93,9 +88,8 @@ void falling() { notify(); status_str = FALLING; printf("falling\n");  leds_on(L
 /* c Type   |stdint.h Type|Bits|Signed| Range     |
  signed char| int8_t      | 8  |Signed|-128 .. 127| */
 
-static int8_t x,y,z;
-static int8_t sample[3][sampleNo];
-static int8_t pos;
+static int16_t sample[3][sampleNo];
+static int16_t pos;
 
 static struct etimer et;
 
@@ -108,73 +102,12 @@ void accm_ff_cb(uint8_t reg){
 //-------End prediction functions ------
 /*---------------------------------------------------------------------------*/
 
-//--- Variable Declaration for rTGS-APp ----
-
- static int32_t mid = 0;  // MessageID
- static int32_t upt = 0;  // UpTime
- static int32_t clk = 0;  // ClockTime
-
-  // temperature function variables 
- static int16_t tempint;
- static uint16_t tempfrac;
- static int16_t raw;
- static uint16_t absraw;
- static int16_t sign;
- static char minus = ' ';
-
-  // Battery function variables 
- static uint16_t bat_v = 0;
- static float bat_mv = 0; 
-
 
 //---End Variable Declaration rTGS-APp ---
 
 //--- Function Deffinitions for rTGS-APp ----
 
-// function to return floor_obs of float value
- float floor_obs(float x){
-  if(x >= 0.0f){ // check the value of x is +eve
-    return (float)((int) x);
-  }else{ // if value of x is -eve
-    // x = -2.2
-    // -3.2 = (-2.2) - 1
-    // -3  = (int)(-3.2)
-    //return -3.0 = (float)(-3)
-    return(float) ((int) x - 1);   
-  } //end if-else
 
-} //end floor_obs function
-
-static void get_sensor_time(){
-  upt = clock_seconds();  // UpTime
-  clk = clock_time(); // ClockTime
-}
-
-static void get_sensor_temperature(){
-  tmp102_init();  // Init Sensor
-  sign = 1;
-  raw = tmp102_read_temp_x100(); // tmp102_read_temp_raw();
-  absraw = raw;
-    if(raw < 0) {   // Perform 2C's if sensor returned negative data
-      absraw = (raw ^ 0xFFFF) + 1;
-    sign = -1;
-  }
-  tempint = (absraw >> 8) * sign;
-    tempfrac = ((absraw >> 4) % 16) * 625;  // Info in 1/10000 of degree
-    minus = ((tempint == 0) & (sign == -1)) ? '-' : ' ';
-    //printf("Temp = %c%d.%04d\n", minus, tempint, tempfrac);
-  }
-
-  static void get_sensor_battery(){
-  // Activate Temperature and Battery Sensors  
-    SENSORS_ACTIVATE(battery_sensor);
-  // prints as fast as possible (with no delay) the battery level.
-    bat_v = battery_sensor.value(0);
-  // When working with the ADC you need to convert the ADC integers in milliVolts. 
-  // This is done with the following formula:
-    bat_mv = (bat_v * 2.500 * 2) / 4096;
-  //printf("Battery Analog Data Value: %i , milli Volt= (%ld.%03d mV)\n", bat_v, (long) bat_mv, (unsigned) ((bat_mv - floor_obs(bat_mv)) * 1000));
-  }
 
 //---End Function Deffinitions e-MCH-APp ---
 
@@ -205,7 +138,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
    */
   REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
   REST.set_header_max_age(response, res_z1_coap_obs_rtgs.periodic->period / CLOCK_SECOND);
-  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size, "%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor_obs(bat_mv)) * 1000),status_str));
+  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size, "%s",status_str));
 
   /* The REST.subscription_handler() will be called for observable resources by the REST framework. */
 }
@@ -228,14 +161,11 @@ res_periodic_handler()
   //printf("Motion Tracking Started\n");
 
     //------------ Prediction (read values) ------------------
-    x = accm_read_axis(X_AXIS);
-    y = accm_read_axis(Y_AXIS);
-    z = accm_read_axis(Z_AXIS);
 
     //printf("%d : %d : %d \n", x, y, z);
-    sample[0][pos]=(int8_t)x;
-    sample[1][pos]=(int8_t)y;
-    sample[2][pos]=(int8_t)z;
+    sample[0][pos]=accm_read_axis(X_AXIS);
+    sample[1][pos]=accm_read_axis(Y_AXIS);
+    sample[2][pos]=accm_read_axis(Z_AXIS);
     if(pos==(sampleNo-1))predict();
     pos=(pos+1)%sampleNo;
     etimer_set(&et, ACCM_READ_INTERVAL);
@@ -248,12 +178,6 @@ res_periodic_handler()
 
   //printf("Motion Tracking Terminated\n");
 
-  //----- Get Data Instance -------
-  ++mid;  // MessageID
-  get_sensor_temperature();
-  get_sensor_time();
-  get_sensor_battery();
-  //----- End Get Data -------
   /* Do a periodic task here, e.g., sampling a sensor. */
   ++event_counter;
 }
@@ -274,11 +198,11 @@ void predict(){
   std=sqrt(tmp/80);
   //printf("This is data from predict:%d,%d\n",(int)std,(int)mean);
   if(std>1000)return;
-  double std1=3, mean1=2.2, max1=0.7;
-  double std2=30, mean2=37, max2=5.74;
-  double std3=68, mean3=83, max3=22;
-  double std4=96, mean4=34, max4=42;
-  double a1=1,a2=1,a3=0;
+  float std1=3, mean1=2.2, max1=0.7;
+  float std2=30, mean2=37, max2=5.74;
+  float std3=68, mean3=83, max3=22;
+  float std4=96, mean4=34, max4=42;
+  float a1=1,a2=1,a3=0;
   result1 = sqrt(a1*pow((std-std1),2)+a2*pow((mean-mean1),2)+a3*pow((max-max1),2));
   result2 = sqrt(a1*pow((std-std2),2)+a2*pow((mean-mean2),2)+a3*pow((max-max2),2));
   result3 = sqrt(a1*pow((std-std3),2)+a2*pow((mean-mean3),2)+a3*pow((max-max3),2));
