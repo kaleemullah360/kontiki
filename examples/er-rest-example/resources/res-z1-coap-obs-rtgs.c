@@ -69,10 +69,9 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
    * Otherwise the requests must be stored with the observer list and passed by REST.notify_subscribers().
    * This would be a TODO in the corresponding files in contiki/apps/erbium/!
    */
-  char *status_str = "1";
   REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
   REST.set_header_max_age(response, res_z1_coap_obs_rtgs.periodic->period / CLOCK_SECOND);
-  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size, "%s",status_str));
+  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size, "%s","nothing"));
 
   /* The REST.subscription_handler() will be called for observable resources by the REST framework. */
 }
