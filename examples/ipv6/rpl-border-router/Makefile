@@ -33,7 +33,8 @@ CFLAGS += -DWEBSERVER=2
 endif
 
 ifeq ($(PREFIX),)
- PREFIX = aaaa::1/64
+ #PREFIX = aaaa::1/64
+ PREFIX = aaaa::1/64 -v4 | ts '[%Y-%m-%d %H:%M:%.S]' | tee ~/br-output.txt
 endif
 
 CONTIKI_WITH_IPV6 = 1

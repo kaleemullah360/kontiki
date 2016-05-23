@@ -1,0 +1,8 @@
+sudo make login TARGET=z1 | ts '[%Y-%m-%d %H:%M:%.S]' | tee ~/z1-output.txt
+sudo your-desired-command | ts '[%Y-%m-%d %H:%M:%.S]' | tee ~/br-output.txt
+
+Install Moreutils:
+
+https://packages.debian.org/sid/amd64/moreutils/download
+http://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
+http://unix.stackexchange.com/questions/26728/prepending-a-timestamp-to-each-line-of-output-from-a-command

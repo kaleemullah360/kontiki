@@ -153,6 +153,7 @@ pow_str = powertrace_result();
  	if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
  		REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
  		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor_emch(bat_mv)) * 1000),pow_str);
+    printf("Message %lu Sent on %lu Tstmp: \n", mid, upt);
 
  		REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
  	}

@@ -43,13 +43,10 @@
 #include <string.h>
 #include "rest-engine.h"
 //--- Libs for e-MCH-APp ----
-
 #include "dev/battery-sensor.h"
 #include "dev/i2cmaster.h"
 #include "dev/tmp102.h"
-
 //---End Libs for e-MCH-APp ---
-
 //--- Variable Declaration for e-MCH-APp ----
 
  static int32_t mid = 0;  // MessageID
@@ -63,11 +60,11 @@
  static uint16_t absraw;
  static int16_t sign;
  static char minus = ' ';
+ static char status_str = 'standing';
 
   // Battery function variables 
  static uint16_t bat_v = 0;
  static float bat_mv = 0; 
- static char *status_str = "1";
 //---End Variable Declaration e-MCH-APp ---
 
 //--- Function Deffinitions for e-MCH-APp ----
@@ -132,8 +129,7 @@ static void get_sensor_temperature(){
  static void
  res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
  {
-  
- //----- Get Data Instance -------
+ 
 ++mid;  // MessageID
 get_sensor_temperature();
 get_sensor_time();
@@ -150,4 +146,5 @@ get_sensor_battery();
     REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
   }
  }
+
 #endif /* PLATFORM_HAS_BATTERY */
