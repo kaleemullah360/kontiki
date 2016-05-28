@@ -16,17 +16,17 @@
   char *WALKING    = "WA";   //WALKING
   char *RUNNING    = "RU";   //RUNNING
   char *FALLING    = "FA";   //FALLING
-  char *STATUS_PT  =  NULL;       //Nothing
+  char *STATUS_PT  =  NULL;  //Nothing
   char last;
 
 // declare/define the pridiction function.
 void predict();
 //	viola ! these are actions to be fired on each event. 
 //	i.e set status 1, print walking, turn on blue LED and off other LEDs when WALKING is fired.
-void standing(){ printf("standing\n"); }
-void walking() { printf("walking\n");  }
-void running() { printf("running\n");  }
-void falling() { printf("falling\n");  }
+void standing(){ printf("standing\n");}
+void walking() { printf("walking\n"); }
+void running() { printf("running\n"); }
+void falling() { printf("falling\n"); }
 #define HISTORY 16
 #define sampleNo 72
 // Why I'm using int16_t ? (finally I discovered, I don't know)

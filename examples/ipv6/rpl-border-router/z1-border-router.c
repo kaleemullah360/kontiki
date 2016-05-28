@@ -50,10 +50,20 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
- // Set the Radio performance
+/* -------- Set Radio Powers --------------- */
 #include <cc2420.h>
+
+// |Power (dBm)|PA_LEVEL|Power (mW)|
+// |0          |  31    |1.0000    |
+// |-0.0914    |  30    |0.9792    |
+// |-25.0000   |  3     |0.0032    |
+// |-28.6970   |  2     |0.0013    |
+// |-32.9840   |  1     |0.0005    |
+// |-37.9170   |  0     |0.0002    |
+
 uint8_t radioChannel = 25;  // default channel
-uint8_t radioChannel_tx_power = 31; // default power
+uint8_t radioChannel_tx_power = 5; // default power
+/* -------- End Set Radio Powers ------------ */
 
 #define DEBUG DEBUG_NONE
 #include "net/ip/uip-debug.h"

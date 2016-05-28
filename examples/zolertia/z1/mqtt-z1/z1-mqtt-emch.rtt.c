@@ -44,6 +44,8 @@
 #include "dev/button-sensor.h"
 #include "dev/leds.h"
 #include <string.h>
+
+
 /* -------- Set Radio Powers --------------- */
 #include <cc2420.h>
 
@@ -57,83 +59,9 @@
 
 uint8_t radioChannel = 25;  // default channel
 uint8_t radioChannel_tx_power = 3; // default power
+uint8_t message_no = 0;
 /* -------- End Set Radio Powers ------------ */
-//--- Libs for e-MCH-APp ----
 
-#include "dev/battery-sensor.h"
-#include "dev/i2cmaster.h"
-#include "dev/tmp102.h"
-
-//---End Libs for e-MCH-APp ---
-
-//--- Variable Declaration for e-MCH-APp ----
-
- static int32_t mid = 0;  // MessageID
- static int32_t upt = 0;  // UpTime
- static int32_t clk = 0;  // ClockTime
-
-  // temperature function variables 
- static int16_t tempint;
- static uint16_t tempfrac;
- static int16_t raw;
- static uint16_t absraw;
- static int16_t sign;
- static char minus = ' ';
-
-  // Battery function variables 
- static uint16_t bat_v = 0;
- static float bat_mv = 0; 
-
-//---End Variable Declaration e-MCH-APp ---
-
-//--- Function Deffinitions for e-MCH-APp ----
-
-// function to return floor of float value
- float floor(float x){
-  if(x >= 0.0f){ // check the value of x is +eve
-    return (float)((int) x);
-  }else{ // if value of x is -eve
-    // x = -2.2
-    // -3.2 = (-2.2) - 1
-    // -3  = (int)(-3.2)
-    //return -3.0 = (float)(-3)
-    return(float) ((int) x - 1);   
-  } //end if-else
-
-} //end floor function
-
-static void get_sensor_time(){
-  upt = clock_seconds();  // UpTime
-  clk = clock_time(); // ClockTime
-}
-
-static void get_sensor_temperature(){
-  tmp102_init();  // Init Sensor
-  sign = 1;
-  raw = tmp102_read_temp_x100(); // tmp102_read_temp_raw();
-  absraw = raw;
-    if(raw < 0) {   // Perform 2C's if sensor returned negative data
-      absraw = (raw ^ 0xFFFF) + 1;
-    sign = -1;
-  }
-  tempint = (absraw >> 8) * sign;
-    tempfrac = ((absraw >> 4) % 16) * 625;  // Info in 1/10000 of degree
-    minus = ((tempint == 0) & (sign == -1)) ? '-' : ' ';
-    //printf("Temp = %c%d.%04d\n", minus, tempint, tempfrac);
-  }
-
-  static void get_sensor_battery(){
-  // Activate Temperature and Battery Sensors  
-    SENSORS_ACTIVATE(battery_sensor);
-  // prints as fast as possible (with no delay) the battery level.
-    bat_v = battery_sensor.value(0);
-  // When working with the ADC you need to convert the ADC integers in milliVolts. 
-  // This is done with the following formula:
-    bat_mv = (bat_v * 2.500 * 2) / 4096;
-  //printf("Battery Analog Data Value: %i , milli Volt= (%ld.%03d mV)\n", bat_v, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
-  }
-
-//---End Function Deffinitions e-MCH-APp ---
 /*---------------------------------------------------------------------------*/
 /*
  * Publish to a local MQTT broker (e.g. mosquitto) running on the host
@@ -201,7 +129,7 @@ static void get_sensor_temperature(){
 #define DEFAULT_EVENT_TYPE_ID       "status"
 #define DEFAULT_SUBSCRIBE_CMD_TYPE  "+"
 #define DEFAULT_BROKER_PORT         1883
-#define DEFAULT_PUBLISH_INTERVAL    (1 * CLOCK_SECOND)   // <----------- SET Publishing Interval
+#define DEFAULT_PUBLISH_INTERVAL    (10 * CLOCK_SECOND)   // <----------- SET Publishing Interval
 #define DEFAULT_KEEP_ALIVE_TIMER    60
 #define DEFAULT_RSSI_MEAS_INTERVAL  (CLOCK_SECOND * 30)
 /*---------------------------------------------------------------------------*/
@@ -510,12 +438,7 @@ subscribe(void)
 static void
 publish(void)
 {
-  //----- Get Data Instance -------
-++mid;  // MessageID
-get_sensor_temperature();
-get_sensor_time();
-get_sensor_battery();
-//----- End Get Data -------
+
   /* Publish MQTT topic in IBM quickstart format */
 int len;
 int remaining = APP_BUFFER_SIZE;
@@ -523,7 +446,7 @@ int remaining = APP_BUFFER_SIZE;
 
 buf_ptr = app_buffer;
 
-len = snprintf(buf_ptr, remaining,"%lu,%lu,%lu,%c%d.%04d,%ld.%03d", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
+len = snprintf(buf_ptr, remaining,"%d", message_no++);
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
@@ -707,6 +630,7 @@ state_machine(void)
  {
 
   PROCESS_BEGIN();
+  powertrace_start(CLOCK_SECOND * 1);
   cc2420_set_channel(radioChannel); // channel 26
   cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
   printf("eMCH-APp\n");
@@ -725,6 +649,8 @@ state_machine(void)
   /* Main loop */
   while(1) {
 
+    //pow_str = powertrace_result();
+  //printf("%s\n", pow_str);
     PROCESS_YIELD();
 
     if(ev == sensors_event && data == PUBLISH_TRIGGER) {
@@ -745,7 +671,7 @@ state_machine(void)
     etimer_set(&echo_request_timer, conf.def_rt_ping_interval);
   }
 }
-
+powertrace_stop();
 PROCESS_END();
 }
 /*---------------------------------------------------------------------------*/

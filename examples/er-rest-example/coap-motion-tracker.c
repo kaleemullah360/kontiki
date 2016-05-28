@@ -86,13 +86,6 @@
  * Resources to be activated need to be imported through the extern keyword.
  * The build system automatically compiles the resources in the corresponding sub-directory.
  */
- extern resource_t
- res_mirror,
- res_chunks,
- res_separate,
- res_event,
- res_sub,
- res_b1_sep_b2;
 
 #if PLATFORM_HAS_ADXLSENSOR
 extern resource_t res_z1_adxl_sensor; // <--- This
