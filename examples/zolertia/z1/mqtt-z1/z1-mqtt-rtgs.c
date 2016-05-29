@@ -44,10 +44,8 @@
 #include "dev/button-sensor.h"
 #include "dev/leds.h"
 #include <string.h>
-// Set the Radio performance
-#include <cc2420.h>
-uint8_t radioChannel = 26;  // default channel
-uint8_t radioChannel_tx_power = 31; // default power
+#include <cc2420-radio.h>
+
 //--- Libs for e-MCH-APp ----
 
 #include "dev/battery-sensor.h"
@@ -786,8 +784,8 @@ state_machine(void)
  {
 
   PROCESS_BEGIN();
-  cc2420_set_channel(radioChannel); // channel 26
-  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
+  set_cc2420_txpower(0);
+  set_cc2420_channel(0);
   printf("eMCH-APp\n");
 
   if(init_config() != 1) {

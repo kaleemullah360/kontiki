@@ -23,15 +23,16 @@
  * The build system automatically compiles the resources in the corresponding sub-directory.
  */
 
-extern resource_t res_z1_coap_emch;
+extern resource_t res_z1_coap_emch_rtt;
 
-PROCESS(er_example_server, "e-MCH-APp Server");
+PROCESS(er_example_server, "e-MCH-APp Server RTT");
 AUTOSTART_PROCESSES(&er_example_server);
 
 PROCESS_THREAD(er_example_server, ev, data)
 {
   PROCESS_BEGIN();
 
+  powertrace_start(CLOCK_SECOND * 1);
   PROCESS_PAUSE();
 
   PRINTF("e-MCH-APp\n");
@@ -51,7 +52,7 @@ PROCESS_THREAD(er_example_server, ev, data)
   /* Initialize the REST engine. */
   rest_init_engine();
 
-  rest_activate_resource(&res_z1_coap_emch, "sens/mote");
+  rest_activate_resource(&res_z1_coap_emch_rtt, "sens/mote");
 
   /* Define application-specific events here. */
   set_cc2420_txpower(0);
@@ -60,6 +61,6 @@ PROCESS_THREAD(er_example_server, ev, data)
     PROCESS_WAIT_EVENT();
 
   }  /* while (1) */
-
+  powertrace_stop();
   PROCESS_END();
 }

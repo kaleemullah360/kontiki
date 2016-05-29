@@ -41,10 +41,6 @@
 #include "httpd-simple.h"
 #include <stdio.h>
 
-// Set the Radio performance
-#include <cc2420.h>
-uint8_t radioChannel = 26;  // default channel
-uint8_t radioChannel_tx_power = 31; // default power
 //--- Libs for e-MCH-APp ----
 #include "dev/battery-sensor.h"
 #include "dev/i2cmaster.h"
@@ -125,8 +121,6 @@ PROCESS(webserver_nogui_process, "rTGS server");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
   PROCESS_BEGIN();
-  cc2420_set_channel(radioChannel); // channel 26
-  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
 
   httpd_init();
 

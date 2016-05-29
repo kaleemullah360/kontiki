@@ -130,7 +130,6 @@ PROCESS_THREAD(web_sense_process, ev, data)
 {
   static struct etimer timer;
   PROCESS_BEGIN();
-  cc2420_set_txpower(31);
 
   process_start(&webserver_nogui_process, NULL);
 

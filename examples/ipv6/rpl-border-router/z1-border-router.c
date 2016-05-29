@@ -41,6 +41,7 @@
 #include "net/ip/uip.h"
 #include "net/ipv6/uip-ds6.h"
 #include "net/rpl/rpl.h"
+#include <cc2420-radio.h>
 
 #include "net/netstack.h"
 #include "dev/button-sensor.h"
@@ -50,20 +51,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-/* -------- Set Radio Powers --------------- */
-#include <cc2420.h>
-
-// |Power (dBm)|PA_LEVEL|Power (mW)|
-// |0          |  31    |1.0000    |
-// |-0.0914    |  30    |0.9792    |
-// |-25.0000   |  3     |0.0032    |
-// |-28.6970   |  2     |0.0013    |
-// |-32.9840   |  1     |0.0005    |
-// |-37.9170   |  0     |0.0002    |
-
-uint8_t radioChannel = 25;  // default channel
-uint8_t radioChannel_tx_power = 5; // default power
-/* -------- End Set Radio Powers ------------ */
 
 #define DEBUG DEBUG_NONE
 #include "net/ip/uip-debug.h"
@@ -106,7 +93,6 @@ PROCESS(webserver_nogui_process, "Web server");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
   PROCESS_BEGIN();
-
   httpd_init();
 
   while(1) {
@@ -345,14 +331,14 @@ set_prefix_64(uip_ipaddr_t *prefix_64)
     PRINTF("created a new RPL dag\n");
   }
 }
+
 /*---------------------------------------------------------------------------*/
 PROCESS_THREAD(border_router_process, ev, data)
 {
   static struct etimer et;
-  cc2420_set_channel(radioChannel); // channel 26
-  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
   PROCESS_BEGIN();
-
+  set_cc2420_txpower(0);
+  set_cc2420_channel(0);
 /* While waiting for the prefix to be sent through the SLIP connection, the future
  * border router can join an existing DAG as a parent or child, or acquire a default
  * router that will later take precedence over the SLIP fallback interface.

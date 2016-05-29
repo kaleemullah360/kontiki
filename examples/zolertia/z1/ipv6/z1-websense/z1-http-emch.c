@@ -40,10 +40,7 @@
 #include "contiki.h"
 #include "httpd-simple.h"
 #include <stdio.h>
-// Set the Radio performance
-#include <cc2420.h>
-uint8_t radioChannel = 25;  // default channel
-uint8_t radioChannel_tx_power = 31; // default power
+#include <cc2420-radio.h>
 //--- Libs for e-MCH-APp ----
 
 #include "dev/battery-sensor.h"
@@ -125,8 +122,6 @@ PROCESS(webserver_nogui_process, "Web server");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
   PROCESS_BEGIN();
-  cc2420_set_channel(radioChannel); // channel 26
-  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
 
   httpd_init();
 
@@ -160,10 +155,8 @@ get_sensor_battery();
 PSOCK_BEGIN(&s->sout);
 blen = 0;
 
-ADD(" ");
-
 ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
-ADD(" ");
+ADD("\n");
 
 SEND_STRING(&s->sout, buf);
 PSOCK_END(&s->sout);
@@ -179,10 +172,10 @@ PROCESS_THREAD(web_sense_process, ev, data)
 {
   static struct etimer timer;
   PROCESS_BEGIN();
-
+	set_cc2420_txpower(0);
+	set_cc2420_channel(0);
 
   etimer_set(&timer, CLOCK_SECOND * 2);
-
 
   while(1) {
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));

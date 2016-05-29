@@ -9,7 +9,8 @@ SMALL=1
 TARGET_LIBFILES += -lm
 
 APPS += webserver webbrowser
-APPS+=powertrace
+APPS += powertrace
+APPS += config-radio
 CFLAGS += -DPROJECT_CONF_H=\"project-conf.h\"
 CONTIKI_SOURCEFILES += wget.c
 PROJECTDIRS += ../../../../ipv6/rpl-border-router

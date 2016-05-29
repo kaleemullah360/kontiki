@@ -42,6 +42,12 @@
 
 #include <string.h>
 #include "rest-engine.h"
+
+// Powertracing
+#include "powertrace-z1.h"
+char *powertrace_result();
+char *pow_str = "";
+
 //--- Libs for e-MCH-APp ----
 
 #include "dev/battery-sensor.h"
@@ -72,8 +78,8 @@
 
 //--- Function Deffinitions for e-MCH-APp ----
 
-// function to return floor of float value
- float floor(float x){
+// function to return floor_emch of float value
+ float floor_emch(float x){
   if(x >= 0.0f){ // check the value of x is +eve
     return (float)((int) x);
   }else{ // if value of x is -eve
@@ -84,7 +90,7 @@
     return(float) ((int) x - 1);   
   } //end if-else
 
-} //end floor function
+} //end floor_emch function
 
 static void get_sensor_time(){
   upt = clock_seconds();  // UpTime
@@ -114,7 +120,7 @@ static void get_sensor_temperature(){
   // When working with the ADC you need to convert the ADC integers in milliVolts. 
   // This is done with the following formula:
     bat_mv = (bat_v * 2.500 * 2) / 4096;
-  //printf("Battery Analog Data Value: %i , milli Volt= (%ld.%03d mV)\n", bat_v, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
+  //printf("Battery Analog Data Value: %i , milli Volt= (%ld.%03d mV)\n", bat_v, (long) bat_mv, (unsigned) ((bat_mv - floor_emch(bat_mv)) * 1000));
   }
 
 //---End Function Deffinitions e-MCH-APp ---
@@ -122,7 +128,7 @@ static void get_sensor_temperature(){
  static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
 
 /* A simple getter example. Returns the reading from light sensor with a simple etag */
- RESOURCE(res_z1_coap_emch,
+ RESOURCE(res_z1_coap_emch_pow,
  	"title=\"Sensor\";rt=\"status\"",
  	res_get_handler,
  	NULL,
@@ -139,13 +145,15 @@ get_sensor_temperature();
 get_sensor_time();
 get_sensor_battery();
 //----- End Get Data -------
+pow_str = powertrace_result();
 
  	unsigned int accept = -1;
  	REST.get_header_accept(request, &accept);
 
  	if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
  		REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
- 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%c%d.%04d,%ld.%03d", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
+ 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor_emch(bat_mv)) * 1000),pow_str);
+    printf("Message %lu Sent on %lu Tstmp: \n", mid, upt);
 
  		REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
  	}

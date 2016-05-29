@@ -5,7 +5,8 @@ all: mqtt-z1
 CONTIKI_WITH_IPV6 = 1
 
 APPS=serial-shell
-APPS+=powertrace
+APPS += powertrace
+APPS += config-radio
 APPS += mqtt
 
 CONTIKI=../../../..

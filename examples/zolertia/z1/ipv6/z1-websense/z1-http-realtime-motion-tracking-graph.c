@@ -167,7 +167,6 @@ PROCESS_THREAD(web_sense_process, ev, data)
 {
   static struct etimer timer;
   PROCESS_BEGIN();
-  cc2420_set_txpower(31);
 
 
     /* Start and setup the accelerometer with default values, eg no interrupts enabled. */

@@ -77,8 +77,6 @@ httpd_simple_get_script(const char *name)
 PROCESS_THREAD(accel_process, ev, data) {
   PROCESS_BEGIN();
   {
-
-    cc2420_set_txpower(31);
     process_start(&webserver_nogui_process, NULL);
 
     /* Start and setup the accelerometer with default values, eg no interrupts enabled. */

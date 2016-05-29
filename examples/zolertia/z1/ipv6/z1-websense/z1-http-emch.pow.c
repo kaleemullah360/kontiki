@@ -39,26 +39,13 @@
 #include "contiki.h"
 #include "httpd-simple.h"
 #include <stdio.h>
+#include <cc2420-radio.h>
 
 // Powertracing
 #include "powertrace-z1.h"
 char *powertrace_result();
 //char *pow_str = "";
 
-/* -------- Set Radio Powers --------------- */
-#include <cc2420.h>
-
-// |Power (dBm)|PA_LEVEL|Power (mW)|
-// |0          |  31    |1.0000    |
-// |-0.0914    |  30    |0.9792    |
-// |-25.0000   |  3     |0.0032    |
-// |-28.6970   |  2     |0.0013    |
-// |-32.9840   |  1     |0.0005    |
-// |-37.9170   |  0     |0.0002    |
-
-uint8_t radioChannel = 25;  // default channel
-uint8_t radioChannel_tx_power = 3; // default power
-/* -------- End Set Radio Powers ------------ */
 //--- Libs for e-MCH-APp ----
 #include "dev/battery-sensor.h"
 #include "dev/i2cmaster.h"
@@ -139,8 +126,6 @@ PROCESS(webserver_nogui_process, "e-MCH server");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
   PROCESS_BEGIN();
-  cc2420_set_channel(radioChannel); // channel 26
-  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
 
   httpd_init();
 
@@ -175,10 +160,8 @@ get_sensor_battery();
 PSOCK_BEGIN(&s->sout);
 blen = 0;
 
-ADD(" ");
-
 ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), powertrace_result());
-ADD(" ");
+ADD("\n");
 
 SEND_STRING(&s->sout, buf);
 PSOCK_END(&s->sout);
@@ -194,6 +177,8 @@ PROCESS_THREAD(web_sense_process, ev, data)
 {
   static struct etimer timer;
   PROCESS_BEGIN();
+	set_cc2420_txpower(0);
+	set_cc2420_channel(0);
   powertrace_start(CLOCK_SECOND * 1);
 
 
