@@ -1,0 +1,43 @@
+Clone:
+
+https://github.com/kaleemullah360/kontiki.git --recursive
+
+To Check what is changed Today:
+
+git status -s
+git status
+
+To Pull those changes into Local repository:
+
+git pull origin master
+
+To Push your local changes into remote (online) repository(require user name & password):
+
+git push origin master
+
+------------------- Extra -----------------------------
+
+to make other repository you're own. just clone that repo and do the following.
+
+first check the current origin url:
+
+git remote -v
+
+
+origin  git@github.com:OHERUSER/REPOSITORY.git (fetch)
+origin  git@github.com:OTHERUSER/REPOSITORY.git (push)
+
+To make it your Repository:
+
+Now Login to your git account and create new repository with same name.
+when created go to clone this repository option and copy that url and paste it into following line.
+
+git remote set-url origin https://github.com/YOURGIT/REPOSITORY.git
+
+again check current origin:
+
+git remote -v
+
+
+origin  git@github.com:YOUR/REPOSITORY.git (fetch)
+origin  git@github.com:YOUR/REPOSITORY.git (push)
