@@ -78,10 +78,7 @@
 #include "dev/button-sensor.h"
 #include "dev/leds.h"
 // Set the Radio performance
-#include <cc2420.h>
-uint8_t radioChannel = 25;  // default channel
-uint8_t radioChannel_tx_power = 31; // default power
-#include <stdio.h>
+#include <cc2420-radio.h>
 
 #define CHANNEL 135
 
@@ -205,8 +202,8 @@ PROCESS_THREAD(example_multihop_process, ev, data)
   PROCESS_EXITHANDLER(multihop_close(&multihop);)
     
   PROCESS_BEGIN();
-  cc2420_set_channel(radioChannel); // channel 26
-  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
+  set_cc2420_txpower(0);
+  set_cc2420_channel(0);
   /* Initialize the memory for the neighbor table entries. */
   memb_init(&neighbor_mem);
 

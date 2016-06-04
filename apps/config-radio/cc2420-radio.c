@@ -58,7 +58,7 @@ void set_cc2420_channel(custom_radioChannel){
 		radioChannel = custom_radioChannel;
 	}
 	cc2420_set_channel(radioChannel);
-	printf("CC2420 Radio channel %d\n", radioChannel);
+	printf("CC2420 Radio channel %d\n", cc2420_get_channel());
 }
 
 
@@ -68,7 +68,7 @@ void set_cc2420_txpower(custom_radioChannel_tx_power){
 		radioChannel_tx_power = custom_radioChannel_tx_power;
 	}
 	cc2420_set_txpower(radioChannel_tx_power);
-	printf("CC2420 Radio TX power %d\n", radioChannel_tx_power);
+	printf("CC2420 Radio TX power %d\n", cc2420_get_txpower());
 }
 
 /* -------- End Set Radio Powers ------------ */
