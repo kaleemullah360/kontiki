@@ -55,6 +55,7 @@
 #include "lib/sensors.h"
 #include "dev/button-sensor.h"
 #include <string.h>
+#include <mqtt-conf.h>
 
 #include "dev/adxl345.h"
 #include "dev/cc2420/cc2420.h"
@@ -149,16 +150,6 @@ uint8_t len = 0;
 /* A timeout used when waiting to connect to a network */
 #define NET_CONNECT_PERIODIC        (CLOCK_SECOND >> 2)
 #define NO_NET_LED_DURATION         (NET_CONNECT_PERIODIC >> 1)
-/*---------------------------------------------------------------------------*/
-/* Default configuration values */
-#define DEFAULT_TYPE_ID             "cc2420"
-#define DEFAULT_AUTH_TOKEN          "F1R3W1R3"
-#define DEFAULT_EVENT_TYPE_ID       "status"
-#define DEFAULT_SUBSCRIBE_CMD_TYPE  "+"
-#define DEFAULT_BROKER_PORT         1883
-#define DEFAULT_PUBLISH_INTERVAL    (TIME_INTERVAL_SECONDS * (CLOCK_SECOND/MILLISECONDS_CONSTANT))   // <----------- This SET Publishing Interval
-#define DEFAULT_KEEP_ALIVE_TIMER    60
-#define DEFAULT_RSSI_MEAS_INTERVAL  (CLOCK_SECOND * 30)
 /*---------------------------------------------------------------------------*/
 /* Take a sensor reading on button press */
 #define PUBLISH_TRIGGER &button_sensor
@@ -336,7 +327,7 @@ mqtt_event(struct mqtt_connection *m, mqtt_event_t event, void *data)
 static int
 construct_pub_topic(void)
 {
-  int len = snprintf(pub_topic, BUFFER_SIZE, "iot-2/evt/%s/fmt/json",   // <---- Set Topic
+  int len = snprintf(pub_topic, BUFFER_SIZE, PUBLISH_TOPIC,   // <---- Set Topic
    conf.event_type_id);
 
   /* len < 0: Error. Len >= BUFFER_SIZE: Buffer too small */
@@ -351,7 +342,7 @@ construct_pub_topic(void)
 static int
 construct_sub_topic(void)
 {
-  int len = snprintf(sub_topic, BUFFER_SIZE, "iot-2/cmd/%s/fmt/json",   // <---- Set Topic
+  int len = snprintf(sub_topic, BUFFER_SIZE, SUBSCRIBE_TOPIC,   // <---- Set Topic
    conf.cmd_type);
 
   /* len < 0: Error. Len >= BUFFER_SIZE: Buffer too small */
@@ -447,7 +438,7 @@ subscribe(void)
   /* Publish MQTT topic in IBM quickstart format */
   mqtt_status_t status;
 
-  status = mqtt_subscribe(&conn, NULL, sub_topic, MQTT_QOS_LEVEL_0);  // <------ Set QoS
+  status = mqtt_subscribe(&conn, NULL, sub_topic, MQTT_QOS);  // <------ Set QoS
 
   DBG("APP - Subscribing!\n");
   if(status == MQTT_STATUS_OUT_QUEUE_FULL) {
@@ -477,7 +468,7 @@ publish(void)
   len = snprintf(buf_ptr, remaining, "%s", STATUS_PT); //<-- 123
 
   mqtt_publish(&conn, NULL, pub_topic, (uint8_t *)app_buffer,
-               strlen(app_buffer), MQTT_QOS_LEVEL_1, MQTT_RETAIN_OFF);  // <------ Set QoS
+               strlen(app_buffer), MQTT_QOS, MQTT_MESSAGE_STATE);  // <------ Set QoS
 
   DBG("APP - Publish!\n");
 }

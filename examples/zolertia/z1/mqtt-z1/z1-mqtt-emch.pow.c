@@ -45,6 +45,7 @@
 #include "dev/leds.h"
 #include <string.h>
 #include <cc2420-radio.h>
+#include <mqtt-conf.h>
 // Powertracing
 #include "powertrace-z1.h"
 char *powertrace_result();
@@ -131,7 +132,7 @@ static void get_sensor_temperature(){
  * Publish to a local MQTT broker (e.g. mosquitto) running on the host
  */
  static const char *broker_ip = MQTT_Z1_BROKER_IP_ADDR;
-#define DEFAULT_ORG_ID "eMCH-APp"
+ #define DEFAULT_ORG_ID "eMCH-APp"
 /*---------------------------------------------------------------------------*/
 /*
  * A timeout used when waiting for something to happen (e.g. to connect or to
@@ -186,16 +187,6 @@ static void get_sensor_temperature(){
 /* A timeout used when waiting to connect to a network */
 #define NET_CONNECT_PERIODIC        (CLOCK_SECOND >> 2)
 #define NO_NET_LED_DURATION         (NET_CONNECT_PERIODIC >> 1)
-/*---------------------------------------------------------------------------*/
-/* Default configuration values */
-#define DEFAULT_TYPE_ID             "cc2420"
-#define DEFAULT_AUTH_TOKEN          "F1R3W1R3"
-#define DEFAULT_EVENT_TYPE_ID       "status"
-#define DEFAULT_SUBSCRIBE_CMD_TYPE  "+"
-#define DEFAULT_BROKER_PORT         1883
-#define DEFAULT_PUBLISH_INTERVAL    (10 * CLOCK_SECOND)   // <----------- SET Publishing Interval
-#define DEFAULT_KEEP_ALIVE_TIMER    60
-#define DEFAULT_RSSI_MEAS_INTERVAL  (CLOCK_SECOND * 30)
 /*---------------------------------------------------------------------------*/
 /* Take a sensor reading on button press */
 #define PUBLISH_TRIGGER &button_sensor
@@ -382,7 +373,7 @@ mqtt_event(struct mqtt_connection *m, mqtt_event_t event, void *data)
 static int
 construct_pub_topic(void)
 {
-  int len = snprintf(pub_topic, BUFFER_SIZE, "iot-2/evt/%s/fmt/json",		// <---- Set Topic
+  int len = snprintf(pub_topic, BUFFER_SIZE, PUBLISH_TOPIC,		// <---- Set Topic
    conf.event_type_id);
 
   /* len < 0: Error. Len >= BUFFER_SIZE: Buffer too small */
@@ -397,7 +388,7 @@ construct_pub_topic(void)
 static int
 construct_sub_topic(void)
 {
-  int len = snprintf(sub_topic, BUFFER_SIZE, "iot-2/cmd/%s/fmt/json",		// <---- Set Topic
+  int len = snprintf(sub_topic, BUFFER_SIZE, SUBSCRIBE_TOPIC,		// <---- Set Topic
    conf.cmd_type);
 
   /* len < 0: Error. Len >= BUFFER_SIZE: Buffer too small */
@@ -491,7 +482,7 @@ subscribe(void)
   /* Publish MQTT topic in IBM quickstart format */
   mqtt_status_t status;
 
-  status = mqtt_subscribe(&conn, NULL, sub_topic, MQTT_QOS_LEVEL_0);	// <------ Set QoS
+  status = mqtt_subscribe(&conn, NULL, sub_topic, MQTT_QOS);	// <------ Set QoS
 
   DBG("APP - Subscribing!\n");
   if(status == MQTT_STATUS_OUT_QUEUE_FULL) {
@@ -527,7 +518,7 @@ memset(def_rt_str, 0, sizeof(def_rt_str));
 ipaddr_sprintf(def_rt_str, sizeof(def_rt_str), uip_ds6_defrt_choose());
 
 mqtt_publish(&conn, NULL, pub_topic, (uint8_t *)app_buffer,
-               strlen(app_buffer), MQTT_QOS_LEVEL_0, MQTT_RETAIN_OFF);	// <------ Set QoS
+               strlen(app_buffer), MQTT_QOS, MQTT_MESSAGE_STATE);	// <------ Set QoS
 
 DBG("APP - Publish!\n");
 }
