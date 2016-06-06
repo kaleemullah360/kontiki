@@ -54,9 +54,12 @@
 /*---------------------------------------------------------------------------*/
 
 /* User configuration */
-#define PUBLISH_INTERVAL_MULTIPLIER		10
-#define PUBLISH_TOPIC 					"iot-2/evt/%s/fmt/json"
-#define SUBSCRIBE_TOPIC 				"iot-2/evt/%s/fmt/json"
+#define TIME_INTERVAL_SECONDS 1		// 1 Seconds
+#define MILLISECONDS_CONSTANT 2		// 500 milliseconds = 1 second / 2
+
+#define PUBLISH_TOPIC 					"iot-2/evt/%s/fmt/json"		// NA
+#define SUBSCRIBE_TOPIC 				"iot-2/evt/%s/fmt/json"		// NA
+
 #define MQTT_QOS 						MQTT_QOS_LEVEL_0
 #define	MQTT_MESSAGE_STATE				MQTT_RETAIN_OFF
 	
@@ -68,7 +71,7 @@
 #define DEFAULT_EVENT_TYPE_ID       	"status"
 #define DEFAULT_SUBSCRIBE_CMD_TYPE  	"+"
 #define DEFAULT_BROKER_PORT         	1883
-#define DEFAULT_PUBLISH_INTERVAL    	(PUBLISH_INTERVAL_MULTIPLIER * CLOCK_SECOND)
+#define DEFAULT_PUBLISH_INTERVAL    	(TIME_INTERVAL_SECONDS * (CLOCK_SECOND/MILLISECONDS_CONSTANT))
 #define DEFAULT_KEEP_ALIVE_TIMER    	60
 #define DEFAULT_RSSI_MEAS_INTERVAL  	(CLOCK_SECOND * 30)
 

@@ -299,12 +299,12 @@ pub_handler(const char *topic, uint16_t topic_len, const uint8_t *chunk,
   DBG("Pub Handler: topic='%s' (len=%u), chunk_len=%u\n", topic, topic_len,
     chunk_len);
 
-  /* If we don't like the length, ignore */
+  /* If we don't like the length, ignore 
   if(topic_len != 23 || chunk_len != 1) {
     printf("Incorrect topic or chunk len. Ignored\n");
     return;
   }
-
+ */
   /* If the format != json, ignore */
   if(strncmp(&topic[topic_len - 4], "json", 4) != 0) {
     printf("Incorrect format\n");
@@ -373,7 +373,7 @@ mqtt_event(struct mqtt_connection *m, mqtt_event_t event, void *data)
 static int
 construct_pub_topic(void)
 {
-  int len = snprintf(pub_topic, BUFFER_SIZE, PUBLISH_TOPIC,		// <---- Set Topic
+  int len = snprintf(pub_topic, BUFFER_SIZE, "iot-2/evt/%s/fmt/json",		// <---- Set Topic
    conf.event_type_id);
 
   /* len < 0: Error. Len >= BUFFER_SIZE: Buffer too small */
@@ -388,7 +388,7 @@ construct_pub_topic(void)
 static int
 construct_sub_topic(void)
 {
-  int len = snprintf(sub_topic, BUFFER_SIZE, SUBSCRIBE_TOPIC,		// <---- Set Topic
+  int len = snprintf(sub_topic, BUFFER_SIZE, "iot-2/evt/%s/fmt/json",		// <---- Set Topic
    conf.cmd_type);
 
   /* len < 0: Error. Len >= BUFFER_SIZE: Buffer too small */
