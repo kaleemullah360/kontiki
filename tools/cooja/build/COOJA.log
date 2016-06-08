@@ -1,97 +1,29 @@
-[15:48:18 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[15:48:18 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[15:48:18 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /home/superuser/.cooja.user.properties
-[15:48:22 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:48:22 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:48:22 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[15:48:23 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[15:48:24 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:48:36 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:48:36 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:48:37 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:48:37 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make mqtt-qos-one-pkt-size-millisec-sequence-timstamp-byte.z1 TARGET=z1 
-[15:48:50 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/mqtt-qos-one-pkt-size-millisec-sequence-timstamp-byte.z1
-[15:49:00 - Thread-1] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:49:00 - Thread-3] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:49:02 - Thread-4] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1465210142336
-[15:49:33 - Thread-3] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:49:33 - Thread-3] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:49:33 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:49:33 - Thread-4] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1465210173401	Duration: 31065 ms	Simulated time 30746 ms	Ratio 0.9897312087558345
-[15:49:33 - Thread-5] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:49:33 - Thread-5] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:49:33 - Thread-5] [CompileContiki.java:140] [INFO] - > make mqtt-qos-one-pkt-size-millisec-sequence-timstamp-byte.z1 TARGET=z1 
-[15:49:34 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[15:49:34 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/mqtt-qos-one-pkt-size-millisec-sequence-timstamp-byte.z1
-[15:49:35 - Thread-5] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:49:35 - Thread-7] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1465210175307
-[15:49:41 - Thread-6] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:49:41 - Thread-8] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:50:28 - Thread-6] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:50:28 - Thread-8] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:50:28 - Thread-8] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:50:28 - Thread-7] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1465210228193	Duration: 52886 ms	Simulated time 52869 ms	Ratio 0.9996785538705896
-[15:50:28 - Thread-9] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:50:28 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:50:28 - Thread-9] [CompileContiki.java:140] [INFO] - > make mqtt-qos-one-pkt-size-millisec-sequence-timstamp-byte.z1 TARGET=z1 
-[15:50:28 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[15:50:29 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/mqtt-qos-one-pkt-size-millisec-sequence-timstamp-byte.z1
-[15:50:29 - Thread-9] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:50:30 - Thread-11] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1465210230062
-[15:50:33 - Thread-10] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:50:33 - Thread-12] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:51:06 - Thread-10] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:51:06 - Thread-12] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:51:06 - Thread-12] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:51:06 - Thread-11] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1465210266495	Duration: 36433 ms	Simulated time 36415 ms	Ratio 0.9995059424148437
-[15:51:06 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:51:06 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:51:06 - Thread-13] [CompileContiki.java:140] [INFO] - > make mqtt-qos-one-pkt-size-millisec-sequence-timstamp-byte.z1 TARGET=z1 
-[15:51:07 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[15:51:07 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/mqtt-qos-one-pkt-size-millisec-sequence-timstamp-byte.z1
-[15:51:08 - Thread-13] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:51:08 - Thread-15] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1465210268392
-[15:51:14 - Thread-14] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:51:14 - Thread-16] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:53:17 - Thread-14] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:53:17 - Thread-16] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:53:17 - Thread-16] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:53:17 - Thread-15] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1465210397357	Duration: 128965 ms	Simulated time 128945 ms	Ratio 0.9998449191641143
-[15:53:17 - Thread-17] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:53:17 - Thread-17] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:53:17 - Thread-17] [CompileContiki.java:140] [INFO] - > make mqtt-qos-one-pkt-size-millisec-sequence-timstamp-byte.z1 TARGET=z1 
-[15:53:17 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[15:53:18 - Thread-17] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/mqtt-qos-one-pkt-size-millisec-sequence-timstamp-byte.z1
-[15:53:18 - Thread-17] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:53:19 - Thread-19] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1465210399096
-[15:53:25 - Thread-18] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:53:25 - Thread-20] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:54:54 - Thread-20] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:54:54 - Thread-20] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:54:54 - Thread-18] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:54:54 - Thread-19] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1465210494492	Duration: 95396 ms	Simulated time 95386 ms	Ratio 0.9998951738018366
-[15:54:54 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:54:54 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:54:54 - Thread-21] [CompileContiki.java:140] [INFO] - > make mqtt-qos-one-pkt-size-millisec-sequence-timstamp-byte.z1 TARGET=z1 
-[15:54:55 - Thread-21] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[15:54:55 - Thread-21] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/mqtt-qos-one-pkt-size-millisec-sequence-timstamp-byte.z1
-[15:54:56 - Thread-21] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:54:56 - Thread-23] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1465210496180
-[15:55:02 - Thread-22] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:55:02 - Thread-24] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:58:01 - Thread-24] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:58:01 - Thread-24] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:58:01 - Thread-22] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:58:01 - Thread-23] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1465210681741	Duration: 185561 ms	Simulated time 185513 ms	Ratio 0.999741324955136
-[15:58:05 - Thread-25] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:58:05 - Thread-25] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:58:06 - Thread-25] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[15:58:07 - Thread-25] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:58:27 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:58:27 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:58:28 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.rtt.z1 TARGET=z1 
-[15:58:40 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.rtt.z1
-[15:59:05 - Thread-28] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1465210745822
-[15:59:12 - Thread-26] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:59:12 - Thread-29] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[16:11:48 - Thread-28] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1465211508091	Duration: 762269 ms	Simulated time 762134 ms	Ratio 0.9998228971662235
+[19:51:30 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[19:51:30 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[19:51:30 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /home/superuser/.cooja.user.properties
+[19:51:35 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:51:35 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:51:37 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[19:51:37 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[19:51:37 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        slip-bridge.c
+[19:51:37 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> slip-bridge.c:154:1: fatal error: opening dependency file obj_z1/slip-bridge.d: Permission denied
+[19:51:37 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> compilation terminated.
+[19:51:37 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/slip-bridge.o' failed
+[19:51:37 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/slip-bridge.o] Error 1
+[19:51:37 - Thread-0] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:51:37 - Thread-0] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:52:38 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:52:38 - Thread-0] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-border-router/z1-border-router.z1 with /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[19:52:38 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:52:47 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:52:47 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[19:52:48 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:53:07 - Thread-2] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[19:53:07 - Thread-3] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[19:53:53 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[19:53:54 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-rtgs.z1 TARGET=z1 
+[19:54:45 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[19:54:46 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-rtgs.z1 TARGET=z1 
+[19:55:02 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-rtgs.z1
+[19:55:09 - Thread-5] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1465397709867
+[19:56:48 - Thread-3] [SerialSocketServer.java:501] [INFO] - End of Stream
