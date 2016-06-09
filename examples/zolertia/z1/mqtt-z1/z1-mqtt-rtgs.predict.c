@@ -46,7 +46,7 @@
 #include <string.h>
 #include <cc2420-radio.h>
 #include <mqtt-conf.h>
-//------- prediction custom libs ------
+//------- pgediction custom libs ------
 #include "dev/adxl345.h"
 #include <math.h>
 #include "dev/leds.h"
