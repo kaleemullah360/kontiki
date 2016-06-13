@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2012, Swedish Institute of Computer Science.
+ * Copyright (c) 2011, Swedish Institute of Computer Science.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,57 +25,79 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
- *
- * This file is part of the Contiki operating system.
  */
 
-/**
- * \file
- *         MQTT Protocol configurations
- * \author
- *         Kaleem Ullah <mscs14059@itu.edu.pk>
- *         Kaleem Ullah <kaleemullah360@live.com>
- */
+#include "contiki.h"
+#include "net/netstack.h"
+#include "net/ip/uip.h"
+#include "net/packetbuf.h"
+#include "dev/slip.h"
+#include <stdio.h>
 
-/**
- * MQTT Quality of Services
- * --------------------------------------------
- * QoS  | Parameter       | Description       |
- *---------------------------------------------
- * QoS0 |MQTT_QOS_LEVEL_0 | Fire & Forget     |
- * QoS1 |MQTT_QOS_LEVEL_1 | Fire atleast ONCE |
- * QoS2 |MQTT_QOS_LEVEL_2 | Fire exactly ONCE |
- *---------------------------------------------
- */
-/*---------------------------------------------------------------------------*/
-#ifndef MQTT_CONF_H_
-#define MQTT_CONF_H_
+#define SLIP_END     0300
+#define SLIP_ESC     0333
+#define SLIP_ESC_END 0334
+#define SLIP_ESC_ESC 0335
+
+#define DEBUG 0
 
 /*---------------------------------------------------------------------------*/
-
-/* User configuration */
-#define TIME_INTERVAL_SECONDS 10		// 1 Seconds
-#define MILLISECONDS_CONSTANT 1		// 500 milliseconds = 1 second / 2
-
-#define PUBLISH_TOPIC 					"iot-2/evt/%s/fmt/json"		// NA
-#define SUBSCRIBE_TOPIC 				"iot-2/evt/%s/fmt/json"		// NA
-
-#define MQTT_QOS 						MQTT_QOS_LEVEL_0
-#define	MQTT_MESSAGE_STATE				MQTT_RETAIN_OFF
-	
+void
+slipnet_init(void)
+{
+}
 /*---------------------------------------------------------------------------*/
-	
-/* Default configuration values */	
-#define DEFAULT_TYPE_ID             	"cc2420"
-#define DEFAULT_AUTH_TOKEN          	"F1R3W1R3"
-#define DEFAULT_EVENT_TYPE_ID       	"status"
-#define DEFAULT_SUBSCRIBE_CMD_TYPE  	"+"
-#define DEFAULT_BROKER_PORT         	1883
-#define DEFAULT_PUBLISH_INTERVAL    	(TIME_INTERVAL_SECONDS * (CLOCK_SECOND/MILLISECONDS_CONSTANT))
-#define DEFAULT_KEEP_ALIVE_TIMER    	60
-#define DEFAULT_RSSI_MEAS_INTERVAL  	(CLOCK_SECOND * 30)
+void
+slip_send_packet(const uint8_t *ptr, int len)
+{
+  uint16_t i;
+  uint8_t c;
 
+  slip_arch_writeb(SLIP_END);
+  for(i = 0; i < len; ++i) {
+    c = *ptr++;
+    if(c == SLIP_END) {
+      slip_arch_writeb(SLIP_ESC);
+      c = SLIP_ESC_END;
+    } else if(c == SLIP_ESC) {
+      slip_arch_writeb(SLIP_ESC);
+      c = SLIP_ESC_ESC;
+    }
+    slip_arch_writeb(c);
+  }
+  slip_arch_writeb(SLIP_END);
+}
 /*---------------------------------------------------------------------------*/
-#endif /* MQTT_CONF_H_ */
+void
+slipnet_input(void)
+{
+  int i;
+  /* radio should be configured for filtering so this should be simple */
+  /* this should be sent over SLIP! */
+  /* so just copy into uip-but and send!!! */
+  /* Format: !R<data> ? */
+  uip_len = packetbuf_datalen();
+  i = packetbuf_copyto(uip_buf);
+
+  if(DEBUG) {
+    printf("Slipnet got input of len: %d, copied: %d\n",
+	   packetbuf_datalen(), i);
+
+    for(i = 0; i < uip_len; i++) {
+      printf("%02x", (unsigned char) uip_buf[i]);
+      if((i & 15) == 15) printf("\n");
+      else if((i & 7) == 7) printf(" ");
+    }
+    printf("\n");
+  }
+
+  /* printf("SUT: %u\n", uip_len); */
+  slip_send_packet(uip_buf, uip_len);
+}
 /*---------------------------------------------------------------------------*/
-/** @} */
+const struct network_driver slipnet_driver = {
+  "slipnet",
+  slipnet_init,
+  slipnet_input
+};
+/*---------------------------------------------------------------------------*/

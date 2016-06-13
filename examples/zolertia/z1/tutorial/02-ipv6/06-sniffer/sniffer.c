@@ -1,7 +1,4 @@
 /*
- * Copyright (c) 2011-2012, Swedish Institute of Computer Science.
- * All rights reserved.
- *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
  * are met:
@@ -27,55 +24,25 @@
  * SUCH DAMAGE.
  *
  * This file is part of the Contiki operating system.
+ *
  */
+#include "contiki.h"
 
-/**
- * \file
- *         MQTT Protocol configurations
- * \author
- *         Kaleem Ullah <mscs14059@itu.edu.pk>
- *         Kaleem Ullah <kaleemullah360@live.com>
- */
-
-/**
- * MQTT Quality of Services
- * --------------------------------------------
- * QoS  | Parameter       | Description       |
- *---------------------------------------------
- * QoS0 |MQTT_QOS_LEVEL_0 | Fire & Forget     |
- * QoS1 |MQTT_QOS_LEVEL_1 | Fire atleast ONCE |
- * QoS2 |MQTT_QOS_LEVEL_2 | Fire exactly ONCE |
- *---------------------------------------------
- */
+#define DEBUG DEBUG_NONE
+#include "net/ip/uip-debug.h"
 /*---------------------------------------------------------------------------*/
-#ifndef MQTT_CONF_H_
-#define MQTT_CONF_H_
-
+PROCESS(sniffer_process, "Sniffer process");
+AUTOSTART_PROCESSES(&sniffer_process);
 /*---------------------------------------------------------------------------*/
+PROCESS_THREAD(sniffer_process, ev, data)
+{
 
-/* User configuration */
-#define TIME_INTERVAL_SECONDS 10		// 1 Seconds
-#define MILLISECONDS_CONSTANT 1		// 500 milliseconds = 1 second / 2
+  PROCESS_BEGIN();
 
-#define PUBLISH_TOPIC 					"iot-2/evt/%s/fmt/json"		// NA
-#define SUBSCRIBE_TOPIC 				"iot-2/evt/%s/fmt/json"		// NA
+  PRINTF("Sniffer started\n");
 
-#define MQTT_QOS 						MQTT_QOS_LEVEL_0
-#define	MQTT_MESSAGE_STATE				MQTT_RETAIN_OFF
-	
+  PROCESS_EXIT();
+
+  PROCESS_END();
+}
 /*---------------------------------------------------------------------------*/
-	
-/* Default configuration values */	
-#define DEFAULT_TYPE_ID             	"cc2420"
-#define DEFAULT_AUTH_TOKEN          	"F1R3W1R3"
-#define DEFAULT_EVENT_TYPE_ID       	"status"
-#define DEFAULT_SUBSCRIBE_CMD_TYPE  	"+"
-#define DEFAULT_BROKER_PORT         	1883
-#define DEFAULT_PUBLISH_INTERVAL    	(TIME_INTERVAL_SECONDS * (CLOCK_SECOND/MILLISECONDS_CONSTANT))
-#define DEFAULT_KEEP_ALIVE_TIMER    	60
-#define DEFAULT_RSSI_MEAS_INTERVAL  	(CLOCK_SECOND * 30)
-
-/*---------------------------------------------------------------------------*/
-#endif /* MQTT_CONF_H_ */
-/*---------------------------------------------------------------------------*/
-/** @} */

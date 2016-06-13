@@ -1,0 +1,46 @@
+Generating srec (Motorola S format), binary, ihex (Intel Hex) files:
+
+ 
+
+When building a project, the LPCXpresso IDE tools create an ARM executable format (AXF) file - which is actually standard ELF/DWARF file. This file can be programmed directly down to your target using the LPCXpresso debug functionality, but it may also be converted into a variety of formats suitable for use in other external tools.
+
+ 
+
+The objcopy (arm-none-eabi-objcopy) utility is used for this. Objcopy can convert into the following formats:
+
+ 
+
+    srec
+    binary
+    ihex
+    tekhex
+
+ 
+
+For example, to convert example.axf into binary format, use the following command:
+
+ 
+
+arm-none-eabi-objcopy -O binary example.axf example.bin
+
+ 
+
+If you Ctrl-click on the projectname on the right hand side of the bottom bar of the IDE, this will launch a command prompt in the project directory with appropriate tool paths set up. All you need to do before running the objcopy command is change into the directory of the required Build configuration.
+
+ 
+
+You can also select the .axf file in the Project Explorer, right-click and select "Binary Utilities->Create binary". You can change the options used to create a binary file in this way on the "Windows->Preferences ->LPCXpresso->Utilites" preference page.
+
+ 
+Automatically converting the file during a build
+
+ 
+
+Objcopy may be used to automatically convert an axf file during a build. To do this, create an appropriate Post-build step. See related FAQs below for more information.
+
+ 
+Binary files and checksums
+
+ 
+
+When creating a binary file, you also need to ensure that you apply a checksum to it. Please see the FAQ "LPC Image Checksums " for more details.

@@ -38,8 +38,8 @@
 // declare/define the pridiction function.
 void predict();
 void notify();
-//	viola ! these are actions to be fired on each event. 
-//	i.e set status 1, print walking, turn on blue LED and off other LEDs when WALKING is fired.
+//  viola ! these are actions to be fired on each event. 
+//  i.e set status 1, print walking, turn on blue LED and off other LEDs when WALKING is fired.
 void standing(){ status_str =STANDING; notify(); leds_on(LEDS_BLUE);  leds_off(LEDS_RED); leds_off(LEDS_GREEN); }
 void walking() { status_str = WALKING; notify(); leds_on(LEDS_GREEN); leds_off(LEDS_RED); leds_off(LEDS_BLUE);  }
 void running() { status_str = RUNNING; notify(); leds_on(LEDS_GREEN); leds_on(LEDS_RED);  leds_off(LEDS_BLUE);  }

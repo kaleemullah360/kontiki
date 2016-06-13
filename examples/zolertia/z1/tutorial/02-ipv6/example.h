@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2012, Swedish Institute of Computer Science.
+ * Copyright (c) 2016, Zolertia - http://www.zolertia.com
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -26,56 +26,33 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * This file is part of the Contiki operating system.
  */
-
 /**
- * \file
- *         MQTT Protocol configurations
- * \author
- *         Kaleem Ullah <mscs14059@itu.edu.pk>
- *         Kaleem Ullah <kaleemullah360@live.com>
+ * \author Antonio Lignan <alinan@zolertia.com>
  */
 
-/**
- * MQTT Quality of Services
- * --------------------------------------------
- * QoS  | Parameter       | Description       |
- *---------------------------------------------
- * QoS0 |MQTT_QOS_LEVEL_0 | Fire & Forget     |
- * QoS1 |MQTT_QOS_LEVEL_1 | Fire atleast ONCE |
- * QoS2 |MQTT_QOS_LEVEL_2 | Fire exactly ONCE |
- *---------------------------------------------
- */
+#ifndef EXAMPLE_
+#define EXAMPLE_
 /*---------------------------------------------------------------------------*/
-#ifndef MQTT_CONF_H_
-#define MQTT_CONF_H_
+/* This is the UDP port used to send and receive data */
+#define UDP_CLIENT_PORT   8765
+#define UDP_SERVER_PORT   5678
+
+/* Radio values to be configured for the 01-udp-local-multicast example */
+#define EXAMPLE_TX_POWER  31
+#define EXAMPLE_CHANNEL   15
+#define EXAMPLE_PANID     0xBEEF
 
 /*---------------------------------------------------------------------------*/
-
-/* User configuration */
-#define TIME_INTERVAL_SECONDS 10		// 1 Seconds
-#define MILLISECONDS_CONSTANT 1		// 500 milliseconds = 1 second / 2
-
-#define PUBLISH_TOPIC 					"iot-2/evt/%s/fmt/json"		// NA
-#define SUBSCRIBE_TOPIC 				"iot-2/evt/%s/fmt/json"		// NA
-
-#define MQTT_QOS 						MQTT_QOS_LEVEL_0
-#define	MQTT_MESSAGE_STATE				MQTT_RETAIN_OFF
-	
+/* This data structure is used to store the packet content (payload) */
+struct my_msg_t {
+  uint8_t  id;
+  uint16_t counter;
+  uint16_t value1;
+  uint16_t value2;
+  uint16_t value3;
+  uint16_t value4;
+  uint16_t battery;
+};
 /*---------------------------------------------------------------------------*/
-	
-/* Default configuration values */	
-#define DEFAULT_TYPE_ID             	"cc2420"
-#define DEFAULT_AUTH_TOKEN          	"F1R3W1R3"
-#define DEFAULT_EVENT_TYPE_ID       	"status"
-#define DEFAULT_SUBSCRIBE_CMD_TYPE  	"+"
-#define DEFAULT_BROKER_PORT         	1883
-#define DEFAULT_PUBLISH_INTERVAL    	(TIME_INTERVAL_SECONDS * (CLOCK_SECOND/MILLISECONDS_CONSTANT))
-#define DEFAULT_KEEP_ALIVE_TIMER    	60
-#define DEFAULT_RSSI_MEAS_INTERVAL  	(CLOCK_SECOND * 30)
-
-/*---------------------------------------------------------------------------*/
-#endif /* MQTT_CONF_H_ */
-/*---------------------------------------------------------------------------*/
-/** @} */
+#endif /* __TEST_EXAMPLE__ */
