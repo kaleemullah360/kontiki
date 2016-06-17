@@ -46,41 +46,41 @@
 #include <string.h>
 #include <cc2420-radio.h>
 #include <mqtt-conf.h>
+//--- Libs for e-MCH-APp ----
+#include "dev/battery-sensor.h"
+#include "dev/i2cmaster.h"
+#include "dev/tmp102.h"
+//---End Libs for e-MCH-APp ---
 //------- pgediction custom libs ------
 #include "dev/adxl345.h"
 #include <math.h>
 #include "dev/leds.h"
 //------- End prediction custom libs ------
-
+float
+floor_bat(float x)
+{
+  if(x >= 0.0f) {
+    return (float)((int)x);
+  } else {
+    return (float)((int)x - 1);
+  }
+}
 //------- prediction functions ------
 // set the sensor reading value interval
 #define ACCM_READ_INTERVAL    CLOCK_SECOND/50
 
-// if you want "STANDING" instead of "1" just set it to 1
-#define CHAR_STR_STATUS 1 
-#if CHAR_STR_STATUS
-  static char *STANDING   = "STANDING";  //STANDING
-  static char *WALKING    = "WALKING";   //WALKING
-  static char *RUNNING    = "RUNNING";   //RUNNING
-  static char *FALLING    = "FALLING";   //FALLING
-  static char *STATUS_PT  =  NULL;       //Nothing
-  static char *status_str = "STANDING";  //STANDING
-  static char last;
-#else
-  static char *STANDING   = "1"; //STANDING
-  static char *WALKING    = "2"; //WALKING
-  static char *RUNNING    = "3"; //RUNNING
-  static char *FALLING    = "4"; //FALLING
-  static char *STATUS_PT  = NULL;//Nothing
-  static char *status_str = "1"; //STANDING
-  static char last;
-#endif
+char *STANDING   = "STANDING";  //STANDING
+char *WALKING    = "WALKING";   //WALKING
+char *RUNNING    = "RUNNING";   //RUNNING
+char *FALLING    = "FALLING";   //FALLING
+char *STATUS_PT  =  NULL;       //Nothing
+char last;
 
 // declare/define the pridiction function.
 void predict();
 
 #define HISTORY 16
-#define sampleNo 71
+#define sampleNo 41
 // Why I'm using int16_t ? (finally I discovered, I don't know)
 /* c Type   |stdint.h Type|Bits|Signed| Range           |
  signed char| int16_t     | 16 |Signed|-32,768 .. 32,767| */
@@ -101,6 +101,9 @@ void accm_ff_cb(uint8_t reg){
 /*---------------------------------------------------------------------------*/
 
 uint8_t mid = 0;
+int16_t temp;
+uint16_t bateria = 0;
+float mv = 0.0;
 /*---------------------------------------------------------------------------*/
 /*
  * Publish to a local MQTT broker (e.g. mosquitto) running on the host
@@ -477,7 +480,7 @@ int remaining = APP_BUFFER_SIZE;
 
 buf_ptr = app_buffer;
 //  MessageID, UpTime, ClockTime, Temperature, Battery, Status  //<-- This
-len = snprintf(buf_ptr, remaining,"%d,%lu,1,1,1,%s", mid++ ,clock_seconds(), status_str);
+len = snprintf(buf_ptr, remaining,"%d,%lu,1,%d,%ld.%03d,%s", mid++ ,clock_seconds(), temp, (long)mv,(unsigned)((mv - floor_bat(mv)) * 1000), STATUS_PT);
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
@@ -517,10 +520,10 @@ ping_parent(void)
 
 //	viola ! these are actions to be fired on each event. 
 //	i.e set status 1, print walking, turn on blue LED and off other LEDs when WALKING is fired.
-void standing(){ status_str = STANDING; printf("standing\n"); leds_on(LEDS_BLUE);  leds_off(LEDS_RED); leds_off(LEDS_GREEN); publish();}
-void walking() { status_str = WALKING; printf("walking\n");  leds_on(LEDS_GREEN); leds_off(LEDS_RED); leds_off(LEDS_BLUE);   publish();}
-void running() { status_str = RUNNING; printf("running\n");  leds_on(LEDS_GREEN); leds_on(LEDS_RED);  leds_off(LEDS_BLUE);   publish();}
-void falling() { status_str = FALLING; printf("falling\n");  leds_on(LEDS_RED);   leds_off(LEDS_BLUE);leds_off(LEDS_GREEN);  publish();}
+void standing(){  printf("standing\n"); leds_on(LEDS_BLUE);  leds_off(LEDS_RED); leds_off(LEDS_GREEN); publish();}
+void walking() { printf("walking\n");  leds_on(LEDS_GREEN); leds_off(LEDS_RED); leds_off(LEDS_BLUE);   publish();}
+void running() { printf("running\n");  leds_on(LEDS_GREEN); leds_on(LEDS_RED);  leds_off(LEDS_BLUE);   publish();}
+void falling() { printf("falling\n");  leds_on(LEDS_RED);   leds_off(LEDS_BLUE);leds_off(LEDS_GREEN);  publish();}
 /*---------------------------------------------------------------------------*/
 static void
 state_machine(void)
@@ -713,6 +716,8 @@ PROCESS_END();
 
 PROCESS_THREAD(motion_tracking_process, ev, data){
   PROCESS_BEGIN();
+  SENSORS_ACTIVATE(battery_sensor);
+  tmp102_init();
   //----------- Init ADXL Sensor ------------
   /* Start and setup the accelerometer with default values, eg no interrupts enabled. */
   accm_init();
@@ -725,6 +730,10 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
   printf("Motion Tracking Started\n");
 
   while(1){
+
+    temp = tmp102_read_temp_x100()/100;
+    bateria = battery_sensor.value(0);
+    mv = (bateria * 2.500 * 2) / 4096;
     //------------ Prediction (read values) ------------------
     x = accm_read_axis(X_AXIS);
     y = accm_read_axis(Y_AXIS);
@@ -743,11 +752,11 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
       etimer_set(&et, 15);
       PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));}
     //------------ End Prediction (read values) ------------------
-    //printf("FinalStatus: %s\n", status_str);
+    //printf("FinalStatus: %s\n", STATUS_PT);
 
   }
   printf("Motion Tracking Terminated\n");
-
+  SENSORS_DEACTIVATE(battery_sensor);
   PROCESS_END();
 }
 
@@ -764,7 +773,7 @@ void predict(){
 
   mean =(sum/sampleNo);
   for(i=0; i<sampleNo-1; i++){ tmp = tmp + pow( ( 1 - mean ), 2); }
-  std=sqrt(tmp/70);
+  std=sqrt(tmp/40);
   //printf("This is data from predict:%d,%d\n",(int)std,(int)mean);
   if(std>1000)return;
   double std1=3, mean1=2.2, max1=0.7;

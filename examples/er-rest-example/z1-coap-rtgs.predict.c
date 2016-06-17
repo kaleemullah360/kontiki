@@ -5,45 +5,49 @@
 
 #include <string.h>
 #include "er-coap.h"
+
+//--- Libs for e-MCH-APp ----
+#include "dev/battery-sensor.h"
+#include "dev/i2cmaster.h"
+#include "dev/tmp102.h"
+//---End Libs for e-MCH-APp ---
+
 //------- prediction custom libs ------
 #include "dev/adxl345.h"
 #include <math.h>
 #include "dev/leds.h"
 //------- End prediction custom libs ------
 
+float
+floor_bat(float x)
+{
+  if(x >= 0.0f) {
+    return (float)((int)x);
+  } else {
+    return (float)((int)x - 1);
+  }
+}
+
 //------- prediction functions ------
 // set the sensor reading value interval
 #define ACCM_READ_INTERVAL    CLOCK_SECOND/50
 
-// if you want "STANDING" instead of "1" just set it to 1
-#define CHAR_STR_STATUS 1 
-#if CHAR_STR_STATUS
-  static char *STANDING   = "STANDING";  //STANDING
-  static char *WALKING    = "WALKING";   //WALKING
-  static char *RUNNING    = "RUNNING";   //RUNNING
-  static char *FALLING    = "FALLING";   //FALLING
-  static char *STATUS_PT  =  NULL;       //Nothing
-  static char *status_str = "STANDING";  //STANDING
-  static char last;
-#else
-  static char *STANDING   = "1"; //STANDING
-  static char *WALKING    = "2"; //WALKING
-  static char *RUNNING    = "3"; //RUNNING
-  static char *FALLING    = "4"; //FALLING
-  static char *STATUS_PT  = NULL;//Nothing
-  static char *status_str = "1"; //STANDING
-  static char last;
-#endif
+  char *STANDING   = "STANDING";  //STANDING
+  char *WALKING    = "WALKING";   //WALKING
+  char *RUNNING    = "RUNNING";   //RUNNING
+  char *FALLING    = "FALLING";   //FALLING
+  char *STATUS_PT  =  NULL;       //Nothing
+  char last;
 
 // declare/define the pridiction function.
 void predict();
 void notify();
 //  viola ! these are actions to be fired on each event. 
 //  i.e set status 1, print walking, turn on blue LED and off other LEDs when WALKING is fired.
-void standing(){ status_str =STANDING; notify(); leds_on(LEDS_BLUE);  leds_off(LEDS_RED); leds_off(LEDS_GREEN); }
-void walking() { status_str = WALKING; notify(); leds_on(LEDS_GREEN); leds_off(LEDS_RED); leds_off(LEDS_BLUE);  }
-void running() { status_str = RUNNING; notify(); leds_on(LEDS_GREEN); leds_on(LEDS_RED);  leds_off(LEDS_BLUE);  }
-void falling() { status_str = FALLING; notify(); leds_on(LEDS_RED);   leds_off(LEDS_BLUE);leds_off(LEDS_GREEN); }
+void standing(){ notify(); leds_on(LEDS_BLUE);  leds_off(LEDS_RED); leds_off(LEDS_GREEN); }
+void walking() { notify(); leds_on(LEDS_GREEN); leds_off(LEDS_RED); leds_off(LEDS_BLUE);  }
+void running() { notify(); leds_on(LEDS_GREEN); leds_on(LEDS_RED);  leds_off(LEDS_BLUE);  }
+void falling() { notify(); leds_on(LEDS_RED);   leds_off(LEDS_BLUE);leds_off(LEDS_GREEN); }
 
 #define HISTORY 16
 #define sampleNo 41
@@ -79,7 +83,8 @@ AUTOSTART_PROCESSES(&er_example_server, &motion_tracking_process);
 PROCESS_THREAD(er_example_server, ev, data)
 {
   PROCESS_BEGIN();
-
+	SENSORS_ACTIVATE(battery_sensor);
+	tmp102_init();
   PROCESS_PAUSE();
   /* Initialize the REST engine. */
   rest_init_engine();
@@ -92,6 +97,7 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   }  /* while (1) */
 
+	SENSORS_DEACTIVATE(battery_sensor);
   PROCESS_END();
 }
 
@@ -107,18 +113,22 @@ PERIODIC_RESOURCE(res_z1_coap_rtgs_obs_moves,
                   5 * CLOCK_SECOND,
                   res_periodic_handler);
 
-static uint16_t mid = 0;
+uint8_t mid = 0;
+int16_t temp;
+uint16_t bateria = 0;
+float mv = 0.0;
 
 static void
 res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
 {
   REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
   REST.set_header_max_age(response, res_z1_coap_rtgs_obs_moves.periodic->period / CLOCK_SECOND);
-  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size, "%d,%lu,1,1,1,%s", mid++ ,clock_seconds(), status_str));
+	//  MessageID, UpTime, ClockTime, Temperature, Battery, Status, RTT  //<-- This
+  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size, "%d,%lu,1,%d,%ld.%03d,%s", mid++ ,clock_seconds(), temp, (long)mv,(unsigned)((mv - floor_bat(mv)) * 1000), STATUS_PT));
 
 }
 void notify() {
-    printf("FinalStatus: %s\n", status_str);
+    printf("FinalStatus: %s\n", STATUS_PT);
     REST.notify_subscribers(&res_z1_coap_rtgs_obs_moves);
 }
 static void
@@ -129,6 +139,7 @@ res_periodic_handler()
 
 PROCESS_THREAD(motion_tracking_process, ev, data){
   PROCESS_BEGIN();
+
   //----------- Init ADXL Sensor ------------
   /* Start and setup the accelerometer with default values, eg no interrupts enabled. */
   accm_init();
@@ -138,9 +149,13 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
   accm_set_irq(ADXL345_INT_FREEFALL, ADXL345_INT_TAP + ADXL345_INT_DOUBLETAP);
   ACCM_REGISTER_INT1_CB(accm_ff_cb);
   //-----------End Init ADXL Sensor ------------
+
   printf("Motion Tracking Started\n");
 
   while(1){
+		temp = tmp102_read_temp_x100()/100;
+    bateria = battery_sensor.value(0);
+    mv = (bateria * 2.500 * 2) / 4096;
     //------------ Prediction (read values) ------------------
     x = accm_read_axis(X_AXIS);
     y = accm_read_axis(Y_AXIS);
