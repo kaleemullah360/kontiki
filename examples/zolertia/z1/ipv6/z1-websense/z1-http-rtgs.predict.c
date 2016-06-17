@@ -203,7 +203,7 @@ PSOCK_BEGIN(&s->sout);
 blen = 0;
 
 ADD(" ");
-
+//  MessageID, UpTime, ClockTime, Temperature, Battery, Status, RTT  //<-- This
 ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floorfun(bat_mv)) * 1000), status_str);
 ADD(" ");
 

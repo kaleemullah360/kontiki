@@ -107,14 +107,14 @@ PERIODIC_RESOURCE(res_z1_coap_rtgs_obs_moves,
                   5 * CLOCK_SECOND,
                   res_periodic_handler);
 
-static int32_t event_counter = 0;
+static uint16_t mid = 0;
 
 static void
 res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
 {
   REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
   REST.set_header_max_age(response, res_z1_coap_rtgs_obs_moves.periodic->period / CLOCK_SECOND);
-  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size, "%s", status_str));
+  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size, "%d, %lu, 1, 1, 1, %s", mid++ ,clock_seconds(), status_str));
 
 }
 void notify() {
@@ -124,7 +124,7 @@ void notify() {
 static void
 res_periodic_handler()
 {
-  ++event_counter;
+
 }
 
 PROCESS_THREAD(motion_tracking_process, ev, data){

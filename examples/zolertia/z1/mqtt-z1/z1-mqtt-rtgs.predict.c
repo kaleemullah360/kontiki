@@ -100,7 +100,7 @@ void accm_ff_cb(uint8_t reg){
 //-------End prediction functions ------
 /*---------------------------------------------------------------------------*/
 
-uint8_t message_no = 0;
+uint8_t mid = 0;
 /*---------------------------------------------------------------------------*/
 /*
  * Publish to a local MQTT broker (e.g. mosquitto) running on the host
@@ -476,8 +476,8 @@ int remaining = APP_BUFFER_SIZE;
   //int16_t value;
 
 buf_ptr = app_buffer;
-
-len = snprintf(buf_ptr, remaining,"%s", status_str);
+//  MessageID, UpTime, ClockTime, Temperature, Battery, Status  //<-- This
+len = snprintf(buf_ptr, remaining,"%d, %lu, 1, 1, 1, %s", mid++ ,clock_seconds(), status_str);
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
