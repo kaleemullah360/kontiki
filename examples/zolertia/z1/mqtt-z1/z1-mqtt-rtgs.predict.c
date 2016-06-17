@@ -477,7 +477,7 @@ int remaining = APP_BUFFER_SIZE;
 
 buf_ptr = app_buffer;
 //  MessageID, UpTime, ClockTime, Temperature, Battery, Status  //<-- This
-len = snprintf(buf_ptr, remaining,"%d, %lu, 1, 1, 1, %s", mid++ ,clock_seconds(), status_str);
+len = snprintf(buf_ptr, remaining,"%d,%lu,1,1,1,%s", mid++ ,clock_seconds(), status_str);
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
