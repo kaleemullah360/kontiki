@@ -46,7 +46,7 @@
 #include <string.h>
 #include <cc2420-radio.h>
 #include <mqtt-conf.h>
-uint8_t message_no = 0;
+uint16_t mid = 0;
 /*---------------------------------------------------------------------------*/
 /*
  * Publish to a local MQTT broker (e.g. mosquitto) running on the host
@@ -421,7 +421,7 @@ int remaining = APP_BUFFER_SIZE;
 
 buf_ptr = app_buffer;
 
-len = snprintf(buf_ptr, remaining,"%d", message_no++);
+len = snprintf(buf_ptr, remaining,"%d", mid++);
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);

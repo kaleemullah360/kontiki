@@ -42,7 +42,7 @@
 #include <stdio.h>
 #include <cc2420-radio.h>
 
-uint8_t message_no = 0;
+uint16_t mid = 0;
 
 
 PROCESS(web_sense_process, "Sense HTTP RTT");
@@ -75,9 +75,7 @@ PT_THREAD(send_values(struct httpd_state *s))
 {
 	PSOCK_BEGIN(&s->sout);
 	blen = 0;
-	
-		ADD("%d", message_no++);
-		ADD("\n");
+		ADD("%d", mid++);
 
 		SEND_STRING(&s->sout, buf);
 
