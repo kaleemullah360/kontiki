@@ -46,7 +46,19 @@
 #include "webserver-nogui.h"
 #include "dev/cc2420/cc2420.h"
 #include "dev/adxl345.h"
+#include "dev/battery-sensor.h"
 
+uint16_t bateria = 0;
+float mv = 0.0;
+float
+floor_bat(float x)
+{
+  if(x >= 0.0f) {
+    return (float)((int)x);
+  } else {
+    return (float)((int)x - 1);
+  }
+}
 
 #define LED_INT_ONTIME        CLOCK_SECOND/2
 #define ACCM_READ_INTERVAL    CLOCK_SECOND/50
@@ -213,9 +225,10 @@ PT_THREAD(send_values(struct httpd_state *s))
 
     /* Default page: show latest sensor values as text (does not
        require Internet connection to Google for charts). */
+
     blen = 0;
 	printf("sending %s\n",STATUS_PT);
-    ADD("%s", STATUS_PT); //Motion Status (Values displayed on Web Browser)
+    ADD("%ld.%03d,%s", (long)mv,(unsigned)((mv - floor_bat(mv)) * 1000), STATUS_PT); //Motion Status (Values displayed on Web Browser)
   ADD("\">");   
   ADD("<META HTTP-EQUIV=\"Refresh\" CONTENT=\"3\">");
   SEND_STRING(&s->sout, buf);
@@ -240,6 +253,7 @@ static struct etimer et;
 PROCESS_THREAD(accel_process, ev, data) {
   PROCESS_BEGIN();
   {
+  	SENSORS_ACTIVATE(battery_sensor);
     //int16_t x, y, z;
     cc2420_set_txpower(31);
     process_start(&webserver_nogui_process, NULL);
@@ -259,6 +273,8 @@ PROCESS_THREAD(accel_process, ev, data) {
     accm_set_irq(ADXL345_INT_FREEFALL, ADXL345_INT_TAP + ADXL345_INT_DOUBLETAP);
     
     while (1) {
+    	bateria = battery_sensor.value(0);
+    	mv = (bateria * 2.500 * 2) / 4096;
 	    x = accm_read_axis(X_AXIS);
 	    y = accm_read_axis(Y_AXIS);
 	    z = accm_read_axis(Z_AXIS);
@@ -275,6 +291,7 @@ PROCESS_THREAD(accel_process, ev, data) {
                 PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));}
     }
   }
+  SENSORS_DEACTIVATE(battery_sensor);
   PROCESS_END();
 }
 

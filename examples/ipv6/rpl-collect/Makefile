@@ -1,5 +1,6 @@
 CONTIKI = ../../..
 APPS = powertrace collect-view
+APPS += config-radio
 CONTIKI_PROJECT = udp-sender udp-sink
 PROJECT_SOURCEFILES += collect-common.c
 

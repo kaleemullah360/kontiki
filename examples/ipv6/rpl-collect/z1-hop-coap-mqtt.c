@@ -44,9 +44,7 @@
 #include <stdio.h>
 #include <string.h>
 // Set the Radio performance
-#include <cc2420.h>
-uint8_t radioChannel = 25;  // default channel
-uint8_t radioChannel_tx_power = 0; // default power
+#include <cc2420-radio.h>
 
 #define UDP_CLIENT_PORT 8775
 #define UDP_SERVER_PORT 5688
@@ -211,9 +209,9 @@ set_global_address(void)
 PROCESS_THREAD(udp_client_process, ev, data)
 {
   PROCESS_BEGIN();
-
-  cc2420_set_channel(radioChannel); // channel 26
-  cc2420_set_txpower(radioChannel_tx_power);  // tx power 31
+  
+  set_cc2420_txpower(0);
+  set_cc2420_channel(0);
 
   PROCESS_PAUSE();
 

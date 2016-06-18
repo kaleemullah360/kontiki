@@ -43,7 +43,7 @@
 #include <string.h>
 #include "rest-engine.h"
 
-uint16_t mid = 0;
+uint16_t msgid = 0;
 
  static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
 
@@ -64,8 +64,8 @@ uint16_t mid = 0;
 
  	if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
  		REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
- 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%d", mid++);
-    printf("Message %d Sent: \n", mid);
+ 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%d", msgid++);
+    printf("Message %d Sent: \n", msgid);
 
  		REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
  	}
