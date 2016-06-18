@@ -162,8 +162,8 @@ PSOCK_BEGIN(&s->sout);
 blen = 0;
 
 //  MessageID, UpTime, ClockTime, Temperature, Battery, Status, RTT  //<-- This
-ADD("%d,%lu,1,%d,%ld.%03d,%s", mid++ ,clock_seconds(), temp, (long)mv,(unsigned)((mv - floor_bat(mv)) * 1000), STATUS_PT);
 ADD("\n");
+ADD("%d,%lu,1,%d,%ld.%03d,%s", mid++ ,clock_seconds(), temp, (long)mv,(unsigned)((mv - floor_bat(mv)) * 1000), STATUS_PT);
 
 SEND_STRING(&s->sout, buf);
 PSOCK_END(&s->sout);
