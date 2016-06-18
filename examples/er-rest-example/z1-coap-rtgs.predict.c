@@ -2,21 +2,28 @@
 #include "contiki.h"
 #include "contiki-net.h"
 #include "rest-engine.h"
+#include <cc2420-radio.h>
 
 #include <string.h>
 #include "er-coap.h"
-
-//--- Libs for e-MCH-APp ----
-#include "dev/battery-sensor.h"
-#include "dev/i2cmaster.h"
-#include "dev/tmp102.h"
-//---End Libs for e-MCH-APp ---
 
 //------- prediction custom libs ------
 #include "dev/adxl345.h"
 #include <math.h>
 #include "dev/leds.h"
 //------- End prediction custom libs ------
+
+//--- Libs for rTGS-APp ----
+#include "dev/battery-sensor.h"
+#include "dev/i2cmaster.h"
+#include "dev/tmp102.h"
+//---End Libs for rTGS-APp ---
+
+//--- Function Deffinitions for rTGS-APp ----
+uint8_t mid = 0;
+int16_t temp;
+uint16_t bateria = 0;
+float mv = 0.0;
 
 float
 floor_bat(float x)
@@ -27,6 +34,7 @@ floor_bat(float x)
     return (float)((int)x - 1);
   }
 }
+//---End Function Deffinitions rTGS-APp ---
 
 //------- prediction functions ------
 // set the sensor reading value interval
@@ -83,6 +91,8 @@ AUTOSTART_PROCESSES(&er_example_server, &motion_tracking_process);
 PROCESS_THREAD(er_example_server, ev, data)
 {
   PROCESS_BEGIN();
+	set_cc2420_txpower(0);
+	set_cc2420_channel(0);
 	SENSORS_ACTIVATE(battery_sensor);
 	tmp102_init();
   PROCESS_PAUSE();
@@ -113,10 +123,6 @@ PERIODIC_RESOURCE(res_z1_coap_rtgs_obs_moves,
                   5 * CLOCK_SECOND,
                   res_periodic_handler);
 
-uint8_t mid = 0;
-int16_t temp;
-uint16_t bateria = 0;
-float mv = 0.0;
 
 static void
 res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
@@ -153,9 +159,11 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
   printf("Motion Tracking Started\n");
 
   while(1){
+    //----- Get Data Instance -------
 		temp = tmp102_read_temp_x100()/100;
     bateria = battery_sensor.value(0);
     mv = (bateria * 2.500 * 2) / 4096;
+    //----- End Get Data -------
     //------------ Prediction (read values) ------------------
     x = accm_read_axis(X_AXIS);
     y = accm_read_axis(Y_AXIS);

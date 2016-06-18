@@ -40,12 +40,7 @@
 #include "contiki.h"
 #include "httpd-simple.h"
 #include <stdio.h>
-
-//--- Libs for e-MCH-APp ----
-#include "dev/battery-sensor.h"
-#include "dev/i2cmaster.h"
-#include "dev/tmp102.h"
-//---End Libs for e-MCH-APp ---
+#include <cc2420-radio.h>
 
 //------- prediction custom libs ------
 #include "dev/adxl345.h"
@@ -53,74 +48,28 @@
 #include "dev/leds.h"
 //------- End prediction custom libs ------
 
-//--- Variable Declaration for e-MCH-APp ----
+//--- Libs for rTGS-APp ----
+#include "dev/battery-sensor.h"
+#include "dev/i2cmaster.h"
+#include "dev/tmp102.h"
+//---End Libs for rTGS-APp ---
 
- static int32_t mid = 0;  // MessageID
- static int32_t upt = 0;  // UpTime
- static int32_t clk = 0;  // ClockTime
+//--- Function Deffinitions for rTGS-APp ----
+uint8_t mid = 0;
+int16_t temp;
+uint16_t bateria = 0;
+float mv = 0.0;
 
-  // temperature function variables 
- static int16_t tempint;
- static uint16_t tempfrac;
- static int16_t raw;
- static uint16_t absraw;
- static int16_t sign;
- static char minus = ' ';
-
-  // Battery function variables 
- static uint16_t bat_v = 0;
- static float bat_mv = 0; 
-
-//---End Variable Declaration e-MCH-APp ---
-
-//--- Function Deffinitions for e-MCH-APp ----
-
-// function to return floorfun of float value
- float floorfun(float x){
-  if(x >= 0.0f){ // check the value of x is +eve
-    return (float)((int) x);
-  }else{ // if value of x is -eve
-    // x = -2.2
-    // -3.2 = (-2.2) - 1
-    // -3  = (int)(-3.2)
-    //return -3.0 = (float)(-3)
-    return(float) ((int) x - 1);   
-  } //end if-else
-
-} //end floorfun function
-
-static void get_sensor_time(){
-  upt = clock_seconds();  // UpTime
-  clk = clock_time(); // ClockTime
+float
+floor_bat(float x)
+{
+  if(x >= 0.0f) {
+    return (float)((int)x);
+  } else {
+    return (float)((int)x - 1);
+  }
 }
-
-static void get_sensor_temperature(){
-  tmp102_init();  // Init Sensor
-  sign = 1;
-  raw = tmp102_read_temp_x100(); // tmp102_read_temp_raw();
-  absraw = raw;
-    if(raw < 0) {   // Perform 2C's if sensor returned negative data
-      absraw = (raw ^ 0xFFFF) + 1;
-    sign = -1;
-  }
-  tempint = (absraw >> 8) * sign;
-    tempfrac = ((absraw >> 4) % 16) * 625;  // Info in 1/10000 of degree
-    minus = ((tempint == 0) & (sign == -1)) ? '-' : ' ';
-    //printf("Temp = %c%d.%04d\n", minus, tempint, tempfrac);
-  }
-
-  static void get_sensor_battery(){
-  // Activate Temperature and Battery Sensors  
-    SENSORS_ACTIVATE(battery_sensor);
-  // prints as fast as possible (with no delay) the battery level.
-    bat_v = battery_sensor.value(0);
-  // When working with the ADC you need to convert the ADC integers in milliVolts. 
-  // This is done with the following formula:
-    bat_mv = (bat_v * 2.500 * 2) / 4096;
-  //printf("Battery Analog Data Value: %i , milli Volt= (%ld.%03d mV)\n", bat_v, (long) bat_mv, (unsigned) ((bat_mv - floorfun(bat_mv)) * 1000));
-  }
-
-//---End Function Deffinitions e-MCH-APp ---
+//---End Function Deffinitions rTGS-APp ---
 
 //------- prediction functions ------
 // set the sensor value get interval
@@ -134,7 +83,6 @@ static void get_sensor_temperature(){
   static char *RUNNING    = "RUNNING";   //RUNNING
   static char *FALLING    = "FALLING";   //FALLING
   static char *STATUS_PT  =  NULL;       //Nothing
-  static char *status_str = "STANDING";  //STANDING
   static char last;
 #else
   static char *STANDING   = "1"; //STANDING
@@ -142,31 +90,34 @@ static void get_sensor_temperature(){
   static char *RUNNING    = "3"; //RUNNING
   static char *FALLING    = "4"; //FALLING
   static char *STATUS_PT  = NULL;//Nothing
-  static char *status_str = "1"; //STANDING
   static char last;
 #endif
-// declare the pridiction function.
+
+// declare/define the pridiction function.
 void predict();
+//  viola ! these are actions to be fired on each event. 
+//  i.e set status 1, print walking, turn on blue LED and off other LEDs when WALKING is fired.
+void standing(){ leds_on(LEDS_BLUE);  leds_off(LEDS_RED); leds_off(LEDS_GREEN); }
+void walking() { leds_on(LEDS_GREEN); leds_off(LEDS_RED); leds_off(LEDS_BLUE);  }
+void running() { leds_on(LEDS_GREEN); leds_on(LEDS_RED);  leds_off(LEDS_BLUE);  }
+void falling() { leds_on(LEDS_RED);   leds_off(LEDS_BLUE);leds_off(LEDS_GREEN); }
 
 #define HISTORY 16
+#define sampleNo 41
+// Why I'm using int16_t ? (finally I discovered, I don't know)
+/* c Type   |stdint.h Type|Bits|Signed| Range           |
+ signed char| int16_t     | 16 |Signed|-32,768 .. 32,767| */
 
-/*---------------------------------------------------------------------------*/
-
-#define sampleNo 81
 static int16_t x,y,z;
-static int sample[3][sampleNo];
-static int pos;
+static int16_t sample[3][sampleNo];
+static int16_t pos;
 
 static struct etimer et;
 
-void print_int(uint16_t reg){
-#define ANNOYING_ALWAYS_THERE_ANYWAY_OUTPUT 0
-  if(reg && ADXL345_INT_FREEFALL) {last=*STATUS_PT;STATUS_PT=FALLING;if(last!=*STATUS_PT){status_str = "4"; printf("falling\n");leds_toggle(LEDS_RED);}}
-}
-
 /* accelerometer free fall detection callback */
 void accm_ff_cb(uint8_t reg){
-  print_int(reg);
+#define ANNOYING_ALWAYS_THERE_ANYWAY_OUTPUT 0
+  if(reg && ADXL345_INT_FREEFALL){last=*STATUS_PT;STATUS_PT=FALLING;if(last!=*STATUS_PT){ falling(); }}
 }
 
 //-------End prediction functions ------
@@ -179,6 +130,10 @@ PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
   PROCESS_BEGIN();
 
+	set_cc2420_txpower(0);
+	set_cc2420_channel(0);
+	SENSORS_ACTIVATE(battery_sensor);
+	tmp102_init();
   httpd_init();
 
   while(1) {
@@ -186,6 +141,7 @@ PROCESS_THREAD(webserver_nogui_process, ev, data)
     httpd_appcall(data);
   }
 
+	SENSORS_DEACTIVATE(battery_sensor);
   PROCESS_END();
 }
 AUTOSTART_PROCESSES(&web_sense_process,&webserver_nogui_process,&motion_tracking_process);
@@ -202,20 +158,12 @@ static int blen;
 static
 PT_THREAD(send_values(struct httpd_state *s))
 {
-//----- Get Data Instance -------
-++mid;  // MessageID
-get_sensor_temperature();
-get_sensor_time();
-get_sensor_battery();
-
-//----- End Get Data -------
 PSOCK_BEGIN(&s->sout);
 blen = 0;
 
-ADD(" ");
 //  MessageID, UpTime, ClockTime, Temperature, Battery, Status, RTT  //<-- This
-ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floorfun(bat_mv)) * 1000), status_str);
-ADD(" ");
+ADD("%d,%lu,1,%d,%ld.%03d,%s", mid++ ,clock_seconds(), temp, (long)mv,(unsigned)((mv - floor_bat(mv)) * 1000), STATUS_PT);
+ADD("\n");
 
 SEND_STRING(&s->sout, buf);
 PSOCK_END(&s->sout);
@@ -257,6 +205,11 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
 
 
   while(1){
+    //----- Get Data Instance -------
+		temp = tmp102_read_temp_x100()/100;
+    bateria = battery_sensor.value(0);
+    mv = (bateria * 2.500 * 2) / 4096;
+    //----- End Get Data -------
 //------------ Prediction (read values) ------------------
     x = accm_read_axis(X_AXIS);
     y = accm_read_axis(Y_AXIS);
@@ -274,7 +227,7 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
           etimer_set(&et, 15);
                 PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));}
 
-  printf("FinalStatus: %s\n", status_str);
+  printf("FinalStatus: %s\n", STATUS_PT);
 //------------ End Prediction (read values) ------------------ 
   }
   printf("Motion Tracking Terminated\n");
@@ -294,10 +247,8 @@ void predict(){
   }
 
   mean =(sum/sampleNo);
-  for(i=0;i<sampleNo-1;i++){
-    tmp = tmp + pow( ( 1 - mean ), 2);
-  }
-  std=sqrt(tmp/80);
+  for(i=0; i<sampleNo-1; i++){ tmp = tmp + pow( ( 1 - mean ), 2); }
+  std=sqrt(tmp/40);
   //printf("This is data from predict:%d,%d\n",(int)std,(int)mean);
   if(std>1000)return;
   double std1=3, mean1=2.2, max1=0.7;
@@ -310,8 +261,8 @@ void predict(){
   result3 = sqrt(a1*pow((std-std3),2)+a2*pow((mean-mean3),2)+a3*pow((max-max3),2));
   result4 = sqrt(a1*pow((std-std4),2)+a2*pow((mean-mean4),2)+a3*pow((max-max4),2));
   //printf("This is four results:%d,%d,%d,%d\n",(int)result1,(int)result2,(int)result3,(int)result4);
-  if(result1<result2 && result1<result3 && result1<result4){last=*STATUS_PT;STATUS_PT=STANDING;if(last!=*STATUS_PT){status_str = "1"; printf("standing\n");leds_toggle(LEDS_BLUE);}}
-  if(result2<result1 && result2<result3 && result2<result4){last=*STATUS_PT;STATUS_PT=WALKING;if(last!=*STATUS_PT){status_str = "2"; printf("walking\n");leds_toggle(LEDS_GREEN);}}
-  if(result3<result1 && result3<result2 && result3<result4){last=*STATUS_PT;STATUS_PT=RUNNING;if(last!=*STATUS_PT){status_str = "3"; printf("running\n");leds_toggle(LEDS_GREEN);}}
+  if(result1<result2 && result1<result3 && result1<result4){ last=*STATUS_PT;STATUS_PT=STANDING; if(last!=*STATUS_PT){ standing();} }
+  if(result2<result1 && result2<result3 && result2<result4){ last=*STATUS_PT;STATUS_PT=WALKING;  if(last!=*STATUS_PT){ walking(); } }
+  if(result3<result1 && result3<result2 && result3<result4){ last=*STATUS_PT;STATUS_PT=RUNNING;  if(last!=*STATUS_PT){ running(); } }
 }
 /*---- End Human Body Posture Detection and Prediction ---------------*/

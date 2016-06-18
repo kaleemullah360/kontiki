@@ -46,16 +46,24 @@
 #include <string.h>
 #include <cc2420-radio.h>
 #include <mqtt-conf.h>
-//--- Libs for e-MCH-APp ----
-#include "dev/battery-sensor.h"
-#include "dev/i2cmaster.h"
-#include "dev/tmp102.h"
-//---End Libs for e-MCH-APp ---
 //------- pgediction custom libs ------
 #include "dev/adxl345.h"
 #include <math.h>
 #include "dev/leds.h"
 //------- End prediction custom libs ------
+
+//--- Libs for rTGS-APp ----
+#include "dev/battery-sensor.h"
+#include "dev/i2cmaster.h"
+#include "dev/tmp102.h"
+//---End Libs for rTGS-APp ---
+
+//--- Function Deffinitions for rTGS-APp ----
+uint8_t mid = 0;
+int16_t temp;
+uint16_t bateria = 0;
+float mv = 0.0;
+
 float
 floor_bat(float x)
 {
@@ -65,6 +73,8 @@ floor_bat(float x)
     return (float)((int)x - 1);
   }
 }
+//---End Function Deffinitions rTGS-APp ---
+
 //------- prediction functions ------
 // set the sensor reading value interval
 #define ACCM_READ_INTERVAL    CLOCK_SECOND/50
@@ -91,25 +101,14 @@ static int16_t pos;
 
 static struct etimer et;
 
-/* accelerometer free fall detection callback */
-void accm_ff_cb(uint8_t reg){
-#define ANNOYING_ALWAYS_THERE_ANYWAY_OUTPUT 0
-  if(reg && ADXL345_INT_FREEFALL){last=*STATUS_PT;STATUS_PT=FALLING;if(last!=*STATUS_PT){ falling(); }}
-}
-
 //-------End prediction functions ------
-/*---------------------------------------------------------------------------*/
 
-uint8_t mid = 0;
-int16_t temp;
-uint16_t bateria = 0;
-float mv = 0.0;
 /*---------------------------------------------------------------------------*/
 /*
  * Publish to a local MQTT broker (e.g. mosquitto) running on the host
  */
  static const char *broker_ip = MQTT_Z1_BROKER_IP_ADDR;
- #define DEFAULT_ORG_ID "eMCH-APp"
+ #define DEFAULT_ORG_ID "rTGS-APp"
 /*---------------------------------------------------------------------------*/
 /*
  * A timeout used when waiting for something to happen (e.g. to connect or to
@@ -520,11 +519,18 @@ ping_parent(void)
 
 //	viola ! these are actions to be fired on each event. 
 //	i.e set status 1, print walking, turn on blue LED and off other LEDs when WALKING is fired.
-void standing(){  printf("standing\n"); leds_on(LEDS_BLUE);  leds_off(LEDS_RED); leds_off(LEDS_GREEN); publish();}
-void walking() { printf("walking\n");  leds_on(LEDS_GREEN); leds_off(LEDS_RED); leds_off(LEDS_BLUE);   publish();}
-void running() { printf("running\n");  leds_on(LEDS_GREEN); leds_on(LEDS_RED);  leds_off(LEDS_BLUE);   publish();}
-void falling() { printf("falling\n");  leds_on(LEDS_RED);   leds_off(LEDS_BLUE);leds_off(LEDS_GREEN);  publish();}
+void standing(){publish(); printf("standing\n"); leds_on(LEDS_BLUE);  leds_off(LEDS_RED); leds_off(LEDS_GREEN); }
+void walking() {publish(); printf("walking\n");  leds_on(LEDS_GREEN); leds_off(LEDS_RED); leds_off(LEDS_BLUE);  }
+void running() {publish(); printf("running\n");  leds_on(LEDS_GREEN); leds_on(LEDS_RED);  leds_off(LEDS_BLUE);  }
+void falling() {publish(); printf("falling\n");  leds_on(LEDS_RED);   leds_off(LEDS_BLUE);leds_off(LEDS_GREEN); }
 /*---------------------------------------------------------------------------*/
+  
+/* accelerometer free fall detection callback */
+void accm_ff_cb(uint8_t reg){
+#define ANNOYING_ALWAYS_THERE_ANYWAY_OUTPUT 0
+  if(reg && ADXL345_INT_FREEFALL){last=*STATUS_PT;STATUS_PT=FALLING;if(last!=*STATUS_PT){ falling(); }}
+}
+
 static void
 state_machine(void)
 {
@@ -731,9 +737,11 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
 
   while(1){
 
-    temp = tmp102_read_temp_x100()/100;
+    //----- Get Data Instance -------
+		temp = tmp102_read_temp_x100()/100;
     bateria = battery_sensor.value(0);
     mv = (bateria * 2.500 * 2) / 4096;
+    //----- End Get Data -------
     //------------ Prediction (read values) ------------------
     x = accm_read_axis(X_AXIS);
     y = accm_read_axis(Y_AXIS);
