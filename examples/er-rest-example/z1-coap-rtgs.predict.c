@@ -40,12 +40,23 @@ floor_bat(float x)
 // set the sensor reading value interval
 #define ACCM_READ_INTERVAL    CLOCK_SECOND/50
 
-  char *STANDING   = "STANDING";  //STANDING
-  char *WALKING    = "WALKING";   //WALKING
-  char *RUNNING    = "RUNNING";   //RUNNING
-  char *FALLING    = "FALLING";   //FALLING
-  char *STATUS_PT  =  NULL;       //Nothing
-  char last;
+// if you want "STANDING" instead of "1" just set it to 1
+#define CHAR_STR_STATUS 1 
+#if CHAR_STR_STATUS
+  static char *STANDING   = "STANDING";  //STANDING
+  static char *WALKING    = "WALKING";   //WALKING
+  static char *RUNNING    = "RUNNING";   //RUNNING
+  static char *FALLING    = "FALLING";   //FALLING
+  static char *STATUS_PT  =  NULL;       //Nothing
+  static char last;
+#else
+  static char *STANDING   = "1"; //STANDING
+  static char *WALKING    = "2"; //WALKING
+  static char *RUNNING    = "3"; //RUNNING
+  static char *FALLING    = "4"; //FALLING
+  static char *STATUS_PT  = NULL;//Nothing
+  static char last;
+#endif
 
 // declare/define the pridiction function.
 void predict();
