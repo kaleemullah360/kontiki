@@ -25,6 +25,14 @@
  *
  * This file is part of the Contiki operating system.
  *
+ * \file
+ *         Hoping for MQTT & CoAP Protocols.
+ * \author
+ *         Kaleem Ullah    <MSCS14059@ITU.EDU.PK>
+ *
+ * \Short Description:
+ *
+ *    in order to do multihopping in CoAP and MQTT Protocols. the application is used.
  */
 
 #include "contiki.h"
