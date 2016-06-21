@@ -41,7 +41,7 @@ floor_bat(float x)
 #define ACCM_READ_INTERVAL    CLOCK_SECOND/50
 
 // if you want "STANDING" instead of "1" just set it to 1
-#define CHAR_STR_STATUS 1 
+#define CHAR_STR_STATUS 1
 #if CHAR_STR_STATUS
   static char *STANDING   = "STANDING";  //STANDING
   static char *WALKING    = "WALKING";   //WALKING
