@@ -79,23 +79,12 @@ floor_bat(float x)
 // set the sensor reading value interval
 #define ACCM_READ_INTERVAL    CLOCK_SECOND/50
 
-// if you want "STANDING" instead of "1" just set it to 1
-#define CHAR_STR_STATUS 1 
-#if CHAR_STR_STATUS
   static char *STANDING   = "STANDING";  //STANDING
   static char *WALKING    = "WALKING";   //WALKING
   static char *RUNNING    = "RUNNING";   //RUNNING
   static char *FALLING    = "FALLING";   //FALLING
   static char *STATUS_PT  =  NULL;       //Nothing
   static char last;
-#else
-  static char *STANDING   = "1"; //STANDING
-  static char *WALKING    = "2"; //WALKING
-  static char *RUNNING    = "3"; //RUNNING
-  static char *FALLING    = "4"; //FALLING
-  static char *STATUS_PT  = NULL;//Nothing
-  static char last;
-#endif
 
 // declare/define the pridiction function.
 void predict();
@@ -234,7 +223,7 @@ static struct etimer et;
 /* Parent RSSI functionality */
  static struct uip_icmp6_echo_reply_notification echo_reply_notification;
  static struct etimer echo_request_timer;
- static int def_rt_rssi = 0;
+ //static int def_rt_rssi = 0;
 /*---------------------------------------------------------------------------*/
  static mqtt_client_config_t conf;
 /*---------------------------------------------------------------------------*/
@@ -269,10 +258,10 @@ PROCESS(motion_tracking_process, "Motion Tracker");
 static void
 echo_reply_handler(uip_ipaddr_t *source, uint8_t ttl, uint8_t *data,
  uint16_t datalen)
-{
+{ /*
   if(uip_ip6addr_cmp(source, uip_ds6_defrt_choose())) {
     def_rt_rssi = sicslowpan_get_last_rssi();
-  }
+  } */
 }
 /*---------------------------------------------------------------------------*/
 static void
@@ -293,8 +282,9 @@ pub_handler(const char *topic, uint16_t topic_len, const uint8_t *chunk,
     printf("Incorrect topic or chunk len. Ignored topic= %d chunk= %d\n", topic_len, chunk_len);
     return;
   }
-  */
-  /* If the format != json, ignore */
+
+   //If the format != json, ignore 
+  
   if(strncmp(&topic[topic_len - 4], "json", 4) != 0) {
     printf("Incorrect format\n");
   }
@@ -307,6 +297,7 @@ pub_handler(const char *topic, uint16_t topic_len, const uint8_t *chunk,
     }
     return;
   }
+  */
 }
 /*---------------------------------------------------------------------------*/
 static void
@@ -699,7 +690,7 @@ state_machine(void)
 
   update_config();
   //def_rt_rssi = 0x8000000;
-  def_rt_rssi = 0x8000;
+  //def_rt_rssi = 0x8000;
   uip_icmp6_echo_reply_callback_add(&echo_reply_notification,
     echo_reply_handler);
   etimer_set(&echo_request_timer, conf.def_rt_ping_interval);
