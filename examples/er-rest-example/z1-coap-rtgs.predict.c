@@ -40,23 +40,12 @@ floor_bat(float x)
 // set the sensor reading value interval
 #define ACCM_READ_INTERVAL    CLOCK_SECOND/50
 
-// if you want "STANDING" instead of "1" just set it to 1
-#define CHAR_STR_STATUS 1
-#if CHAR_STR_STATUS
   static char *STANDING   = "STANDING";  //STANDING
   static char *WALKING    = "WALKING";   //WALKING
   static char *RUNNING    = "RUNNING";   //RUNNING
   static char *FALLING    = "FALLING";   //FALLING
   static char *STATUS_PT  =  NULL;       //Nothing
   static char last;
-#else
-  static char *STANDING   = "1"; //STANDING
-  static char *WALKING    = "2"; //WALKING
-  static char *RUNNING    = "3"; //RUNNING
-  static char *FALLING    = "4"; //FALLING
-  static char *STATUS_PT  = NULL;//Nothing
-  static char last;
-#endif
 
 // declare/define the pridiction function.
 void predict();
@@ -70,6 +59,7 @@ void falling() { notify(); leds_on(LEDS_RED);   leds_off(LEDS_BLUE);leds_off(LED
 
 #define HISTORY 16
 #define sampleNo 41
+
 // Why I'm using int16_t ? (finally I discovered, I don't know)
 /* c Type   |stdint.h Type|Bits|Signed| Range           |
  signed char| int16_t     | 16 |Signed|-32,768 .. 32,767| */
@@ -145,13 +135,14 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
 
 }
 void notify() {
-    printf("FinalStatus: %s\n", STATUS_PT);
+    //printf("FinalStatus: %s\n", STATUS_PT);
     REST.notify_subscribers(&res_z1_coap_rtgs_obs_moves);
 }
 static void
 res_periodic_handler()
 {
-
+    // do periodic task here.
+    // this method is called each after 5 seconds
 }
 
 PROCESS_THREAD(motion_tracking_process, ev, data){
@@ -166,8 +157,6 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
   accm_set_irq(ADXL345_INT_FREEFALL, ADXL345_INT_TAP + ADXL345_INT_DOUBLETAP);
   ACCM_REGISTER_INT1_CB(accm_ff_cb);
   //-----------End Init ADXL Sensor ------------
-
-  printf("Motion Tracking Started\n");
 
   while(1){
     //----- Get Data Instance -------
@@ -196,7 +185,6 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
     //printf("FinalStatus: %s\n", status_str);
 
   }
-  printf("Motion Tracking Terminated\n");
 
   PROCESS_END();
 }
@@ -232,8 +220,3 @@ void predict(){
   if(result3<result1 && result3<result2 && result3<result4){ last=*STATUS_PT;STATUS_PT=RUNNING;  if(last!=*STATUS_PT){ running(); } }
 }
 /*---- End Human Body Posture Detection and Prediction ---------------*/
-/*---------------------------------------------------------------------------*/
-/**
- * @}
- * @}
- */
