@@ -31,7 +31,9 @@
 
 /**
  * \file
+ *
  *  cc2420 Radio configurations
+ *
  * \author
  *
  *	Kaleem Ullah <mscs14059@itu.edu.pk>
