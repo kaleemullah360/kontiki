@@ -6,7 +6,7 @@
  *
  * \Short Description:
  *
- *    Track Motion eg. Walking, Standing, Falling, Running
+ *    Track Motion eg. Walking, Standing, Falling, Running, Battery Sensing and Temperature monitoring
  * this application uses Zolertia adxl345 sensor. and CoAP Protocol at Application layer
  * The sensor produced x, y, z axis values upone actuation.
  * then using these values a predict(); function output state of the sensor node.
