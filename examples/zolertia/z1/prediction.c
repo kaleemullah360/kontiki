@@ -50,7 +50,6 @@
   static char *RUNNING    = "RUNNING";   //RUNNING
   static char *FALLING    = "FALLING";   //FALLING
   static char *STATUS_PT  =  NULL;       //Nothing
-  static char *status_str = "STANDING";  //STANDING
   static char last;
 #else
   static char *STANDING   = "1"; //STANDING
@@ -58,7 +57,6 @@
   static char *RUNNING    = "3"; //RUNNING
   static char *FALLING    = "4"; //FALLING
   static char *STATUS_PT  = NULL;//Nothing
-  static char *status_str = "1"; //STANDING
   static char last;
 #endif
 
@@ -66,10 +64,10 @@
 void predict();
 //	viola ! these are actions to be fired on each event. 
 //	i.e set status 1, print walking, turn on blue LED and off other LEDs when WALKING is fired.
-void standing(){ status_str = STANDING; printf("standing\n"); leds_on(LEDS_BLUE);  leds_off(LEDS_RED); leds_off(LEDS_GREEN); }
-void walking() { status_str = WALKING; printf("walking\n");  leds_on(LEDS_GREEN); leds_off(LEDS_RED); leds_off(LEDS_BLUE);  }
-void running() { status_str = RUNNING; printf("running\n");  leds_on(LEDS_GREEN); leds_on(LEDS_RED);  leds_off(LEDS_BLUE);  }
-void falling() { status_str = FALLING; printf("falling\n");  leds_on(LEDS_RED);   leds_off(LEDS_BLUE);leds_off(LEDS_GREEN); }
+void standing(){printf("standing\n"); leds_on(LEDS_BLUE);  leds_off(LEDS_RED); leds_off(LEDS_GREEN); }
+void walking() {printf("walking\n");  leds_on(LEDS_GREEN); leds_off(LEDS_RED); leds_off(LEDS_BLUE);  }
+void running() {printf("running\n");  leds_on(LEDS_GREEN); leds_on(LEDS_RED);  leds_off(LEDS_BLUE);  }
+void falling() {printf("falling\n");  leds_on(LEDS_RED);   leds_off(LEDS_BLUE);leds_off(LEDS_GREEN); }
 
 #define HISTORY 16
 #define sampleNo 81
@@ -127,7 +125,7 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
       etimer_set(&et, 15);
       PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));}
     //------------ End Prediction (read values) ------------------
-    //printf("FinalStatus: %s\n", status_str);
+    //printf("FinalStatus: %s\n", STATUS_PT);
 
   }
   printf("Motion Tracking Terminated\n");
