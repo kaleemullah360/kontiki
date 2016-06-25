@@ -199,7 +199,7 @@ PROCESS_THREAD(motion_tracking_process, ev, data){
       etimer_set(&et, 15);
       PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));}
     //------------ End Prediction (read values) ------------------
-    //printf("FinalStatus: %s\n", status_str);
+    //printf("FinalStatus: %s\n", STATUS_PT);
 
   }
 
