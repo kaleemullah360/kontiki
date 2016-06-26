@@ -34,14 +34,14 @@
 
 /*
  * \file
- *         CoAP Application layer protocol Motion Detector with Zolertia Z1 example.
+ *         MQTT Application layer protocol Motion Detector with Zolertia Z1 example.
  * \author
  *         Kaleem Ullah    <MSCS14059@ITU.EDU.PK>
  *
  * \Short Description:
  *
  *    Track Motion eg. Walking, Standing, Falling, Running, Battery Sensing and Temperature monitoring
- * This application uses Zolertia adxl345 sensor. and CoAP Protocol at Application layer
+ * This application uses Zolertia adxl345 sensor. and MQTT Protocol at Application layer
  * The sensor produced x, y, z axis values upone actuation.
  * Observe resources and on status change it notify the subscriber
  *
