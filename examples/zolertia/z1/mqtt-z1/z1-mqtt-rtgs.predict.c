@@ -32,6 +32,24 @@
 * MQTT Server Mote App Extension By Kaleem Ullah MSCS14059@ITU.EDU.PK
 */
 
+/*
+ * \file
+ *         CoAP Application layer protocol Motion Detector with Zolertia Z1 example.
+ * \author
+ *         Kaleem Ullah    <MSCS14059@ITU.EDU.PK>
+ *
+ * \Short Description:
+ *
+ *    Track Motion eg. Walking, Standing, Falling, Running, Battery Sensing and Temperature monitoring
+ * This application uses Zolertia adxl345 sensor. and CoAP Protocol at Application layer
+ * The sensor produced x, y, z axis values upone actuation.
+ * Observe resources and on status change it notify the subscriber
+ *
+ * then using these values a predict(); function output state of the sensor node.
+ * Send Battery values and Temperature.
+ *
+ */
+
 /*---------------------------------------------------------------------------*/
 #include "contiki-conf.h"
 #include "rpl/rpl-private.h"
