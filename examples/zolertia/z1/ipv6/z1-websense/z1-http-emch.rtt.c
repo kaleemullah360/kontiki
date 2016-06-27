@@ -39,7 +39,7 @@
  *    e-MCH-APp (Evaluation MQTT, CoAP, HTTP protocol) using Node.Js server.
  * this application uses Zolertia and send message number only on request.
  * while request we also compute RTT.
- * then using these values a predict(); function output state of the sensor node.
+ *
  */
 
 #include "contiki.h"
