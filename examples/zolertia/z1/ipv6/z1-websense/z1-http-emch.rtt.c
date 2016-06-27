@@ -28,13 +28,18 @@
  *
  */
 
-/**
+/*
  * \file
- *         Light and temperatur sensor web demo
+ *         Motion Detector with Zolertia Z1 example.
  * \author
- *         Niclas Finne    <nfi@sics.se>
- *         Joakim Eriksson <joakime@sics.se>
- *         Joel Hoglund    <joel@sics.se>
+ *         Kaleem Ullah    <MSCS14059@ITU.EDU.PK>
+ *
+ * \Short Description:
+ *
+ *    e-MCH-APp (Evaluation MQTT, CoAP, HTTP protocol) using Node.Js 
+ * this application uses Zolertia adxl345 sensor.
+ * The sensor produced x, y, z axis values upone actuation.
+ * then using these values a predict(); function output state of the sensor node.
  */
 
 #include "contiki.h"
