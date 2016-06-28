@@ -36,7 +36,7 @@
  * \Short Description:
  *
  *    e-MCH-APp (Evaluation MQTT, CoAP, HTTP protocol) using Node.Js server.
- * this application uses Zolertia z1 mote. on each request. power traces are save in data base
+ * this application uses Zolertia z1 mote. on each request, power traces are save in data base while we also sent uptime, 
  * while request we also compute RTT.
  *
  */
