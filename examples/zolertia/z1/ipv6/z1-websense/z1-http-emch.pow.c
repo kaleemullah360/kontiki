@@ -27,13 +27,18 @@
  * SUCH DAMAGE.
  *
  */
-
-/**
+/*
  * \file
- *         Light and temperatur sensor web demo
+ *         Evaluation of HTTP Protocols at Application layer.
  * \author
- *         Kaleem Ullah    <kaleemullah360@live.com>|<mscs14059@itu.edu.pk>
-
+ *         Kaleem Ullah    <MSCS14059@ITU.EDU.PK>
+ *
+ * \Short Description:
+ *
+ *    e-MCH-APp (Evaluation MQTT, CoAP, HTTP protocol) using Node.Js server.
+ * this application uses Zolertia and send message number only on request.
+ * while request we also compute RTT.
+ *
  */
 
 #include "contiki.h"

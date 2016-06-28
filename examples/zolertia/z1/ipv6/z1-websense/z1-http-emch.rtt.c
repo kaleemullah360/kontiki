@@ -30,7 +30,7 @@
 
 /*
  * \file
- *         Motion Detector with Zolertia Z1 example.
+ *         Evaluation of HTTP Protocols at Application layer.
  * \author
  *         Kaleem Ullah    <MSCS14059@ITU.EDU.PK>
  *
