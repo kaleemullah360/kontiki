@@ -30,7 +30,7 @@
 
 /*
  * \file
- *         Evaluation of HTTP Protocols at Application layer.
+ *         Evaluation of MQTT Protocols at Application layer.
  * \author
  *         Kaleem Ullah    <MSCS14059@ITU.EDU.PK>
  *
