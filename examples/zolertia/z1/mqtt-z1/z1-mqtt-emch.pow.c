@@ -37,7 +37,7 @@
  * \Short Description:
  *
  *    e-MCH-APp (Evaluation MQTT, CoAP, HTTP protocol) using Node.Js server.
- * this application uses Zolertia and send message number only on request.
+ * this application uses Zolertia and send 180 Bytes message containing different traces on request.
  * while request we also compute RTT.
  * Power traces also computed and stored in data base
  *
