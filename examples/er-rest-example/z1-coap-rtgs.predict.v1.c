@@ -130,7 +130,7 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
   REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
   REST.set_header_max_age(response, res_z1_coap_rtgs_obs_moves.periodic->period / CLOCK_SECOND);
 	//  MessageID, UpTime, ClockTime, Temperature, Battery, Status, RTT  //<-- This
-  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size, "%d,%s", mid++ ,STATUS_PT));
+  REST.set_response_payload(response, buffer, snprintf((char *)buffer, preferred_size, "%d,%lu,%s", mid++, clock_seconds(), STATUS_PT));
 
 }
 void notify() {

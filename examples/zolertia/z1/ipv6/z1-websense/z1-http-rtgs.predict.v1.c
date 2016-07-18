@@ -131,7 +131,7 @@ blen = 0;
 
 //  MessageID, UpTime, ClockTime, Temperature, Battery, Status, RTT  //<-- This
 //ADD("\n");
-ADD("%d,%s", mid++, STATUS_PT);
+ADD("%d,%lu,%s", mid++, clock_seconds(), STATUS_PT);
 
 SEND_STRING(&s->sout, buf);
 PSOCK_END(&s->sout);
