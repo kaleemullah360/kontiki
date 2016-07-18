@@ -108,7 +108,6 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   }  /* while (1) */
 
-	SENSORS_DEACTIVATE(battery_sensor);
   PROCESS_END();
 }
 

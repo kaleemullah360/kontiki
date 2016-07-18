@@ -21,3 +21,6 @@
 [20:06:23 - Thread-5] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
 [20:06:43 - Thread-6] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1468854403559
 [20:07:52 - Thread-6] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1468854472823	Duration: 69264 ms	Simulated time 11679 ms	Ratio 0.1686157311157311
+[21:16:17 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[21:16:17 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[21:16:18 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-coap-rtgs.predict.v1.z1 TARGET=z1 
