@@ -34,3 +34,4 @@
 [21:18:09 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-rtgs.predict.v1.z1
 [21:18:10 - Thread-8] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1468858690219
 [21:18:19 - Thread-8] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1468858699627	Duration: 9408 ms	Simulated time 21086 ms	Ratio 2.2412840136054424
+[23:54:01 - Thread-5] [SerialSocketServer.java:501] [INFO] - End of Stream

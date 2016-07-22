@@ -6,7 +6,7 @@ clean-all:
 	rm -f *.exe
 
 view-project:
-	firefox https://github.com/kaleemullah360/BuddySystem &
+	firefox https://github.com/kaleemullah360/kontiki &
 
 view-profile:
 	firefox https://github.com/kaleemullah360 &
