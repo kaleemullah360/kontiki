@@ -51,10 +51,10 @@
  *
  *    LED Status:
  *
- *      STANDING => Blue LED
- *      WALKING  => Green LED
- *      RUNNING  => Green & Red LED
- *      FALLING  => Red LED
+*      STANDING => Blue LED
+*      WALKING  => Green LED
+*      RUNNING  => Green & Red LED
+*      FALLING  => Red LED
  */
 /*---------------------------------------------------------------------------*/
 #include "contiki-conf.h"
