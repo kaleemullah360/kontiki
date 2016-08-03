@@ -49,12 +49,12 @@
  * Send Battery values and Temperature.
  * It publish tracking infromation to broker on topic "iot-2/evt/status/fmt/json"
  *
- *    LED Status:
+ * LED Status:
  *
-*      STANDING => Blue LED
-*      WALKING  => Green LED
-*      RUNNING  => Green & Red LED
-*      FALLING  => Red LED
+ *      STANDING => Blue LED
+ *      WALKING  => Green LED
+ *      RUNNING  => Green & Red LED
+ *      FALLING  => Red LED
  */
 /*---------------------------------------------------------------------------*/
 #include "contiki-conf.h"
