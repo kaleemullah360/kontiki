@@ -32,7 +32,7 @@
  *
  * \Short Description:
  *
- *    in order to do multihopping in CoAP and MQTT Protocols. the application is used.
+ *    in order to do multihopping in CoAP and MQTT Protocols. the application is used. it forwards the message. to next available hop
  */
 
 #include "contiki.h"
