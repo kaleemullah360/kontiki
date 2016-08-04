@@ -38,7 +38,7 @@
  *
  *    e-MCH-APp (Evaluation MQTT, CoAP, HTTP protocol) using Node.Js server.
  * this application uses Zolertia and send message number only on request.
- * while request we also compute RTT.
+ * while request we also compute RTT. for RTT it uses PING method
  *
  */
 
