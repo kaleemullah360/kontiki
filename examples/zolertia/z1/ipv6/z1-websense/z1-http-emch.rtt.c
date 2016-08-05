@@ -41,7 +41,7 @@
  *
  *\Goal:
  * 	This application only compute RTT using PING method in NodeJs. on each request it first PING then get data.
- * the data consist of 
+ * the data consist of message number only
  */
 
 #include "contiki.h"
