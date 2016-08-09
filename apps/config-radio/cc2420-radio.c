@@ -46,6 +46,21 @@
  *	Case 3:	not using both/eithere of power/channel setting function will set Contiki OS default configurations i.e channel 26, tx power 31.
  */
 
+/**
+*          ,
+*         `$b
+*    .ss,  $$:         .,d$
+*    `$$P,d$P'    .,md$P"'
+*     ,$$$$$bmmd$$$P^'
+*   .d$$$$$$$$$$P'
+*   $$^' `"^$$$'    
+*   $:     ,$$:       
+*   `b     :$$        
+*          $$:        
+*          $$ 
+*        .d$$                KuSu
+*/
+
 /* -------- Set Radio Powers --------------- */
 
 #include <cc2420-radio.h>
@@ -58,8 +73,8 @@
 * |-32.9840   |  1     |0.0005    |
 * |-37.9170   |  0     |0.0002    |
 */ 
-uint8_t radioChannel = 15;  // default channel
-uint8_t radioChannel_tx_power = 30; // default power
+uint8_t radioChannel = 26;  // default channel
+uint8_t radioChannel_tx_power = 31; // default power
 
 void set_cc2420_channel(custom_radioChannel){
 	/* channel */
