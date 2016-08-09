@@ -23,6 +23,7 @@
  * The build system automatically compiles the resources in the corresponding sub-directory.
  */
 
+// coap resource to GET: resource
 extern resource_t res_z1_coap_emch_rtt;
 
 PROCESS(er_example_server, "e-MCH-APp Server RTT");

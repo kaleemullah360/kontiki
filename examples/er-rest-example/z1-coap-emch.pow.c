@@ -25,7 +25,7 @@
  * Resources to be activated need to be imported through the extern keyword.
  * The build system automatically compiles the resources in the corresponding sub-directory.
  */
-
+// this application responds with full payload of 180bytes including powertraces, and messages identities.
 extern resource_t res_z1_coap_emch_pow;
 
 PROCESS(er_example_server, "e-MCH-APp Server");

@@ -22,7 +22,7 @@
  * Resources to be activated need to be imported through the extern keyword.
  * The build system automatically compiles the resources in the corresponding sub-directory.
  */
-
+// customised csv payload
 extern resource_t res_z1_coap_emch;
 
 PROCESS(er_example_server, "e-MCH-APp Server");
