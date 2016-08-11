@@ -16,7 +16,29 @@ include the library in your application and set the desired channel and TX power
 The RADIO MOD library uses very small code footprints. Very light weight and usefull when creating multi hops or mesh network.
 This library enhance the cc2420 radio methods. it uses `cc2420_set_txpower(radioChannel_tx_power);`, `cc2420_set_channel(radioChannel);`.
 
+## Setup:
 
+include the library in your application `Makefile`
+
+	```sh
+	APPS += config-radio
+	```
+
+call the methods with approperiate settings.
+
+Change th channel or TX power of all the nodes wich includes this library.
+
+In file
+
+	~/Contiki/app/config-radio/cc2420-radio.c
+
+Change the values of follwing variables.
+
+	uint8_t radioChannel = 26;  // default channel
+	uint8_t radioChannel_tx_power = 31; // default power
+
+	set_cc2420_txpower(0);	// setting zero will use predefined configurations in 
+	set_cc2420_channel(0);
 
 ## Author
 Kaleem Ullah <mscs14059@itu.edu.pk>
