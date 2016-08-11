@@ -28,7 +28,7 @@ call the methods with approperiate settings.
 
 ## Global Configurations:
 
-Change the channel or TX power of all the nodes which includes this library.
+1) Change the channel or TX power of all the nodes which includes this library.
 
 In file
 
@@ -42,14 +42,15 @@ Change the values of follwing variables.
 in you application add these method.
 
 	set_cc2420_txpower(0);	// setting zero will use predefined configurations in `cc2420-radio.c` file
-	set_cc2420_channel(0);
+	set_cc2420_channel(0);	// I want all the motes use the channel 26 defined in library.
 
 ## Local Configurations:
 
-Change the channel or TX power of only that the node which includes this library.
+2) Change the channel or TX power of only that the node which includes this library.
+
 in your application add these method with custom values.
-	set_cc2420_txpower(0);	// setting zero will use predefined configurations in 
-	set_cc2420_channel(0);
+	set_cc2420_txpower(3);	// I want TX power to be 3 at mote B
+	set_cc2420_channel(15);	// I want channel 15 to used at mote B
 
 ## Author
 Kaleem Ullah <mscs14059@itu.edu.pk>
