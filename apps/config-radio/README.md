@@ -13,7 +13,7 @@
 
 
 ### Solution:
-include the library in your application and set the desired channel and TX power for your network thats it!.
+Include the library in your application and set the desired channel and TX power for your network thats it!.
 
 ## Abstract
 The RADIO MOD library uses very small code footprints. Very light weight and usefull when creating multi hops or mesh network.
@@ -62,13 +62,13 @@ Kaleem Ullah <mscs14059@itu.edu.pk>
 Kaleem Ullah <kaleemullah360@live.com>
 
 ## Usage
-###Case 1:	
+### Case 1:	
 > zero is passed in power/channel function i.e set_cc2420_txpower(0); will use predefined channel number in cc2420-radio lib
 
-###Case 2:
+### Case 2:
 > a custom value is passed in power/channel function i.e set_cc2420_txpower(13); will use channel 13.
 
-###Case 3:
+### Case 3:
 > not using both/eithere of power/channel setting function will set Contiki OS default configurations i.e channel 26, tx power 31.
 
 For more information, see the Contiki website:
