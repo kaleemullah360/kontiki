@@ -3,7 +3,15 @@ The Contiki Operating System
 
 # CC2420 Radio Configurations Library.
 
+
+
+1. Tired of setting custom Channel and Transmission ranges in number of nodes ?. 
+2. Often forget to change Channel or Transmission range in one of node in network and wonder why it is not functioning ?
+3. want to set Channel and Transmission ranges in single step for whole network ?, also want to set a quit different configurations for one ore more nodes ?
+
 ## Abstract
+	The library uses very small code footprints. it is very usefull when creating multi hops or mesh network.
+include the library in your project and set the desired channel and TX power for your network.
 
 ## Author
 
