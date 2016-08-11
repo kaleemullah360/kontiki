@@ -14,7 +14,8 @@ include the library in your application and set the desired channel and TX power
 
 ## Abstract
 The RADIO MOD library uses very small code footprints. Very light weight and usefull when creating multi hops or mesh network.
-This library enhance the cc2420 radio methods. it uses `cc2420_set_txpower(radioChannel_tx_power);`, `cc2420_set_channel(radioChannel);`
+This library enhance the cc2420 radio methods. it uses `cc2420_set_txpower(radioChannel_tx_power);`, `cc2420_set_channel(radioChannel);`.
+
 
 
 ## Author
