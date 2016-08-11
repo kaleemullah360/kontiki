@@ -18,7 +18,7 @@ This library enhance the cc2420 radio methods. it uses `cc2420_set_txpower(radio
 
 ## Setup:
 
-include the library in your application `Makefile`
+Include the library in your application `Makefile`
 
 ```sh
 APPS += config-radio
@@ -34,7 +34,7 @@ In file
 
 	~/Contiki/app/config-radio/cc2420-radio.c
 
-Change the values of follwing variables.
+Change the values of following variables.
 
 	uint8_t radioChannel = 26;  		// default channel
 	uint8_t radioChannel_tx_power = 31; // default power
