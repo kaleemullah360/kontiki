@@ -46,9 +46,10 @@ in your application add these method.
 
 ## Local Configurations:
 
-2) Change the channel or TX power of only that the node which includes this library.
+2) Change the channel or TX power of only that node which includes this library.
 
 in your application add these method with custom values.
+
 	set_cc2420_txpower(3);	// I want TX power to be 3 at mote B
 	set_cc2420_channel(15);	// I want channel 15 to used at mote B
 
