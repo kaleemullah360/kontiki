@@ -39,7 +39,7 @@ Change the values of following variables.
 	uint8_t radioChannel = 26;  		// default channel
 	uint8_t radioChannel_tx_power = 31; // default power
 
-in you application add these method.
+in your application add these method.
 
 	set_cc2420_txpower(0);	// setting zero will use predefined configurations in `cc2420-radio.c` file
 	set_cc2420_channel(0);	// I want all the motes use the channel 26 defined in library.
