@@ -1,6 +1,3 @@
-The Contiki Operating System
-============================
-
 # RADIO MOD
 
 ## CC2420 Radio Configurations Library.
