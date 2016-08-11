@@ -20,13 +20,15 @@ This library enhance the cc2420 radio methods. it uses `cc2420_set_txpower(radio
 
 include the library in your application `Makefile`
 
-	```sh
-	APPS += config-radio
-	```
+```sh
+APPS += config-radio
+```
 
 call the methods with approperiate settings.
 
-Change th channel or TX power of all the nodes wich includes this library.
+## Global Configurations:
+
+Change the channel or TX power of all the nodes which includes this library.
 
 In file
 
@@ -34,9 +36,18 @@ In file
 
 Change the values of follwing variables.
 
-	uint8_t radioChannel = 26;  // default channel
+	uint8_t radioChannel = 26;  		// default channel
 	uint8_t radioChannel_tx_power = 31; // default power
 
+in you application add these method.
+
+	set_cc2420_txpower(0);	// setting zero will use predefined configurations in `cc2420-radio.c` file
+	set_cc2420_channel(0);
+
+## Local Configurations:
+
+Change the channel or TX power of only that the node which includes this library.
+in your application add these method with custom values.
 	set_cc2420_txpower(0);	// setting zero will use predefined configurations in 
 	set_cc2420_channel(0);
 
