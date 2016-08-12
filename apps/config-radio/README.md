@@ -26,7 +26,11 @@ Include the library in your application `Makefile`
 ```sh
 APPS += config-radio
 ```
+Include the library in your application i.e `websense-remote.c`
 
+```sh
+#include <cc2420-radio.h>
+```
 call the methods with approperiate settings.
 
 ## Global Configurations:
