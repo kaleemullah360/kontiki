@@ -31,7 +31,7 @@
  /**
  * \file
  *
- *  cc2420 Radio configurations
+ *  cc2420-radio.h
  *
  * \author
  *
