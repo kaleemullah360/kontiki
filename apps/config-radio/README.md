@@ -75,7 +75,7 @@ Kaleem Ullah <kaleemullah360@live.com>
 ### Case 3:
 > not using both/eithere of power/channel setting function will set Contiki OS default configurations i.e channel 26, tx power 31.
 
-# Post Script:
+## Post Script:
 
 For more information, see the Contiki website:
 
