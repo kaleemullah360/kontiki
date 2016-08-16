@@ -77,6 +77,7 @@ Kaleem Ullah <kaleemullah360@live.com>
 
 ## Post Script:
 
-For more information, see the Contiki website:
-
+This Library got rejected from pull request to Contiki OS.
+for more details [visit](https://github.com/contiki-os/contiki/pull/1821)
+or
 [http://contiki-os.org](http://contiki-os.org)
