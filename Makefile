@@ -1,4 +1,22 @@
-build:
+cooja:
+	gnome-terminal --tab --working-directory="/home/superuser/kontiki/examples/ipv6/rpl-border-router/"
+	sudo wireshark
+	cd ~/kontiki/tools/cooja/ && ant run
+
+mqtt:
+	gnome-terminal --tab --working-directory="/home/superuser/kontiki/examples/ipv6/rpl-border-router/"
+	cd ~/kontiki/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.rtt.upload nodeid=4 nodemac=4
+	gnome-terminal --tab -e "sudo wireshark"
+	cd ~/nodev/e-MCH-APp/ && sudo npm start
+
+coap:
+	gnome-terminal --tab --working-directory="/home/superuser/kontiki/examples/ipv6/rpl-border-router/"
+	sudo wireshark
+	cd ~/kontiki/tools/cooja/ && ant run
+
+http:
+	gnome-terminal --tab --working-directory="/home/superuser/kontiki/examples/ipv6/rpl-border-router/"
+	sudo wireshark
 	cd ~/kontiki/tools/cooja/ && ant run
 
 clean:
