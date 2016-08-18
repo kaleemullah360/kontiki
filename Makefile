@@ -1,3 +1,6 @@
+build:
+	cd ~/kontiki/tools/cooja/ && ant run
+
 clean:
 	rm -f *.exe
 
