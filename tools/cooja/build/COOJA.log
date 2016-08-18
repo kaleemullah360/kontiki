@@ -9,3 +9,8 @@
 [16:30:28 - AWT-EventQueue-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
 [16:31:02 - Thread-2] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
 [16:31:02 - Thread-3] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[16:36:51 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.rtt.z1 TARGET=z1 
+[16:37:06 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.rtt.z1
+[16:37:17 - Thread-5] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1471520237280
+[16:37:19 - Thread-5] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1471520239486	Duration: 2206 ms	Simulated time 17608 ms	Ratio 7.981867633726202
+[16:37:21 - Thread-6] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1471520241202
