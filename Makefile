@@ -1,6 +1,6 @@
 current_user = $USER
 cooja:
-	sudo gnome-terminal --tab --working-directory='/home/${USER}/kontiki/examples/ipv6/rpl-border-router/' --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/kontiki/tools/cooja/' -e "ant run" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
+	sudo gnome-terminal --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start" --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/kontiki/examples/ipv6/rpl-border-router/' --tab --working-directory='/home/${USER}/kontiki/tools/cooja/' -e "ant run"
 	firefox http://localhost:3000/mqtt >> '/home/${USER}/logs/firelog.log' &
 mqtt:
 	sudo gnome-terminal --tab --working-directory='/home/${USER}/kontiki/examples/ipv6/rpl-border-router/' --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"

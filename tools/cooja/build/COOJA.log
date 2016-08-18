@@ -1,3 +1,3 @@
-[16:13:27 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[16:13:27 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[16:13:27 - AWT-EventQueue-0] [Cooja.java:2887] [WARN] - Error when reading user settings from: /root/.cooja.user.properties
+[16:22:00 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[16:22:00 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[16:22:00 - AWT-EventQueue-0] [Cooja.java:2887] [WARN] - Error when reading user settings from: /root/.cooja.user.properties
