@@ -4,10 +4,9 @@ cooja:
 	cd ~/kontiki/tools/cooja/ && ant run
 
 mqtt:
-	#cd ~/kontiki/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.rtt.upload nodeid=4 nodemac=4
-	sudo gnome-terminal --tab --working-directory="/home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/" -e "sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.rtt.upload nodeid=4 nodemac=4" 
-	#--tab --working-directory="/home/superuser/kontiki/examples/ipv6/rpl-border-router/" --tab -e "sudo wireshark" --tab --working-directory="/home/superuser/nodev/e-MCH-APp/" -e "sudo npm start"
-
+	sudo gnome-terminal --tab --working-directory="/home/superuser/kontiki/examples/ipv6/rpl-border-router/" --tab -e "sudo wireshark" --tab --working-directory="/home/superuser/nodev/e-MCH-APp/" -e "sudo npm start"
+	cd ~/kontiki/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.rtt.upload nodeid=4 nodemac=4
+	firefox http://localhost:3000/mqtt &
 coap:
 	gnome-terminal --tab --working-directory="/home/superuser/kontiki/examples/ipv6/rpl-border-router/"
 	sudo wireshark
