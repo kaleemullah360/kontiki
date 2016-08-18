@@ -34,6 +34,15 @@ clean-all:
 	rm -f *.o
 	rm -f *.exe
 
+clean-emch:
+	cd ~/kontiki/examples/zolertia/z1/mqtt-z1/ && sudo make clean
+	cd ~/kontiki/examples/er-rest-example/ && sudo make clean
+	cd ~/kontiki/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean
+	cd ~/kontiki/examples/ipv6/rpl-border-router/ && sudo make clean
+	cd ~/kontiki/examples/ipv6/rpl-collect/ && sudo make clean
+	cd ~/kontiki/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean
+	cd ~/kontiki/examples/rime/ && sudo make clean
+
 push:
 	git add -A
 	git commit -m $(c)

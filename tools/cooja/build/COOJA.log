@@ -1,3 +1,12 @@
-[15:46:33 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[15:46:34 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[15:46:34 - AWT-EventQueue-0] [Cooja.java:2887] [WARN] - Error when reading user settings from: /root/.cooja.user.properties
+[15:49:17 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[15:49:17 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[15:49:17 - AWT-EventQueue-0] [Cooja.java:2887] [WARN] - Error when reading user settings from: /root/.cooja.user.properties
+[15:49:24 - AWT-EventQueue-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[15:49:25 - AWT-EventQueue-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[15:50:10 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:50:10 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:50:11 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[15:50:23 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[15:50:44 - AWT-EventQueue-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[15:50:46 - Thread-2] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[15:50:46 - Thread-3] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
