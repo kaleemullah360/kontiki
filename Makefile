@@ -26,6 +26,8 @@ mchop:
 hthop:
 	cd ~/kontiki/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-emch.rtt.upload
 
+ptrace:
+	cd ~/kontiki/examples/rime/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-hop-mote.upload
 
 clean:
 	rm -f *.exe
@@ -51,3 +53,6 @@ push:
 
 pull:
 	git pull origin master
+
+reboot:
+	sudo reboot
