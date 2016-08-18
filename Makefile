@@ -1,7 +1,5 @@
 cooja:
-	gnome-terminal --tab --working-directory="/home/superuser/kontiki/examples/ipv6/rpl-border-router/"
-	sudo wireshark
-	cd ~/kontiki/tools/cooja/ && ant run
+	sudo gnome-terminal --tab --working-directory="/home/superuser/kontiki/examples/ipv6/rpl-border-router/" --tab -e "sudo wireshark" --tab --working-directory="/home/superuser/kontiki/tools/cooja/" -e "ant run" --tab --working-directory="/home/superuser/nodev/e-MCH-APp/" -e "sudo npm start"
 
 mqtt:
 	sudo gnome-terminal --tab --working-directory="/home/superuser/kontiki/examples/ipv6/rpl-border-router/" --tab -e "sudo wireshark" --tab --working-directory="/home/superuser/nodev/e-MCH-APp/" -e "sudo npm start"
