@@ -35,6 +35,9 @@ clean-all:
 	rm -f *.o
 	rm -f *.exe
 
+log:
+	vim '/home/${USER}/logs/firelog.log'
+
 clean-emch:
 	cd ~/kontiki/examples/zolertia/z1/mqtt-z1/ && sudo make clean
 	cd ~/kontiki/examples/er-rest-example/ && sudo make clean
