@@ -40,7 +40,7 @@
  * this application uses Zolertia and send message number only on request.
  *
  *\Goal:
- * 	This application create only hop node. shows HtHop
+ * 	This application create only hop node. shows HtHop string
  */
 
 #include "contiki.h"
