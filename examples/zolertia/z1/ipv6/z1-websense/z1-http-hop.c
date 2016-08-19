@@ -40,7 +40,7 @@
  * this application uses Zolertia and send message number only on request.
  *
  *\Goal:
- * 	This application create only hop node. shows HtHop string
+ * 	This application create only hop node. shows HtHop string on calling its ipv6 address in browser
  */
 
 #include "contiki.h"
