@@ -40,8 +40,7 @@
  * this application uses Zolertia and send message number only on request.
  *
  *\Goal:
- * 	This application only compute RTT using PING method in NodeJs. on each request it first PING then get data.
- * the data consist of message number only
+ * 	This application create only hop node. shows HtHop
  */
 
 #include "contiki.h"
