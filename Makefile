@@ -64,6 +64,9 @@ push:
 
 pull:
 	git pull origin master
+run:
+	sudo gnome-terminal --tab --working-directory='/home/${USER}/kontiki/examples/ipv6/rpl-border-router/' --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
+	firefox http://localhost:3000/coap >> '/home/${USER}/logs/firelog.log' &
 
 reboot:
 	sudo reboot
