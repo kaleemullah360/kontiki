@@ -49,10 +49,8 @@
 #include <stdio.h>
 #include <cc2420-radio.h>
 
-uint16_t mid = 0;
 
-
-PROCESS(web_sense_process, "Sense HTTP RTT");
+PROCESS(web_sense_process, "Sense HTTP HOP Node");
 PROCESS(webserver_nogui_process, "HTTP HOP Node");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
@@ -82,9 +80,9 @@ PT_THREAD(send_values(struct httpd_state *s))
 {
 	PSOCK_BEGIN(&s->sout);
 	blen = 0;
-		ADD("%d", mid++);
+	ADD("HtHop");
 
-		SEND_STRING(&s->sout, buf);
+	SEND_STRING(&s->sout, buf);
 
 	PSOCK_END(&s->sout);
 }
