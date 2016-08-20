@@ -35,7 +35,7 @@ brouter:
 	cd ~/kontiki/examples/ipv6/rpl-border-router/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-border-router.upload nodeid=1 nodemac=1
 
 mchop:
-	cd ~/kontiki/examples/ipv6/rpl-collect/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-hop-coap-mqtt.upload
+	cd ~/kontiki/examples/ipv6/rpl-collect/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-hop-coap-mqtt.upload nodeid=9 nodemac=9
 
 hthop:
 	cd ~/kontiki/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-hop.upload
