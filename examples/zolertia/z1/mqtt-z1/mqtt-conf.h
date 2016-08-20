@@ -54,7 +54,7 @@
 /*---------------------------------------------------------------------------*/
 
 /* User configuration */
-#define TIME_INTERVAL_SECONDS 10		// 1 Seconds
+#define TIME_INTERVAL_SECONDS 1		// 1 Seconds
 #define MILLISECONDS_CONSTANT 1		// 500 milliseconds = 1 second / 2
 
 #define PUBLISH_TOPIC 					"iot-2/evt/%s/fmt/json"		// NA
