@@ -2,10 +2,9 @@ current_user = $USER
 cooja:
 	sudo gnome-terminal --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start" --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/kontiki/examples/ipv6/rpl-border-router/' --tab --working-directory='/home/${USER}/kontiki/tools/cooja/' -e "ant run"
 		sudo service mosquitto start
-	echo "==================================================================="
-	echo "Starting mosquitto service"
+	echo "==================== Starting mosquitto service ===================="
 	service mosquitto status| grep running
-	echo "==================================================================="
+
 	firefox http://localhost:3000/mqtt >> '/home/${USER}/logs/firelog.log' &
 	firefox http://[aaaa::c30c:0:0:1]/
 
@@ -13,10 +12,8 @@ mqtt:
 	sudo gnome-terminal --tab --working-directory='/home/${USER}/kontiki/examples/ipv6/rpl-border-router/' --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
 	cd ~/kontiki/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.rtt.upload nodeid=4 nodemac=4
 		sudo service mosquitto start
-	echo "==================================================================="
-	echo "Starting mosquitto service"
+	echo "==================== Starting mosquitto service ===================="
 	service mosquitto status| grep running
-	echo "==================================================================="
 	firefox http://localhost:3000/mqtt >> '/home/${USER}/logs/firelog.log' &
 	firefox http://[aaaa::c30c:0:0:1]/
 coap:
