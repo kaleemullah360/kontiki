@@ -7,6 +7,8 @@ The Contiki Operating System V.3 (Kontiki)
 Kontiki (Contiki) is clone of Contiki Operating System version 3.
 Kontiki is for Educational purposes. Do your stuff enjoy the spirit of opensource :)
 
+The Kontiki OS (my version) and not Contiki OS (by Contiki ORG) may malfunction due to under development and you might get undesired result. therefore it is reccomended not to use it for profesional use.
+
 Construct a world of Internet of (Amazing) things. :rocket:
 
 Contiki is an open source operating system that runs on tiny low-power
