@@ -1,5 +1,5 @@
 notifications:
-  email: false
+  email: "kaleemullah360@live.com"
 language: c #NOTE: this will set CC=gcc which might cause trouble
 before_script:
   - WGET="travis_retry wget --continue --tries=20 --waitretry=10 --retry-connrefused --no-dns-cache --timeout 300"
