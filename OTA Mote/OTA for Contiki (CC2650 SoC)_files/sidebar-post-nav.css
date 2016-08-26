@@ -1,0 +1,45 @@
+nav#post-directory-spy.affix {
+  top: 70px;
+}
+nav#post-directory-spy.affix-bottom {
+  position: absolute;
+}
+nav#post-directory-spy .nav .nav {
+  display: none;
+}
+nav#post-directory-spy .nav li a {
+  color: #aaa;
+  border-radius: 0;
+}
+nav#post-directory-spy .nav .nav li a {
+  padding-left: 30px;
+}
+nav#post-directory-spy .nav .active .nav  {
+  display: block;
+}
+nav#post-directory-spy .nav li.active {
+  color: #337ab7 !important;
+  background-color: transparent !important;
+}
+nav#post-directory-spy > .nav > li {
+  font-weight: bold;
+}
+nav#post-directory-spy > .nav > li > .nav > li {
+  font-weight: normal;
+}
+nav#post-directory-spy > .nav > li.active {
+  border-left: 1px solid #eee !important;
+}
+nav#post-directory-spy .nav li.active > a {
+  border-left: 4px solid #337ab7 !important;
+}
+li.active > a {
+  color: #337ab7 !important;
+  background-color: transparent !important;
+}
+.nav>li>a:focus {
+  background-color: transparent !important;
+}
+li > a:hover {
+  background-color: #eee !important;
+}
