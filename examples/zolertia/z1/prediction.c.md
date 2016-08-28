@@ -1,3 +1,5 @@
+## Prediction Algorithm for motion detection in Zolertia Z1
+
 activate adxl sensor
 
 while adxl semsor active do
