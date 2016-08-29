@@ -1,5 +1,7 @@
 ## Prediction Algorithm for motion detection in Zolertia Z1
 
+### Priction Function:
+
 activate adxl sensor
 
 while adxl semsor active do
@@ -27,9 +29,9 @@ while adxl semsor active do
 
 end while
 
+deactivate sensor.
 
-
-GAO
+### GAO Protocol:
 
 Client Start
 
@@ -41,7 +43,7 @@ Client Start
 end client
 
 
-CoAP
+CoAP 
 
 Client Start
 
