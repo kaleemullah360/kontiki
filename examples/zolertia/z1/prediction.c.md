@@ -43,7 +43,7 @@ Client Start
 end client
 
 
-CoAP 
+### CoAP Protocol:
 
 Client Start
 
@@ -64,7 +64,7 @@ end
 
 
 
-http
+### HTTP Protocol:
 
 Client start
 
