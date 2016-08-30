@@ -37,7 +37,7 @@
  *         Kaleem Ullah <kaleemullah360@live.com>
  *
  * \Description
- *			This configuration file is usefull for tweaking the Protocol.
+ *			This configuration file is usefull for tweaking the Protocol. include the protocol in your project and set the desired values in this file. you're good to go.
  */
 
 /**
