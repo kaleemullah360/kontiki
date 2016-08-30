@@ -36,7 +36,8 @@
  *         Kaleem Ullah <mscs14059@itu.edu.pk>
  *         Kaleem Ullah <kaleemullah360@live.com>
  *
- *
+ * \Description
+ *			This configuration file is usefull for tweaking the Protocol.
  */
 
 /**
