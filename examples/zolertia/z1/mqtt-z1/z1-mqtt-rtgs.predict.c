@@ -699,7 +699,7 @@ state_machine(void)
 
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
-  printf("eMCH-APp\n");
+  printf("rTGS-Serv\n");
 
   if(init_config() != 1) {
     PROCESS_EXIT();
