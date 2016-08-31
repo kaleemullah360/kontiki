@@ -245,7 +245,7 @@ static struct etimer et;
  static mqtt_client_config_t conf;
 /*---------------------------------------------------------------------------*/
 PROCESS(motion_tracking_process, "Motion Tracker");
- PROCESS(mqtt_z1_client_process, "eMCH-APp");
+ PROCESS(mqtt_z1_client_process, "rTGS-Serv");
 /*---------------------------------------------------------------------------*/
  int
  ipaddr_sprintf(char *buf, uint8_t buf_len, const uip_ipaddr_t *addr)
