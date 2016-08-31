@@ -706,6 +706,7 @@ state_machine(void)
   }
 
   update_config();
+  // the followoing value produces warning
   //def_rt_rssi = 0x8000000;
   //def_rt_rssi = 0x8000;
   uip_icmp6_echo_reply_callback_add(&echo_reply_notification,
