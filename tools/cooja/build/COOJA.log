@@ -1,17 +1,7 @@
-[12:41:37 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[12:41:38 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[12:41:38 - AWT-EventQueue-0] [Cooja.java:2887] [WARN] - Error when reading user settings from: /root/.cooja.user.properties
-[12:41:46 - AWT-EventQueue-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:41:46 - AWT-EventQueue-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[12:42:54 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:42:54 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:42:55 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[12:43:12 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[12:43:19 - AWT-EventQueue-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:44:37 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:44:37 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:44:38 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-rtgs.predict.z1 TARGET=z1 
-[12:44:54 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-rtgs.predict.z1
-[12:45:07 - Thread-4] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1472629507409
-[12:45:20 - Thread-2] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[12:45:20 - Thread-5] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[12:57:39 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[12:57:39 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[12:57:39 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
+[12:57:48 - Thread-0] [Cooja.java:2289] [FATAL] - No read access to file: /home/superuser/kontiki/tools/cooja/build
+[12:57:52 - AWT-EventQueue-0] [Cooja.java:2314] [INFO] - Load command cancelled by user...
+[12:57:58 - AWT-EventQueue-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:57:58 - AWT-EventQueue-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
