@@ -19,3 +19,7 @@
 [13:05:52 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.rtt.z1 TARGET=z1 
 [13:06:25 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
 [13:06:25 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.rtt.z1 TARGET=z1 
+[13:06:43 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:06:43 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:06:44 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.rtt.z1 TARGET=z1 
+[13:06:57 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.rtt.z1
