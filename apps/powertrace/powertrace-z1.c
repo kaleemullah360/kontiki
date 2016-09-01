@@ -193,6 +193,7 @@ powertrace_result()
     
   }
   seqno++;
+  printf("%s", "%s\n", radio, all_radio);
   //printf("Console PowPrint: %s\n", powertrace_results_str);
   return powertrace_results_str;
 }

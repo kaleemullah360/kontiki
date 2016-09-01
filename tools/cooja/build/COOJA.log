@@ -5,3 +5,10 @@
 [12:57:52 - AWT-EventQueue-0] [Cooja.java:2314] [INFO] - Load command cancelled by user...
 [12:57:58 - AWT-EventQueue-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
 [12:57:58 - AWT-EventQueue-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[13:00:05 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:00:05 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:00:06 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
+[13:00:20 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/border-router.z1
+[13:00:26 - AWT-EventQueue-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[13:01:18 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:01:19 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.rtt.z1 TARGET=z1 
