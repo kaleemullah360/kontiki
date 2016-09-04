@@ -77,11 +77,8 @@ Kaleem Ullah <kaleemullah360@live.com>
 
 ## Post Script:
 
-<<<<<<< HEAD
-[http://contiki-os.org](http://contiki-os.org)
-=======
 This Library got rejected from pull request to Contiki OS.
 for more details [visit](https://github.com/contiki-os/contiki/pull/1821)
 or
 [http://contiki-os.org](http://contiki-os.org)
->>>>>>> 9d8b755c81a1bc02e1fab16612e034daa0688fb0
+>>>>>>> 9d8b755c81a1bc02e1fab16612e034daa0688fb0 >>>>>>>
