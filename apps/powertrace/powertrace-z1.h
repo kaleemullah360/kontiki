@@ -35,6 +35,7 @@
  *         Header file for the powertrace application
  * \author
  *         Kaleem Ullah <kaleemullah360@live.com>
+ *         Kaleem Ullah <mscs14059@itu.edu.pk>
  */
 
 #ifndef POWERTRACE_H
