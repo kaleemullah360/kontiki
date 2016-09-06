@@ -34,7 +34,7 @@
  * \file
  *         Header file for the powertrace application
  * \author
- *         Adam Dunkels <adam@sics.se>
+ *         Kaleem Ullah <kaleemullah360@live.com>
  */
 
 #ifndef POWERTRACE_H
