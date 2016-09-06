@@ -137,6 +137,8 @@ powertrace_result()
 
   for(s = list_head(stats_list); s != NULL; s = list_item_next(s)) {
 
+// what will happen if I un-Comment this paragraph?
+
 /*
 #if ! NETSTACK_CONF_WITH_IPV6
     printf("%s %lu SP %d.%d %lu %u %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu (channel %d radio %d.%02d%% / %d.%02d%%)\n",
