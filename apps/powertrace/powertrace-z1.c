@@ -35,7 +35,7 @@
  *         Powertrace: periodically print out power consumption in a variable
  *         and at the end the function return that variable to calling function. 
  * \author
- *         Adam Dunkels <adam@sics.se>
+ *         Kaleem Ullah <kaleemullah360@live.com>
  */
 
 #include "contiki.h"
