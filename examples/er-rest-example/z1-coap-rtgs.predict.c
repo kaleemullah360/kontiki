@@ -14,6 +14,8 @@
  * then using these values a predict(); function output state of the sensor node.
  * Send Battery values and Temperature.
  *
+ * \info:
+ *		This file has no resources. it has it's own.
  */
 #include <stdio.h>
 #include "contiki.h"
