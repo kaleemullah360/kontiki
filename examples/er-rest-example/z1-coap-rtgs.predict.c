@@ -15,7 +15,7 @@
  * Send Battery values and Temperature.
  *
  * \info:
- *		This file has no resources. it has it's own.
+ *		This file has no external resources. it has it's own.
  */
 #include <stdio.h>
 #include "contiki.h"
