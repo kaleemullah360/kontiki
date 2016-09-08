@@ -61,6 +61,7 @@
 *        .d$$                KuSu
 *
 * https://cruise.eecs.uottawa.ca/umpleonline/
+* wow, what's that ?
 */
 
 /* -------- Set Radio Powers --------------- */
