@@ -29,6 +29,7 @@
  *         Hoping for MQTT & CoAP Protocols.
  * \author
  *         Kaleem Ullah    <MSCS14059@ITU.EDU.PK>
+ *				 Kaleem Ullah		 <kaleemullah360@live.com>
  *
  * \Short Description:
  *
