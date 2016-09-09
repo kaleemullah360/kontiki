@@ -219,9 +219,9 @@ set_global_address(void)
 PROCESS_THREAD(udp_client_process, ev, data)
 {
   PROCESS_BEGIN();
-  
-  set_cc2420_txpower(0);
-  set_cc2420_channel(0);
+  // Radio Mod Lib methods to set radio
+  set_cc2420_txpower(0);	// uses global configs
+  set_cc2420_channel(0);	// uses global configs
 
   PROCESS_PAUSE();
 
