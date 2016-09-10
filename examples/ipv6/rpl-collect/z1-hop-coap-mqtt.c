@@ -223,7 +223,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
   set_cc2420_txpower(0);	// uses global configs
   set_cc2420_channel(0);	// uses global configs
 
-  PROCESS_PAUSE();
+  PROCESS_PAUSE(); // why pause this process ?
 
   set_global_address();
 
