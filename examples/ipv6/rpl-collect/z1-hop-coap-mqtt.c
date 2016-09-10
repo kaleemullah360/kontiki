@@ -241,7 +241,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
         UIP_HTONS(client_conn->lport), UIP_HTONS(client_conn->rport));
 
   while(1) {
-    PROCESS_YIELD();
+    PROCESS_YIELD();	// what is process yield ?
     if(ev == tcpip_event) {
       tcpip_handler();
     }
