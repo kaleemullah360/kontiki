@@ -1,4 +1,4 @@
-#! /bin/sh
+# /bin/sh
 ################################################################################
 # 1. This script is used to check whether your cpu is functional or not.       #
 # Written By:                                                                  #
