@@ -44,3 +44,12 @@
 [14:22:52 - Thread-6] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-http-emch.rtt.co] Error 1
 [14:22:52 - Thread-6] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
 [14:22:52 - Thread-6] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[14:31:29 - Thread-6] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[14:31:29 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[14:31:29 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-http-emch.rtt.z1 TARGET=z1 
+[14:31:29 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[14:31:29 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.rtt.z1
+[14:31:30 - Thread-6] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[14:31:30 - Thread-6] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[14:31:30 - Thread-9] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1473931890896
+[14:31:33 - Thread-9] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1473931893900	Duration: 3004 ms	Simulated time 3002 ms	Ratio 0.9993342210386151
