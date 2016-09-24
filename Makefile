@@ -18,6 +18,7 @@ mqtt:
 	service mosquitto status| grep running
 	firefox http://localhost:3000/mqtt >> '/home/${USER}/logs/firelog.log' &
 	firefox http://[aaaa::c30c:0:0:1]/
+	
 coap:
 	sudo gnome-terminal --tab --working-directory='/home/${USER}/kontiki/examples/ipv6/rpl-border-router/' --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
 	cd ~/kontiki/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.rtt.upload nodeid=2 nodemac=2
