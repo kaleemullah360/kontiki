@@ -34,7 +34,6 @@ AUTOSTART_PROCESSES(&er_example_server);
 PROCESS_THREAD(er_example_server, ev, data)
 {
   PROCESS_BEGIN();
-
   powertrace_start(CLOCK_SECOND * 1);
   PROCESS_PAUSE();
 
@@ -56,7 +55,6 @@ PROCESS_THREAD(er_example_server, ev, data)
   rest_init_engine();
 
   rest_activate_resource(&res_z1_coap_emch_pow, "sens/mote");
-
   /* Define application-specific events here. */
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
