@@ -1,4 +1,7 @@
 current_user = $USER
+ifeq ($(c),)
+ c = 'updates'
+endif
 cooja:
 	sudo gnome-terminal --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start" --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/kontiki/examples/ipv6/rpl-border-router/' --tab --working-directory='/home/${USER}/kontiki/tools/cooja/' -e "ant run"
 		sudo service mosquitto start
@@ -78,7 +81,3 @@ view-project:
 
 view-profile:
 	firefox https://github.com/kaleemullah360 &
-
-ifeq ($(c),)
- c = 'updates'
-endif
