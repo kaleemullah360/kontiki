@@ -2,13 +2,12 @@ current_user = $USER
 ifeq ($(c),)
  c = 'updates'
 endif
+
 cooja:
-	sudo gnome-terminal --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start" --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/kontiki/examples/ipv6/rpl-border-router/' --tab --working-directory='/home/${USER}/kontiki/tools/cooja/' -e "ant run"
+	sudo gnome-terminal --tab --working-directory='/home/${USER}/kontiki/examples/ipv6/rpl-border-router/' --tab --working-directory='/home/${USER}/kontiki/tools/cooja/' -e "ant run"
 		sudo service mosquitto start
 	echo "==================== Starting mosquitto service ===================="
 	service mosquitto status| grep running
-
-	firefox http://localhost:3000/mqtt >> '/home/${USER}/logs/firelog.log' &
 	firefox http://[aaaa::c30c:0:0:1]/
 
 mqtt:
