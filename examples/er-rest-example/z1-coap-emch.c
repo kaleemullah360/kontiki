@@ -25,7 +25,7 @@
 // customised csv payload
 extern resource_t res_z1_coap_emch;
 
-PROCESS(er_example_server, "e-MCH-APp Server");
+PROCESS(er_example_server, "e-MCH-APp full functional Server.");
 AUTOSTART_PROCESSES(&er_example_server);
 
 PROCESS_THREAD(er_example_server, ev, data)
@@ -34,7 +34,7 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   PROCESS_PAUSE();
 
-  PRINTF("e-MCH-APp\n");
+  PRINTF("e-MCH-APp full functional Server started.\n");
 
 #ifdef RF_CHANNEL
   PRINTF("RF channel: %u\n", RF_CHANNEL);
