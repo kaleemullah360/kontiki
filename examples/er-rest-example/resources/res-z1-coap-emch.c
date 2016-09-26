@@ -147,7 +147,7 @@ get_sensor_battery();
   if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
     REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
     snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%lu,%c%d.%04d,%ld.%03d", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
-
+    printf("Message %lu Sent on: %lu \n", mid, upt);
     REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
   }
  }

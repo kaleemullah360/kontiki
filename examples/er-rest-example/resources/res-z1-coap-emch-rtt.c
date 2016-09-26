@@ -43,8 +43,15 @@
 #include <string.h>
 #include "rest-engine.h"
 
-uint16_t msgid = 0;
+static int32_t mid = 0;  // MessageID
+static int32_t upt = 0;  // UpTime
+//--- Function Deffinitions for e-MCH-APp ----
 
+static void get_sensor_time(){
+  upt = clock_seconds();  // UpTime
+}
+
+//---End Function Deffinitions e-MCH-APp ---
  static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
 
 /* A simple getter example. Returns the reading from light sensor with a simple etag */
@@ -58,14 +65,15 @@ uint16_t msgid = 0;
  static void
  res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
  {
- 	
+ 	++mid;
+ 	get_sensor_time();
  	unsigned int accept = -1;
  	REST.get_header_accept(request, &accept);
 
  	if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
  		REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
- 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%d", msgid++);
-    printf("Message %d Sent: \n", msgid);
+ 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu", mid);
+    printf("Message %lu Sent on: %lu \n", mid, upt);
 
  		REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
  	}
