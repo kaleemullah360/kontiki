@@ -52,13 +52,6 @@
 char *powertrace_result();
 //char *pow_str = "";
 
-//--- Libs for e-MCH-APp ----
-#include "dev/battery-sensor.h"
-#include "dev/i2cmaster.h"
-#include "dev/tmp102.h"
-
-//---End Libs for e-MCH-APp ---
-
 //--- Variable Declaration for e-MCH-APp ----
 
  static int32_t mid = 0;  // MessageID
@@ -104,9 +97,8 @@ PT_THREAD(send_values(struct httpd_state *s))
 {
 //----- Get Data Instance -------
 ++mid;  // MessageID
-get_sensor_temperature();
+
 get_sensor_time();
-get_sensor_battery();
 
 //----- End Get Data -------
 PSOCK_BEGIN(&s->sout);
