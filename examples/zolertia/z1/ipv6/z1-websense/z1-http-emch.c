@@ -27,22 +27,32 @@
  * SUCH DAMAGE.
  *
  */
-
-/**
+/*
  * \file
- *         Light and temperatur sensor web demo
+ *         Evaluation of HTTP Protocols at Application layer.
  * \author
- *         Niclas Finne    <nfi@sics.se>
- *         Joakim Eriksson <joakime@sics.se>
- *         Joel Hoglund    <joel@sics.se>
+ *         Kaleem Ullah    <MSCS14059@ITU.EDU.PK>
+ *
+ * \Short Description:
+ *
+ *    e-MCH-APp (Evaluation MQTT, CoAP, HTTP protocol) using Node.Js server.
+ * this application uses Zolertia z1 mote. on each request, 
+ * power traces are save in data base while we also sent uptime along with battery & temperature, 
+ * while request we also compute RTT.
+ *
  */
 
 #include "contiki.h"
 #include "httpd-simple.h"
 #include <stdio.h>
 #include <cc2420-radio.h>
-//--- Libs for e-MCH-APp ----
 
+// Powertracing
+#include "powertrace-z1.h"
+char *powertrace_result();
+//char *pow_str = "";
+
+//--- Libs for e-MCH-APp ----
 #include "dev/battery-sensor.h"
 #include "dev/i2cmaster.h"
 #include "dev/tmp102.h"
@@ -117,8 +127,8 @@ static void get_sensor_temperature(){
   }
 
 //---End Function Deffinitions e-MCH-APp ---
-PROCESS(web_sense_process, "Sense Web Demo");
-PROCESS(webserver_nogui_process, "Web server");
+PROCESS(web_sense_process, "e-MCH-APp");
+PROCESS(webserver_nogui_process, "e-MCH server");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
   PROCESS_BEGIN();
@@ -151,12 +161,13 @@ PT_THREAD(send_values(struct httpd_state *s))
 get_sensor_temperature();
 get_sensor_time();
 get_sensor_battery();
+
 //----- End Get Data -------
 PSOCK_BEGIN(&s->sout);
 blen = 0;
 
-ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
-ADD("\n");
+ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), powertrace_result());
+ADD("\n");  // I think we don't need it ?
 
 SEND_STRING(&s->sout, buf);
 PSOCK_END(&s->sout);
@@ -172,17 +183,21 @@ PROCESS_THREAD(web_sense_process, ev, data)
 {
   static struct etimer timer;
   PROCESS_BEGIN();
-	set_cc2420_txpower(0);
-	set_cc2420_channel(0);
+  set_cc2420_txpower(0);
+  set_cc2420_channel(0);
+  powertrace_start(CLOCK_SECOND * 1);
+
 
   etimer_set(&timer, CLOCK_SECOND * 2);
+
 
   while(1) {
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
     etimer_reset(&timer);
-
+  //pow_str = powertrace_result();
+  //printf("%s\n", pow_str);
   }
-
+  powertrace_stop();
   PROCESS_END();
 }
 /*---------------------------------------------------------------------------*/
