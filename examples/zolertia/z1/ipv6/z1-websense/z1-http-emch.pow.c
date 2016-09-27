@@ -113,6 +113,7 @@ PSOCK_END(&s->sout);
 httpd_simple_script_t
 httpd_simple_get_script(const char *name)
 {
+  printf("Message %lu Sent on: %lu \n", mid, upt);
   return send_values;
 }
 /*---------------------------------------------------------------------------*/

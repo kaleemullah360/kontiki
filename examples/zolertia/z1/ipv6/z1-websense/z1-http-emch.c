@@ -167,7 +167,7 @@ PSOCK_BEGIN(&s->sout);
 blen = 0;
 
 ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), powertrace_result());
-ADD("\n");  // I think we don't need it ?
+//ADD("\n");  // I think we don't need it ?
 
 SEND_STRING(&s->sout, buf);
 PSOCK_END(&s->sout);
@@ -176,6 +176,7 @@ PSOCK_END(&s->sout);
 httpd_simple_script_t
 httpd_simple_get_script(const char *name)
 {
+  printf("Message %lu Sent on: %lu \n", mid, upt);
   return send_values;
 }
 /*---------------------------------------------------------------------------*/
