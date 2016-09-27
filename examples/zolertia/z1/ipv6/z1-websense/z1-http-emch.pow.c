@@ -73,7 +73,7 @@ static void get_sensor_time(){
 }
 
 //---End Function Deffinitions e-MCH-APp ---
-PROCESS(web_sense_process, "e-MCH-APp");
+PROCESS(web_sense_process, "e-MCH-APp Power Tracing");
 PROCESS(webserver_nogui_process, "e-MCH server");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
@@ -112,8 +112,7 @@ get_sensor_battery();
 PSOCK_BEGIN(&s->sout);
 blen = 0;
 
-ADD("%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), powertrace_result());
-ADD("\n");  // I think we don't need it ?
+ADD("%s", powertrace_result());
 
 SEND_STRING(&s->sout, buf);
 PSOCK_END(&s->sout);
