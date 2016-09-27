@@ -194,8 +194,7 @@ PROCESS_THREAD(web_sense_process, ev, data)
   while(1) {
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
     etimer_reset(&timer);
-  //pow_str = powertrace_result();
-  //printf("%s\n", pow_str);
+    
   }
   powertrace_stop();
   PROCESS_END();
