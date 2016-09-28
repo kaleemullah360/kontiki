@@ -135,8 +135,25 @@ powertrace_result()
          (int)((10000L * all_listen) / all_time - (100L * all_listen / all_time) * 100),
          (int)((100L * listen) / time),
          (int)((10000L * listen) / time - (100L * listen / time) * 100));
-
-
+/*
+  sprintf(powertrace_results_str, "%s %lu P %d.%d %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu (%d.%02d%% / %d.%02d%% tx %d.%02d%% / %d.%02d%% rx %d.%02d%% / %d.%02d%%)\n",
+         str,
+         clock_time(), linkaddr_node_addr.u8[0], linkaddr_node_addr.u8[1], seqno,
+         all_cpu, all_lpm, all_transmit, all_listen, all_idle_transmit, all_idle_listen,
+         cpu, lpm, transmit, listen, idle_transmit, idle_listen,
+         (int)((100L * (all_transmit + all_listen)) / all_time),
+         (int)((10000L * (all_transmit + all_listen) / all_time) - (100L * (all_transmit + all_listen) / all_time) * 100),
+         (int)((100L * (transmit + listen)) / time),
+         (int)((10000L * (transmit + listen) / time) - (100L * (transmit + listen) / time) * 100),
+         (int)((100L * all_transmit) / all_time),
+         (int)((10000L * all_transmit) / all_time - (100L * all_transmit / all_time) * 100),
+         (int)((100L * transmit) / time),
+         (int)((10000L * transmit) / time - (100L * transmit / time) * 100),
+         (int)((100L * all_listen) / all_time),
+         (int)((10000L * all_listen) / all_time - (100L * all_listen / all_time) * 100),
+         (int)((100L * listen) / time),
+         (int)((10000L * listen) / time - (100L * listen / time) * 100));
+*/
   for(s = list_head(stats_list); s != NULL; s = list_item_next(s)) {
 
 // what will happen if I un-Comment this paragraph?
