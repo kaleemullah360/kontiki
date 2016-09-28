@@ -213,7 +213,9 @@ source: http://personal.ee.surrey.ac.uk/Personal/P.Barnaghi/teaching/EEEM048/201
   }
   seqno++;
   // this line is only to remove warning
-  printf("%lu, %lu\n", radio, all_radio);
+
+  sprintf(str, "%s, %lu, %lu, %lu, %lu, %lu, %lu\n",str, all_time, time, radio, idle_listen, idle_transmit, all_radio);
+  str = "";
   //printf("Console PowPrint: %s\n", powertrace_results_str);
   return powertrace_results_str;
 }
