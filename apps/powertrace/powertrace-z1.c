@@ -129,8 +129,10 @@ powertrace_result()
 source: http://personal.ee.surrey.ac.uk/Personal/P.Barnaghi/teaching/EEEM048/2014/lab/D6PowerConsumption.pdf
 */
   // instead of printing, write all results to powertrace_results_str and return to calling function
+  // => simple version
   sprintf(powertrace_results_str, "%lu,%lu,%lu,%lu,%lu,%lu\n",all_cpu, all_lpm, all_transmit, all_listen, all_idle_transmit, all_idle_listen);
 /*
+  // => full version
   sprintf(powertrace_results_str, "%s %lu P %d.%d %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu (%d.%02d%% / %d.%02d%% tx %d.%02d%% / %d.%02d%% rx %d.%02d%% / %d.%02d%%)\n",
          str,
          clock_time(), linkaddr_node_addr.u8[0], linkaddr_node_addr.u8[1], seqno,
