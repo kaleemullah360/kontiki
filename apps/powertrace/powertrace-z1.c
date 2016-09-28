@@ -117,6 +117,15 @@ powertrace_result()
   all_time = all_cpu + all_lpm;
   all_radio = energest_type_time(ENERGEST_TYPE_LISTEN) +
     energest_type_time(ENERGEST_TYPE_TRANSMIT);
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+|clocktime | P | rime | Seq Nr | aggregated  | aggregated  | aggregated    | aggregated  | aggregated  | current     | current     | current     | current     |
+|          |   |      |        | cpu         | lpm         | transmission  | listen      | idle listen | cpu         | lpm         | transmit    | listen      |
+|          |   |      |        | consumption | consumption | consumption   | consumption |             | consumption | consumption | consumption | consumption |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  16232   | P | 158  |  125   | 85419       | 4043362     | 0             | 20399       | 20399       | 704         | 32062       | 0           | 287         |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
   // instead of printing, write all results to powertrace_results_str and return to calling function
   sprintf(powertrace_results_str, "%s %lu P %d.%d %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu (%d.%02d%% / %d.%02d%% tx %d.%02d%% / %d.%02d%% rx %d.%02d%% / %d.%02d%%)\n",
          str,
