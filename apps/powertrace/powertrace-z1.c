@@ -125,6 +125,8 @@ powertrace_result()
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  16232   | P | 158  |  125   | 85419       | 4043362     | 0             | 20399       | 20399       | 704         | 32062       | 0           | 287         |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+source: http://personal.ee.surrey.ac.uk/Personal/P.Barnaghi/teaching/EEEM048/2014/lab/D6PowerConsumption.pdf
 */
   // instead of printing, write all results to powertrace_results_str and return to calling function
   sprintf(powertrace_results_str, "%s %lu P %d.%d %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu %lu (%d.%02d%% / %d.%02d%% tx %d.%02d%% / %d.%02d%% rx %d.%02d%% / %d.%02d%%)\n",
