@@ -80,3 +80,5 @@
 [13:49:52 - Thread-15] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
 [13:49:52 - Thread-15] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
 [13:49:52 - Thread-17] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1475052592895
+[13:50:38 - Thread-16] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[13:50:38 - Thread-18] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port

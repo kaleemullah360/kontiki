@@ -115,8 +115,8 @@ powertrace_result()
   radio = transmit + listen;
   time = cpu + lpm;
   all_time = all_cpu + all_lpm;
-  all_radio = energest_type_time(ENERGEST_TYPE_LISTEN) +
-    energest_type_time(ENERGEST_TYPE_TRANSMIT);
+  all_radio = energest_type_time(ENERGEST_TYPE_LISTEN) + energest_type_time(ENERGEST_TYPE_TRANSMIT);
+  
 /*
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 |clocktime | P | rime | Seq Nr | aggregated  | aggregated  | aggregated    | aggregated  | aggregated  | current     | current     | current     | current     |
