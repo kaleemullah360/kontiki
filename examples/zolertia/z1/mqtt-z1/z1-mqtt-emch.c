@@ -29,8 +29,19 @@
  */
 
 /*
-* MQTT Server Mote App Extension By Kaleem Ullah MSCS14059@ITU.EDU.PK
-*/
+ * \file
+ *         Evaluation of MQTT Protocols at Application layer.
+ * \author
+ *         Kaleem Ullah    <MSCS14059@ITU.EDU.PK>
+ *
+ * \Short Description:
+ *
+ *    e-MCH-APp (Evaluation MQTT, CoAP, HTTP protocol) using Node.Js server.
+ * this application uses Zolertia and send 180 Bytes message containing different traces on request.
+ * while request we also compute RTT.
+ * Power traces also computed and stored in data base
+ *
+ */
 
 /*---------------------------------------------------------------------------*/
 #include "contiki-conf.h"
@@ -46,6 +57,10 @@
 #include <string.h>
 #include <cc2420-radio.h>
 #include <mqtt-conf.h>
+// Powertracing
+#include "powertrace-z1.h"
+char *powertrace_result();
+//char *pow_str = "";
 
 //--- Libs for e-MCH-APp ----
 
@@ -369,7 +384,7 @@ mqtt_event(struct mqtt_connection *m, mqtt_event_t event, void *data)
 static int
 construct_pub_topic(void)
 {
-  int len = snprintf(pub_topic, BUFFER_SIZE, "iot-2/evt/%s/fmt/json",		// <---- Set Topic
+  int len = snprintf(pub_topic, BUFFER_SIZE, "iot-2/evt/%s/fmt/json",   // <---- Set Topic
    conf.event_type_id);
 
   /* len < 0: Error. Len >= BUFFER_SIZE: Buffer too small */
@@ -384,7 +399,7 @@ construct_pub_topic(void)
 static int
 construct_sub_topic(void)
 {
-  int len = snprintf(sub_topic, BUFFER_SIZE, "iot-2/evt/%s/fmt/json",		// <---- Set Topic
+  int len = snprintf(sub_topic, BUFFER_SIZE, "iot-2/evt/%s/fmt/json",   // <---- Set Topic
    conf.cmd_type);
 
   /* len < 0: Error. Len >= BUFFER_SIZE: Buffer too small */
@@ -478,7 +493,7 @@ subscribe(void)
   /* Publish MQTT topic in IBM quickstart format */
   mqtt_status_t status;
 
-  status = mqtt_subscribe(&conn, NULL, sub_topic, MQTT_QOS);	// <------ Set QoS
+  status = mqtt_subscribe(&conn, NULL, sub_topic, MQTT_QOS);  // <------ Set QoS
 
   DBG("APP - Subscribing!\n");
   if(status == MQTT_STATUS_OUT_QUEUE_FULL) {
@@ -502,8 +517,7 @@ int remaining = APP_BUFFER_SIZE;
 
 buf_ptr = app_buffer;
 
-printf("Message %lu Sent on: %lu \n", mid, upt);
-len = snprintf(buf_ptr, remaining,"%lu,%lu,%lu,%c%d.%04d,%ld.%03d", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000));
+len = snprintf(buf_ptr, remaining,"%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), powertrace_result());
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
@@ -515,7 +529,7 @@ memset(def_rt_str, 0, sizeof(def_rt_str));
 ipaddr_sprintf(def_rt_str, sizeof(def_rt_str), uip_ds6_defrt_choose());
 
 mqtt_publish(&conn, NULL, pub_topic, (uint8_t *)app_buffer,
-               strlen(app_buffer), MQTT_QOS, MQTT_MESSAGE_STATE);	// <------ Set QoS
+               strlen(app_buffer), MQTT_QOS, MQTT_MESSAGE_STATE); // <------ Set QoS
 
 DBG("APP - Publish!\n");
 }
@@ -687,6 +701,7 @@ state_machine(void)
  {
 
   PROCESS_BEGIN();
+  powertrace_start(CLOCK_SECOND * 1);
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
   printf("eMCH-APp\n");
@@ -705,6 +720,8 @@ state_machine(void)
   /* Main loop */
   while(1) {
 
+    //pow_str = powertrace_result();
+  //printf("%s\n", pow_str);
     PROCESS_YIELD();
 
     if(ev == sensors_event && data == PUBLISH_TRIGGER) {
@@ -725,7 +742,7 @@ state_machine(void)
     etimer_set(&echo_request_timer, conf.def_rt_ping_interval);
   }
 }
-
+powertrace_stop();
 PROCESS_END();
 }
 /*---------------------------------------------------------------------------*/
