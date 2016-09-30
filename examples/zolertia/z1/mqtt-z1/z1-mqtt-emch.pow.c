@@ -454,7 +454,7 @@ int remaining = APP_BUFFER_SIZE;
   //int16_t value;
 
 buf_ptr = app_buffer;
-
+printf("Message %lu Sent on: %lu \n", mid, upt);
 len = snprintf(buf_ptr, remaining,"%s", powertrace_result());
 
 if(len < 0 || len >= remaining) {

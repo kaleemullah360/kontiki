@@ -516,7 +516,7 @@ int remaining = APP_BUFFER_SIZE;
   //int16_t value;
 
 buf_ptr = app_buffer;
-
+printf("Message %lu Sent on: %lu \n", mid, upt);
 len = snprintf(buf_ptr, remaining,"%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), powertrace_result());
 
 if(len < 0 || len >= remaining) {
