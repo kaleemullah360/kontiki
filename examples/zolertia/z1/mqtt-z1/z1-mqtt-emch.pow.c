@@ -62,14 +62,6 @@
 char *powertrace_result();
 //char *pow_str = "";
 
-//--- Libs for e-MCH-APp ----
-
-#include "dev/battery-sensor.h"
-#include "dev/i2cmaster.h"
-#include "dev/tmp102.h"
-
-//---End Libs for e-MCH-APp ---
-
 //--- Variable Declaration for e-MCH-APp ----
 
  static int32_t mid = 0;  // MessageID
@@ -517,7 +509,8 @@ int remaining = APP_BUFFER_SIZE;
 
 buf_ptr = app_buffer;
 
-len = snprintf(buf_ptr, remaining,"%lu,%lu,%lu,%c%d.%04d,%ld.%03d,%s", mid, upt, clk, minus,tempint,tempfrac, (long) bat_mv, (unsigned) ((bat_mv - floor(bat_mv)) * 1000), powertrace_result());
+printf("Message %lu Sent on: %lu \n", mid, upt);
+len = snprintf(buf_ptr, remaining, "%s", powertrace_result());
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
