@@ -1,4 +1,3 @@
-
 /*
  * Copyright (c) 2014, Texas Instruments Incorporated - http://www.ti.com/
  * All rights reserved.
