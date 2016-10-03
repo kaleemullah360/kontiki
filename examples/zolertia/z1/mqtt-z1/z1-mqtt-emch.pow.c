@@ -455,7 +455,7 @@ int remaining = APP_BUFFER_SIZE;
 
 buf_ptr = app_buffer;
 printf("Message %lu Sent on: %lu \n", mid, upt);
-len = snprintf(buf_ptr, remaining,"%s", powertrace_result());
+len = snprintf(buf_ptr, remaining,"%lu,%lu,0,0,0,%s", mid, upt, powertrace_result());
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);

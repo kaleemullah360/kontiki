@@ -47,7 +47,7 @@
 // Powertracing
 #include "powertrace-z1.h"
 char *powertrace_result();
-char *pow_str = "";
+//char *pow_str = "";
 
 //--- Variable Declaration for e-MCH-APp ----
 
@@ -82,14 +82,14 @@ static void get_sensor_time(){
 ++mid;  // MessageID
 get_sensor_time();
 //----- End Get Data -------
-pow_str = powertrace_result();
+//pow_str = powertrace_result();
 
  	unsigned int accept = -1;
  	REST.get_header_accept(request, &accept);
 
  	if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
  		REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
- 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%s", pow_str);
+ 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,0,0,0,%s", mid, upt, powertrace_result());
     printf("Message %lu Sent on: %lu \n", mid, upt);
 
  		REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));

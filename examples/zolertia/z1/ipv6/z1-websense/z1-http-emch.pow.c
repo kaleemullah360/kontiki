@@ -103,8 +103,9 @@ get_sensor_time();
 //----- End Get Data -------
 PSOCK_BEGIN(&s->sout);
 blen = 0;
+// variables
 
-ADD("%s", powertrace_result());
+ADD("%lu,%lu,0,0,0,%s", mid, upt, powertrace_result());
 
 SEND_STRING(&s->sout, buf);
 PSOCK_END(&s->sout);

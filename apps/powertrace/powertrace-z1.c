@@ -130,7 +130,8 @@ source: http://personal.ee.surrey.ac.uk/Personal/P.Barnaghi/teaching/EEEM048/201
 */
   // instead of printing, write all results to powertrace_results_str and return to calling function
   // => simple version
-  sprintf(powertrace_results_str, "%lu,%lu,%lu,%lu,%lu,%lu\n",all_cpu, all_lpm, all_transmit, all_listen, all_idle_transmit, all_idle_listen);
+  //sprintf(powertrace_results_str, "%lu,%lu,%lu,%lu,%lu,%lu\n",all_cpu, all_lpm, all_transmit, all_listen, all_idle_transmit, all_idle_listen);
+  sprintf(powertrace_results_str, "%lu %lu %lu %lu %lu %lu",all_cpu, all_lpm, all_transmit, all_listen, all_idle_transmit, all_idle_listen);
 
 /*
   // => full version
