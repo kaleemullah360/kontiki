@@ -444,9 +444,7 @@ publish(void)
 {
   //----- Get Data Instance -------
 ++mid;  // MessageID
-get_sensor_temperature();
 get_sensor_time();
-get_sensor_battery();
 //----- End Get Data -------
   /* Publish MQTT topic in IBM quickstart format */
 int len;

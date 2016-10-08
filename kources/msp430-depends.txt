@@ -11,4 +11,3 @@ export PATH=/opt/mspgcc-4.7.3/bin:$PATH
 for PythonSerial Module:
 https://launchpad.net/ubuntu/+archive/primary/+files/pyserial_2.7.orig.tar.gz
 sudo python setup.py install
-
