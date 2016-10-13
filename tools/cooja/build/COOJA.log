@@ -20,3 +20,4 @@
 [14:02:48 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.rtt.z1
 [14:02:49 - Thread-4] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
 [14:02:50 - Thread-4] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[14:03:08 - Thread-6] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476349388199
