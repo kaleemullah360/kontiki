@@ -1,96 +1,69 @@
-[14:00:14 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[14:00:15 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[14:00:15 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
-[14:00:18 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:00:18 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:00:22 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:00:23 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[14:00:24 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[14:00:24 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[14:00:54 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[14:00:55 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.rtt.z1 TARGET=z1 
-[14:01:08 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.rtt.z1
-[14:01:16 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476349276978
-[14:01:22 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476349282301	Duration: 5323 ms	Simulated time 5232 ms	Ratio 0.9829043772308849
-[14:02:46 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[14:02:46 - Thread-4] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:02:46 - Thread-4] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:02:47 - Thread-4] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.rtt.z1 TARGET=z1 
-[14:02:48 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:02:48 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.rtt.z1
-[14:02:49 - Thread-4] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[14:02:50 - Thread-4] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[14:03:08 - Thread-6] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476349388199
-[14:04:08 - Thread-6] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476349448118	Duration: 59919 ms	Simulated time 59917 ms	Ratio 0.9999666216058345
-[14:04:09 - Thread-5] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[14:04:09 - Thread-7] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:04:09 - Thread-7] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:04:09 - Thread-7] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.rtt.z1 TARGET=z1 
-[14:04:10 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:04:10 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.rtt.z1
-[14:04:11 - Thread-7] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[14:04:11 - Thread-7] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[14:31:54 - Thread-9] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476351114984
-[14:32:03 - Thread-9] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476351123477	Duration: 8493 ms	Simulated time 8493 ms	Ratio 1.0
-[14:34:56 - Thread-8] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[14:34:56 - Thread-10] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:34:56 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:34:57 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.rtt.z1 TARGET=z1 
-[14:34:57 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:34:57 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.rtt.z1
-[14:34:58 - Thread-10] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[14:34:58 - Thread-10] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[14:35:52 - Thread-11] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[14:35:52 - Thread-12] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:35:52 - Thread-12] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:35:53 - Thread-12] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.rtt.z1 TARGET=z1 
-[14:35:53 - Thread-12] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:35:53 - Thread-12] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.rtt.z1
-[14:35:54 - Thread-12] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[14:35:54 - Thread-12] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[14:37:06 - Thread-13] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[14:37:06 - Thread-14] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:37:06 - Thread-14] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:37:06 - Thread-14] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.rtt.z1 TARGET=z1 
-[14:37:07 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:37:07 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.rtt.z1
-[14:37:07 - Thread-14] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[14:37:08 - Thread-14] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[14:37:51 - Thread-15] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[14:37:51 - Thread-16] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:37:51 - Thread-16] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:37:51 - Thread-16] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        z1-border-router.c
-[14:37:51 - Thread-16] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../platform/z1/./contiki-z1-main.c
-[14:37:51 - Thread-16] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        z1-border-router.z1
-[14:37:51 - Thread-16] [AbstractMspMoteType.java:152] [FATAL] - >> contiki-z1.a(cc2420-radio.o): In function `set_cc2420_rxpower':
-[14:37:51 - Thread-16] [AbstractMspMoteType.java:152] [FATAL] - >> /home/superuser/kontiki/examples/ipv6/rpl-border-router/../../../apps/config-radio/cc2420-radio.c:111: undefined reference to `cc2420_get_tx_power'
-[14:37:51 - Thread-16] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: error: ld returned 1 exit status
-[14:37:51 - Thread-16] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:280: recipe for target 'z1-border-router.z1' failed
-[14:37:51 - Thread-16] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o z1-border-router.co
-[14:37:51 - Thread-16] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-border-router.z1] Error 1
-[14:37:51 - Thread-16] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[14:37:51 - Thread-16] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[14:38:23 - Thread-16] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:38:23 - Thread-16] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-border-router/z1-border-router.z1 with /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
-[14:38:23 - Thread-16] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:38:23 - Thread-16] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.rtt.z1 TARGET=z1 
-[14:38:23 - Thread-16] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:38:23 - Thread-16] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.rtt.z1
-[14:38:24 - Thread-16] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[14:38:24 - Thread-16] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[14:40:36 - Thread-18] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[14:40:36 - Thread-19] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:40:36 - Thread-19] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:40:36 - Thread-19] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.rtt.z1 TARGET=z1 
-[14:40:37 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:40:37 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.rtt.z1
-[14:40:37 - Thread-19] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[14:40:38 - Thread-19] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[14:40:53 - Thread-20] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[14:40:53 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[14:40:53 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[14:40:54 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.rtt.z1 TARGET=z1 
-[14:40:54 - Thread-21] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[14:40:54 - Thread-21] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.rtt.z1
-[14:40:55 - Thread-21] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[14:40:55 - Thread-21] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[14:42:38 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[14:42:39 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[14:42:39 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
+[14:42:55 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[14:42:55 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[14:42:56 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[14:42:56 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[14:42:57 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[14:42:57 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[14:42:59 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476351779365
+[14:43:00 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476351780144	Duration: 779 ms	Simulated time 762 ms	Ratio 0.9781771501925546
+[14:43:31 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[14:43:31 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[14:43:32 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[14:43:45 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[14:44:16 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[14:44:16 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[14:44:17 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[14:44:29 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[14:44:53 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[14:44:53 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[14:44:53 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.z1 TARGET=z1 
+[14:45:06 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.z1
+[14:45:21 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[14:45:21 - Thread-6] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[14:45:21 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[14:45:21 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[14:45:22 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[14:45:23 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.z1 TARGET=z1 
+[14:45:23 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[14:45:23 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[14:45:24 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[14:45:24 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.z1
+[14:45:24 - Thread-6] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[14:45:25 - Thread-6] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[14:45:26 - Thread-8] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476351926392
+[14:45:43 - Thread-7] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[14:45:43 - Thread-9] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[14:47:09 - Thread-8] [Simulation.java:292] [FATAL] - Simulation stopped due to error: -1
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at se.sics.mspsim.core.MSP430Core$1.write(MSP430Core.java:171)
+	at se.sics.mspsim.core.MSP430Core.serviceInterrupt(MSP430Core.java:913)
+	at se.sics.mspsim.core.MSP430Core.emulateOP(MSP430Core.java:970)
+	at se.sics.mspsim.core.MSP430.stepMicros(MSP430.java:256)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:337)
+	at org.contikios.cooja.mspmote.MspMote.execute(MspMote.java:298)
+	at org.contikios.cooja.motes.AbstractWakeupMote$1.execute(AbstractWakeupMote.java:47)
+	at org.contikios.cooja.Simulation.run(Simulation.java:280)
+	at java.lang.Thread.run(Thread.java:745)
+[14:47:12 - Thread-8] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476352032767	Duration: 106375 ms	Simulated time 101780 ms	Ratio 0.9568037602820212
+[14:47:14 - Thread-7] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[14:47:14 - Thread-9] [SerialSocketServer.java:497] [INFO] - Socket closed
+[14:47:14 - Thread-9] [SerialSocketServer.java:501] [INFO] - End of Stream
+[14:47:14 - Thread-11] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[14:47:14 - Thread-11] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[14:47:14 - Thread-11] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[14:47:15 - Thread-11] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[14:47:15 - Thread-11] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.z1 TARGET=z1 
+[14:47:15 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[14:47:15 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[14:47:16 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[14:47:16 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.z1
+[14:47:16 - Thread-11] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[14:47:17 - Thread-11] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[14:47:18 - Thread-13] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476352038362
+[14:47:32 - Thread-12] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[14:47:32 - Thread-14] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[14:48:35 - Thread-13] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476352115808	Duration: 77446 ms	Simulated time 261646 ms	Ratio 3.3783878006895036
+[14:48:40 - Thread-15] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476352120239
