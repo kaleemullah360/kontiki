@@ -1,11 +1,15 @@
-[19:15:56 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[19:15:56 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[19:15:56 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
-[19:16:06 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[19:16:06 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[19:16:11 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[19:16:12 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[19:16:13 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[19:16:13 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[19:16:15 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476195375876
-[19:16:17 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476195377521	Duration: 1645 ms	Simulated time 1644 ms	Ratio 0.9993920972644377
+[10:50:51 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[10:50:51 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[10:50:51 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
+[10:50:55 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[10:50:55 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[10:50:59 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/superuser/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[10:51:00 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[10:51:00 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[10:51:01 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[10:51:03 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476337863182
+[10:51:04 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476337864872	Duration: 1690 ms	Simulated time 1689 ms	Ratio 0.9994082840236687
+[10:51:07 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476337867818
+[10:51:09 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476337869877	Duration: 2059 ms	Simulated time 3746 ms	Ratio 1.8193297717338515
+[10:51:10 - Thread-4] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476337870627
+[10:51:11 - Thread-4] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476337871569	Duration: 942 ms	Simulated time 4687 ms	Ratio 4.975583864118896
