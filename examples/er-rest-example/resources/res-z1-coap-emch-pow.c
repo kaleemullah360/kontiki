@@ -91,7 +91,7 @@ get_sensor_time();
  		REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
  		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,0,0,0,%s", mid, upt, powertrace_result());
     printf("Message %lu Sent on: %lu \n", mid, upt);
-
+    printf("Ticks per second: %u\n", RTIMER_SECOND);
  		REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
  	}
  }
