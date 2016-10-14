@@ -118,13 +118,13 @@ powertrace_result()
   all_radio = energest_type_time(ENERGEST_TYPE_LISTEN) + energest_type_time(ENERGEST_TYPE_TRANSMIT);
   
 /*
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-|clocktime | P | rime | Seq Nr | aggregated  | aggregated  | aggregated    | aggregated  | aggregated  | current     | current     | current     | current     |
-|          |   |      |        | cpu         | lpm         | transmission  | listen      | idle listen | cpu         | lpm         | transmit    | listen      |
-|          |   |      |        | consumption | consumption | consumption   | consumption |             | consumption | consumption | consumption | consumption |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  16232   | P | 158  |  125   | 85419       | 4043362     | 0             | 20399       | 20399       | 704         | 32062       | 0           | 287         |
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+|clocktime|P|rime| Seq | aggregated  | aggregated  | aggregated   | aggregated  | aggregated  | current     | current     | current     | current     |
+|         | |    | Nr  | cpu         | lpm         | transmission | listen      | idle listen | cpu         | lpm         | transmit    | listen      |
+|         | |    |     | consumption | consumption | consumption  | consumption |             | consumption | consumption | consumption | consumption |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+|  16232  |P|158 | 125 | 85419       | 4043362     | 0            | 20399       | 20399       | 704         | 32062       | 0           | 287         |
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 source: http://personal.ee.surrey.ac.uk/Personal/P.Barnaghi/teaching/EEEM048/2014/lab/D6PowerConsumption.pdf
 */
