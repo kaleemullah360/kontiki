@@ -96,7 +96,6 @@ static
 PT_THREAD(send_values(struct httpd_state *s))
 {
 //----- Get Data Instance -------
-++mid;  // MessageID
 
 get_sensor_time();
 
@@ -105,8 +104,8 @@ PSOCK_BEGIN(&s->sout);
 blen = 0;
 // variables
 
-ADD("%lu,%lu,0,0,0,%s", mid, upt, powertrace_result());
-
+ADD("%lu,%lu,0,0,0,%s", mid++, upt, powertrace_result());
+printf("Message %lu Sent on: %lu \n", mid, upt);
 SEND_STRING(&s->sout, buf);
 PSOCK_END(&s->sout);
 }
@@ -114,7 +113,6 @@ PSOCK_END(&s->sout);
 httpd_simple_script_t
 httpd_simple_get_script(const char *name)
 {
-  printf("Message %lu Sent on: %lu \n", mid, upt);
   return send_values;
 }
 /*---------------------------------------------------------------------------*/
