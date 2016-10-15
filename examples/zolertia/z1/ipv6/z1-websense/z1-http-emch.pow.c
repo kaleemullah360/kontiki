@@ -125,7 +125,7 @@ PROCESS_THREAD(web_sense_process, ev, data)
 	set_cc2420_txpower(0);
 	set_cc2420_channel(0);
   powertrace_start(CLOCK_SECOND * 1);
-
+  printf("Ticks per second: %u\n", RTIMER_SECOND);
 
   etimer_set(&timer, CLOCK_SECOND * 2);
 
