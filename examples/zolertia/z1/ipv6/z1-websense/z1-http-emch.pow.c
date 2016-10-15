@@ -106,6 +106,7 @@ blen = 0;
 
 ADD("%lu,%lu,0,0,0,%s", mid++, upt, powertrace_result());
 printf("Message %lu Sent on: %lu \n", mid, upt);
+printf("Ticks per second: %u\n", RTIMER_SECOND);
 SEND_STRING(&s->sout, buf);
 PSOCK_END(&s->sout);
 }
@@ -123,7 +124,6 @@ PROCESS_THREAD(web_sense_process, ev, data)
 	set_cc2420_txpower(0);
 	set_cc2420_channel(0);
   powertrace_start(CLOCK_SECOND * 1);
-  printf("Ticks per second: %u\n", RTIMER_SECOND);
 
   etimer_set(&timer, CLOCK_SECOND * 2);
 
