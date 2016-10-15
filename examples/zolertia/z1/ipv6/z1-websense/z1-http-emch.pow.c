@@ -103,8 +103,9 @@ get_sensor_time();
 PSOCK_BEGIN(&s->sout);
 blen = 0;
 // variables
-
+powertrace_start(CLOCK_SECOND * 1);
 ADD("%lu,%lu,0,0,0,%s", mid++, upt, powertrace_result());
+powertrace_stop();
 printf("Message %lu Sent on: %lu \n", mid, upt);
 printf("Ticks per second: %u\n", RTIMER_SECOND);
 SEND_STRING(&s->sout, buf);
@@ -123,7 +124,7 @@ PROCESS_THREAD(web_sense_process, ev, data)
   PROCESS_BEGIN();
 	set_cc2420_txpower(0);
 	set_cc2420_channel(0);
-  powertrace_start(CLOCK_SECOND * 1);
+  
 
   etimer_set(&timer, CLOCK_SECOND * 2);
 
@@ -132,7 +133,7 @@ PROCESS_THREAD(web_sense_process, ev, data)
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
     etimer_reset(&timer);
   }
-  powertrace_stop();
+  
   PROCESS_END();
 }
 /*---------------------------------------------------------------------------*/
