@@ -34,7 +34,7 @@ AUTOSTART_PROCESSES(&er_example_server);
 PROCESS_THREAD(er_example_server, ev, data)
 {
   PROCESS_BEGIN();
-  powertrace_start(CLOCK_SECOND * 1);
+
   PROCESS_PAUSE();
 
   PRINTF("e-MCH-APp\n");
@@ -62,6 +62,6 @@ PROCESS_THREAD(er_example_server, ev, data)
     PROCESS_WAIT_EVENT();
 
   }  /* while (1) */
-  powertrace_stop();
+  
   PROCESS_END();
 }
