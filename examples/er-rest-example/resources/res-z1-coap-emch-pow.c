@@ -79,7 +79,6 @@ static void get_sensor_time(){
  {
  	
  //----- Get Data Instance -------
-++mid;  // MessageID
 get_sensor_time();
 //----- End Get Data -------
 //pow_str = powertrace_result();
@@ -89,9 +88,9 @@ get_sensor_time();
 
  	if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
  		REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
- 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,0,0,0,%s", mid, upt, powertrace_result());
-    printf("Message %lu Sent on: %lu \n", mid, upt);
-    printf("Ticks per second: %u\n", RTIMER_SECOND);
+ 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,0,0,0,%s", mid++, upt, powertrace_result());
+	    printf("Message %lu Sent on: %lu \n", mid, upt);
+	    printf("Ticks per second: %u\n", RTIMER_SECOND);
  		REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
  	}
  }
