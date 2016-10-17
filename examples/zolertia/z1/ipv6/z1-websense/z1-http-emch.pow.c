@@ -95,21 +95,19 @@ static int blen;
 static
 PT_THREAD(send_values(struct httpd_state *s))
 {
+powertrace_start(CLOCK_SECOND * 1);
 //----- Get Data Instance -------
-
 get_sensor_time();
-
-//----- End Get Data -------
 PSOCK_BEGIN(&s->sout);
 blen = 0;
 // variables
-powertrace_start(CLOCK_SECOND * 1);
 ADD("%lu,%lu,0,0,0,%s", mid++, upt, powertrace_result());
-powertrace_stop();
 printf("Message %lu Sent on: %lu \n", mid, upt);
 printf("Ticks per second: %u\n", RTIMER_SECOND);
+//----- End Get Data -------
 SEND_STRING(&s->sout, buf);
 PSOCK_END(&s->sout);
+powertrace_stop();
 }
 /*---------------------------------------------------------------------------*/
 httpd_simple_script_t
