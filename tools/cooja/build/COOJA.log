@@ -8,3 +8,12 @@
 [18:29:33 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
 [18:29:33 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
 [18:29:34 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:29:40 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:29:40 - Thread-2] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:29:40 - Thread-2] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:29:40 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:29:41 - Thread-2] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:29:41 - Thread-2] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:29:56 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[18:29:56 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[18:29:57 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
