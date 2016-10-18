@@ -67,7 +67,7 @@
 /* -------- Set Radio Powers --------------- */
 
 #include <cc2420-radio.h>
-#define  Kaleem 
+
 /*|Power (dBm)|PA_LEVEL|Power (mW)|
 * |0          |  31    |1.0000    |
 * |-0.0914    |  30    |0.9792    |
@@ -110,6 +110,10 @@ The Contiki RDC drivers are called:
 */
 
 void set_cc2420_rdcmac(rdc_channel_check_rate, rdc_driver, mac_driver){
+	
+	#undef NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE
+	#undef NETSTACK_CONF_RDC
+	#undef NETSTACK_CONF_MAC
 
 	#define NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE rdc_channel_check_rate
 	#define NETSTACK_CONF_RDC *rdc_driver
