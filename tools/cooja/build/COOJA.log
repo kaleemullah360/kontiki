@@ -1,95 +1,1207 @@
-[17:24:44 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[17:24:44 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[17:24:44 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
-[17:24:47 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[17:24:47 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[17:24:47 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[17:24:48 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[17:24:48 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[17:24:49 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[17:26:04 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[17:26:04 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[17:26:15 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[17:29:16 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[17:29:16 - Thread-3] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[17:29:16 - Thread-3] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[17:29:17 - Thread-3] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[17:29:17 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[17:29:17 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[17:29:18 - Thread-3] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[17:29:18 - Thread-3] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[17:29:20 - Thread-5] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476793760547
-[17:29:34 - Thread-5] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476793774024	Duration: 13477 ms	Simulated time 13426 ms	Ratio 0.9962157750241152
-[17:31:43 - Thread-4] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[17:31:43 - Thread-6] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[17:31:43 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[17:31:43 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[17:31:44 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[17:31:44 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[17:31:45 - Thread-6] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[17:31:45 - Thread-6] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[17:39:56 - Thread-7] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[17:39:56 - Thread-8] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[17:39:59 - Thread-9] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476794399274
-[17:40:06 - Thread-7] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[17:40:06 - Thread-8] [SerialSocketServer.java:497] [INFO] - Socket closed
-[17:40:06 - Thread-8] [SerialSocketServer.java:501] [INFO] - End of Stream
-[17:40:06 - Thread-9] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476794406035	Duration: 6761 ms	Simulated time 6752 ms	Ratio 0.9986688359710102
-[17:40:06 - Thread-10] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[17:40:06 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[17:40:06 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[17:40:06 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[17:40:07 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[17:40:07 - Thread-10] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[17:40:08 - Thread-10] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[17:40:08 - Thread-12] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476794408063
-[17:42:06 - Thread-11] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[17:42:06 - Thread-12] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476794526398	Duration: 118335 ms	Simulated time 118324 ms	Ratio 0.9999070435627667
-[17:42:06 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[17:42:06 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[17:42:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[17:42:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[17:42:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[17:42:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:112:55: error: expected ‘)’ before ‘char’
-[17:42:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[17:42:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[17:42:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[17:42:06 - Thread-13] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[17:42:27 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[17:42:27 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[17:42:27 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[17:42:27 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[17:42:27 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[17:42:27 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:112:55: error: expected ‘)’ before ‘char’
-[17:42:27 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[17:42:27 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[17:42:27 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[17:42:27 - Thread-13] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[17:42:45 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[17:42:45 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[17:42:45 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[17:42:45 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[17:42:45 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[17:42:45 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:112:55: error: expected ‘)’ before ‘char’
-[17:42:45 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[17:42:45 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[17:42:45 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[17:42:45 - Thread-13] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[17:43:01 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[17:43:01 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[17:43:02 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[17:43:02 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[17:43:03 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[17:43:03 - Thread-13] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[17:43:03 - Thread-13] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[17:43:03 - Thread-18] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476794583733
-[17:43:19 - Thread-18] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476794599480	Duration: 15747 ms	Simulated time 15735 ms	Ratio 0.9992379500857306
-[17:46:44 - Thread-17] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[17:46:44 - Thread-19] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[17:46:44 - Thread-19] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[17:46:44 - Thread-19] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[17:46:45 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[17:46:45 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[17:46:45 - Thread-19] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[17:46:46 - Thread-19] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[17:47:01 - Thread-21] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476794821129
+[17:54:35 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[17:54:35 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[17:54:35 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
+[18:15:45 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:15:45 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:15:46 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:15:47 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[18:15:47 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:15:48 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:17:10 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:17:10 - Thread-2] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:17:10 - Thread-2] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:17:10 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[18:17:10 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[18:17:10 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[18:17:10 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:112:55: error: expected ‘)’ before ‘(’ token
+[18:17:10 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[18:17:10 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[18:17:10 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:17:10 - Thread-2] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:17:48 - Thread-2] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:17:48 - Thread-2] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:17:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[18:17:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[18:17:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[18:17:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:112:59: error: unknown type name ‘custom_rdc_driver’
+[18:17:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:112:78: error: unknown type name ‘custom_mac_driver’
+[18:17:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[18:17:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[18:17:48 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:17:48 - Thread-2] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:18:06 - Thread-2] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:18:06 - Thread-2] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:18:06 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:112:6: error: conflicting types for ‘set_cc2420_rdcmac’
+[18:18:06 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:112:1: note: an argument type that has a default promotion can’t match an empty parameter name list declaration
+[18:18:06 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> In file included from ../../../apps/config-radio/cc2420-radio.c:69:0:
+[18:18:06 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.h:82:6: note: previous declaration of ‘set_cc2420_rdcmac’ was here
+[18:18:06 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[18:18:06 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:132:2: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat]
+[18:18:06 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:133:2: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat]
+[18:18:06 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[18:18:06 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[18:18:06 - Thread-2] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:18:06 - Thread-2] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:21:12 - Thread-2] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:21:12 - Thread-2] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:21:12 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:21:13 - Thread-2] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:21:13 - Thread-2] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:21:52 - Thread-6] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:21:52 - Thread-7] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:21:53 - Thread-7] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:21:53 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:21:53 - Thread-7] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:21:54 - Thread-7] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:22:00 - Thread-9] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476796920234
+[18:22:03 - Thread-9] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476796923510	Duration: 3276 ms	Simulated time 3267 ms	Ratio 0.9972527472527473
+[18:22:14 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[18:22:14 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[18:22:15 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:22:55 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:26:20 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:27:03 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:31:30 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:32:34 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:33:58 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:34:04 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:34:06 - Thread-11] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476797646234
+[18:34:10 - Thread-11] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476797650696	Duration: 4462 ms	Simulated time 7728 ms	Ratio 1.731958762886598
+[18:36:28 - Thread-8] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:36:28 - Thread-12] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:36:28 - Thread-12] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:36:29 - Thread-12] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:36:29 - Thread-12] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:36:29 - Thread-12] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:36:30 - Thread-12] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:36:30 - Thread-12] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:36:42 - Thread-14] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476797802727
+[18:36:46 - Thread-14] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476797806735	Duration: 4008 ms	Simulated time 4007 ms	Ratio 0.999750499001996
+[18:37:38 - Thread-13] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:37:38 - Thread-15] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:37:38 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:37:38 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:37:39 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[18:37:39 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-http-emch.pow.z1 TARGET=z1 
+[18:37:39 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        z1-http-emch.pow.c
+[18:37:39 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.pow.c: In function ‘process_thread_web_sense_process’:
+[18:37:39 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.pow.c:125:21: error: expected expression before ‘int’
+[18:37:39 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-http-emch.pow.co] Error 1
+[18:37:39 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../../../Makefile.include:260: recipe for target 'z1-http-emch.pow.co' failed
+[18:37:39 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:37:39 - Thread-15] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:37:42 - Thread-15] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:37:42 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:37:42 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:37:43 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[18:37:43 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-http-emch.pow.z1 TARGET=z1 
+[18:37:43 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        z1-http-emch.pow.c
+[18:37:43 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.pow.c: In function ‘process_thread_web_sense_process’:
+[18:37:43 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.pow.c:125:21: error: expected expression before ‘int’
+[18:37:43 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-http-emch.pow.co] Error 1
+[18:37:43 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../../../Makefile.include:260: recipe for target 'z1-http-emch.pow.co' failed
+[18:37:43 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:37:43 - Thread-15] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:38:58 - Thread-15] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:38:58 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:38:58 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:38:58 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[18:38:58 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-http-emch.pow.z1 TARGET=z1 
+[18:38:58 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        z1-http-emch.pow.c
+[18:38:58 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.pow.c: In function ‘process_thread_web_sense_process’:
+[18:38:58 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.pow.c:128:52: error: expected expression before ‘char’
+[18:38:58 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.pow.c:127:11: warning: unused variable ‘custom_mac_driver’ [-Wunused-variable]
+[18:38:58 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.pow.c:126:10: warning: unused variable ‘custom_rdc_driver’ [-Wunused-variable]
+[18:38:58 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-http-emch.pow.co] Error 1
+[18:38:58 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../../../Makefile.include:260: recipe for target 'z1-http-emch.pow.co' failed
+[18:38:58 - Thread-15] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:38:58 - Thread-15] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:39:30 - Thread-15] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:39:30 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:39:30 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:39:30 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:39:30 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:39:31 - Thread-15] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:39:31 - Thread-15] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:39:33 - Thread-20] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476797973055
+[18:39:35 - Thread-20] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476797975691	Duration: 2637 ms	Simulated time 2635 ms	Ratio 0.9992415623814941
+[18:40:03 - Thread-19] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:40:03 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:40:03 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:40:03 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:40:03 - Thread-21] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:40:04 - Thread-21] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:40:04 - Thread-21] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:40:05 - Thread-21] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:40:06 - Thread-23] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798006292
+[18:40:10 - Thread-23] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798010663	Duration: 4371 ms	Simulated time 4371 ms	Ratio 1.0
+[18:40:42 - Thread-22] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:40:42 - Thread-24] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:40:42 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:40:43 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:40:43 - Thread-24] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:40:43 - Thread-24] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:40:44 - Thread-24] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:40:44 - Thread-24] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:40:45 - Thread-26] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798045373
+[18:40:49 - Thread-26] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798049007	Duration: 3634 ms	Simulated time 3634 ms	Ratio 1.0
+[18:46:10 - Thread-25] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:46:10 - Thread-27] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:46:10 - Thread-27] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:46:10 - Thread-27] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:46:10 - Thread-27] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:46:11 - Thread-27] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:46:11 - Thread-27] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:46:11 - Thread-27] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:46:13 - Thread-29] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798373343
+[18:46:14 - Thread-29] [MspMote.java:229] [WARN] - 2: # MSP430[VOID_IO_READ]: *** IOUnit read from non-existent IO at $005d
+[18:46:14 - Thread-29] [MspMote.java:229] [WARN] - 2: # MSP430[VOID_IO_READ]: *** IOUnit read from non-existent IO at $005d
+[18:46:16 - Thread-29] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798376381	Duration: 3038 ms	Simulated time 3037 ms	Ratio 0.999670836076366
+[18:46:46 - Thread-28] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:46:46 - Thread-30] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:46:46 - Thread-30] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:46:46 - Thread-30] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:46:47 - Thread-30] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:46:47 - Thread-30] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:46:47 - Thread-30] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:46:48 - Thread-30] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:47:19 - Thread-31] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:47:19 - Thread-32] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:47:19 - Thread-32] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:47:19 - Thread-32] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:47:19 - Thread-32] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:47:20 - Thread-32] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:47:20 - Thread-32] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:47:20 - Thread-32] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:47:22 - Thread-34] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798442770
+[18:47:24 - Thread-34] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798444799	Duration: 2029 ms	Simulated time 2029 ms	Ratio 1.0
+[18:47:50 - Thread-33] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:47:50 - Thread-35] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:47:50 - Thread-35] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:47:50 - Thread-35] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:47:51 - Thread-35] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:47:51 - Thread-35] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:47:51 - Thread-35] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:47:52 - Thread-35] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:47:53 - Thread-37] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798473204
+[18:47:57 - Thread-37] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798477264	Duration: 4060 ms	Simulated time 4059 ms	Ratio 0.9997536945812808
+[18:48:09 - Thread-36] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:48:09 - Thread-38] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:48:09 - Thread-38] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:48:09 - Thread-38] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:48:09 - Thread-38] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:48:10 - Thread-38] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:48:10 - Thread-38] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:48:10 - Thread-38] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:48:19 - Thread-40] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798499504
+[18:48:22 - Thread-40] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798502703	Duration: 3199 ms	Simulated time 3196 ms	Ratio 0.9990622069396686
+[18:48:34 - Thread-39] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:48:34 - Thread-41] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:48:34 - Thread-41] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:48:34 - Thread-41] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:48:34 - Thread-41] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:48:35 - Thread-41] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:48:35 - Thread-41] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:48:35 - Thread-41] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:48:37 - Thread-43] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798517041
+[18:48:38 - Thread-43] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798518940	Duration: 1899 ms	Simulated time 1897 ms	Ratio 0.9989468141126909
+[18:49:07 - Thread-42] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:49:07 - Thread-44] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:49:07 - Thread-44] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:49:07 - Thread-44] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:49:08 - Thread-44] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:49:08 - Thread-44] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:49:08 - Thread-44] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:49:09 - Thread-44] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:49:09 - Thread-46] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798549734
+[18:49:14 - Thread-46] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798554522	Duration: 4788 ms	Simulated time 4787 ms	Ratio 0.9997911445279867
+[18:50:02 - Thread-45] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:50:02 - Thread-47] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:50:02 - Thread-47] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:50:03 - Thread-47] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:50:03 - Thread-47] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:50:03 - Thread-47] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:50:04 - Thread-47] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:50:04 - Thread-47] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:50:08 - Thread-49] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798608168
+[18:50:10 - Thread-49] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798610141	Duration: 1973 ms	Simulated time 1972 ms	Ratio 0.9994931576279777
+[18:50:25 - Thread-48] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:50:25 - Thread-50] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:50:25 - Thread-50] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:50:25 - Thread-50] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:50:25 - Thread-50] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:50:26 - Thread-50] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:50:26 - Thread-50] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:50:26 - Thread-50] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:50:29 - Thread-52] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798629063
+[18:50:33 - Thread-52] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798633027	Duration: 3964 ms	Simulated time 3962 ms	Ratio 0.9994954591321897
+[18:51:44 - Thread-51] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:51:44 - Thread-53] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:51:44 - Thread-53] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:51:44 - Thread-53] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:51:45 - Thread-53] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:51:45 - Thread-53] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:51:45 - Thread-53] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:51:46 - Thread-53] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:53:17 - Thread-54] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:53:17 - Thread-55] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:53:18 - Thread-55] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:53:18 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[18:53:18 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[18:53:18 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[18:53:18 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:112:55: error: expected ‘)’ before ‘char’
+[18:53:18 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[18:53:18 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[18:53:18 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:53:18 - Thread-55] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:53:28 - Thread-55] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:53:28 - Thread-55] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:53:28 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[18:53:28 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[18:53:28 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[18:53:28 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:112:55: error: expected ‘)’ before ‘char’
+[18:53:28 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[18:53:28 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[18:53:28 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:53:28 - Thread-55] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:54:11 - Thread-55] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:54:11 - Thread-55] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:54:11 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[18:54:11 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[18:54:11 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[18:54:11 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[18:54:11 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:113:56: error: invalid type argument of unary ‘*’ (have ‘int’)
+[18:54:11 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:113:76: error: invalid type argument of unary ‘*’ (have ‘int’)
+[18:54:11 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[18:54:11 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:54:11 - Thread-55] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[18:54:11 - Thread-55] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:54:27 - Thread-55] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:54:27 - Thread-55] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:54:28 - Thread-55] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:54:28 - Thread-55] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:54:29 - Thread-55] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:54:29 - Thread-55] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:54:29 - Thread-55] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:54:33 - Thread-60] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798873897
+[18:54:37 - Thread-60] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798877297	Duration: 3400 ms	Simulated time 3400 ms	Ratio 1.0
+[18:54:45 - Thread-59] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:54:45 - Thread-61] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:54:45 - Thread-61] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:54:45 - Thread-61] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:54:45 - Thread-61] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:54:45 - Thread-61] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:54:46 - Thread-61] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:54:46 - Thread-61] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:55:10 - Thread-62] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:55:10 - Thread-63] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:55:10 - Thread-63] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:55:10 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[18:55:10 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[18:55:10 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[18:55:10 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[18:55:10 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:113:56: error: invalid type argument of unary ‘*’ (have ‘int’)
+[18:55:10 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:113:76: error: invalid type argument of unary ‘*’ (have ‘int’)
+[18:55:10 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[18:55:10 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[18:55:10 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:55:10 - Thread-63] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:55:19 - Thread-63] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:55:19 - Thread-63] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:55:20 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[18:55:20 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[18:55:20 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[18:55:20 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[18:55:20 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:113:56: error: invalid type argument of unary ‘*’ (have ‘int’)
+[18:55:20 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:113:77: error: invalid type argument of unary ‘*’ (have ‘int’)
+[18:55:20 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[18:55:20 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[18:55:20 - Thread-63] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:55:20 - Thread-63] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:55:55 - Thread-63] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:55:55 - Thread-63] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:55:55 - Thread-63] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:55:56 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:55:56 - Thread-63] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:55:56 - Thread-63] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:55:57 - Thread-63] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:55:58 - Thread-67] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798958366
+[18:56:01 - Thread-67] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798961834	Duration: 3468 ms	Simulated time 3466 ms	Ratio 0.9994232987312572
+[18:56:11 - Thread-66] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:56:11 - Thread-68] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:56:11 - Thread-68] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:56:12 - Thread-68] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:56:12 - Thread-68] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:56:12 - Thread-68] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:56:13 - Thread-68] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:56:13 - Thread-68] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:56:14 - Thread-70] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476798974914
+[18:56:20 - Thread-70] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476798980426	Duration: 5512 ms	Simulated time 5512 ms	Ratio 1.0
+[18:56:39 - Thread-69] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:56:39 - Thread-71] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:56:39 - Thread-71] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:56:39 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[18:56:39 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[18:56:39 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[18:56:39 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[18:56:39 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:122:8: error: invalid type argument of unary ‘*’ (have ‘int’)
+[18:56:39 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:124:8: error: invalid type argument of unary ‘*’ (have ‘int’)
+[18:56:39 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[18:56:39 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[18:56:39 - Thread-71] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[18:56:39 - Thread-71] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[18:57:40 - Thread-71] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:57:40 - Thread-71] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:57:41 - Thread-71] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:57:41 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:57:41 - Thread-71] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:57:42 - Thread-71] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:57:42 - Thread-71] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:58:54 - Thread-73] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:58:54 - Thread-74] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:58:54 - Thread-74] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:58:54 - Thread-74] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:58:55 - Thread-74] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:58:55 - Thread-74] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:58:55 - Thread-74] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:58:56 - Thread-74] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:59:04 - Thread-75] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[18:59:04 - Thread-76] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:59:04 - Thread-76] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[18:59:04 - Thread-76] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[18:59:05 - Thread-76] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[18:59:05 - Thread-76] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[18:59:05 - Thread-76] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[18:59:06 - Thread-76] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[18:59:07 - Thread-78] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799147754
+[18:59:13 - Thread-78] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799153403	Duration: 5649 ms	Simulated time 5648 ms	Ratio 0.9998229775181448
+[19:00:23 - Thread-77] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:00:23 - Thread-79] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:00:23 - Thread-79] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:00:24 - Thread-79] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:00:24 - Thread-79] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:00:25 - Thread-79] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:00:25 - Thread-79] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:00:25 - Thread-79] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:00:26 - Thread-81] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799226861
+[19:00:28 - Thread-81] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799228860	Duration: 1999 ms	Simulated time 1998 ms	Ratio 0.9994997498749375
+[19:02:04 - Thread-80] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:02:04 - Thread-82] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:02:04 - Thread-82] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:02:04 - Thread-82] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:02:05 - Thread-82] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:02:05 - Thread-82] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:02:06 - Thread-82] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:02:06 - Thread-82] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:02:07 - Thread-84] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799327488
+[19:02:09 - Thread-84] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799329939	Duration: 2451 ms	Simulated time 2449 ms	Ratio 0.9991840065279478
+[19:02:31 - Thread-83] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:02:31 - Thread-85] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:02:31 - Thread-85] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:02:31 - Thread-85] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:02:31 - Thread-85] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:02:32 - Thread-85] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:02:32 - Thread-85] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:02:32 - Thread-85] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:02:33 - Thread-87] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799353627
+[19:02:35 - Thread-87] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799355664	Duration: 2037 ms	Simulated time 2036 ms	Ratio 0.9995090819833088
+[19:03:08 - Thread-86] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:03:08 - Thread-88] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:03:08 - Thread-88] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:03:08 - Thread-88] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:03:09 - Thread-88] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:03:09 - Thread-88] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:03:09 - Thread-88] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:03:10 - Thread-88] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:03:13 - Thread-90] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799393098
+[19:03:15 - Thread-90] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799395701	Duration: 2603 ms	Simulated time 2603 ms	Ratio 1.0
+[19:03:36 - Thread-89] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:03:36 - Thread-91] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:03:36 - Thread-91] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:03:37 - Thread-91] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:03:37 - Thread-91] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:03:37 - Thread-91] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:03:38 - Thread-91] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:03:38 - Thread-91] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:03:42 - Thread-93] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799422892
+[19:03:46 - Thread-93] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799426661	Duration: 3769 ms	Simulated time 3768 ms	Ratio 0.9997346776333245
+[19:04:12 - Thread-92] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:04:13 - Thread-94] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:04:13 - Thread-94] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:04:13 - Thread-94] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:04:13 - Thread-94] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:04:14 - Thread-94] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:04:14 - Thread-94] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:04:14 - Thread-94] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:04:17 - Thread-96] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799457068
+[19:04:21 - Thread-96] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799461749	Duration: 4681 ms	Simulated time 4680 ms	Ratio 0.999786370433668
+[19:04:44 - Thread-95] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:04:44 - Thread-97] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:04:44 - Thread-97] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:04:44 - Thread-97] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:04:44 - Thread-97] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:04:45 - Thread-97] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:04:45 - Thread-97] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:04:45 - Thread-97] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:04:48 - Thread-99] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799488575
+[19:04:50 - Thread-99] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799490538	Duration: 1963 ms	Simulated time 1963 ms	Ratio 1.0
+[19:05:15 - Thread-98] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:05:15 - Thread-100] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:05:15 - Thread-100] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:05:16 - Thread-100] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:05:16 - Thread-100] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:05:16 - Thread-100] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:05:17 - Thread-100] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:05:17 - Thread-100] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:05:55 - Thread-101] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:05:55 - Thread-102] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:05:55 - Thread-102] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:05:55 - Thread-102] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:05:56 - Thread-102] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:05:56 - Thread-102] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:05:57 - Thread-102] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:05:57 - Thread-102] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:05:58 - Thread-104] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799558845
+[19:06:01 - Thread-104] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799561779	Duration: 2934 ms	Simulated time 2934 ms	Ratio 1.0
+[19:06:11 - Thread-103] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:06:12 - Thread-105] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:06:12 - Thread-105] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:06:12 - Thread-105] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:06:12 - Thread-105] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:06:13 - Thread-105] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:06:13 - Thread-105] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:06:13 - Thread-105] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:06:14 - Thread-107] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799574769
+[19:06:16 - Thread-107] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799576837	Duration: 2068 ms	Simulated time 2068 ms	Ratio 1.0
+[19:08:54 - Thread-106] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:08:54 - Thread-108] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:08:54 - Thread-108] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:08:54 - Thread-108] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:08:54 - Thread-108] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:08:55 - Thread-108] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:08:55 - Thread-108] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:08:55 - Thread-108] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:08:57 - Thread-110] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799737147
+[19:08:58 - Thread-110] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799738838	Duration: 1692 ms	Simulated time 1691 ms	Ratio 0.9994089834515366
+[19:09:32 - Thread-109] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:09:32 - Thread-111] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:09:32 - Thread-111] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:09:32 - Thread-111] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:09:32 - Thread-111] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:09:33 - Thread-111] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:09:33 - Thread-111] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:09:34 - Thread-111] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:10:14 - Thread-112] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:10:14 - Thread-113] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:10:14 - Thread-113] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:10:14 - Thread-113] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:10:15 - Thread-113] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:10:15 - Thread-113] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:10:15 - Thread-113] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:10:16 - Thread-113] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:10:19 - Thread-114] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:10:19 - Thread-115] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:10:19 - Thread-115] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:10:19 - Thread-115] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:10:20 - Thread-115] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:10:20 - Thread-115] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:10:20 - Thread-115] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:10:21 - Thread-115] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:10:21 - Thread-117] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799821284
+[19:10:23 - Thread-117] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799823278	Duration: 1994 ms	Simulated time 1994 ms	Ratio 1.0
+[19:12:00 - Thread-116] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:12:00 - Thread-118] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:12:00 - Thread-118] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:12:01 - Thread-118] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:12:01 - Thread-118] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:12:01 - Thread-118] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:12:02 - Thread-118] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:12:02 - Thread-118] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:12:03 - Thread-120] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799923849
+[19:12:07 - Thread-120] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799927479	Duration: 3630 ms	Simulated time 3629 ms	Ratio 0.9997245179063361
+[19:12:25 - Thread-119] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:12:25 - Thread-121] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:12:25 - Thread-121] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:12:25 - Thread-121] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:12:25 - Thread-121] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:12:26 - Thread-121] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:12:26 - Thread-121] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:12:26 - Thread-121] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:12:29 - Thread-123] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476799949798
+[19:12:31 - Thread-123] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476799951854	Duration: 2056 ms	Simulated time 2055 ms	Ratio 0.9995136186770428
+[19:18:18 - Thread-122] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:18:18 - Thread-124] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:18:18 - Thread-124] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:18:18 - Thread-124] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:18:19 - Thread-124] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:18:19 - Thread-124] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:18:19 - Thread-124] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:18:20 - Thread-124] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:18:21 - Thread-126] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476800301616
+[19:18:23 - Thread-126] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476800303530	Duration: 1914 ms	Simulated time 1913 ms	Ratio 0.9994775339602926
+[19:18:50 - Thread-125] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:18:50 - Thread-127] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:18:50 - Thread-127] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:18:50 - Thread-127] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:18:50 - Thread-127] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:18:51 - Thread-127] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:18:51 - Thread-127] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:18:51 - Thread-127] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:18:54 - Thread-129] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476800334112
+[19:18:55 - Thread-129] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476800335887	Duration: 1775 ms	Simulated time 1773 ms	Ratio 0.9988732394366198
+[19:19:06 - Thread-128] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:19:06 - Thread-130] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:19:06 - Thread-130] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:19:07 - Thread-130] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:19:07 - Thread-130] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:19:07 - Thread-130] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:19:08 - Thread-130] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:19:08 - Thread-130] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:19:11 - Thread-131] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:19:11 - Thread-132] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:19:11 - Thread-132] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:19:11 - Thread-132] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:19:11 - Thread-132] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:19:12 - Thread-132] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:19:12 - Thread-132] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:19:12 - Thread-132] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:19:13 - Thread-134] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476800353581
+[19:19:15 - Thread-134] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476800355365	Duration: 1784 ms	Simulated time 1783 ms	Ratio 0.999439461883408
+[19:19:41 - Thread-133] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:19:41 - Thread-135] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:19:41 - Thread-135] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:19:42 - Thread-135] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:19:42 - Thread-135] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:19:42 - Thread-135] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:19:43 - Thread-135] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:19:43 - Thread-135] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:19:44 - Thread-136] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:19:44 - Thread-137] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:19:44 - Thread-137] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:19:45 - Thread-137] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:19:45 - Thread-137] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:19:45 - Thread-137] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:19:45 - Thread-137] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:19:46 - Thread-137] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:19:50 - Thread-139] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476800390114
+[19:19:52 - Thread-139] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476800392184	Duration: 2070 ms	Simulated time 2069 ms	Ratio 0.9995169082125603
+[19:20:36 - Thread-138] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:20:36 - Thread-140] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:20:36 - Thread-140] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:20:36 - Thread-140] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:20:37 - Thread-140] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:20:37 - Thread-140] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:20:37 - Thread-140] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:20:38 - Thread-140] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:21:15 - Thread-141] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:21:15 - Thread-142] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:21:15 - Thread-142] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:21:15 - Thread-142] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:21:16 - Thread-142] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:21:16 - Thread-142] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:21:16 - Thread-142] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:21:17 - Thread-142] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:21:35 - Thread-144] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476800495741
+[19:21:36 - Thread-144] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476800496367	Duration: 626 ms	Simulated time 625 ms	Ratio 0.9984025559105432
+[19:21:36 - Thread-145] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476800496928
+[19:21:38 - Thread-145] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476800498331	Duration: 1403 ms	Simulated time 2028 ms	Ratio 1.4454739843193158
+[19:21:45 - Thread-143] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:21:45 - Thread-146] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:21:45 - Thread-146] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:21:45 - Thread-146] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:21:46 - Thread-146] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:21:46 - Thread-146] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:21:46 - Thread-146] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:21:47 - Thread-146] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:21:48 - Thread-148] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476800508588
+[19:21:50 - Thread-148] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476800510975	Duration: 2387 ms	Simulated time 2387 ms	Ratio 1.0
+[19:27:00 - Thread-147] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:27:00 - Thread-149] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:27:00 - Thread-149] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:27:01 - Thread-149] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:27:01 - Thread-149] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:27:01 - Thread-149] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:27:02 - Thread-149] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:27:02 - Thread-149] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:27:13 - Thread-151] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476800833625
+[19:27:15 - Thread-151] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476800835676	Duration: 2051 ms	Simulated time 2050 ms	Ratio 0.999512432959532
+[19:27:31 - Thread-150] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:27:31 - Thread-152] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:27:31 - Thread-152] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:27:32 - Thread-152] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:27:32 - Thread-152] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:27:32 - Thread-152] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:27:33 - Thread-152] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:27:33 - Thread-152] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:27:34 - Thread-154] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476800854287
+[19:27:38 - Thread-154] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476800858986	Duration: 4699 ms	Simulated time 4698 ms	Ratio 0.9997871887635668
+[19:38:42 - Thread-153] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:38:42 - Thread-155] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:38:42 - Thread-155] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:38:42 - Thread-155] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:38:43 - Thread-155] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:38:43 - Thread-155] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:38:43 - Thread-155] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:38:44 - Thread-155] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:38:48 - Thread-157] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476801528766
+[19:38:50 - Thread-157] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476801530527	Duration: 1761 ms	Simulated time 1761 ms	Ratio 1.0
+[19:39:53 - Thread-156] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:39:53 - Thread-158] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:39:53 - Thread-158] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:39:53 - Thread-158] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:39:54 - Thread-158] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:39:54 - Thread-158] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:39:54 - Thread-158] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:39:55 - Thread-158] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:39:56 - Thread-160] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476801596948
+[19:39:58 - Thread-160] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476801598902	Duration: 1954 ms	Simulated time 1954 ms	Ratio 1.0
+[19:40:31 - Thread-159] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:40:31 - Thread-161] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:40:31 - Thread-161] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:40:32 - Thread-161] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:40:32 - Thread-161] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:40:32 - Thread-161] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:40:33 - Thread-161] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:40:33 - Thread-161] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:41:17 - Thread-162] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:41:17 - Thread-163] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:41:17 - Thread-163] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:41:17 - Thread-163] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:41:18 - Thread-163] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:41:18 - Thread-163] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:41:18 - Thread-163] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:41:19 - Thread-163] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:41:20 - Thread-165] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476801680566
+[19:41:22 - Thread-165] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476801682889	Duration: 2323 ms	Simulated time 2322 ms	Ratio 0.9995695221696083
+[19:41:55 - Thread-164] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:41:56 - Thread-166] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:41:56 - Thread-166] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:41:56 - Thread-166] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:41:56 - Thread-166] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:41:57 - Thread-166] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:41:57 - Thread-166] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:41:57 - Thread-166] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:41:58 - Thread-168] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476801718666
+[19:42:01 - Thread-168] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476801721190	Duration: 2524 ms	Simulated time 2524 ms	Ratio 1.0
+[19:43:39 - Thread-167] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:43:39 - Thread-169] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:43:39 - Thread-169] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:43:40 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[19:43:40 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[19:43:40 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[19:43:40 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[19:43:40 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:121:20: error: invalid suffix "b6h" on integer constant
+[19:43:40 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:122:2: error: expected ‘,’ or ‘;’ before ‘printf’
+[19:43:40 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[19:43:40 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[19:43:40 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:43:40 - Thread-169] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:43:52 - Thread-169] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:43:52 - Thread-169] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:43:52 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[19:43:52 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[19:43:52 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[19:43:52 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[19:43:52 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:121:20: warning: initialization makes pointer from integer without a cast [enabled by default]
+[19:43:52 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:122:2: error: expected ‘,’ or ‘;’ before ‘printf’
+[19:43:52 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[19:43:52 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[19:43:52 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:43:52 - Thread-169] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:44:22 - Thread-169] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:44:23 - Thread-169] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:44:23 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[19:44:23 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[19:44:23 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[19:44:23 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[19:44:23 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:121:21: warning: initialization makes pointer from integer without a cast [enabled by default]
+[19:44:23 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:122:2: error: expected ‘,’ or ‘;’ before ‘printf’
+[19:44:23 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[19:44:23 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[19:44:23 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:44:23 - Thread-169] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:44:41 - Thread-169] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:44:41 - Thread-169] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:44:41 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[19:44:41 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[19:44:41 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[19:44:41 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[19:44:41 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:121:21: warning: character constant too long for its type [enabled by default]
+[19:44:41 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:121:21: warning: initialization makes pointer from integer without a cast [enabled by default]
+[19:44:41 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:122:2: error: expected ‘,’ or ‘;’ before ‘printf’
+[19:44:41 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[19:44:41 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[19:44:41 - Thread-169] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:44:41 - Thread-169] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:45:08 - Thread-169] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:45:08 - Thread-169] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:45:08 - Thread-169] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:45:09 - Thread-169] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:45:09 - Thread-169] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:45:09 - Thread-169] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:45:10 - Thread-169] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:45:11 - Thread-175] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476801911671
+[19:45:13 - Thread-175] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476801913807	Duration: 2137 ms	Simulated time 2136 ms	Ratio 0.9995320542817033
+[19:51:58 - Thread-174] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:51:58 - Thread-176] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:51:58 - Thread-176] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:51:58 - Thread-176] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:51:59 - Thread-176] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:51:59 - Thread-176] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:51:59 - Thread-176] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:52:00 - Thread-176] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:52:01 - Thread-178] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802321118
+[19:52:03 - Thread-178] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802323201	Duration: 2083 ms	Simulated time 2083 ms	Ratio 1.0
+[19:52:19 - Thread-177] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:52:19 - Thread-179] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:52:19 - Thread-179] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:52:20 - Thread-179] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:52:20 - Thread-179] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:52:20 - Thread-179] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:52:21 - Thread-179] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:52:21 - Thread-179] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:52:22 - Thread-181] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802342989
+[19:52:26 - Thread-181] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802346220	Duration: 3231 ms	Simulated time 3230 ms	Ratio 0.9996904982977406
+[19:52:36 - Thread-180] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:52:36 - Thread-182] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:52:36 - Thread-182] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:52:36 - Thread-182] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:52:37 - Thread-182] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:52:37 - Thread-182] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:52:38 - Thread-182] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:52:38 - Thread-182] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:52:39 - Thread-184] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802359034
+[19:52:41 - Thread-184] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802361183	Duration: 2149 ms	Simulated time 2148 ms	Ratio 0.9995346672871103
+[19:52:57 - Thread-183] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:52:57 - Thread-185] [AbstractRadioMedium.java:196] [FATAL] - Connection source turned off radio: org.contikios.cooja.mspmote.interfaces.Msp802154Radio@dbd46a4
+[19:52:57 - Thread-185] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:52:57 - Thread-185] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:52:57 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[19:52:57 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[19:52:57 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[19:52:57 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[19:52:57 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:124:49: error: subscripted value is neither array nor pointer nor vector
+[19:52:57 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[19:52:57 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[19:52:57 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:52:57 - Thread-185] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:53:03 - Thread-185] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:53:03 - Thread-185] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:53:03 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[19:53:03 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[19:53:03 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[19:53:03 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[19:53:03 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:124:49: error: subscripted value is neither array nor pointer nor vector
+[19:53:03 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[19:53:03 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:53:03 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[19:53:03 - Thread-185] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:53:17 - Thread-185] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:53:17 - Thread-185] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:53:17 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[19:53:17 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[19:53:17 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[19:53:17 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[19:53:17 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:124:56: error: subscripted value is neither array nor pointer nor vector
+[19:53:17 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[19:53:17 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[19:53:17 - Thread-185] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:53:17 - Thread-185] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:53:44 - Thread-185] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:53:44 - Thread-185] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:53:44 - Thread-185] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:53:45 - Thread-185] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:53:45 - Thread-185] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:53:45 - Thread-185] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:53:46 - Thread-185] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:53:47 - Thread-190] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802427900
+[19:56:03 - Thread-189] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:56:03 - Thread-190] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802563095	Duration: 135195 ms	Simulated time 135150 ms	Ratio 0.999667147453678
+[19:56:03 - Thread-191] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:56:03 - Thread-191] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:56:03 - Thread-191] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:56:04 - Thread-191] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:56:04 - Thread-191] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:56:04 - Thread-191] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:56:05 - Thread-191] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:56:05 - Thread-193] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802565154
+[19:56:05 - Thread-193] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802565803	Duration: 649 ms	Simulated time 648 ms	Ratio 0.9984591679506933
+[19:56:06 - Thread-194] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802566372
+[19:56:08 - Thread-194] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802568372	Duration: 2000 ms	Simulated time 2649 ms	Ratio 1.3245
+[19:56:44 - Thread-192] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:56:45 - Thread-195] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:56:45 - Thread-195] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:56:45 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[19:56:45 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[19:56:45 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[19:56:45 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[19:56:45 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:124:38: error: request for member ‘length’ in something not a structure or union
+[19:56:45 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[19:56:45 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[19:56:45 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:56:45 - Thread-195] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:57:27 - Thread-195] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:57:27 - Thread-195] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:57:27 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[19:57:27 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[19:57:27 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[19:57:27 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[19:57:27 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:124:46: error: expected ‘)’ before ‘;’ token
+[19:57:27 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:142:1: error: expected ‘;’ before ‘}’ token
+[19:57:27 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[19:57:27 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[19:57:27 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:57:27 - Thread-195] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:57:29 - Thread-195] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:57:29 - Thread-195] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:57:29 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[19:57:29 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[19:57:29 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[19:57:29 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[19:57:29 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:124:46: error: expected ‘)’ before ‘;’ token
+[19:57:29 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:142:1: error: expected ‘;’ before ‘}’ token
+[19:57:29 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[19:57:29 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[19:57:29 - Thread-195] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:57:29 - Thread-195] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:57:35 - Thread-195] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:57:35 - Thread-195] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:57:36 - Thread-195] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:57:36 - Thread-195] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:57:36 - Thread-195] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:57:37 - Thread-195] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:57:37 - Thread-195] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:57:39 - Thread-200] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802659167
+[19:57:41 - Thread-200] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802661515	Duration: 2348 ms	Simulated time 2347 ms	Ratio 0.9995741056218058
+[19:57:51 - Thread-199] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:57:51 - Thread-201] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:57:51 - Thread-201] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:57:52 - Thread-201] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:57:52 - Thread-201] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:57:53 - Thread-201] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:57:53 - Thread-201] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:57:53 - Thread-201] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:57:55 - Thread-203] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802675293
+[19:57:57 - Thread-203] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802677030	Duration: 1737 ms	Simulated time 1737 ms	Ratio 1.0
+[19:58:33 - Thread-204] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802713124
+[19:58:37 - Thread-202] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:58:37 - Thread-204] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802717468	Duration: 4344 ms	Simulated time 6079 ms	Ratio 1.399401473296501
+[19:58:37 - Thread-205] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:58:37 - Thread-205] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:58:37 - Thread-205] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:58:38 - Thread-205] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:58:38 - Thread-205] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:58:39 - Thread-205] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:58:39 - Thread-205] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:58:39 - Thread-207] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802719419
+[19:58:39 - Thread-207] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802719652	Duration: 233 ms	Simulated time 233 ms	Ratio 1.0
+[19:58:51 - Thread-206] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:58:51 - Thread-208] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:58:51 - Thread-208] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:58:52 - Thread-208] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[19:58:52 - Thread-208] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:58:52 - Thread-208] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[19:58:53 - Thread-208] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:58:53 - Thread-208] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:58:53 - Thread-210] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802733899
+[19:58:55 - Thread-210] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802735892	Duration: 1993 ms	Simulated time 1993 ms	Ratio 1.0
+[20:00:05 - Thread-209] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:00:05 - Thread-211] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:00:05 - Thread-211] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:00:05 - Thread-211] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[20:00:05 - Thread-211] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[20:00:05 - Thread-211] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[20:00:05 - Thread-211] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[20:00:05 - Thread-211] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:121:35: error: ‘driver’ undeclared (first use in this function)
+[20:00:05 - Thread-211] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:121:35: note: each undeclared identifier is reported only once for each function it appears in
+[20:00:05 - Thread-211] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[20:00:05 - Thread-211] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[20:00:05 - Thread-211] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[20:00:05 - Thread-211] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[20:00:36 - Thread-211] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:00:36 - Thread-211] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:00:37 - Thread-211] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:00:37 - Thread-211] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:00:38 - Thread-211] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:00:38 - Thread-211] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:00:38 - Thread-211] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:00:40 - Thread-214] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802840385
+[20:00:43 - Thread-214] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802843433	Duration: 3048 ms	Simulated time 3048 ms	Ratio 1.0
+[20:01:54 - Thread-213] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:01:54 - Thread-215] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:01:54 - Thread-215] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:01:55 - Thread-215] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:01:55 - Thread-215] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:01:55 - Thread-215] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:01:56 - Thread-215] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:01:56 - Thread-215] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:01:57 - Thread-217] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802917071
+[20:01:58 - Thread-217] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802918978	Duration: 1907 ms	Simulated time 1907 ms	Ratio 1.0
+[20:02:39 - Thread-216] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:02:39 - Thread-218] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:02:39 - Thread-218] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:02:39 - Thread-218] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:02:40 - Thread-218] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:02:40 - Thread-218] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:02:40 - Thread-218] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:02:41 - Thread-218] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:02:41 - Thread-220] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476802961566
+[20:02:43 - Thread-220] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476802963291	Duration: 1725 ms	Simulated time 1725 ms	Ratio 1.0
+[20:03:45 - Thread-219] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:03:45 - Thread-221] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:03:45 - Thread-221] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:03:45 - Thread-221] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:03:46 - Thread-221] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:03:46 - Thread-221] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:03:47 - Thread-221] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:03:47 - Thread-221] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:03:50 - Thread-223] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803030067
+[20:03:52 - Thread-223] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803032128	Duration: 2061 ms	Simulated time 2061 ms	Ratio 1.0
+[20:04:14 - Thread-222] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:04:14 - Thread-224] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:04:14 - Thread-224] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:04:14 - Thread-224] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[20:04:14 - Thread-224] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[20:04:14 - Thread-224] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[20:04:14 - Thread-224] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[20:04:14 - Thread-224] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:123:34: error: subscripted value is neither array nor pointer nor vector
+[20:04:14 - Thread-224] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[20:04:14 - Thread-224] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[20:04:14 - Thread-224] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[20:04:14 - Thread-224] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[20:04:36 - Thread-224] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:04:36 - Thread-224] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:04:36 - Thread-224] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:04:37 - Thread-224] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:04:37 - Thread-224] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:04:37 - Thread-224] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:04:38 - Thread-224] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:04:42 - Thread-227] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803082228
+[20:04:44 - Thread-227] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803084215	Duration: 1987 ms	Simulated time 1986 ms	Ratio 0.9994967287367891
+[20:05:55 - Thread-226] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:05:55 - Thread-228] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:05:55 - Thread-228] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:05:55 - Thread-228] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:05:56 - Thread-228] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:05:56 - Thread-228] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:05:56 - Thread-228] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:05:57 - Thread-228] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:05:59 - Thread-230] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803159941
+[20:06:01 - Thread-230] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803161735	Duration: 1794 ms	Simulated time 1794 ms	Ratio 1.0
+[20:07:34 - Thread-229] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:07:34 - Thread-231] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:07:34 - Thread-231] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:07:34 - Thread-231] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:07:35 - Thread-231] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:07:35 - Thread-231] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:07:36 - Thread-231] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:07:36 - Thread-231] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:08:45 - Thread-232] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:08:45 - Thread-233] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:08:45 - Thread-233] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:08:45 - Thread-233] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[20:08:45 - Thread-233] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[20:08:45 - Thread-233] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[20:08:45 - Thread-233] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_rdcmac’:
+[20:08:45 - Thread-233] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:123:2: error: too few arguments to function ‘snprintf’
+[20:08:45 - Thread-233] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[20:08:45 - Thread-233] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[20:08:45 - Thread-233] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[20:08:45 - Thread-233] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[20:09:28 - Thread-233] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:09:28 - Thread-233] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:09:28 - Thread-233] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:09:28 - Thread-233] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:09:29 - Thread-233] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:09:29 - Thread-233] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:09:29 - Thread-233] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:09:36 - Thread-236] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803376241
+[20:09:38 - Thread-236] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803378284	Duration: 2043 ms	Simulated time 2043 ms	Ratio 1.0
+[20:10:45 - Thread-235] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:10:45 - Thread-237] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:10:45 - Thread-237] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:10:45 - Thread-237] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:10:46 - Thread-237] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:10:46 - Thread-237] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:10:46 - Thread-237] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:10:47 - Thread-237] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:10:51 - Thread-239] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803451211
+[20:10:53 - Thread-239] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803453134	Duration: 1923 ms	Simulated time 1923 ms	Ratio 1.0
+[20:11:47 - Thread-238] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:11:47 - Thread-240] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:11:47 - Thread-240] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:11:48 - Thread-240] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:11:48 - Thread-240] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:11:48 - Thread-240] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:11:49 - Thread-240] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:11:49 - Thread-240] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:11:53 - Thread-242] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803513278
+[20:11:55 - Thread-242] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803515301	Duration: 2023 ms	Simulated time 2023 ms	Ratio 1.0
+[20:12:25 - Thread-243] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803545390
+[20:12:26 - Thread-241] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:12:26 - Thread-243] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803546246	Duration: 856 ms	Simulated time 2874 ms	Ratio 3.357476635514019
+[20:12:26 - Thread-244] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:12:26 - Thread-244] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:12:26 - Thread-244] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:12:27 - Thread-244] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:12:27 - Thread-244] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:12:27 - Thread-244] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:12:28 - Thread-244] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:12:28 - Thread-246] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803548125
+[20:12:35 - Thread-246] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803555707	Duration: 7582 ms	Simulated time 7581 ms	Ratio 0.999868108678449
+[20:12:49 - Thread-245] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:12:49 - Thread-247] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:12:50 - Thread-247] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:12:50 - Thread-247] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:12:50 - Thread-247] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:12:51 - Thread-247] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:12:51 - Thread-247] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:12:51 - Thread-247] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:12:54 - Thread-249] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803574385
+[20:12:56 - Thread-249] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803576285	Duration: 1900 ms	Simulated time 1899 ms	Ratio 0.9994736842105263
+[20:13:16 - Thread-248] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:13:16 - Thread-250] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:13:16 - Thread-250] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:13:17 - Thread-250] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:13:17 - Thread-250] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:13:17 - Thread-250] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:13:18 - Thread-250] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:13:18 - Thread-250] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:13:40 - Thread-251] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:13:40 - Thread-252] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:13:40 - Thread-252] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:13:40 - Thread-252] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:13:41 - Thread-252] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:13:41 - Thread-252] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:13:41 - Thread-252] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:13:42 - Thread-252] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:13:42 - Thread-254] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803622921
+[20:13:45 - Thread-254] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803625087	Duration: 2166 ms	Simulated time 2166 ms	Ratio 1.0
+[20:15:28 - Thread-253] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:15:29 - Thread-255] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:15:29 - Thread-255] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:15:29 - Thread-255] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:15:29 - Thread-255] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:15:30 - Thread-255] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:15:30 - Thread-255] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:15:30 - Thread-255] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:15:31 - Thread-257] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803731516
+[20:15:33 - Thread-257] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803733399	Duration: 1883 ms	Simulated time 1882 ms	Ratio 0.9994689325544344
+[20:16:04 - Thread-256] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:16:04 - Thread-258] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:16:04 - Thread-258] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:16:05 - Thread-258] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:16:05 - Thread-258] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:16:05 - Thread-258] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:16:06 - Thread-258] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:16:06 - Thread-258] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:16:07 - Thread-260] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803767231
+[20:16:09 - Thread-260] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803769189	Duration: 1958 ms	Simulated time 1957 ms	Ratio 0.9994892747701737
+[20:16:51 - Thread-259] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:16:51 - Thread-261] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:16:51 - Thread-261] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:16:52 - Thread-261] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:16:52 - Thread-261] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:16:52 - Thread-261] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:16:53 - Thread-261] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:16:53 - Thread-261] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:16:54 - Thread-263] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803814192
+[20:16:55 - Thread-263] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803815925	Duration: 1733 ms	Simulated time 1732 ms	Ratio 0.9994229659549914
+[20:17:19 - Thread-262] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:17:19 - Thread-264] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:17:19 - Thread-264] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:17:19 - Thread-264] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:17:20 - Thread-264] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:17:20 - Thread-264] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:17:20 - Thread-264] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:17:21 - Thread-264] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:17:21 - Thread-266] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803841698
+[20:17:23 - Thread-266] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803843587	Duration: 1889 ms	Simulated time 1889 ms	Ratio 1.0
+[20:17:41 - Thread-265] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:17:42 - Thread-267] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:17:42 - Thread-267] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:17:42 - Thread-267] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:17:42 - Thread-267] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:17:43 - Thread-267] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:17:43 - Thread-267] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:17:43 - Thread-267] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:17:44 - Thread-269] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803864905
+[20:17:46 - Thread-269] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803866875	Duration: 1970 ms	Simulated time 1970 ms	Ratio 1.0
+[20:17:56 - Thread-268] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:17:56 - Thread-270] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:17:56 - Thread-270] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:17:56 - Thread-270] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:17:56 - Thread-270] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:17:57 - Thread-270] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:17:57 - Thread-270] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:17:57 - Thread-270] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:17:59 - Thread-272] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803879140
+[20:18:01 - Thread-272] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803881741	Duration: 2601 ms	Simulated time 2601 ms	Ratio 1.0
+[20:19:01 - Thread-271] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:19:01 - Thread-273] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:19:01 - Thread-273] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:19:01 - Thread-273] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:19:02 - Thread-273] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:19:02 - Thread-273] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:19:02 - Thread-273] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:19:03 - Thread-273] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:19:04 - Thread-274] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:19:04 - Thread-275] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:19:04 - Thread-275] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:19:05 - Thread-275] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:19:05 - Thread-275] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:19:05 - Thread-275] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:19:05 - Thread-275] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:19:06 - Thread-275] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:19:06 - Thread-277] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476803946793
+[20:19:08 - Thread-277] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476803948892	Duration: 2100 ms	Simulated time 2099 ms	Ratio 0.9995238095238095
+[20:22:24 - Thread-276] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:22:24 - Thread-278] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:22:24 - Thread-278] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:22:24 - Thread-278] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:22:25 - Thread-278] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:22:25 - Thread-278] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:22:25 - Thread-278] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:22:25 - Thread-278] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:22:29 - Thread-280] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476804149258
+[20:22:31 - Thread-280] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476804151358	Duration: 2100 ms	Simulated time 2100 ms	Ratio 1.0
+[20:22:49 - Thread-279] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:22:49 - Thread-281] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:22:49 - Thread-281] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:22:50 - Thread-281] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:22:50 - Thread-281] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:22:50 - Thread-281] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:22:51 - Thread-281] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:22:51 - Thread-281] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:23:44 - Thread-282] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:23:44 - Thread-283] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:23:44 - Thread-283] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:23:45 - Thread-283] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:23:45 - Thread-283] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:23:46 - Thread-283] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:23:46 - Thread-283] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:23:46 - Thread-283] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:23:47 - Thread-285] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476804227815
+[20:23:50 - Thread-285] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476804230211	Duration: 2396 ms	Simulated time 2396 ms	Ratio 1.0
+[20:24:00 - Thread-286] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476804240896
+[20:24:02 - Thread-286] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476804242560	Duration: 1664 ms	Simulated time 4060 ms	Ratio 2.4399038461538463
+[20:24:03 - Thread-287] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476804243984
+[20:24:04 - Thread-287] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476804244555	Duration: 571 ms	Simulated time 4631 ms	Ratio 8.110332749562172
+[20:24:36 - Thread-284] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:24:36 - Thread-288] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:24:36 - Thread-288] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:24:37 - Thread-288] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:24:37 - Thread-288] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:24:37 - Thread-288] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:24:37 - Thread-288] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:24:38 - Thread-288] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:24:52 - Thread-289] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:24:52 - Thread-290] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:24:52 - Thread-290] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:24:53 - Thread-290] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:24:53 - Thread-290] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:24:54 - Thread-290] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:24:54 - Thread-290] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:24:54 - Thread-290] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:24:55 - Thread-292] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476804295525
+[20:24:58 - Thread-292] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476804298027	Duration: 2502 ms	Simulated time 2502 ms	Ratio 1.0
