@@ -98,6 +98,12 @@ void set_cc2420_txpower(custom_radioChannel_tx_power){
 	cc2420_set_txpower(radioChannel_tx_power);
 	printf("CC2420 Radio TX power %d\n", cc2420_get_txpower());
 }
+/*
+The Contiki RDC drivers are called:
+ contikimac_driver
+ cxmac_driver
+ nullrdc_driver
+*/
 void set_cc2420_rdcmac(){
 	#define NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE 16
 	#define NETSTACK_CONF_RDC nullrdc_driver
