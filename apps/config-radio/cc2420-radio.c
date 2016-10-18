@@ -78,7 +78,8 @@
 */ 
 uint8_t radioChannel = 26;  // default channel
 uint8_t rdc_channel_check_rate = 8;	// default in MHz
-
+char *rdc_driver = "nullrdc_driver";
+char *mac_driver = "nullmac_driver";
 //uint8_t radioChannel_tx_power = 0; // custom power
 uint8_t radioChannel_tx_power = 31; // default power
 
