@@ -126,6 +126,6 @@ void set_cc2420_rdcmac(custom_rdc_channel_check_rate, custom_rdc_driver, custom_
 	#define NETSTACK_CONF_RDC *rdc_driver
 	#define NETSTACK_CONF_MAC *mac_driver
 
-	printf("CC2420 Radio Channel check rate %d\n MHz", NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE);
+	printf("CC2420 Radio Channel check rate %d MHz\n ", NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE);
 }
 /* -------- End Set Radio Powers ------------ */
