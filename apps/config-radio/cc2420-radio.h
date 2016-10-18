@@ -80,5 +80,6 @@
 void set_cc2420_channel();
 void set_cc2420_txpower();
 void set_cc2420_rdcmac();
+void enable_rdc();
 
 #endif /* CC2420_RADIO_CONFIG_H */
