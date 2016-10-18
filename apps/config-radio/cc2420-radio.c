@@ -114,6 +114,7 @@ void set_cc2420_rdcmac(custom_rdc_channel_check_rate, custom_rdc_driver, custom_
 	#undef NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE
 	#undef NETSTACK_CONF_RDC
 	#undef NETSTACK_CONF_MAC
+
 	if(!custom_rdc_channel_check_rate == 0){
 		rdc_channel_check_rate = custom_rdc_channel_check_rate;
 	}if(!custom_rdc_driver == "0"){
@@ -121,6 +122,7 @@ void set_cc2420_rdcmac(custom_rdc_channel_check_rate, custom_rdc_driver, custom_
 	}if(!custom_mac_driver == "0"){
 		*mac_driver = custom_mac_driver;
 	}
+	
 	/* set new default settings for duty cycling */
 	#define NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE rdc_channel_check_rate
 	#define NETSTACK_CONF_RDC *rdc_driver
