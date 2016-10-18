@@ -110,11 +110,12 @@ The Contiki RDC drivers are called:
 */
 
 void set_cc2420_rdcmac(rdc_channel_check_rate, rdc_driver, mac_driver){
-	
+	/* first remove existing settings from z1 platform configuration */
 	#undef NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE
 	#undef NETSTACK_CONF_RDC
 	#undef NETSTACK_CONF_MAC
 
+	/* set new default settings for duty cycling */
 	#define NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE rdc_channel_check_rate
 	#define NETSTACK_CONF_RDC *rdc_driver
 	#define NETSTACK_CONF_MAC *mac_driver
