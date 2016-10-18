@@ -99,6 +99,8 @@ void set_cc2420_txpower(custom_radioChannel_tx_power){
 	printf("CC2420 Radio TX power %d\n", cc2420_get_txpower());
 }
 void set_cc2420_rdcmac(){
-	
+	#define NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE 16
+	#define NETSTACK_CONF_RDC nullrdc_driver
+	#define NETSTACK_CONF_MAC nullmac_driver
 }
 /* -------- End Set Radio Powers ------------ */
