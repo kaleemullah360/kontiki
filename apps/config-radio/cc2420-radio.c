@@ -78,7 +78,7 @@
 */ 
 uint8_t radioChannel = 26;  // default channel
 uint8_t rdc_channel_check_rate = 8;	// default in MHz
-char *rdc_driver = "nullrdc_driver";
+char *rdc_driver = "nullrdc_driver";	// default
 char *mac_driver = "nullmac_driver";
 //uint8_t radioChannel_tx_power = 0; // custom power
 uint8_t radioChannel_tx_power = 31; // default power
@@ -101,15 +101,18 @@ void set_cc2420_txpower(custom_radioChannel_tx_power){
 	cc2420_set_txpower(radioChannel_tx_power);
 	printf("CC2420 Radio TX power %d\n", cc2420_get_txpower());
 }
+
 /*
 The Contiki RDC drivers are called:
  contikimac_driver
  cxmac_driver
  nullrdc_driver
 */
-void set_cc2420_rdcmac(){
+
+void set_cc2420_rdcmac(rdc_channel_check_rate, rdc_driver, mac_driver){
+
 	#define NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE rdc_channel_check_rate
-	#define NETSTACK_CONF_RDC nullrdc_driver
-	#define NETSTACK_CONF_MAC nullmac_driver
+	#define NETSTACK_CONF_RDC *rdc_driver
+	#define NETSTACK_CONF_MAC *mac_driver
 }
 /* -------- End Set Radio Powers ------------ */
