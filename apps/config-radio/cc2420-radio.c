@@ -110,6 +110,7 @@ The Contiki RDC drivers are called:
 */
 
 void enable_rdc(){
+	
 	#undef NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE
 	#undef NETSTACK_CONF_RDC
 	#undef NETSTACK_CONF_MAC

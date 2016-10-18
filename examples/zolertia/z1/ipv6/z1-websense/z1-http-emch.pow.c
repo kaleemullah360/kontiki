@@ -122,11 +122,7 @@ PROCESS_THREAD(web_sense_process, ev, data)
   PROCESS_BEGIN();
 	set_cc2420_txpower(0);
 	set_cc2420_channel(0);
-  int custom_rdc_channel_check_rate=12;
-  char *custom_rdc_driver="0";
-  char *custom_mac_driver="custom_mac_driver";
-
-  set_cc2420_rdcmac(custom_rdc_channel_check_rate, custom_rdc_driver, custom_mac_driver);
+  enable_rdc();
   
 
   etimer_set(&timer, CLOCK_SECOND * 2);
