@@ -109,17 +109,23 @@ The Contiki RDC drivers are called:
  nullrdc_driver
 */
 
-void set_cc2420_rdcmac(rdc_channel_check_rate, rdc_driver, mac_driver){
+void set_cc2420_rdcmac(custom_rdc_channel_check_rate, custom_rdc_driver, custom_mac_driver){
 	/* first remove existing settings from z1 platform configuration */
 	#undef NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE
 	#undef NETSTACK_CONF_RDC
 	#undef NETSTACK_CONF_MAC
-
+	if(!custom_rdc_channel_check_rate == 0){
+		rdc_channel_check_rate = custom_rdc_channel_check_rate;
+	}if(!custom_rdc_driver == "0"){
+		rdc_driver = custom_rdc_driver;
+	}if(!custom_mac_driver == "0"){
+		mac_driver = custom_mac_driver;
+	}
 	/* set new default settings for duty cycling */
 	#define NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE rdc_channel_check_rate
 	#define NETSTACK_CONF_RDC *rdc_driver
 	#define NETSTACK_CONF_MAC *mac_driver
 
-	printf("%x\n", NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE);
+	printf("CC2420 Radio Channel check rate %d\n MHz", NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE);
 }
 /* -------- End Set Radio Powers ------------ */
