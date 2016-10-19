@@ -57,13 +57,13 @@
 /* Disabling RDC and CSMA for demo purposes. Core updates often
    require more memory. */
 /* For projects, optimize memory and enable RDC and CSMA again.
-*/
+
 #undef NETSTACK_CONF_RDC
 #define NETSTACK_CONF_RDC              nullrdc_driver
 
 #undef NETSTACK_CONF_MAC
 #define NETSTACK_CONF_MAC     nullmac_driver
-
+*/
 
 
 /* Disabling TCP on CoAP nodes. */
@@ -72,7 +72,7 @@
 
 /* Increase rpl-border-router IP-buffer when using more than 64. */
 #undef REST_MAX_CHUNK_SIZE
-#define REST_MAX_CHUNK_SIZE            256 //<-- This // 48 //change payload size
+#define REST_MAX_CHUNK_SIZE            200 //<-- This // 48 //change payload size
 
 /* Estimate your header size, especially when using Proxy-Uri. */
 /*
