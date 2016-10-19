@@ -77,9 +77,9 @@
 * |-37.9170   |  0     |0.0002    |
 */ 
 uint8_t radioChannel = 26;  // default channel
-uint8_t rdc_channel_check_rate = 8;	// default in MHz
-char *rdc_driver = "contikirdc_driver";	// default
-char *mac_driver = "contikimac_driver";
+uint8_t rdc_channel_check_rate = 4;	// default in MHz
+char *rdc_driver = "nullrdc_driver";	// default
+char *mac_driver = "nullmac_driver";
 //uint8_t radioChannel_tx_power = 0; // custom power
 uint8_t radioChannel_tx_power = 31; // default power
 
@@ -119,7 +119,7 @@ void enable_rdc(){
 	#define NETSTACK_CONF_RDC *rdc_driver
 	#define NETSTACK_CONF_MAC *mac_driver
 
-	printf("CC2420 Radio Channel check rate [ %d MHz ]\n", NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE);
+	printf("CC2420 Radio Channel check rate [ %d Hz ]\n", NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE);
 	printf("CC2420 Radio RDC Driver [ %s ]\n", (char*)rdc_driver);
 	printf("CC2420 Radio MAC Driver [ %s ]\n", (char*)mac_driver);
 }
@@ -150,7 +150,7 @@ void set_cc2420_rdcmac(custom_rdc_channel_check_rate, custom_rdc_driver, custom_
 	#define NETSTACK_CONF_RDC *rdc_driver
 	#define NETSTACK_CONF_MAC *mac_driver
 
-	printf("CC2420 Radio Channel check rate %d MHz\n", NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE);
+	printf("CC2420 Radio Channel check rate %d Hz\n", NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE);
 	printf("CC2420 Radio RDC Driver %s\n", (char*)rdc_driver);
 	printf("CC2420 Radio MAC Driver %s\n", (char*)mac_driver);
 }
