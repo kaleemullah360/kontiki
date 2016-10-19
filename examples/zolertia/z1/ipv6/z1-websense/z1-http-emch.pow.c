@@ -122,7 +122,7 @@ PROCESS_THREAD(web_sense_process, ev, data)
   PROCESS_BEGIN();
 	set_cc2420_txpower(0);
 	set_cc2420_channel(0);
-  enable_rdc();
+  enable_rdc(1);
   
 
   etimer_set(&timer, CLOCK_SECOND * 2);
