@@ -107,9 +107,10 @@ The Contiki RDC drivers are called:
 
 
 void print_netstats() {
-printf("CC2420: TX [%u], Channel [%u], Channel check rate [%lu] Hz, MAC [%s], RDC [%s]\n", 
-	cc2420_get_txpower(), cc2420_get_channel(), 
-	CLOCK_SECOND / (NETSTACK_RDC.channel_check_interval() == 0 ? 1 : NETSTACK_RDC.channel_check_interval()), 
-	NETSTACK_MAC.name, NETSTACK_RDC.name);
+	printf("CC2420: %s %s, channel check rate %lu Hz, radio channel %u, TX %u\n",
+	       NETSTACK_MAC.name, NETSTACK_RDC.name,
+	       CLOCK_SECOND / (NETSTACK_RDC.channel_check_interval() == 0 ? 1:
+			       NETSTACK_RDC.channel_check_interval()),
+	       cc2420_get_channel(), cc2420_get_txpower());
 }
 /* -------- End Set Radio Powers ------------ */
