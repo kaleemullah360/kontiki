@@ -1,298 +1,118 @@
-[12:19:08 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[12:19:08 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[12:19:08 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
-[12:19:12 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:19:12 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:19:12 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[12:19:13 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[12:19:13 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[12:19:14 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:19:59 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:20:00 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:20:00 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
-[12:20:14 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
-[12:20:24 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476861624107
-[12:20:27 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476861627104	Duration: 2997 ms	Simulated time 2898 ms	Ratio 0.9669669669669669
-[12:21:46 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:21:46 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:21:46 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[12:21:47 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[12:21:59 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[12:22:12 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[12:22:12 - Thread-5] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:22:12 - Thread-5] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:22:12 - Thread-5] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
-[12:22:14 - Thread-5] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[12:22:14 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[12:22:14 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
-[12:22:15 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[12:22:15 - Thread-5] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[12:22:16 - Thread-5] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:22:17 - Thread-7] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476861737187
-[12:22:21 - Thread-7] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476861741785	Duration: 4598 ms	Simulated time 4598 ms	Ratio 1.0
-[12:24:09 - Thread-6] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[12:24:09 - Thread-8] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:24:09 - Thread-8] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘enable_rdc’:
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:45: error: ‘contikimac_driver’ undeclared (first use in this function)
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:45: note: each undeclared identifier is reported only once for each function it appears in
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:24:09 - Thread-8] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:24:09 - Thread-8] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘enable_rdc’:
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:45: error: ‘contikimac_driver’ undeclared (first use in this function)
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:45: note: each undeclared identifier is reported only once for each function it appears in
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:24:09 - Thread-8] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:25:05 - Thread-8] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:25:05 - Thread-8] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:25:06 - Thread-8] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
-[12:25:06 - Thread-8] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[12:25:06 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[12:25:07 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
-[12:25:07 - Thread-8] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[12:25:07 - Thread-8] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[12:25:08 - Thread-8] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:25:08 - Thread-12] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476861908913
-[12:25:12 - Thread-12] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476861912515	Duration: 3603 ms	Simulated time 3601 ms	Ratio 0.9994449070219261
-[12:25:49 - Thread-11] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[12:25:49 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:25:49 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:25:49 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:25:49 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[12:25:49 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[12:25:49 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘enable_rdc’:
-[12:25:49 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:45: error: ‘nullrdc_driver’ undeclared (first use in this function)
-[12:25:49 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:45: note: each undeclared identifier is reported only once for each function it appears in
-[12:25:49 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:25:49 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:25:49 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:25:49 - Thread-13] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:26:29 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:26:29 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:26:29 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:26:29 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[12:26:29 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[12:26:29 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘enable_rdc’:
-[12:26:29 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:45: error: ‘nullrdc_driver’ undeclared (first use in this function)
-[12:26:29 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:45: note: each undeclared identifier is reported only once for each function it appears in
-[12:26:29 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:26:29 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:26:29 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:26:29 - Thread-13] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:27:24 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:27:24 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:27:24 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:27:24 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[12:27:24 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[12:27:24 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘enable_rdc’:
-[12:27:24 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:46: error: ‘nullrdc_driver’ undeclared (first use in this function)
-[12:27:24 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:46: note: each undeclared identifier is reported only once for each function it appears in
-[12:27:24 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:27:24 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:27:24 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:27:24 - Thread-13] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:27:39 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:27:39 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:27:39 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:27:39 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[12:27:39 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[12:27:39 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘enable_rdc’:
-[12:27:39 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:45: error: ‘nullrdc_driver’ undeclared (first use in this function)
-[12:27:39 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:45: note: each undeclared identifier is reported only once for each function it appears in
-[12:27:39 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:27:39 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:27:39 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:27:39 - Thread-13] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:28:05 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:28:05 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:28:06 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
-[12:28:06 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[12:28:06 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[12:28:07 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
-[12:28:07 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[12:28:08 - Thread-13] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[12:28:08 - Thread-13] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:28:35 - Thread-18] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[12:28:35 - Thread-19] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:28:35 - Thread-19] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:28:35 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:28:35 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[12:28:35 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[12:28:35 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘enable_rdc’:
-[12:28:35 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:45: error: invalid type argument of unary ‘*’ (have ‘int’)
-[12:28:35 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:28:35 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:28:35 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:28:35 - Thread-19] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:28:39 - Thread-19] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:28:39 - Thread-19] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:28:39 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:28:39 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[12:28:39 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[12:28:39 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘enable_rdc’:
-[12:28:39 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:129:45: error: invalid type argument of unary ‘*’ (have ‘int’)
-[12:28:39 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:28:39 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:28:39 - Thread-19] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:28:39 - Thread-19] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:29:24 - Thread-19] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:29:24 - Thread-19] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:29:25 - Thread-19] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
-[12:29:25 - Thread-19] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[12:29:25 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[12:29:26 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
-[12:29:26 - Thread-19] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[12:29:26 - Thread-19] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[12:29:27 - Thread-19] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:29:29 - Thread-23] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476862169033
-[12:29:38 - Thread-23] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476862178330	Duration: 9297 ms	Simulated time 9296 ms	Ratio 0.9998924384209961
-[12:37:06 - Thread-22] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[12:37:06 - Thread-24] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:37:06 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:37:06 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘print_netstack’:
-[12:37:06 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:172:21: error: request for member ‘name’ in something not a structure or union
-[12:37:06 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:172:40: error: request for member ‘name’ in something not a structure or union
-[12:37:06 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:173:37: error: request for member ‘channel_check_interval’ in something not a structure or union
-[12:37:06 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:174:23: error: request for member ‘channel_check_interval’ in something not a structure or union
-[12:37:06 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:175:9: error: ‘RF_CHANNEL’ undeclared (first use in this function)
-[12:37:06 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:175:9: note: each undeclared identifier is reported only once for each function it appears in
-[12:37:06 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:37:06 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:37:06 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:37:06 - Thread-24] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:37:33 - Thread-24] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:37:33 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘print_netstack’:
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:172:21: error: request for member ‘name’ in something not a structure or union
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:172:40: error: request for member ‘name’ in something not a structure or union
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:173:37: error: request for member ‘channel_check_interval’ in something not a structure or union
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:174:23: error: request for member ‘channel_check_interval’ in something not a structure or union
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:175:9: error: ‘RF_CHANNEL’ undeclared (first use in this function)
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:175:9: note: each undeclared identifier is reported only once for each function it appears in
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:37:33 - Thread-24] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:37:33 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘print_netstack’:
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:172:21: error: request for member ‘name’ in something not a structure or union
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:172:40: error: request for member ‘name’ in something not a structure or union
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:173:37: error: request for member ‘channel_check_interval’ in something not a structure or union
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:174:23: error: request for member ‘channel_check_interval’ in something not a structure or union
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:175:9: error: ‘RF_CHANNEL’ undeclared (first use in this function)
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:175:9: note: each undeclared identifier is reported only once for each function it appears in
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:37:33 - Thread-24] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:38:37 - Thread-24] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:38:37 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:38:37 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘print_netstack’:
-[12:38:37 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:174:21: error: request for member ‘name’ in something not a structure or union
-[12:38:37 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:174:40: error: request for member ‘name’ in something not a structure or union
-[12:38:37 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:175:37: error: request for member ‘channel_check_interval’ in something not a structure or union
-[12:38:37 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:176:23: error: request for member ‘channel_check_interval’ in something not a structure or union
-[12:38:37 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:177:9: error: ‘RF_CHANNEL’ undeclared (first use in this function)
-[12:38:37 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:177:9: note: each undeclared identifier is reported only once for each function it appears in
-[12:38:37 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:38:37 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:38:37 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:38:37 - Thread-24] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:38:40 - Thread-24] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:38:40 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:38:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘print_netstack’:
-[12:38:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:174:21: error: request for member ‘name’ in something not a structure or union
-[12:38:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:174:40: error: request for member ‘name’ in something not a structure or union
-[12:38:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:175:37: error: request for member ‘channel_check_interval’ in something not a structure or union
-[12:38:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:176:23: error: request for member ‘channel_check_interval’ in something not a structure or union
-[12:38:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:177:9: error: ‘RF_CHANNEL’ undeclared (first use in this function)
-[12:38:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:177:9: note: each undeclared identifier is reported only once for each function it appears in
-[12:38:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:38:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:38:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:38:40 - Thread-24] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:39:40 - Thread-24] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:39:40 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:39:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘print_netstack’:
-[12:39:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:174:21: error: request for member ‘name’ in something not a structure or union
-[12:39:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:174:40: error: request for member ‘name’ in something not a structure or union
-[12:39:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:175:37: error: request for member ‘channel_check_interval’ in something not a structure or union
-[12:39:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:176:23: error: request for member ‘channel_check_interval’ in something not a structure or union
-[12:39:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:177:9: error: ‘RF_CHANNEL’ undeclared (first use in this function)
-[12:39:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:177:9: note: each undeclared identifier is reported only once for each function it appears in
-[12:39:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:39:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:39:40 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:39:40 - Thread-24] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:46:45 - Thread-24] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:46:45 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:46:45 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:46:45 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[12:46:45 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[12:46:45 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘enable_rdc’:
-[12:46:45 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:123:62: error: request for member ‘name’ in something not a structure or union
-[12:46:45 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:46:45 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:46:45 - Thread-24] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:46:45 - Thread-24] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
-[12:49:51 - Thread-24] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:49:51 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:49:52 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
-[12:49:52 - Thread-24] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[12:49:52 - Thread-24] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[12:49:53 - Thread-24] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
-[12:49:53 - Thread-24] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[12:49:53 - Thread-24] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[12:49:54 - Thread-24] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:49:55 - Thread-33] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476863395313
-[12:50:07 - Thread-33] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476863407382	Duration: 12069 ms	Simulated time 12068 ms	Ratio 0.9999171430938769
-[12:51:55 - Thread-32] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[12:51:55 - Thread-34] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:51:55 - Thread-34] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:51:55 - Thread-34] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
-[12:51:56 - Thread-34] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[12:51:56 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[12:51:56 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
-[12:51:57 - Thread-34] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[12:51:57 - Thread-34] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[12:51:58 - Thread-34] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:52:01 - Thread-36] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476863521657
-[12:52:04 - Thread-36] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476863524817	Duration: 3160 ms	Simulated time 3159 ms	Ratio 0.9996835443037975
-[12:53:00 - Thread-35] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[12:53:00 - Thread-37] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:53:00 - Thread-37] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:53:00 - Thread-37] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
-[12:53:01 - Thread-37] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
-[12:53:01 - Thread-37] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[12:53:01 - Thread-37] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
-[12:53:02 - Thread-37] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
-[12:53:02 - Thread-37] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[12:53:02 - Thread-37] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[12:53:04 - Thread-39] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476863584082
-[12:53:06 - Thread-39] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476863586114	Duration: 2032 ms	Simulated time 2032 ms	Ratio 1.0
-[12:53:34 - Thread-38] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[12:53:34 - Thread-40] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[12:53:34 - Thread-40] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[12:53:34 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> 
-[12:53:34 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
-[12:53:34 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
-[12:53:34 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘print_netstack’:
-[12:53:34 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:115:9: error: ‘RF_CHANNEL’ undeclared (first use in this function)
-[12:53:34 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:115:9: note: each undeclared identifier is reported only once for each function it appears in
-[12:53:34 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
-[12:53:34 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
-[12:53:34 - Thread-40] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
-[12:53:34 - Thread-40] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:55:57 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[12:55:57 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[12:55:57 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
+[12:56:02 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:56:02 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[12:56:02 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[12:56:03 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[12:56:03 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:56:04 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[12:56:17 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[12:56:17 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[12:56:18 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[12:56:29 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[12:56:34 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476863794280
+[12:56:37 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476863797165	Duration: 2885 ms	Simulated time 2654 ms	Ratio 0.9199306759098786
+[12:57:12 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[12:57:12 - Thread-4] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:57:12 - Thread-4] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[12:57:12 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[12:57:12 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_txpower’:
+[12:57:12 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:101:2: warning: implicit declaration of function ‘print_netstack’ [-Wimplicit-function-declaration]
+[12:57:12 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:101:17: error: expected expression before ‘void’
+[12:57:12 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: At top level:
+[12:57:12 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:110:6: warning: conflicting types for ‘print_netstack’ [enabled by default]
+[12:57:12 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:101:2: note: previous implicit declaration of ‘print_netstack’ was here
+[12:57:12 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[12:57:12 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[12:57:12 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:57:12 - Thread-4] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:57:33 - Thread-4] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:57:33 - Thread-4] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[12:57:33 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> 
+[12:57:33 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> > make z1-border-router.z1 TARGET=z1 
+[12:57:33 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../apps/config-radio/cc2420-radio.c
+[12:57:33 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c: In function ‘set_cc2420_txpower’:
+[12:57:33 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:101:17: error: expected expression before ‘void’
+[12:57:33 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:101:17: error: too many arguments to function ‘print_netstack’
+[12:57:33 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../apps/config-radio/cc2420-radio.c:83:6: note: declared here
+[12:57:33 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [obj_z1/cc2420-radio.o] Error 1
+[12:57:33 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../Makefile.include:240: recipe for target 'obj_z1/cc2420-radio.o' failed
+[12:57:33 - Thread-4] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:57:33 - Thread-4] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:58:02 - Thread-4] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:58:02 - Thread-4] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[12:58:03 - Thread-4] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[12:58:03 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[12:58:03 - Thread-4] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[12:58:04 - Thread-4] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:58:04 - Thread-4] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[12:58:05 - Thread-8] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476863885795
+[12:58:08 - Thread-8] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476863888507	Duration: 2712 ms	Simulated time 2711 ms	Ratio 0.9996312684365781
+[12:58:38 - Thread-7] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[12:58:38 - Thread-9] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:58:38 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[12:58:38 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[12:58:39 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[12:58:39 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[12:58:39 - Thread-9] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:58:40 - Thread-9] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[12:58:41 - Thread-11] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476863921078
+[12:58:46 - Thread-11] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476863926593	Duration: 5515 ms	Simulated time 5515 ms	Ratio 1.0
+[13:07:03 - Thread-10] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[13:07:03 - Thread-12] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[13:07:03 - Thread-12] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[13:07:04 - Thread-12] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[13:07:04 - Thread-12] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[13:07:04 - Thread-12] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[13:07:05 - Thread-12] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[13:07:05 - Thread-12] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[13:07:06 - Thread-14] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476864426416
+[13:07:09 - Thread-14] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476864429025	Duration: 2609 ms	Simulated time 2609 ms	Ratio 1.0
+[13:08:07 - Thread-13] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[13:08:07 - Thread-15] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[13:08:07 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[13:08:07 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[13:08:08 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[13:08:08 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[13:08:09 - Thread-15] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[13:08:09 - Thread-15] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[13:08:10 - Thread-17] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476864490574
+[13:08:14 - Thread-17] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476864494043	Duration: 3469 ms	Simulated time 3468 ms	Ratio 0.9997117324877486
+[13:09:05 - Thread-16] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[13:09:05 - Thread-18] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[13:09:05 - Thread-18] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[13:09:06 - Thread-18] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[13:09:06 - Thread-18] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[13:09:06 - Thread-18] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[13:09:07 - Thread-18] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[13:09:07 - Thread-18] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[13:09:14 - Thread-19] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[13:09:14 - Thread-20] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[13:09:14 - Thread-20] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[13:09:14 - Thread-20] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[13:09:15 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[13:09:15 - Thread-20] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[13:09:15 - Thread-20] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[13:09:16 - Thread-20] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[13:09:16 - Thread-22] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476864556703
+[13:09:19 - Thread-22] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476864559118	Duration: 2415 ms	Simulated time 2415 ms	Ratio 1.0
+[13:11:17 - Thread-21] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[13:11:17 - Thread-23] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[13:11:17 - Thread-23] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[13:11:17 - Thread-23] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[13:11:17 - Thread-23] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[13:11:18 - Thread-23] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[13:11:18 - Thread-23] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[13:11:18 - Thread-23] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[13:11:19 - Thread-25] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476864679636
+[13:11:23 - Thread-25] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476864683387	Duration: 3751 ms	Simulated time 3750 ms	Ratio 0.9997334044254865
+[13:12:39 - Thread-24] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[13:12:39 - Thread-26] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[13:12:39 - Thread-26] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[13:12:40 - Thread-26] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[13:12:40 - Thread-26] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[13:12:40 - Thread-26] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[13:12:41 - Thread-26] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[13:12:41 - Thread-26] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[13:12:42 - Thread-28] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476864762455

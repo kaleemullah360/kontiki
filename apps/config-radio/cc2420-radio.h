@@ -73,11 +73,12 @@
 
 #include <stdio.h>
 #include <cc2420.h>
+#include "net/netstack.h"
 
 #ifndef CC2420_RADIO_CONFIG_H
 #define CC2420_RADIO_CONFIG_H
 
 void set_cc2420_channel();
 void set_cc2420_txpower();
-
+void print_netstats();
 #endif /* CC2420_RADIO_CONFIG_H */

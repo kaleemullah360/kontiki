@@ -67,9 +67,7 @@
 /* -------- Set Radio Powers --------------- */
 
 #include <cc2420-radio.h>
-#include "contiki.h"
-#include "net/netstack.h"
-#include "net/ipv6/uip-ds6.h"
+
 /*|Power (dBm)|PA_LEVEL|Power (mW)|
 * |0          |  31    |1.0000    |
 * |-0.0914    |  30    |0.9792    |
@@ -87,7 +85,6 @@ void set_cc2420_channel(custom_radioChannel){
 		radioChannel = custom_radioChannel;
 	}
 	cc2420_set_channel(radioChannel);
-	printf("CC2420 Radio channel %d\n", cc2420_get_channel());
 }
 
 
@@ -97,7 +94,7 @@ void set_cc2420_txpower(custom_radioChannel_tx_power){
 		radioChannel_tx_power = custom_radioChannel_tx_power;
 	}
 	cc2420_set_txpower(radioChannel_tx_power);
-	printf("CC2420 Radio TX power %d\n", cc2420_get_txpower());
+	print_netstats();
 }
 
 /*
@@ -106,12 +103,13 @@ The Contiki RDC drivers are called:
  cxmac_driver
  nullrdc_driver
 */
-void
-print_netstack(void) {
-	printf("%s %s, channel check rate %lu Hz, radio channel %u\n",
-	       NETSTACK_MAC.name, NETSTACK_RDC.name,
-	       CLOCK_SECOND / (NETSTACK_RDC.channel_check_interval() == 0 ? 1:
-			       NETSTACK_RDC.channel_check_interval()),
-	       cc2420_get_channel());
+
+
+
+void print_netstats() {
+printf("CC2420: TX [%u], Channel [%u], Channel check rate [%lu] Hz, MAC [%s], RDC [%s]\n", 
+	cc2420_get_txpower(), cc2420_get_channel(), 
+	CLOCK_SECOND / (NETSTACK_RDC.channel_check_interval() == 0 ? 1 : NETSTACK_RDC.channel_check_interval()), 
+	NETSTACK_MAC.name, NETSTACK_RDC.name);
 }
 /* -------- End Set Radio Powers ------------ */
