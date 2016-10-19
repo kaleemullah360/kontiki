@@ -58,7 +58,7 @@ PROCESS_THREAD(er_example_server, ev, data)
   /* Define application-specific events here. */
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
-  enable_rdc();
+
   while(1) {
     PROCESS_WAIT_EVENT();
 

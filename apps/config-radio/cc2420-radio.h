@@ -73,16 +73,11 @@
 
 #include <stdio.h>
 #include <cc2420.h>
-#include "contiki.h"
-#include "net/netstack.h"
-#include "net/ipv6/uip-ds6.h"
 
 #ifndef CC2420_RADIO_CONFIG_H
 #define CC2420_RADIO_CONFIG_H
 
 void set_cc2420_channel();
 void set_cc2420_txpower();
-void set_cc2420_rdcmac();
-void enable_rdc();
-void print_netstack(void);
+
 #endif /* CC2420_RADIO_CONFIG_H */
