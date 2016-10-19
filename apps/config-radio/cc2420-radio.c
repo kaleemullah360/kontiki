@@ -111,6 +111,12 @@ The Contiki RDC drivers are called:
 
 void enable_rdc(rdcStatus){
 	if (rdcStatus == 1){
+
+	#undef NETSTACK_CONF_RDC
+	#define NETSTACK_CONF_RDC	nullrdc_driver
+	#undef NETSTACK_CONF_MAC
+	#define NETSTACK_CONF_MAC	nullmac_driver
+		/*
 	#undef NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE
 	#undef NETSTACK_CONF_RDC
 	#undef NETSTACK_CONF_MAC
@@ -118,7 +124,7 @@ void enable_rdc(rdcStatus){
 	#define NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE rdc_channel_check_rate
 	#define NETSTACK_CONF_RDC *rdc_driver
 	#define NETSTACK_CONF_MAC *mac_driver
-
+	*/
 	printf("CC2420 Radio Channel check rate [ %d Hz ]\n", NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE);
 	printf("CC2420 Radio RDC Driver [ %s ]\n", (char*)rdc_driver);
 	printf("CC2420 Radio MAC Driver [ %s ]\n", (char*)mac_driver);
