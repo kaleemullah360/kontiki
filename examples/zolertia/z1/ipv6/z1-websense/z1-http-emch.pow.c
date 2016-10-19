@@ -121,7 +121,7 @@ PROCESS_THREAD(web_sense_process, ev, data)
   static struct etimer timer;
   PROCESS_BEGIN();
 	set_cc2420_txpower(0);
-	set_cc2420_channel(0); 
+	set_cc2420_channel(0);
   print_radio_config();
   etimer_set(&timer, CLOCK_SECOND * 2);
 

@@ -5,10 +5,6 @@
 #include "contiki-net.h"
 #include "rest-engine.h"
 #include <cc2420-radio.h>
-
-// Powertracing
-#include "powertrace-z1.h"
-
 #define DEBUG 0
 #if DEBUG
 #include <stdio.h>
@@ -50,15 +46,15 @@ PROCESS_THREAD(er_example_server, ev, data)
   PRINTF("LL header: %u\n", UIP_LLH_LEN);
   PRINTF("IP+UDP header: %u\n", UIP_IPUDPH_LEN);
   PRINTF("REST max chunk: %u\n", REST_MAX_CHUNK_SIZE);
-
+  set_cc2420_txpower(0);
+  set_cc2420_channel(0);
+  print_radio_config();
   /* Initialize the REST engine. */
   rest_init_engine();
 
   rest_activate_resource(&res_z1_coap_emch_pow, "sens/mote");
   /* Define application-specific events here. */
-  set_cc2420_txpower(0);
-  set_cc2420_channel(0);
-  print_radio_config();
+
   while(1) {
     PROCESS_WAIT_EVENT();
 
