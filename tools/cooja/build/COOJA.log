@@ -90,3 +90,4 @@
 [16:13:56 - Thread-22] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
 [16:13:57 - Thread-22] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
 [16:13:57 - Thread-24] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476875637207
+[16:14:23 - Thread-24] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476875663176	Duration: 25969 ms	Simulated time 25967 ms	Ratio 0.9999229850976163
