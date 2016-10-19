@@ -80,5 +80,5 @@
 
 void set_cc2420_channel();
 void set_cc2420_txpower();
-void print_netstats();
+void print_radio_config();
 #endif /* CC2420_RADIO_CONFIG_H */

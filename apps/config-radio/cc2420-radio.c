@@ -94,7 +94,6 @@ void set_cc2420_txpower(custom_radioChannel_tx_power){
 		radioChannel_tx_power = custom_radioChannel_tx_power;
 	}
 	cc2420_set_txpower(radioChannel_tx_power);
-	print_netstats();
 }
 
 /*
@@ -104,9 +103,7 @@ The Contiki RDC drivers are called:
  nullrdc_driver
 */
 
-
-
-void print_netstats() {
+void print_radio_config() {
 	printf("CC2420: %s %s, channel check rate %lu Hz, radio channel %u, TX %u\n",
 	       NETSTACK_MAC.name, NETSTACK_RDC.name,
 	       CLOCK_SECOND / (NETSTACK_RDC.channel_check_interval() == 0 ? 1:
