@@ -110,13 +110,16 @@ The Contiki RDC drivers are called:
 */
 
 void enable_rdc(rdcStatus){
-	if (rdcStatus == 1){
 
+	print_netstack();
+
+	if (rdcStatus == 1){
+/*
 	#undef NETSTACK_CONF_RDC
 	#define NETSTACK_CONF_RDC	nullrdc_driver
 	#undef NETSTACK_CONF_MAC
 	#define NETSTACK_CONF_MAC	nullmac_driver
-		/*
+		
 	#undef NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE
 	#undef NETSTACK_CONF_RDC
 	#undef NETSTACK_CONF_MAC
@@ -132,6 +135,7 @@ void enable_rdc(rdcStatus){
 		printf("No duty cycling enabled, RDC status [%d] \n", rdcStatus);
 	}
 }
+
 void set_cc2420_rdcmac(custom_rdc_channel_check_rate, custom_rdc_driver, custom_mac_driver){
 	printf("%d, %s, %s\n", custom_rdc_channel_check_rate, (char*)custom_rdc_driver, (char*)custom_mac_driver);
 	/* first remove existing settings from z1 platform configuration */
@@ -161,5 +165,15 @@ void set_cc2420_rdcmac(custom_rdc_channel_check_rate, custom_rdc_driver, custom_
 	printf("CC2420 Radio Channel check rate %d Hz\n", NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE);
 	printf("CC2420 Radio RDC Driver %s\n", (char*)rdc_driver);
 	printf("CC2420 Radio MAC Driver %s\n", (char*)mac_driver);
+}
+
+void print_netstack(void) {
+	/* Initialize communication stack */
+  	netstack_init();
+	printf("%s %s, channel check rate %lu Hz, radio channel %u\n",
+	   NETSTACK_MAC.name, NETSTACK_RDC.name,
+	   CLOCK_SECOND / (NETSTACK_RDC.channel_check_interval() == 0 ? 1:
+		       NETSTACK_RDC.channel_check_interval()),
+	   RF_CHANNEL);
 }
 /* -------- End Set Radio Powers ------------ */
