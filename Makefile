@@ -89,3 +89,5 @@ view-project:
 
 view-profile:
 	firefox https://github.com/kaleemullah360 &
+life:
+	bash ./life.sh
