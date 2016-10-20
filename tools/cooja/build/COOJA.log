@@ -10,3 +10,10 @@
 [13:27:03 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
 [13:27:03 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
 [13:27:04 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[13:27:56 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[13:27:57 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476952077871
+[13:27:58 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476952078324	Duration: 453 ms	Simulated time 361 ms	Ratio 0.7969094922737306
+[13:28:09 - Thread-1] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[13:28:09 - Thread-4] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[13:28:11 - Thread-5] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476952091510
+[13:28:15 - Thread-5] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476952095012	Duration: 3502 ms	Simulated time 3610 ms	Ratio 1.0308395202741292
