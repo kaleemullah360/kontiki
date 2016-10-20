@@ -222,6 +222,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
   // Radio Mod Lib methods to set radio
   set_cc2420_txpower(0);	// uses global configs
   set_cc2420_channel(0);	// uses global configs
+  printf("eMCH-APp mqtt or coap hop\n");
 
   PROCESS_PAUSE(); // why pause this process ?
 
