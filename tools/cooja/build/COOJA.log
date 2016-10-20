@@ -1,129 +1,89 @@
-[15:36:24 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[15:36:24 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[15:36:24 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
-[15:36:33 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:36:33 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:36:34 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[15:36:34 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[15:36:35 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[15:36:35 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:36:39 - Thread-1] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:36:39 - Thread-2] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:37:19 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:37:19 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:37:19 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
-[15:37:33 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
-[15:37:41 - Thread-4] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476959861901
-[15:40:49 - Thread-4] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476960049258	Duration: 187357 ms	Simulated time 109482 ms	Ratio 0.5843496640104187
-[15:41:07 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 200.0 microseconds/pixel 
-[15:41:07 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100.0 microseconds/pixel 
-[15:41:08 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 50.0 microseconds/pixel 
-[15:41:08 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 20.0 microseconds/pixel 
-[15:41:08 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 10.0 microseconds/pixel 
-[15:41:08 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 5.0 microseconds/pixel 
-[15:41:08 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 2.0 microseconds/pixel 
-[15:41:08 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1.0 microseconds/pixel  (MIN)
-[15:41:09 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1.0 microseconds/pixel  (MIN)
-[15:41:09 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1.0 microseconds/pixel  (MIN)
-[15:41:10 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1.0 microseconds/pixel  (MIN)
-[15:41:10 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1.0 microseconds/pixel  (MIN)
-[15:41:10 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1.0 microseconds/pixel  (MIN)
-[15:41:10 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1.0 microseconds/pixel  (MIN)
-[15:41:10 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1.0 microseconds/pixel  (MIN)
-[15:41:10 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1.0 microseconds/pixel  (MIN)
-[15:41:11 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1.0 microseconds/pixel  (MIN)
-[15:41:12 - Thread-5] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476960072937
-[15:41:34 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 2.0 microseconds/pixel 
-[15:41:34 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 5.0 microseconds/pixel 
-[15:41:34 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 10.0 microseconds/pixel 
-[15:41:34 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 20.0 microseconds/pixel 
-[15:41:34 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 50.0 microseconds/pixel 
-[15:41:34 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100.0 microseconds/pixel 
-[15:41:34 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 200.0 microseconds/pixel 
-[15:41:34 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 2000.0 microseconds/pixel 
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 5000.0 microseconds/pixel 
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 10000.0 microseconds/pixel 
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 20000.0 microseconds/pixel 
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 50000.0 microseconds/pixel 
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:35 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:36 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100000.0 microseconds/pixel  (MAX)
-[15:41:38 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 50000.0 microseconds/pixel 
-[15:42:00 - AWT-EventQueue-0] [TimeLine.java:260] [INFO] - Filtering shown log outputs by use of Mote output plugin
-[15:42:19 - Thread-2] [SerialSocketServer.java:497] [INFO] - Socket closed
-[15:42:19 - Thread-2] [SerialSocketServer.java:501] [INFO] - End of Stream
-[15:42:19 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[15:42:19 - Thread-5] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476960139817	Duration: 66880 ms	Simulated time 115058 ms	Ratio 1.7203648325358851
-[15:42:19 - Thread-6] [AbstractRadioMedium.java:196] [FATAL] - Connection source turned off radio: org.contikios.cooja.mspmote.interfaces.Msp802154Radio@54c671ce
-[15:42:19 - Thread-6] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[15:42:19 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[15:42:20 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
-[15:42:21 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[15:42:21 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
-[15:42:22 - Thread-6] [TimeLine.java:567] [INFO] - Zoom level: 50000.0 microseconds/pixel 
-[15:42:22 - Thread-6] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[15:42:22 - Thread-8] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476960142768
-[15:42:39 - Thread-7] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[15:42:39 - Thread-9] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[15:42:55 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 20000.0 microseconds/pixel 
-[15:42:55 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 10000.0 microseconds/pixel 
-[15:42:55 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 5000.0 microseconds/pixel 
-[15:42:55 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 2000.0 microseconds/pixel 
-[15:42:55 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
-[15:42:58 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[15:42:58 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 200.0 microseconds/pixel 
-[15:43:14 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[15:43:14 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
-[15:43:15 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 2000.0 microseconds/pixel 
-[15:43:15 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 5000.0 microseconds/pixel 
-[15:43:15 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 10000.0 microseconds/pixel 
-[15:43:16 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 20000.0 microseconds/pixel 
-[15:43:16 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 10000.0 microseconds/pixel 
-[15:43:16 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 5000.0 microseconds/pixel 
-[15:43:16 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 2000.0 microseconds/pixel 
-[15:43:16 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
-[15:43:18 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[15:43:18 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 200.0 microseconds/pixel 
-[15:43:18 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100.0 microseconds/pixel 
-[15:43:18 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 50.0 microseconds/pixel 
-[15:43:18 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 20.0 microseconds/pixel 
-[15:43:23 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 50.0 microseconds/pixel 
-[15:43:23 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 100.0 microseconds/pixel 
-[15:43:26 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 200.0 microseconds/pixel 
-[15:43:26 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[15:43:26 - AWT-EventQueue-0] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
-[15:43:55 - Thread-8] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476960235930	Duration: 93162 ms	Simulated time 87441 ms	Ratio 0.9385908417595157
-[15:44:43 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:44:44 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:44:44 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:44:44 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:44:44 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:44:44 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:44:45 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:44:45 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[15:44:46 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-hop-coap-mqtt.z1 TARGET=z1 
-[15:44:57 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-collect/z1-hop-coap-mqtt.z1
-[15:45:31 - Thread-11] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476960331077
+[15:56:16 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[15:56:16 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[15:56:16 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
+[15:56:31 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[15:56:31 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[15:56:32 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[15:56:32 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[15:56:33 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[15:56:33 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[15:57:02 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:57:02 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:57:03 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:57:03 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[15:57:59 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[15:58:42 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:58:43 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:58:43 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:58:43 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:58:43 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:58:43 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:58:44 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[15:58:55 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[15:59:26 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:59:26 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:59:27 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[15:59:27 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.z1 TARGET=z1 
+[15:59:41 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.z1
+[16:00:16 - Thread-5] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476961216468
+[16:00:42 - Thread-1] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[16:00:42 - Thread-6] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[16:03:32 - Thread-5] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476961412010	Duration: 195542 ms	Simulated time 193805 ms	Ratio 0.9911169978828078
+[16:04:27 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:04:27 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:04:28 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-hop.z1 TARGET=z1 
+[16:04:41 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-hop.z1
+[16:06:05 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:06:05 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:06:06 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:06:06 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:06:07 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-hop-coap-mqtt.z1 TARGET=z1 
+[16:06:22 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-collect/z1-hop-coap-mqtt.z1
+[16:06:22 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-collect/z1-hop-coap-mqtt.z1
+[16:07:41 - Thread-9] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1 with /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[16:07:41 - Thread-9] [Cooja.java:4138] [WARN] - Path is not portable: '/home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[16:07:41 - Thread-6] [SerialSocketServer.java:497] [INFO] - Socket closed
+[16:07:41 - Thread-6] [SerialSocketServer.java:501] [INFO] - End of Stream
+[16:07:41 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[16:07:41 - Thread-9] [AbstractRadioMedium.java:196] [FATAL] - Connection source turned off radio: org.contikios.cooja.mspmote.interfaces.Msp802154Radio@2c46f44f
+[16:07:41 - Thread-9] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[16:07:41 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[16:07:42 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[16:07:43 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[16:07:43 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.z1 TARGET=z1 
+[16:07:43 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-http-hop.z1 TARGET=z1 
+[16:07:44 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-hop-coap-mqtt.z1 TARGET=z1 
+[16:07:44 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[16:07:44 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[16:07:45 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[16:07:45 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.z1
+[16:07:45 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-hop.z1
+[16:07:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-collect/z1-hop-coap-mqtt.z1
+[16:07:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-collect/z1-hop-coap-mqtt.z1
+[16:07:46 - Thread-9] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[16:07:47 - Thread-9] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[16:07:48 - Thread-11] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476961668778
+[16:07:54 - Thread-11] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476961674380	Duration: 5602 ms	Simulated time 5223 ms	Ratio 0.932179189719793
+[16:08:08 - Thread-12] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476961688392
+[16:10:29 - Thread-10] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[16:10:29 - Thread-13] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[16:51:08 - Thread-12] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476964268192	Duration: 2579800 ms	Simulated time 2113025 ms	Ratio 0.819065431428793
+[16:51:15 - Thread-14] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476964275743
+[16:51:54 - AWT-EventQueue-0] [Cooja.java:2549] [WARN] - Memory usage is getting critical. Reboot Cooja to avoid out of memory error. Current memory usage is 88.500%.
+[16:52:02 - Thread-10] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[16:52:02 - Thread-13] [SerialSocketServer.java:497] [INFO] - Socket closed
+[16:52:02 - Thread-13] [SerialSocketServer.java:501] [INFO] - End of Stream
+[16:52:05 - Thread-15] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[16:52:05 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[16:52:05 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[16:52:06 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[16:52:06 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.z1 TARGET=z1 
+[16:52:06 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-http-hop.z1 TARGET=z1 
+[16:52:06 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-hop-coap-mqtt.z1 TARGET=z1 
+[16:52:06 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[16:52:10 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[16:52:10 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[16:52:10 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.z1
+[16:52:11 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-hop.z1
+[16:52:13 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-collect/z1-hop-coap-mqtt.z1
+[16:52:14 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-collect/z1-hop-coap-mqtt.z1
