@@ -89,7 +89,7 @@ AUTOSTART_PROCESSES(&border_router_process,&webserver_nogui_process);
 #define BUF_USES_STACK 1
 #endif
 
-PROCESS(webserver_nogui_process, "Web server");
+PROCESS(webserver_nogui_process, "Z1 BRouter Web server");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
   PROCESS_BEGIN();
@@ -339,7 +339,7 @@ PROCESS_THREAD(border_router_process, ev, data)
   PROCESS_BEGIN();
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
-  
+
 /* While waiting for the prefix to be sent through the SLIP connection, the future
  * border router can join an existing DAG as a parent or child, or acquire a default
  * router that will later take precedence over the SLIP fallback interface.

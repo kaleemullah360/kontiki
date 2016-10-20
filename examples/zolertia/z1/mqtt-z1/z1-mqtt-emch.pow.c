@@ -640,7 +640,7 @@ state_machine(void)
   powertrace_start(CLOCK_SECOND * 1);
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
-  printf("eMCH-APp\n");
+  printf("eMCH-APp mqtt Powertracing\n");
 
   if(init_config() != 1) {
     PROCESS_EXIT();
