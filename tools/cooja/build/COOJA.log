@@ -47,3 +47,26 @@
 [13:57:57 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
 [13:57:57 - Thread-15] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
 [13:57:58 - Thread-15] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[13:58:25 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[13:58:31 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:31 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:31 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:31 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:32 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:32 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:32 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:32 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:32 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:33 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:33 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:33 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:33 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:33 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:48 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:48 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[13:58:49 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[13:59:08 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[13:59:14 - Thread-19] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476953954120
+[13:59:16 - Thread-19] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476953956687	Duration: 2567 ms	Simulated time 2565 ms	Ratio 0.9992208804051422
+[13:59:19 - Thread-20] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1476953959711
+[13:59:21 - Thread-20] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1476953961173	Duration: 1462 ms	Simulated time 4025 ms	Ratio 2.753077975376197
