@@ -23,7 +23,7 @@ print_netstack(void) {
 	       NETSTACK_MAC.name, NETSTACK_RDC.name,
 	       CLOCK_SECOND / (NETSTACK_RDC.channel_check_interval() == 0 ? 1:
 			       NETSTACK_RDC.channel_check_interval()),
-	       RF_CHANNEL, RF_CHANNEL);
+	       RF_CHANNEL, cc2420_get_txpower());
 }
 
 void print_lladdrs(void) {	
