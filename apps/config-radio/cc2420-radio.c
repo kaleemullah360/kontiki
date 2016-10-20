@@ -104,7 +104,7 @@ The Contiki RDC drivers are called:
 */
 
 void print_radio_config() {
-	printf("CC2420: %s %s, channel check rate %lu Hz, radio channel %u, TX %u\n",
+  printf("CC2420: %s %s, channel check rate %lu Hz, radio channel %u, Tx Power %u\n",
 	       NETSTACK_MAC.name, NETSTACK_RDC.name,
 	       CLOCK_SECOND / (NETSTACK_RDC.channel_check_interval() == 0 ? 1:
 			       NETSTACK_RDC.channel_check_interval()),
