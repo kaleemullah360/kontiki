@@ -93,7 +93,7 @@ void set_cc2420_txpower(custom_radioChannel_tx_power){
 	if(!custom_radioChannel_tx_power == 0){
 		radioChannel_tx_power = custom_radioChannel_tx_power;
 	}
-	enable_rdc(0);
+
 	cc2420_set_txpower(radioChannel_tx_power);
 }
 
@@ -112,13 +112,5 @@ void print_radio_config() {
 	       cc2420_get_channel(), cc2420_get_txpower());
 }
 
-void enable_rdc(sw){
 
-	if(sw == 0){
-		#undef  NETSTACK_CONF_RDC
-		#define NETSTACK_CONF_RDC nullrdc_driver
-		#undef  NETSTACK_CONF_MAC
-		#define NETSTACK_CONF_MAC nullmac_driver
-	}
-}
 /* -------- End Set Radio Powers ------------ */

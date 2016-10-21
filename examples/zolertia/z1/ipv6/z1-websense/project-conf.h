@@ -27,6 +27,7 @@
  * SUCH DAMAGE.
  *
  */
+void enable_rdc();
 
 #ifndef PROJECT_RPL_WEB_CONF_H_
 #define PROJECT_RPL_WEB_CONF_H_
