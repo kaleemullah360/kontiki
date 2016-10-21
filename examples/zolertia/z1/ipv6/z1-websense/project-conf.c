@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  */
-#include <project-conf>
+#include "project-conf.h"
 
 void enable_rdc(sw){
 

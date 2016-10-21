@@ -51,7 +51,7 @@
 char *powertrace_result();
 //char *pow_str = "";
 #include <cc2420-radio.h>
-
+#include "project-conf.h"
 //--- Variable Declaration for e-MCH-APp ----
 
  static int32_t mid = 0;  // MessageID

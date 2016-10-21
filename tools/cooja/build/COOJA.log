@@ -99,3 +99,64 @@
 [12:08:24 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o z1-border-router.co
 [12:08:24 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
 [12:08:24 - Thread-13] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:08:58 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:08:58 - Thread-13] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-border-router/z1-border-router.z1 with /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[12:08:58 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[12:08:58 - Thread-13] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1 with /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[12:08:58 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[12:09:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        z1-http-emch.pow.c
+[12:09:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../../../platform/z1/./contiki-z1-main.c
+[12:09:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        z1-http-emch.pow.z1
+[12:09:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.pow.co: In function `httpd_simple_get_script':
+[12:09:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.c:117: undefined reference to `enable_rdc'
+[12:09:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: error: ld returned 1 exit status
+[12:09:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../../../Makefile.include:280: recipe for target 'z1-http-emch.pow.z1' failed
+[12:09:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-http-emch.pow.z1] Error 1
+[12:09:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o z1-http-emch.pow.co
+[12:09:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:09:06 - Thread-13] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:10:06 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:10:06 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[12:10:06 - Thread-13] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1 with /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[12:10:06 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[12:10:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        z1-http-emch.pow.c
+[12:10:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../../../platform/z1/./contiki-z1-main.c
+[12:10:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        z1-http-emch.pow.z1
+[12:10:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.pow.co: In function `httpd_simple_get_script':
+[12:10:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.c:117: undefined reference to `enable_rdc'
+[12:10:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: error: ld returned 1 exit status
+[12:10:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../../../Makefile.include:280: recipe for target 'z1-http-emch.pow.z1' failed
+[12:10:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-http-emch.pow.z1] Error 1
+[12:10:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o z1-http-emch.pow.co
+[12:10:06 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:10:06 - Thread-13] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:10:16 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:10:16 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[12:10:16 - Thread-13] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1 with /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[12:10:16 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[12:10:16 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        z1-http-emch.pow.c
+[12:10:16 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../../../platform/z1/./contiki-z1-main.c
+[12:10:16 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        z1-http-emch.pow.z1
+[12:10:16 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.pow.co: In function `httpd_simple_get_script':
+[12:10:16 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.c:117: undefined reference to `enable_rdc'
+[12:10:16 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: error: ld returned 1 exit status
+[12:10:16 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-http-emch.pow.z1] Error 1
+[12:10:16 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:10:16 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../../../Makefile.include:280: recipe for target 'z1-http-emch.pow.z1' failed
+[12:10:16 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o z1-http-emch.pow.co
+[12:10:16 - Thread-13] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[12:11:42 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:11:42 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[12:11:43 - Thread-13] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1 with /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[12:11:43 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[12:11:43 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        z1-http-emch.pow.c
+[12:11:43 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../../../platform/z1/./contiki-z1-main.c
+[12:11:43 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        z1-http-emch.pow.z1
+[12:11:43 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> z1-http-emch.pow.co: In function `httpd_simple_get_script':
+[12:11:43 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.c:117: undefined reference to `enable_rdc'
+[12:11:43 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: error: ld returned 1 exit status
+[12:11:43 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../../../Makefile.include:280: recipe for target 'z1-http-emch.pow.z1' failed
+[12:11:43 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> rm obj_z1/contiki-z1-main.o z1-http-emch.pow.co
+[12:11:43 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[12:11:43 - Thread-13] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-http-emch.pow.z1] Error 1
+[12:11:43 - Thread-13] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
