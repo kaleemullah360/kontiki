@@ -27,11 +27,6 @@
  * SUCH DAMAGE.
  *
  */
-#undef NETSTACK_CONF_RDC
-#define NETSTACK_CONF_RDC nullrdc_driver
-
-#undef NETSTACK_CONF_MAC
-#define NETSTACK_CONF_MAC nullmac_driver
 
 #ifndef PROJECT_ROUTER_CONF_H_
 #define PROJECT_ROUTER_CONF_H_

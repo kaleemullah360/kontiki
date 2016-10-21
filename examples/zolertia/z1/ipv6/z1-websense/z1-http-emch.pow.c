@@ -45,12 +45,12 @@
 #include "contiki.h"
 #include "httpd-simple.h"
 #include <stdio.h>
-#include <cc2420-radio.h>
 
 // Powertracing
 #include "powertrace-z1.h"
 char *powertrace_result();
 //char *pow_str = "";
+#include <cc2420-radio.h>
 
 //--- Variable Declaration for e-MCH-APp ----
 
@@ -122,6 +122,7 @@ PROCESS_THREAD(web_sense_process, ev, data)
   PROCESS_BEGIN();
 	set_cc2420_txpower(0);
 	set_cc2420_channel(0);
+  enable_rdc(0);
   printf("eMCH-APp http Powertracing\n");
   etimer_set(&timer, CLOCK_SECOND * 2);
 
