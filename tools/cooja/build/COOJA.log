@@ -10,3 +10,12 @@
 [17:25:21 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1477398321068
 [17:26:00 - Thread-1] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
 [17:26:00 - Thread-3] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:26:47 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1477398407168	Duration: 86100 ms	Simulated time 85826 ms	Ratio 0.9968176538908247
+[17:27:07 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:27:07 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:27:08 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[17:27:32 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:27:33 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:27:33 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[17:27:51 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[17:27:55 - Thread-5] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1477398475894
