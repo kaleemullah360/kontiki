@@ -1,6 +1,6 @@
 #! /bin/sh
 current_user = $USER
-CPWD = $CPWD
+CPWD = /home/su/kontiki
 ifeq ($(c),)
  c = 'updates'
 endif
@@ -35,16 +35,16 @@ http:
 	firefox http://[aaaa::c30c:0:0:1]/
 
 brouter:
-	cd ${PWD}/examples/ipv6/rpl-border-router/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-border-router.upload nodeid=1 nodemac=1
+	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-border-router.upload nodeid=1 nodemac=1
 
 mchop:
-	cd ${PWD}/examples/ipv6/rpl-collect/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-hop-coap-mqtt.upload nodeid=9 nodemac=9
+	cd ${CPWD}/examples/ipv6/rpl-collect/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-hop-coap-mqtt.upload nodeid=9 nodemac=9
 
 hthop:
-	cd ${PWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-hop.upload
+	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-hop.upload
 
 ptrace:
-	cd ${PWD}/examples/rime/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-hop-mote.upload
+	cd ${CPWD}/examples/rime/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-hop-mote.upload
 
 clean:
 	rm -f *.exe
