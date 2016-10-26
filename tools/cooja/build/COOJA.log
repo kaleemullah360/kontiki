@@ -66,3 +66,5 @@
 [17:54:41 - Thread-13] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
 [17:54:41 - Thread-13] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
 [17:54:41 - Thread-16] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1477400081568
+[10:10:20 - Thread-16] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1477458620905	Duration: 58539337 ms	Simulated time 12063235 ms	Ratio 0.20607057780650984
+[10:10:23 - Thread-15] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
