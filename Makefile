@@ -1,6 +1,6 @@
 #! /bin/sh
 current_user = $USER
-CPWD = /home/su/kontiki
+CPWD = /home/${USER}/kontiki
 ifeq ($(c),)
  c = 'updates'
 endif
