@@ -77,10 +77,15 @@ run:
 	firefox http://localhost:3000/coap >> '/home/${USER}/logs/firelog.log' &
 
 list:
-	$PROJ_CURRENT_DIR = ${PWD}
 	cd ~/kontiki/examples/ipv6/rpl-border-router/
 	sudo make z1-motelist
-	cd ${PROJ_CURRENT_DIR}
+	cd ~/kontiki/
+
+login:
+	cd ~/kontiki/examples/ipv6/rpl-border-router/
+	sudo make z1-reset && sudo make login
+	cd ~/kontiki/
+
 
 reboot:
 	sudo reboot
