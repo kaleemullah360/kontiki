@@ -6,7 +6,7 @@ endif
 	
 cooja:
 
-	sudo gnome-terminal --tab --working-directory='/home/${USER}/kontiki/examples/ipv6/rpl-border-router/' --tab --working-directory='/home/${USER}/kontiki/tools/cooja/' -e "ant run"
+	sudo gnome-terminal --tab --working-directory='${PWD}/examples/ipv6/rpl-border-router/' --tab --working-directory='/home/${USER}/kontiki/tools/cooja/' -e "ant run"
 		sudo service mosquitto start
 	echo "Starting mosquitto service....."
 	service mosquitto status| grep running
