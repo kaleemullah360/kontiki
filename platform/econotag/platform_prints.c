@@ -19,11 +19,11 @@ print_processes(struct process * const processes[])
 
 void
 print_netstack(void) {
-	printf("%s %s, channel check rate %lu Hz, radio channel %u and tx %u\n",
+	printf("%s %s, channel check rate %lu Hz, radio channel %u\n",
 	       NETSTACK_MAC.name, NETSTACK_RDC.name,
 	       CLOCK_SECOND / (NETSTACK_RDC.channel_check_interval() == 0 ? 1:
 			       NETSTACK_RDC.channel_check_interval()),
-	       RF_CHANNEL, cc2420_get_txpower());
+	       RF_CHANNEL);
 }
 
 void print_lladdrs(void) {	

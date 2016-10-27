@@ -14,3 +14,4 @@
 [15:53:12 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1477565592460
 [15:53:29 - Thread-1] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
 [15:53:29 - Thread-4] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[16:08:03 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1477566483582	Duration: 891122 ms	Simulated time 890930 ms	Ratio 0.9997834193483952
