@@ -6,7 +6,7 @@ dev/cc2420/cc2420.c:105
 
 |  dBm |  Level |  Register Val |
 |---|---|---|
-|  0 |  31 |  0xff |
+|   0 |  31 |  0xff |
 |  -1 |  27 |  0xfb |
 |  -3 |  23 |  0xf7 |
 |  -5 |  19 |  0xf3 |
