@@ -83,7 +83,6 @@ list:
 login:
 	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make z1-reset && sudo make login && cd ~/kontiki/
 
-
 reboot:
 	sudo reboot
 
