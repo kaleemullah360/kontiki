@@ -66,6 +66,7 @@ clean-emch:
 	cd ${CPWD}/examples/rime/ && sudo make clean
 
 push:
+	@#	make commit C="Added-some-test"
 	git add -A
 	git commit -m $(C)
 	git push origin master
