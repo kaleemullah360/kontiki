@@ -74,11 +74,11 @@ pull:
 	git pull origin master
 
 run:
-	sudo gnome-terminal --tab --working-directory='/home/${USER}/kontiki/examples/ipv6/rpl-border-router/' --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
+	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
 	firefox http://localhost:3000/coap >> '/home/${USER}/logs/firelog.log' &
 
 list:
-	cd ~/kontiki/examples/ipv6/rpl-border-router/
+	cd ${CPWD}/examples/ipv6/rpl-border-router/
 	sudo make z1-motelist
 	cd ~/kontiki/
 
