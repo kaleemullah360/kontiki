@@ -1,8 +1,8 @@
 #! /bin/sh
 current_user = $USER
 CPWD = /home/${USER}/kontiki
-ifeq ($(c),)
- c = 'updates'
+ifeq ($(C),)
+ C = 'updates'
 endif
 	
 cooja:
@@ -67,7 +67,7 @@ clean-emch:
 
 push:
 	git add -A
-	git commit -m $(c)
+	git commit -m $(C)
 	git push origin master
 
 pull:
