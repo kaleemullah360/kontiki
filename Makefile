@@ -15,7 +15,7 @@ cooja:
 
 mqtt:
 	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
-	cd ~/kontiki/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.upload nodeid=4 nodemac=4
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.upload nodeid=4 nodemac=4
 		sudo service mosquitto start
 	echo "Starting mosquitto service....."
 	service mosquitto status| grep running
@@ -24,13 +24,13 @@ mqtt:
 
 coap:
 	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
-	cd ~/kontiki/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.pow.upload nodeid=2 nodemac=2
+	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.pow.upload nodeid=2 nodemac=2
 	firefox http://localhost:3000/coap >> '/home/${USER}/logs/firelog.log' &
 	firefox http://[aaaa::c30c:0:0:1]/ &
 
 http:
 	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
-	cd ~/kontiki/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-emch.pow.upload nodeid=3 nodemac=3
+	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-emch.pow.upload nodeid=3 nodemac=3
 	firefox http://localhost:3000/http >> '/home/${USER}/logs/firelog.log' &
 	firefox http://[aaaa::c30c:0:0:1]/ &
 
