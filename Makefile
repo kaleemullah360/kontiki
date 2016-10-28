@@ -57,13 +57,13 @@ log:
 	vim '/home/${USER}/logs/firelog.log'
 
 clean-emch:
-	cd ~/kontiki/examples/zolertia/z1/mqtt-z1/ && sudo make clean
-	cd ~/kontiki/examples/er-rest-example/ && sudo make clean
-	cd ~/kontiki/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean
-	cd ~/kontiki/examples/ipv6/rpl-border-router/ && sudo make clean
-	cd ~/kontiki/examples/ipv6/rpl-collect/ && sudo make clean
-	cd ~/kontiki/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean
-	cd ~/kontiki/examples/rime/ && sudo make clean
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean
+	cd ${CPWD}/examples/er-rest-example/ && sudo make clean
+	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean
+	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make clean
+	cd ${CPWD}/examples/ipv6/rpl-collect/ && sudo make clean
+	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean
+	cd ${CPWD}/examples/rime/ && sudo make clean
 
 push:
 	git add -A
