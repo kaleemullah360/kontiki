@@ -48,6 +48,7 @@ PROCESS_THREAD(er_example_server, ev, data)
   PRINTF("REST max chunk: %u\n", REST_MAX_CHUNK_SIZE);
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
+  
   printf("eMCH-APp coap Powertracing\n");
   /* Initialize the REST engine. */
   rest_init_engine();

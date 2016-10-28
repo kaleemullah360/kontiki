@@ -322,11 +322,11 @@ main(int argc, char **argv)
   NETSTACK_MAC.init();
   NETSTACK_NETWORK.init();
 
-  printf("%s %s, channel check rate %lu Hz, radio channel %u, Tx Power %u\n",
+  printf("%s %s, channel check rate %lu Hz, radio channel %u\n",
          NETSTACK_MAC.name, NETSTACK_RDC.name,
          CLOCK_SECOND / (NETSTACK_RDC.channel_check_interval() == 0 ? 1 :
                          NETSTACK_RDC.channel_check_interval()),
-         CC2420_CONF_CHANNEL, cc2420_get_txpower());
+         CC2420_CONF_CHANNEL);
 
   process_start(&tcpip_process, NULL);
 
@@ -363,11 +363,11 @@ main(int argc, char **argv)
   NETSTACK_MAC.init();
   NETSTACK_NETWORK.init();
 
-  printf("%s %s, channel check rate %lu Hz, radio channel %u, Tx Power %u\n",
+  printf("%s %s, channel check rate %lu Hz, radio channel %u\n",
          NETSTACK_MAC.name, NETSTACK_RDC.name,
          CLOCK_SECOND / (NETSTACK_RDC.channel_check_interval() == 0 ? 1 :
                          NETSTACK_RDC.channel_check_interval()),
-         CC2420_CONF_CHANNEL, cc2420_get_txpower());
+         CC2420_CONF_CHANNEL);
 #endif /* NETSTACK_CONF_WITH_IPV6 */
 
 #if !NETSTACK_CONF_WITH_IPV4 && !NETSTACK_CONF_WITH_IPV6

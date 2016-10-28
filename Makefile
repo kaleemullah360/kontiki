@@ -83,9 +83,7 @@ list:
 	cd ~/kontiki/
 
 login:
-	cd ~/kontiki/examples/ipv6/rpl-border-router/
-	sudo make z1-reset && sudo make login
-	cd ~/kontiki/
+	cd ~/kontiki/examples/ipv6/rpl-border-router/ && sudo make z1-reset && sudo make login && cd ~/kontiki/
 
 
 reboot:

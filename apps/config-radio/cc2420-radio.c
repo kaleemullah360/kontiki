@@ -77,7 +77,7 @@
 * |-37.9170   |  0     |0.0002    |
 */ 
 uint8_t radioChannel = 26;  // default channel
-uint8_t radioChannel_tx_power = 31; // default power 0; // custom power
+uint8_t radioChannel_tx_power = 3; // default power 0; // custom power
 
 void set_cc2420_channel(custom_radioChannel){
 	/* channel */
@@ -95,6 +95,7 @@ void set_cc2420_txpower(custom_radioChannel_tx_power){
 	}
 
 	cc2420_set_txpower(radioChannel_tx_power);
+	print_radio_config();
 }
 
 /*
