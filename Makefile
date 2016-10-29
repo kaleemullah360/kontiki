@@ -93,5 +93,8 @@ view-project:
 view-profile:
 	firefox https://github.com/kaleemullah360 &
 
+open-project:
+	subl ~/kontiki &
+
 life:
 	bash ./life.sh
