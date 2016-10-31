@@ -165,14 +165,14 @@
  */
 #define APP_BUFFER_SIZE 256
  static struct mqtt_connection conn;
- static char app_buffer[APP_BUFFER_SIZE];
+// static char app_buffer[APP_BUFFER_SIZE];
 /*---------------------------------------------------------------------------*/
 #define QUICKSTART "quickstart"
 /*---------------------------------------------------------------------------*/
  static struct mqtt_message *msg_ptr = 0;
  static struct etimer publish_periodic_timer;
  static struct ctimer ct;
- static char *buf_ptr;
+// static char *buf_ptr;
 /*---------------------------------------------------------------------------*/
 /* Parent RSSI functionality */
  static struct uip_icmp6_echo_reply_notification echo_reply_notification;
@@ -421,11 +421,13 @@ subscribe(void)
   }
 }
 /*---------------------------------------------------------------------------*/
+
+ /*
 static void
 publish(void)
 {
 
-  /* Publish MQTT topic in IBM quickstart format */
+  // Publish MQTT topic in IBM quickstart format 
 int len;
 int remaining = APP_BUFFER_SIZE;
   //int16_t value;
@@ -438,7 +440,7 @@ if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
   return;
 }
-  /* Put our Default route's string representation in a buffer */
+  // Put our Default route's string representation in a buffer 
 char def_rt_str[64];
 memset(def_rt_str, 0, sizeof(def_rt_str));
 ipaddr_sprintf(def_rt_str, sizeof(def_rt_str), uip_ds6_defrt_choose());
@@ -448,6 +450,7 @@ mqtt_publish(&conn, NULL, pub_topic, (uint8_t *)app_buffer,
 
 DBG("APP - Publish!\n");
 }
+*/
 /*---------------------------------------------------------------------------*/
 static void
 connect_to_broker(void)
@@ -542,8 +545,8 @@ state_machine(void)
         state = STATE_PUBLISHING;
       } else {
         ctimer_set(&ct, PUBLISH_LED_ON_DURATION, publish_led_off, NULL);
-        publish();
-  /*      if(ttem != bat_mv) {
+      /*  publish();
+        if(ttem != bat_mv) {
     ttem = bat_mv;   // update the temporary valruable with fresh value
      publish();  // <-- This
    } */
