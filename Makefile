@@ -40,7 +40,7 @@ brouter:
 chop:
 	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.hop.upload nodeid=2 nodemac=2
 
-hthop:
+hhop:
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-hop.upload
 
 ptrace:
