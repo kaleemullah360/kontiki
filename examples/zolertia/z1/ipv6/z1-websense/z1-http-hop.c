@@ -44,53 +44,15 @@
  */
 
 #include "contiki.h"
-#include "httpd-simple.h"
 #include <stdio.h>
 #include <cc2420-radio.h>
 
 
 PROCESS(web_sense_process, "Sense HTTP HOP Node");
-PROCESS(webserver_nogui_process, "HTTP HOP Node");
-PROCESS_THREAD(webserver_nogui_process, ev, data)
-{
-	PROCESS_BEGIN();
-  	httpd_init();
 
-  while(1) {
-  	PROCESS_WAIT_EVENT_UNTIL(ev == tcpip_event);
-  	httpd_appcall(data);
-  }
-
-  PROCESS_END();
-}
-AUTOSTART_PROCESSES(&web_sense_process,&webserver_nogui_process);
+AUTOSTART_PROCESSES(&web_sense_process);
 
 
-/*---------------------------------------------------------------------------*/
-/* Only one single request at time */
-static char buf[256];
-static int blen;
-#define ADD(...) do {                                                   \
-blen += snprintf(&buf[blen], sizeof(buf) - blen, __VA_ARGS__);      \
-} while(0)
-
-static
-PT_THREAD(send_values(struct httpd_state *s))
-{
-	PSOCK_BEGIN(&s->sout);
-	blen = 0;
-	ADD("HtHop");
-
-	SEND_STRING(&s->sout, buf);
-
-	PSOCK_END(&s->sout);
-}
-/*---------------------------------------------------------------------------*/
-httpd_simple_script_t
-httpd_simple_get_script(const char *name)
-{
-	return send_values;
-}
 /*---------------------------------------------------------------------------*/
 PROCESS_THREAD(web_sense_process, ev, data)
 {
@@ -100,7 +62,6 @@ PROCESS_THREAD(web_sense_process, ev, data)
 	set_cc2420_channel(0);
 	print_radio_config();
 	etimer_set(&timer, CLOCK_SECOND * 2);
-
 
 	while(1) {
 		PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));

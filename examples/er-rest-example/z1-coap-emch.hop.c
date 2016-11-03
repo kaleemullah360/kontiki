@@ -1,89 +1,74 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "contiki.h"
-#include "contiki-net.h"
-#include "rest-engine.h"
-#include <cc2420-radio.h>
-
-#define DEBUG 0
-#if DEBUG
-#include <stdio.h>
-#define PRINTF(...) printf(__VA_ARGS__)
-#define PRINT6ADDR(addr) PRINTF("[%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x]", ((uint8_t *)addr)[0], ((uint8_t *)addr)[1], ((uint8_t *)addr)[2], ((uint8_t *)addr)[3], ((uint8_t *)addr)[4], ((uint8_t *)addr)[5], ((uint8_t *)addr)[6], ((uint8_t *)addr)[7], ((uint8_t *)addr)[8], ((uint8_t *)addr)[9], ((uint8_t *)addr)[10], ((uint8_t *)addr)[11], ((uint8_t *)addr)[12], ((uint8_t *)addr)[13], ((uint8_t *)addr)[14], ((uint8_t *)addr)[15])
-#define PRINTLLADDR(lladdr) PRINTF("[%02x:%02x:%02x:%02x:%02x:%02x]", (lladdr)->addr[0], (lladdr)->addr[1], (lladdr)->addr[2], (lladdr)->addr[3], (lladdr)->addr[4], (lladdr)->addr[5])
-#else
-#define PRINTF(...)
-#define PRINT6ADDR(addr)
-#define PRINTLLADDR(addr)
-#endif
-
 /*
- * Resources to be activated need to be imported through the extern keyword.
- * The build system automatically compiles the resources in the corresponding sub-directory.
+ * Copyright (c) 2010, Swedish Institute of Computer Science.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the Institute nor the names of its contributors
+ *    may be used to endorse or promote products derived from this software
+ *    without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE INSTITUTE AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE INSTITUTE OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ *
  */
 
- static void res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset);
+/*
+ * \file
+ *         Evaluation of HTTP Protocols at Application layer.
+ * \author
+ *         Kaleem Ullah    <MSCS14059@ITU.EDU.PK>
+ *
+ * \Short Description:
+ *
+ *    e-MCH-APp (Evaluation MQTT, CoAP, HTTP protocol) using Node.Js server.
+ * this application uses Zolertia and send message number only on request.
+ *
+ *\Goal:
+ * 	This application create only hop node. shows HtHop string on calling its ipv6 address in browser
+ */
 
-/* A simple getter example. Returns the reading from light sensor with a simple etag */
- RESOURCE(res_z1_coap_emch_hop,
- 	"title=\"Sensor\";rt=\"status\"",
- 	res_get_handler,
- 	NULL,
- 	NULL,
- 	NULL);
+#include "contiki.h"
+#include <stdio.h>
+#include <cc2420-radio.h>
 
- static void
- res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferred_size, int32_t *offset)
- {
 
- 	unsigned int accept = -1;
- 	REST.get_header_accept(request, &accept);
+PROCESS(web_sense_process, "Sense CoAP HOP Node");
 
- 	if(accept == -1 || accept == REST.type.TEXT_PLAIN) {
- 		REST.set_header_content_type(response, REST.type.TEXT_PLAIN);
- 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "e-MCH-APp CoAP HOP");
- 		REST.set_response_payload(response, (uint8_t *)buffer, strlen((char *)buffer));
- 	}
- }
+AUTOSTART_PROCESSES(&web_sense_process);
 
-// coap resource to GET: resource
-extern resource_t res_z1_coap_emch_hop;
 
-PROCESS(er_example_server, "e-MCH-APp CoAP HOP");
-AUTOSTART_PROCESSES(&er_example_server);
-
-PROCESS_THREAD(er_example_server, ev, data)
+/*---------------------------------------------------------------------------*/
+PROCESS_THREAD(web_sense_process, ev, data)
 {
-  PROCESS_BEGIN();
+	static struct etimer timer;
+	PROCESS_BEGIN();
+	set_cc2420_txpower(0);
+	set_cc2420_channel(0);
+	print_radio_config();
+	etimer_set(&timer, CLOCK_SECOND * 2);
 
-  PROCESS_PAUSE();
+	while(1) {
+		PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+		etimer_reset(&timer);
 
-  PRINTF("e-MCH-APp CoAP HOP\n");
+	}
 
-#ifdef RF_CHANNEL
-  PRINTF("RF channel: %u\n", RF_CHANNEL);
-#endif
-#ifdef IEEE802154_PANID
-  PRINTF("PAN ID: 0x%04X\n", IEEE802154_PANID);
-#endif
-
-  PRINTF("uIP buffer: %u\n", UIP_BUFSIZE);
-  PRINTF("LL header: %u\n", UIP_LLH_LEN);
-  PRINTF("IP+UDP header: %u\n", UIP_IPUDPH_LEN);
-  PRINTF("REST max chunk: %u\n", REST_MAX_CHUNK_SIZE);
-
-  /* Initialize the REST engine. */
-  rest_init_engine();
-
-  rest_activate_resource(&res_z1_coap_emch_hop, "sens/mote");
-
-  /* Define application-specific events here. */
-  set_cc2420_txpower(0);
-  set_cc2420_channel(0);
-  while(1) {
-    PROCESS_WAIT_EVENT();
-
-  }  /* while (1) */
-  PROCESS_END();
+	PROCESS_END();
 }
+/*---------------------------------------------------------------------------*/
