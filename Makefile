@@ -59,6 +59,9 @@ clean-all:
 log:
 	vim '/home/${USER}/logs/firelog.log'
 
+console-mqtt:
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t iot-2/evt/status/fmt/json -v
+
 clean-emch:
 	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean
 	cd ${CPWD}/examples/er-rest-example/ && sudo make clean
