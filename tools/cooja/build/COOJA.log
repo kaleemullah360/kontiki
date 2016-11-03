@@ -1,13 +1,9 @@
-[18:15:21 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[18:15:21 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[18:15:21 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
-[18:15:43 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[18:15:43 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[18:15:43 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[18:15:44 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[18:15:44 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[18:15:45 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[18:16:18 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1478092578566
-[18:16:29 - Thread-1] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[18:16:29 - Thread-3] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[18:18:54 - Thread-3] [SerialSocketServer.java:501] [INFO] - End of Stream
+[12:21:30 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[12:21:30 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[12:21:30 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
+[12:21:34 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[12:21:34 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[12:21:36 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[12:21:36 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[12:21:37 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[12:21:37 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
