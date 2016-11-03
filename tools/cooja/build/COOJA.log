@@ -12,3 +12,110 @@
 [19:38:26 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
 [19:38:26 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
 [19:38:27 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-rssi-lqi.z1 TARGET=z1 
+[19:38:38 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-rssi-lqi.z1
+[19:38:45 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1478183925090
+[19:38:51 - Thread-1] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[19:38:51 - Thread-4] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[19:43:05 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1478184185707	Duration: 260617 ms	Simulated time 260359 ms	Ratio 0.9990100415552324
+[19:43:20 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[19:43:20 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[19:43:21 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[19:43:21 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.hop.z1 TARGET=z1 
+[19:43:47 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.hop.z1 TARGET=z1 
+[19:44:08 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.hop.z1 TARGET=z1 
+[19:44:29 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.hop.z1 TARGET=z1 
+[19:44:45 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.hop.z1 TARGET=z1 
+[19:45:58 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.hop.z1 TARGET=z1 
+[19:46:03 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.hop.z1
+[19:46:07 - Thread-4] [SerialSocketServer.java:497] [INFO] - Socket closed
+[19:46:07 - Thread-4] [SerialSocketServer.java:501] [INFO] - End of Stream
+[19:46:07 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:46:07 - Thread-6] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:46:07 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:46:07 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-http-rssi-lqi.z1 TARGET=z1 
+[19:46:07 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.hop.z1 TARGET=z1 
+[19:46:08 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:46:08 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.hop.z1
+[19:46:08 - Thread-6] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:46:09 - Thread-6] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:46:10 - Thread-8] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1478184370675
+[19:46:27 - Thread-7] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[19:46:27 - Thread-9] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[19:47:44 - Thread-9] [SerialSocketServer.java:497] [INFO] - Socket closed
+[19:47:44 - Thread-9] [SerialSocketServer.java:501] [INFO] - End of Stream
+[19:47:44 - Thread-7] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:47:44 - Thread-8] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1478184464179	Duration: 93504 ms	Simulated time 93475 ms	Ratio 0.9996898528405201
+[19:47:44 - Thread-10] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:47:44 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:47:44 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-http-rssi-lqi.z1 TARGET=z1 
+[19:47:44 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.hop.z1 TARGET=z1 
+[19:47:45 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >>   CC        ../../../../platform/z1/./contiki-z1-main.c
+[19:47:45 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >>   LD        z1-mqtt-emch.hop.z1
+[19:47:45 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> obj_z1/contiki-z1-main.o: In function `main':
+[19:47:45 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> /home/su/kontiki/examples/zolertia/z1/mqtt-z1/../../../../platform/z1/./contiki-z1-main.c:167: undefined reference to `autostart_processes'
+[19:47:45 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> /home/su/kontiki/examples/zolertia/z1/mqtt-z1/../../../../platform/z1/./contiki-z1-main.c:418: undefined reference to `autostart_processes'
+[19:47:45 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> collect2: error: ld returned 1 exit status
+[19:47:45 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> ../../../../Makefile.include:280: recipe for target 'z1-mqtt-emch.hop.z1' failed
+[19:47:45 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> make: *** [z1-mqtt-emch.hop.z1] Error 1
+[19:47:45 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> rm z1-mqtt-emch.hop.co obj_z1/contiki-z1-main.o
+[19:47:45 - Thread-10] [AbstractMspMoteType.java:152] [FATAL] - >> Process returned error code 2
+[19:47:45 - Thread-10] [AbstractMspMoteType.java:155] [FATAL] - Compilation error: Bad return value
+[19:48:00 - Thread-10] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:48:00 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:48:00 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-http-rssi-lqi.z1 TARGET=z1 
+[19:48:00 - Thread-10] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.hop.z1 with /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.hop.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[19:48:00 - Thread-10] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.hop.z1 TARGET=z1 
+[19:48:01 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:48:01 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.hop.z1
+[19:48:01 - Thread-10] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:48:02 - Thread-10] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:48:02 - Thread-13] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1478184482144
+[19:48:30 - Thread-13] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1478184510512	Duration: 28368 ms	Simulated time 28365 ms	Ratio 0.999894247038917
+[19:48:47 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[19:48:47 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[19:48:48 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.z1 TARGET=z1 
+[19:49:05 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.z1
+[19:49:14 - Thread-15] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.hop.z1 with /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.hop.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[19:49:14 - Thread-15] [Cooja.java:4138] [WARN] - Path is not portable: '/home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.hop.z1
+[19:49:14 - Thread-12] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[19:49:14 - Thread-15] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[19:49:14 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[19:49:15 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-http-rssi-lqi.z1 TARGET=z1 
+[19:49:15 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.hop.z1 TARGET=z1 
+[19:49:15 - Thread-15] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.z1 TARGET=z1 
+[19:49:15 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[19:49:16 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.hop.z1
+[19:49:16 - Thread-15] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.z1
+[19:49:16 - Thread-15] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[19:49:17 - Thread-15] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[19:49:19 - Thread-17] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1478184559915
+[19:49:27 - Thread-16] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[19:49:27 - Thread-18] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[19:52:52 - Thread-17] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1478184772789	Duration: 212874 ms	Simulated time 206276 ms	Ratio 0.9690051391903192
+[19:52:53 - Thread-19] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1478184773763
+[19:54:06 - Thread-19] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1478184846848	Duration: 73085 ms	Simulated time 278222 ms	Ratio 3.8068276664158174
+[20:07:57 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:07:57 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:07:57 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:07:58 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:08:18 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:08:42 - Thread-21] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/ipv6/z1-websense/z1-http-rssi-lqi.z1 with /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-rssi-lqi.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[20:08:42 - Thread-21] [Cooja.java:4138] [WARN] - Path is not portable: '/home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-rssi-lqi.z1
+[20:08:42 - Thread-18] [SerialSocketServer.java:497] [INFO] - Socket closed
+[20:08:42 - Thread-16] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:08:42 - Thread-18] [SerialSocketServer.java:501] [INFO] - End of Stream
+[20:08:42 - Thread-21] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:08:42 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:08:42 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-http-rssi-lqi.z1 TARGET=z1 
+[20:08:43 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.hop.z1 TARGET=z1 
+[20:08:43 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.z1 TARGET=z1 
+[20:08:43 - Thread-21] [CompileContiki.java:140] [INFO] - > make z1-http-emch.pow.z1 TARGET=z1 
+[20:08:43 - Thread-21] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:08:44 - Thread-21] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.hop.z1
+[20:08:44 - Thread-21] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.z1
+[20:08:44 - Thread-21] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/zolertia/z1/ipv6/z1-websense/z1-http-emch.pow.z1
+[20:08:45 - Thread-21] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:08:45 - Thread-21] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:08:57 - Thread-23] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1478185737386
+[20:09:06 - Thread-22] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[20:09:06 - Thread-24] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
