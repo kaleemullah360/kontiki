@@ -63,7 +63,7 @@ static void res_get_handler(void *request, void *response, uint8_t *buffer, uint
 static void res_periodic_handler(void);
 
 PERIODIC_RESOURCE(res_z1_coap_rtgs_obs_rssi,
-                  "title=\"rTGS\";obs",
+                  "title=\"rTGS\";obs-rssi-lqi",
                   res_get_handler,
                   NULL,
                   NULL,
@@ -81,7 +81,6 @@ res_get_handler(void *request, void *response, uint8_t *buffer, uint16_t preferr
 
 }
 void notify() {
-    //printf("FinalStatus: %s\n", STATUS_PT);
     REST.notify_subscribers(&res_z1_coap_rtgs_obs_rssi);
 }
 static void
