@@ -101,3 +101,4 @@
 [11:44:29 - Thread-16] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1478241869269
 [11:44:31 - Thread-15] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
 [11:44:31 - Thread-17] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[11:51:38 - Thread-17] [SerialSocketServer.java:501] [INFO] - End of Stream
