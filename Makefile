@@ -69,12 +69,13 @@ console-mqtt:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t iot-2/evt/status/fmt/json -v
 
 clean-emch:
+	cd ${CPWD}/examples/zolertia/z1/ && sudo make clean
 	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean
-	cd ${CPWD}/examples/er-rest-example/ && sudo make clean
+	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean
 	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make clean
 	cd ${CPWD}/examples/ipv6/rpl-collect/ && sudo make clean
-	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean
+	cd ${CPWD}/examples/er-rest-example/ && sudo make clean
 	cd ${CPWD}/examples/rime/ && sudo make clean
 
 push:
