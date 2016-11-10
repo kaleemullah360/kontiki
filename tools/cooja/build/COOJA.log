@@ -17,3 +17,56 @@
 [19:50:44 - Thread-4] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
 [19:50:44 - Thread-1] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
 [19:53:05 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1478789585966	Duration: 157728 ms	Simulated time 157682 ms	Ratio 0.999708358693447
+[20:03:39 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:03:39 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:03:40 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-emch-1.hop.z1 TARGET=z1 nodeid=10 nodemac=10 
+[20:04:37 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:04:38 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-emch-1.hop.z1 TARGET=z1 
+[20:05:23 - Thread-6] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-border-router/z1-border-router.z1 with /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[20:05:23 - Thread-6] [Cooja.java:4138] [WARN] - Path is not portable: '/home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:05:23 - Thread-4] [SerialSocketServer.java:497] [INFO] - Socket closed
+[20:05:23 - Thread-4] [SerialSocketServer.java:501] [INFO] - End of Stream
+[20:05:23 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:05:23 - Thread-6] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:05:23 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:05:23 - Thread-6] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[20:05:24 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:05:25 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[20:05:25 - Thread-6] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:05:26 - Thread-6] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:05:42 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:05:42 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:05:43 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-emch-1.hop.z1 TARGET=z1 
+[20:07:00 - Thread-9] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-border-router/z1-border-router.z1 with /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[20:07:00 - Thread-9] [Cooja.java:4138] [WARN] - Path is not portable: '/home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:07:00 - Thread-9] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/z1-coap-emch.pow.z1 with /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[20:07:00 - Thread-9] [Cooja.java:4138] [WARN] - Path is not portable: '/home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[20:07:00 - Thread-7] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:07:00 - Thread-9] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:07:00 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:07:07 - Thread-9] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[20:07:16 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:07:16 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[20:07:16 - Thread-9] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:07:17 - Thread-9] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:07:45 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:07:45 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:07:46 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-emch-1.hop.z1 TARGET=z1 
+[20:08:06 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:08:07 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:08:07 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:08:38 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:08:38 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:08:38 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:08:39 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-emch-2.hop.z1 TARGET=z1 
+[20:08:57 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:08:58 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:08:58 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:08:58 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:10:24 - Thread-12] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-border-router/z1-border-router.z1 with /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[20:10:24 - Thread-12] [Cooja.java:4138] [WARN] - Path is not portable: '/home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:10:24 - Thread-10] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:10:24 - Thread-12] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:10:24 - Thread-12] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:10:31 - Thread-12] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[20:10:32 - Thread-12] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
