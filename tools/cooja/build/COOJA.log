@@ -73,3 +73,18 @@
 [20:10:32 - Thread-12] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
 [20:10:33 - Thread-12] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
 [20:10:33 - Thread-12] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:19:49 - Thread-14] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-border-router/z1-border-router.z1 with /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[20:19:49 - Thread-14] [Cooja.java:4138] [WARN] - Path is not portable: '/home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:19:49 - Thread-14] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/er-rest-example/z1-coap-emch.pow.z1 with /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[20:19:49 - Thread-14] [Cooja.java:4138] [WARN] - Path is not portable: '/home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[20:19:49 - Thread-13] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:19:50 - Thread-14] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:19:50 - Thread-14] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:19:57 - Thread-14] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
+[20:20:05 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:20:05 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[20:20:05 - Thread-14] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:20:06 - Thread-14] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:21:42 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:21:42 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:21:43 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-emch-1.hop.z1 TARGET=z1 
