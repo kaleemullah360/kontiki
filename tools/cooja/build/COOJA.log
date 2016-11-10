@@ -70,3 +70,6 @@
 [20:10:24 - Thread-12] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
 [20:10:31 - Thread-12] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
 [20:10:32 - Thread-12] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:10:32 - Thread-12] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
+[20:10:33 - Thread-12] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:10:33 - Thread-12] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
