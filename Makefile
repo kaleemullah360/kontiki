@@ -15,6 +15,12 @@ cooja:
 
 mqtt:
 	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.upload nodeid=4 nodemac=4
+	@echo ""
+	@while [ -z "$$CONTINUE" ]; do \
+	read -r -p "Is Border Router connected ?. [y/N]: " CONTINUE; \
+	done ; \
+	[ $$CONTINUE = "y" ] || [ $$CONTINUE = "Y" ] || (echo "Exiting."; exit 1;)
+	@echo "..moving on.."	
 	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' -e "make connect-router" --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
 	sudo service mosquitto start
 	echo "Starting mosquitto service....."
@@ -26,6 +32,12 @@ mqtt:
 
 coap:
 	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.pow.upload nodeid=2 nodemac=2
+	@echo ""
+	@while [ -z "$$CONTINUE" ]; do \
+	read -r -p "Is Border Router connected ?. [y/N]: " CONTINUE; \
+	done ; \
+	[ $$CONTINUE = "y" ] || [ $$CONTINUE = "Y" ] || (echo "Exiting."; exit 1;)
+	@echo "..moving on.."	
 	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' -e "make connect-router" --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
 	sleep 5
 	firefox http://localhost:3000/coap >> '/home/${USER}/logs/firelog.log' &
@@ -34,6 +46,12 @@ coap:
 
 http:
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-emch.pow.upload nodeid=3 nodemac=3
+	@echo ""
+	@while [ -z "$$CONTINUE" ]; do \
+	read -r -p "Is Border Router connected ?. [y/N]: " CONTINUE; \
+	done ; \
+	[ $$CONTINUE = "y" ] || [ $$CONTINUE = "Y" ] || (echo "Exiting."; exit 1;)
+	@echo "..moving on.."	
 	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' -e "make connect-router" --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
 	sleep 5
 	firefox http://localhost:3000/http >> '/home/${USER}/logs/firelog.log' &
@@ -75,6 +93,14 @@ burn-hhop:
 
 ptrace:
 	cd ${CPWD}/examples/rime/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-hop-mote.upload
+
+ask:
+	@echo ""
+	@while [ -z "$$CONTINUE" ]; do \
+	read -r -p "Is Border Router connected ?. [y/N]: " CONTINUE; \
+	done ; \
+	[ $$CONTINUE = "y" ] || [ $$CONTINUE = "Y" ] || (echo "Exiting."; exit 1;)
+	@echo "..moving on.."
 
 clean:
 	rm -f *.exe
