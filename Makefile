@@ -53,6 +53,8 @@ burn-http:
 burn-brouter:
 	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-border-router.upload nodeid=1 nodemac=1
 	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' -e "make connect-router" --working-directory='${CPWD}/'
+	sleep 5
+	firefox http://[aaaa::c30c:0:0:1]/ &
 
 burn-hop-a:
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-emch-1.hop.upload nodeid=10 nodemac=10
