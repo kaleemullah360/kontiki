@@ -21,20 +21,24 @@ mqtt:
 	service mosquitto status| grep running
 	sleep 7
 	firefox http://localhost:3000/mqtt >> '/home/${USER}/logs/firelog.log' &
-	firefox http://[aaaa::c30c:0:0:1]/ &
+	sleep 3
+	firefox --new-tab http://[aaaa::c30c:0:0:1]/ &
 
 coap:
 	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.pow.upload nodeid=2 nodemac=2
 	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' -e "make connect-router" --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
 	sleep 7
 	firefox http://localhost:3000/coap >> '/home/${USER}/logs/firelog.log' &
-	firefox http://[aaaa::c30c:0:0:1]/ &
+	sleep 3
+	firefox --new-tab http://[aaaa::c30c:0:0:1]/ &
 
 http:
-	#cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-emch.pow.upload nodeid=3 nodemac=3
-	#sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' -e "make connect-router" --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
-	#sleep 7
-	firefox http://localhost:3000/http >> '/home/${USER}/logs/firelog.log' && firefox --new-tab http://[aaaa::c30c:0:0:1]/ &
+	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-emch.pow.upload nodeid=3 nodemac=3
+	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' -e "make connect-router" --tab -e "sudo wireshark" --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/' -e "sudo npm start"
+	sleep 7
+	firefox http://localhost:3000/http >> '/home/${USER}/logs/firelog.log' &
+	sleep 3
+	firefox --new-tab http://[aaaa::c30c:0:0:1]/ &
 
 burn-mqtt:
 	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.upload nodeid=4 nodemac=4
