@@ -43,7 +43,6 @@ burn-mqtt:
 	echo "Starting mosquitto service....."
 	service mosquitto status| grep running
 
-
 burn-coap:
 	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.pow.upload nodeid=2 nodemac=2
 
@@ -52,7 +51,7 @@ burn-http:
 
 burn-brouter:
 	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-border-router.upload nodeid=1 nodemac=1
-	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' -e "make connect-router" --working-directory='${CPWD}/'
+	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' -e "make connect-router"
 	sleep 5
 	firefox http://[aaaa::c30c:0:0:1]/ &
 
