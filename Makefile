@@ -6,8 +6,7 @@ ifeq ($(C),)
 endif
 	
 cooja:
-
-	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' -e "make connect-router" --tab --working-directory='/home/${USER}/kontiki/tools/cooja/' -e "ant run"
+	sudo gnome-terminal --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' -e "make connect-router-cooja" --tab --working-directory='/home/${USER}/kontiki/tools/cooja/' -e "ant run"
 	sudo service mosquitto start
 	echo "Starting mosquitto service....."
 	service mosquitto status| grep running
