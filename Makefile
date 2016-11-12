@@ -15,7 +15,7 @@ cooja:
 
 mqtt:
 	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.upload nodeid=4 nodemac=4
-	@echo ""
+	@echo "you can connect border router now"
 	@while [ -z "$$CONTINUE" ]; do \
 	read -r -p "Is Border Router connected ?. [y/N]: " CONTINUE; \
 	done ; \
@@ -32,7 +32,7 @@ mqtt:
 
 coap:
 	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.pow.upload nodeid=2 nodemac=2
-	@echo ""
+	@echo "you can connect border router now"
 	@while [ -z "$$CONTINUE" ]; do \
 	read -r -p "Is Border Router connected ?. [y/N]: " CONTINUE; \
 	done ; \
@@ -46,7 +46,7 @@ coap:
 
 http:
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-emch.pow.upload nodeid=3 nodemac=3
-	@echo ""
+	@echo "you can connect border router now"
 	@while [ -z "$$CONTINUE" ]; do \
 	read -r -p "Is Border Router connected ?. [y/N]: " CONTINUE; \
 	done ; \
