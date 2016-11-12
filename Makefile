@@ -34,22 +34,35 @@ http:
 	firefox http://localhost:3000/http >> '/home/${USER}/logs/firelog.log' &
 	firefox http://[aaaa::c30c:0:0:1]/ &
 
-brouter:
+burn-mqtt:
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.upload nodeid=4 nodemac=4
+		sudo service mosquitto start
+	echo "Starting mosquitto service....."
+	service mosquitto status| grep running
+
+
+burn-coap:
+	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.pow.upload nodeid=2 nodemac=2
+
+burn-http:
+	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-emch.pow.upload nodeid=3 nodemac=3
+
+burn-brouter:
 	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-border-router.upload nodeid=1 nodemac=1
 
-hop-a:
+burn-hop-a:
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-emch-1.hop.upload nodeid=10 nodemac=10
 
-hop-b:
+burn-hop-b:
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-emch-1.hop.upload nodeid=11 nodemac=11
 
-mhop:
+burn-mhop:
 	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.hop.upload
 
-chop:
+burn-chop:
 	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.hop.upload
 
-hhop:
+burn-hhop:
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-hop.upload
 
 ptrace:
