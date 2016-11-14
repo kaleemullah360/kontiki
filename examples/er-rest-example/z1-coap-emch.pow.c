@@ -24,7 +24,7 @@
 // this application responds with full payload of 180bytes including powertraces, and messages identities.
 extern resource_t res_z1_coap_emch_pow;
 
-PROCESS(er_example_server, "e-MCH-APp Server");
+PROCESS(er_example_server, "CoAP eMCH-APp Pow Trace Server");
 AUTOSTART_PROCESSES(&er_example_server);
 
 PROCESS_THREAD(er_example_server, ev, data)
@@ -49,6 +49,7 @@ PROCESS_THREAD(er_example_server, ev, data)
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
   print_radio_config();
+  printf("CoAP eMCH-APp Pow Trace Server\n");
   /* Initialize the REST engine. */
   rest_init_engine();
 
