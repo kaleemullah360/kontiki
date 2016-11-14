@@ -82,29 +82,6 @@ burn-hop-a:
 burn-hop-b:
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-emch-2.hop.upload nodeid=11 nodemac=11
 
-burn-mhop:
-	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.hop.upload
-
-burn-chop:
-	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.hop.upload
-
-burn-hhop:
-	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-http-hop.upload
-
-ptrace:
-	cd ${CPWD}/examples/rime/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-hop-mote.upload
-
-test:
-	cd ${CPWD}/examples/ipv6/rpl-collect/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-hop-coap-mqtt.upload nodeid=10 nodemac=10
-
-ask:
-	@echo ""
-	@while [ -z "$$CONTINUE" ]; do \
-	read -r -p "Is Border Router connected ?. [y/N]: " CONTINUE; \
-	done ; \
-	[ $$CONTINUE = "y" ] || [ $$CONTINUE = "Y" ] || (echo "Exiting."; exit 1;)
-	@echo "..moving on.."
-
 clean:
 	rm -f *.exe
 
