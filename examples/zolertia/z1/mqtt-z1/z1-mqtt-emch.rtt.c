@@ -63,7 +63,7 @@ uint16_t mid = 0;
  * Publish to a local MQTT broker (e.g. mosquitto) running on the host
  */
  static const char *broker_ip = MQTT_Z1_BROKER_IP_ADDR;
- #define DEFAULT_ORG_ID "eMCH-APp"
+ #define DEFAULT_ORG_ID "MQTT eMCH-APp RTT Server"
 /*---------------------------------------------------------------------------*/
 /*
  * A timeout used when waiting for something to happen (e.g. to connect or to
@@ -181,7 +181,7 @@ uint16_t mid = 0;
 /*---------------------------------------------------------------------------*/
  static mqtt_client_config_t conf;
 /*---------------------------------------------------------------------------*/
- PROCESS(mqtt_z1_client_process, "eMCH-MQTT-Server");
+ PROCESS(mqtt_z1_client_process, "MQTT eMCH-APp RTT Server");
 /*---------------------------------------------------------------------------*/
  int
  ipaddr_sprintf(char *buf, uint8_t buf_len, const uip_ipaddr_t *addr)
@@ -619,7 +619,8 @@ state_machine(void)
 
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
-  printf("eMCH-APp\n");
+  print_radio_config();
+  printf("MQTT eMCH-APp RTT Server\n");
 
   if(init_config() != 1) {
     PROCESS_EXIT();
