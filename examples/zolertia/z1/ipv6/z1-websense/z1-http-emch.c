@@ -127,8 +127,8 @@ static void get_sensor_temperature(){
   }
 
 //---End Function Deffinitions e-MCH-APp ---
-PROCESS(web_sense_process, "e-MCH-APp");
-PROCESS(webserver_nogui_process, "e-MCH server");
+PROCESS(web_sense_process, "HTTP eMCH-APp Server");
+PROCESS(webserver_nogui_process, "Mote");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
   PROCESS_BEGIN();
@@ -186,6 +186,8 @@ PROCESS_THREAD(web_sense_process, ev, data)
   PROCESS_BEGIN();
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
+  print_radio_config();
+  printf("HTTP eMCH-APp Server\n");
   powertrace_start(CLOCK_SECOND * 1);
 
 

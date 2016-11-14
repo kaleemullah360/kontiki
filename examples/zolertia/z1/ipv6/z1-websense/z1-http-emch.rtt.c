@@ -52,8 +52,8 @@
 uint16_t mid = 0;
 
 
-PROCESS(web_sense_process, "Sense HTTP RTT");
-PROCESS(webserver_nogui_process, "RTT server");
+PROCESS(web_sense_process, "HTTP eMCH-APp RTT Server");
+PROCESS(webserver_nogui_process, "Mote");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
 	PROCESS_BEGIN();
@@ -101,6 +101,8 @@ PROCESS_THREAD(web_sense_process, ev, data)
 	PROCESS_BEGIN();
 	set_cc2420_txpower(0);
 	set_cc2420_channel(0);
+	print_radio_config();
+	printf("HTTP eMCH-APp RTT Server\n");
 	etimer_set(&timer, CLOCK_SECOND * 2);
 
 

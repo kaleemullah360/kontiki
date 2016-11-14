@@ -66,8 +66,8 @@ static void get_sensor_time(){
 }
 
 //---End Function Deffinitions e-MCH-APp ---
-PROCESS(web_sense_process, "e-MCH-APp Power Tracing");
-PROCESS(webserver_nogui_process, "e-MCH server");
+PROCESS(web_sense_process, "HTTP eMCH-APp Pow Trace Server");
+PROCESS(webserver_nogui_process, "Mote");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
   PROCESS_BEGIN();
@@ -120,9 +120,10 @@ PROCESS_THREAD(web_sense_process, ev, data)
 {
   static struct etimer timer;
   PROCESS_BEGIN();
-	set_cc2420_txpower(0);
-	set_cc2420_channel(0);
+  set_cc2420_txpower(0);
+  set_cc2420_channel(0);
   print_radio_config();
+  printf("HTTP eMCH-APp Pow Trace Server\n");
   etimer_set(&timer, CLOCK_SECOND * 2);
 
 
