@@ -26,7 +26,7 @@
 // coap resource to GET: resource
 extern resource_t res_z1_coap_emch_rtt;
 
-PROCESS(er_example_server, "e-MCH-APp Server RTT");
+PROCESS(er_example_server, "CoAP eMCH-APp RTT Server");
 AUTOSTART_PROCESSES(&er_example_server);
 
 PROCESS_THREAD(er_example_server, ev, data)
@@ -57,6 +57,8 @@ PROCESS_THREAD(er_example_server, ev, data)
   /* Define application-specific events here. */
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
+  print_radio_config();
+  printf("CoAP eMCH-APp RTT Server\n");
   while(1) {
     PROCESS_WAIT_EVENT();
 
