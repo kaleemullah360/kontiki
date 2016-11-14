@@ -353,7 +353,7 @@ PROCESS_THREAD(border_router_process, ev, data)
 
   SENSORS_ACTIVATE(button_sensor);
 
-  PRINTF("RPL-Border router started\n");
+  PRINTF("eMCH-APp RPL-Border router started\n");
 #if 0
    /* The border router runs with a 100% duty cycle in order to ensure high
      packet reception rates.
