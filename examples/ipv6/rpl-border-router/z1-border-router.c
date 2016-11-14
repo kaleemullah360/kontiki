@@ -58,7 +58,7 @@
 static uip_ipaddr_t prefix;
 static uint8_t prefix_set;
 
-PROCESS(border_router_process, "Border router process");
+PROCESS(border_router_process, "eMCH-APp Border Router -Root Node");
 
 #if WEBSERVER==0
 /* No webserver */
@@ -340,6 +340,7 @@ PROCESS_THREAD(border_router_process, ev, data)
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
   print_radio_config();
+  printf("eMCH-APp Border Router -Root Node\n");
 /* While waiting for the prefix to be sent through the SLIP connection, the future
  * border router can join an existing DAG as a parent or child, or acquire a default
  * router that will later take precedence over the SLIP fallback interface.
