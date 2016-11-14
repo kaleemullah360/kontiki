@@ -40,35 +40,74 @@
  * this application uses Zolertia and send message number only on request.
  *
  *\Goal:
- * 	This application create only hop node. shows HtHop string on calling its ipv6 address in browser
+ *  This application only compute RTT using PING method in NodeJs. on each request it first PING then get data.
+ * the data consist of message number only
  */
 
 #include "contiki.h"
+#include "httpd-simple.h"
 #include <stdio.h>
 #include <cc2420-radio.h>
 
+PROCESS(web_sense_process, "e-MCH-Hop-A mote");
+PROCESS(webserver_nogui_process, "e-MCH-Hop-A Server");
+PROCESS_THREAD(webserver_nogui_process, ev, data)
+{
+  PROCESS_BEGIN();
+    httpd_init();
 
-PROCESS(web_sense_process, "Sense eMCH HOP-1 Node");
+  while(1) {
+    PROCESS_WAIT_EVENT_UNTIL(ev == tcpip_event);
+    httpd_appcall(data);
+  }
 
-AUTOSTART_PROCESSES(&web_sense_process);
+  PROCESS_END();
+}
+AUTOSTART_PROCESSES(&web_sense_process,&webserver_nogui_process);
 
 
 /*---------------------------------------------------------------------------*/
+/* Only one single request at time */
+static char buf[256];
+static int blen;
+#define ADD(...) do {                                                   \
+blen += snprintf(&buf[blen], sizeof(buf) - blen, __VA_ARGS__);      \
+} while(0)
+
+static
+PT_THREAD(send_values(struct httpd_state *s))
+{
+  PSOCK_BEGIN(&s->sout);
+  blen = 0;
+    ADD("e-MCH-Hop-A");
+
+    SEND_STRING(&s->sout, buf);
+
+  PSOCK_END(&s->sout);
+}
+/*---------------------------------------------------------------------------*/
+httpd_simple_script_t
+httpd_simple_get_script(const char *name)
+{
+  return send_values;
+}
+/*---------------------------------------------------------------------------*/
 PROCESS_THREAD(web_sense_process, ev, data)
 {
-	static struct etimer timer;
-	PROCESS_BEGIN();
-	set_cc2420_txpower(0);
-	set_cc2420_channel(0);
-	print_radio_config();
-	etimer_set(&timer, CLOCK_SECOND * 2);
+  static struct etimer timer;
+  PROCESS_BEGIN();
+  set_cc2420_txpower(0);
+  set_cc2420_channel(0);
+  print_radio_config();
+  etimer_set(&timer, CLOCK_SECOND * 2);
 
-	while(1) {
-		PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
-		etimer_reset(&timer);
 
-	}
+  while(1) {
+    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&timer));
+    etimer_reset(&timer);
 
-	PROCESS_END();
+  }
+
+  PROCESS_END();
 }
 /*---------------------------------------------------------------------------*/
