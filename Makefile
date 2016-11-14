@@ -94,6 +94,9 @@ burn-hhop:
 ptrace:
 	cd ${CPWD}/examples/rime/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-hop-mote.upload
 
+test:
+	cd ${CPWD}/examples/ipv6/rpl-collect/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-hop-coap-mqtt.upload nodeid=10 nodemac=10
+
 ask:
 	@echo ""
 	@while [ -z "$$CONTINUE" ]; do \
