@@ -106,10 +106,20 @@ clean-emch:
 	cd ${CPWD}/examples/rime/ && sudo make clean
 
 push:
-	@#	make commit C="Added-some-test"
+ifeq ($(m),)
+ m = 'updates'
+endif
+
+push:
+ifeq ($(USER),root)
+	@echo "root user, will not push to repository, try with standard user"
+else
+	@#	make commit m="Added-some-test"
+	@echo "Current USER: $(USER)"	
 	git add -A
-	git commit -m $(C)
+	git commit -m $(m)
 	git push origin master
+endif
 
 pull:
 	git pull origin master
