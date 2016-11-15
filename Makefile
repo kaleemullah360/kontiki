@@ -105,7 +105,7 @@ clean-emch:
 	cd ${CPWD}/examples/er-rest-example/ && sudo make clean
 	cd ${CPWD}/examples/rime/ && sudo make clean
 
-push:
+
 ifeq ($(m),)
  m = 'updates'
 endif
