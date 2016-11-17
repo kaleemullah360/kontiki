@@ -14,3 +14,5 @@ dev/cc2420/cc2420.c:105
 |-10|11|0xeb|
 |-15|7 |0xe7|
 |-25|3 |0xe3|
+
+[Issue Status](https://github.com/contiki-os/contiki/issues/1937)
