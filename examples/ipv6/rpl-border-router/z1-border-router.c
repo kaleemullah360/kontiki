@@ -161,6 +161,7 @@ PT_THREAD(generate_routes(struct httpd_state *s))
 #else
   blen = 0;
 #endif
+  ADD("RSSI: %d LQI: %d<pre>", cc2420_last_rssi, cc2420_last_correlation);
   ADD("Neighbors<pre>");
 
   for(nbr = nbr_table_head(ds6_neighbors);
@@ -341,7 +342,6 @@ PROCESS_THREAD(border_router_process, ev, data)
   set_cc2420_channel(0);
   print_radio_config();
   printf("eMCH-APp Border Router -Root Node\n");
-  printf("RSSI: %d LQI: %d\n", cc2420_last_rssi, cc2420_last_correlation);
 /* While waiting for the prefix to be sent through the SLIP connection, the future
  * border router can join an existing DAG as a parent or child, or acquire a default
  * router that will later take precedence over the SLIP fallback interface.
