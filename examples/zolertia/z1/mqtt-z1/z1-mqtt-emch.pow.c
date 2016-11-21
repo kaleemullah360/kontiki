@@ -453,9 +453,7 @@ int remaining = APP_BUFFER_SIZE;
 
 buf_ptr = app_buffer;
 printf("Message %lu Sent on: %lu \n", mid, upt);
-// id, MessageID, UpTime, ClockTime, Temperature, Battery, Protocol, RTT, PowTrace, created_at
-// db, MessageNo, RunTime,  RSSI,         LQI,      N/A,   Protocol, RTT, PowTrace,   db
-len = snprintf(buf_ptr, "%lu,%lu,%d,%d,0,%s", mid++, upt, cc2420_last_rssi, cc2420_last_correlation, powertrace_result());
+len = snprintf(buf_ptr, remaining,"%lu,%lu,0,0,0,%s", mid, upt, powertrace_result());
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);

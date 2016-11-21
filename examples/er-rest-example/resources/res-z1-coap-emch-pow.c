@@ -89,9 +89,7 @@ static void get_sensor_time(){
  		//----- Get Data Instance -------
 		get_sensor_time();
 		//pow_str = powertrace_result();
-    // id, MessageID, UpTime, ClockTime, Temperature, Battery, Protocol, RTT, PowTrace, created_at
-    // db, MessageNo, RunTime,  RSSI,         LQI,      N/A,   Protocol, RTT, PowTrace,   db
-snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,%d,%d,0,%s", mid++, upt, cc2420_last_rssi, cc2420_last_correlation, powertrace_result());
+ 		snprintf((char *)buffer, REST_MAX_CHUNK_SIZE, "%lu,%lu,0,0,0,%s", mid++, upt, powertrace_result());
 	    printf("Message %lu Sent on: %lu \n", mid, upt);
 	    printf("Ticks per second: %u\n", RTIMER_SECOND);
 	    //----- End Get Data -------
