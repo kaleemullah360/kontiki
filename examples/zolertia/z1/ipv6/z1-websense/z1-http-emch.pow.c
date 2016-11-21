@@ -101,6 +101,8 @@ get_sensor_time();
 PSOCK_BEGIN(&s->sout);
 blen = 0;
 // variables
+// id, MessageID, UpTime, ClockTime, Temperature, Battery, Protocol, RTT, PowTrace, created_at
+// db, MessageNo, RunTime,  RSSI,         LQI,      N/A,   Protocol, RTT, PowTrace,   db
 ADD("%lu,%lu,%d,%d,0,%s", mid++, upt, cc2420_last_rssi, cc2420_last_correlation, powertrace_result());
 printf("Message %lu Sent on: %lu \n", mid, upt);
 printf("Ticks per second: %u\n", RTIMER_SECOND);
