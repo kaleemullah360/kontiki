@@ -46,6 +46,7 @@
 #include <stdio.h>
 #include <string.h>
 
+#include <cc2420.h>
 #define UDP_PORT 1234
 #define SERVICE_ID 190
 
@@ -69,8 +70,8 @@ receiver(struct simple_udp_connection *c,
 {
   printf("Data received from ");
   uip_debug_ipaddr_print(sender_addr);
-  printf(" on port %d from port %d with length %d: '%s'\n",
-         receiver_port, sender_port, datalen, data);
+  //printf(" on port %d from port %d with length %d: '%s'\n",receiver_port, sender_port, datalen, data);
+  printf("RSSI: %d LQI: %d\n", cc2420_last_rssi, cc2420_last_correlation);
 }
 /*---------------------------------------------------------------------------*/
 static uip_ipaddr_t *
