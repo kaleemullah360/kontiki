@@ -1,30 +1,50 @@
-[16:46:35 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[16:46:35 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
-[16:46:35 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
-[16:46:37 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[16:46:37 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[16:46:38 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[16:46:38 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[16:46:39 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[16:46:39 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[16:47:02 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[16:47:02 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[16:47:02 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
-[16:47:15 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
-[16:47:20 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1479728840421
-[16:47:30 - Thread-4] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
-[16:47:30 - Thread-1] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[16:48:17 - Thread-4] [SerialSocketServer.java:497] [INFO] - Socket closed
-[16:48:17 - Thread-4] [SerialSocketServer.java:501] [INFO] - End of Stream
-[16:48:17 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
-[16:48:17 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1479728897800	Duration: 57379 ms	Simulated time 57214 ms	Ratio 0.9971243834852472
-[16:48:17 - Thread-5] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[16:48:17 - Thread-5] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[16:48:18 - Thread-5] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.pow.z1 TARGET=z1 
-[16:48:19 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[16:48:19 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.pow.z1
-[16:48:20 - Thread-5] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[16:48:20 - Thread-5] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[16:48:20 - Thread-7] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1479728900587
-[16:48:23 - Thread-6] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
-[16:48:23 - Thread-8] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[20:48:18 - main] [Cooja.java:3171] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[20:48:18 - AWT-EventQueue-0] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux_64.config
+[20:48:18 - AWT-EventQueue-0] [Cooja.java:2885] [INFO] - External tools user settings: /root/.cooja.user.properties
+[20:48:22 - Thread-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:48:22 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[20:48:27 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[20:48:28 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[20:48:28 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:48:29 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[20:48:47 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:48:47 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:48:48 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-coap-emch.rtt.z1 TARGET=z1 
+[20:49:03 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/er-rest-example/z1-coap-emch.rtt.z1
+[20:49:08 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1480434548172
+[20:49:29 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[20:49:29 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1480434569802	Duration: 21630 ms	Simulated time 21545 ms	Ratio 0.9960702727693019
+[20:49:31 - AWT-EventQueue-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:50:44 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:50:45 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:50:46 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make unicast-receiver.z1 TARGET=z1 
+[20:51:00 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/simple-udp-rpl/unicast-receiver.z1
+[20:51:24 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make unicast-sender.z1 TARGET=z1 
+[20:51:27 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/simple-udp-rpl/unicast-sender.z1
+[20:51:32 - Thread-6] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:51:32 - Thread-6] [CompileContiki.java:140] [INFO] - > make unicast-receiver.z1 TARGET=z1 
+[20:51:32 - Thread-6] [CompileContiki.java:140] [INFO] - > make unicast-sender.z1 TARGET=z1 
+[20:51:32 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/simple-udp-rpl/unicast-receiver.z1
+[20:51:32 - Thread-6] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/simple-udp-rpl/unicast-sender.z1
+[20:51:33 - Thread-6] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:51:34 - Thread-7] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1480434694570
+[20:52:07 - Thread-7] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1480434727273	Duration: 32703 ms	Simulated time 246653 ms	Ratio 7.542213252606794
+[20:52:10 - AWT-EventQueue-0] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:52:24 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:52:25 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:52:25 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make unicast-sender.z1 TARGET=z1 
+[20:52:36 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/simple-udp-rpl/unicast-sender.z1
+[20:52:47 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:52:47 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[20:52:48 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make unicast-receiver.z1 TARGET=z1 
+[20:52:57 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/simple-udp-rpl/unicast-receiver.z1
+[20:53:12 - Thread-10] [Cooja.java:4259] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/simple-udp-rpl/unicast-sender.z1 with /home/su/kontiki/examples/ipv6/simple-udp-rpl/unicast-sender.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[20:53:12 - Thread-10] [Cooja.java:4138] [WARN] - Path is not portable: '/home/su/kontiki/examples/ipv6/simple-udp-rpl/unicast-sender.z1
+[20:53:13 - Thread-10] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[20:53:13 - Thread-10] [CompileContiki.java:140] [INFO] - > make unicast-sender.z1 TARGET=z1 
+[20:53:13 - Thread-10] [CompileContiki.java:140] [INFO] - > make unicast-receiver.z1 TARGET=z1 
+[20:53:13 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/simple-udp-rpl/unicast-sender.z1
+[20:53:13 - Thread-10] [MspMote.java:235] [INFO] - Loading firmware from: /home/su/kontiki/examples/ipv6/simple-udp-rpl/unicast-receiver.z1
+[20:53:14 - Thread-10] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[20:53:15 - Thread-11] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1480434795899
+[20:54:08 - Thread-11] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1480434848428	Duration: 52529 ms	Simulated time 1083903 ms	Ratio 20.634373393744408

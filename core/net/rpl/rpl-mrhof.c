@@ -150,10 +150,16 @@ neighbor_link_callback(rpl_parent_t *p, int status, int numtx)
       p->flags |= RPL_PARENT_FLAG_LINK_METRIC_VALID;
     }
 
-    PRINTF("RPL: ETX changed from %u to %u (packet ETX = %u)\n",
+        PRINTF("RPL: ETX changed from %u to %u (packet ETX = %u)\n",
         (unsigned)(recorded_etx / RPL_DAG_MC_ETX_DIVISOR),
         (unsigned)(new_etx  / RPL_DAG_MC_ETX_DIVISOR),
         (unsigned)(packet_etx / RPL_DAG_MC_ETX_DIVISOR));
+
+        printf("RPL: ETX changed from %u to %u (packet ETX = %u)\n",
+        (unsigned)(recorded_etx / RPL_DAG_MC_ETX_DIVISOR),
+        (unsigned)(new_etx  / RPL_DAG_MC_ETX_DIVISOR),
+        (unsigned)(packet_etx / RPL_DAG_MC_ETX_DIVISOR));
+
     /* update the link metric for this nbr */
     nbr->link_metric = new_etx;
   }
