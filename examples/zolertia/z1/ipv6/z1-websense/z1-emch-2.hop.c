@@ -80,6 +80,7 @@ PT_THREAD(send_values(struct httpd_state *s))
   PSOCK_BEGIN(&s->sout);
   blen = 0;
     ADD("e-MCH-Hop-B");
+    ADD("RSSI: %d LQI: %d<pre>", cc2420_last_rssi, cc2420_last_correlation);
 
     SEND_STRING(&s->sout, buf);
 
