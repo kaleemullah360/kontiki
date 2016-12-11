@@ -82,6 +82,12 @@ burn-hop-a:
 burn-hop-b:
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-emch-b.hop.upload nodeid=11 nodemac=11
 
+burn-hop-mqtt-a:
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-emch-a.hop.upload nodeid=10 nodemac=10
+
+burn-hop-mqtt-b:
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-emch-b.hop.upload nodeid=11 nodemac=11
+
 burn-hop-http-a:
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-emch-a.hop.upload nodeid=10 nodemac=10
 
