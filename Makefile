@@ -137,6 +137,9 @@ login:
 connect:
 	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make connect-router && cd ~/kontiki/
 
+dialout-user:
+	sudo adduser ${USER} dialout
+
 reboot:
 	sudo reboot
 
