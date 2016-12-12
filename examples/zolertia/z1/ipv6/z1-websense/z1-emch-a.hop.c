@@ -49,8 +49,8 @@
 #include <stdio.h>
 #include <cc2420-radio.h>
 
-PROCESS(web_sense_process, "e-MCH-HTTP-Hop-A mote");
-PROCESS(webserver_nogui_process, "e-MCH-HTTP-Hop-A Server");
+PROCESS(web_sense_process, "e-MCH-Hop-A mote");
+PROCESS(webserver_nogui_process, "e-MCH-Hop-A Server");
 PROCESS_THREAD(webserver_nogui_process, ev, data)
 {
   PROCESS_BEGIN();
@@ -79,7 +79,7 @@ PT_THREAD(send_values(struct httpd_state *s))
 {
   PSOCK_BEGIN(&s->sout);
   blen = 0;
-    ADD("e-MCH-HTTP-Hop-A");
+    ADD("e-MCH-Hop-A");
     ADD("<br>RSSI: %d LQI: %d", cc2420_last_rssi, cc2420_last_correlation);
 
     SEND_STRING(&s->sout, buf);
@@ -101,7 +101,7 @@ PROCESS_THREAD(web_sense_process, ev, data)
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
   print_radio_config();
-  printf("e-MCH-HTTP-Hop-A mote\n");
+  printf("e-MCH-Hop-A mote\n");
   etimer_set(&timer, CLOCK_SECOND * 2);
 
 
