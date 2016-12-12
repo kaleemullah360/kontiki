@@ -156,7 +156,7 @@ reset:
 	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make z1-reset && cd ~/kontiki/
 
 connect:
-	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make connect-router && cd ~/kontiki/
+	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make z1-reset && sudo make connect-router && cd ~/kontiki/
 
 dialout-user:
 	sudo adduser ${USER} dialout
