@@ -1,13 +1,9 @@
-[20:45:13 - main] [Cooja.java:3172] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[20:45:14 - AWT-EventQueue-0] [Cooja.java:2856] [INFO] - External tools default settings: /external_tools_linux_64.config
-[20:45:14 - AWT-EventQueue-0] [Cooja.java:2886] [INFO] - External tools user settings: /root/.cooja.user.properties
-[20:48:39 - Thread-0] [Simulation.java:422] [INFO] - Simulation random seed: 123456
-[20:48:39 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[20:48:40 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[20:48:41 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[20:48:43 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[20:48:44 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
-[20:50:44 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
-[20:50:45 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make border-router.z1 TARGET=z1 
-[20:51:06 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/ipv6/rpl-border-router/border-router.z1
-[20:51:28 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[11:23:07 - main] [Cooja.java:3172] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[11:23:07 - AWT-EventQueue-0] [Cooja.java:2856] [INFO] - External tools default settings: /external_tools_linux_64.config
+[11:23:07 - AWT-EventQueue-0] [Cooja.java:2886] [INFO] - External tools user settings: /root/.cooja.user.properties
+[11:23:12 - Thread-0] [Simulation.java:422] [INFO] - Simulation random seed: 123456
+[11:23:13 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[11:23:18 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[11:23:21 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[11:23:23 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[11:23:25 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
