@@ -151,24 +151,23 @@ log:
 console-mqtt:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t iot-2/evt/status/fmt/json -v
 
-
 console-server-mqtt-a:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/a
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/a -v
 
 console-server-mqtt-b:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/b
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/b -v
 
 console-server-mqtt-c:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/c
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/c -v
 
 console-hop-mqtt-a:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/hop/a
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/hop/a -v
 
 console-hop-mqtt-b:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/hop/b
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/hop/b -v
 
 console-hop-mqtt-c:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/hop/c
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/hop/c -v
 
 clean-emch:
 	cd ${CPWD}/examples/zolertia/z1/ && make clean
