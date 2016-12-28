@@ -322,9 +322,8 @@ mqtt_event(struct mqtt_connection *m, mqtt_event_t event, void *data)
 static int
 construct_pub_topic(void)
 {
-  int len = snprintf(pub_topic, BUFFER_SIZE, "iot-2/evt/%s/fmt/json",		// <---- Set Topic
+  int len = snprintf(pub_topic, BUFFER_SIZE, "iot-2/evt/%s/fmt/json",   // <---- Set Topic
    conf.event_type_id);
-
   /* len < 0: Error. Len >= BUFFER_SIZE: Buffer too small */
   if(len < 0 || len >= BUFFER_SIZE) {
     printf("Pub Topic: %d, Buffer %d\n", len, BUFFER_SIZE);
@@ -337,7 +336,7 @@ construct_pub_topic(void)
 static int
 construct_sub_topic(void)
 {
-  int len = snprintf(sub_topic, BUFFER_SIZE, "iot-2/evt/%s/fmt/json",		// <---- Set Topic
+  int len = snprintf(sub_topic, BUFFER_SIZE, "iot-2/evt/%s/fmt/json",   // <---- Set Topic
    conf.cmd_type);
 
   /* len < 0: Error. Len >= BUFFER_SIZE: Buffer too small */

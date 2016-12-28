@@ -63,12 +63,23 @@ burn-mqtt:
 	sudo service mosquitto start
 	echo "Starting mosquitto service....."
 	service mosquitto status| grep running
+	@echo "Topic: "
+	@echo "iot-2/evt/status/fmt/json"
 
 burn-mqtt-a:
-	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.upload nodeid=10 nodemac=10
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.a.upload nodeid=10 nodemac=10
+	@echo "Topic: "
+	@echo "emch/mqtt/server/a"
 
 burn-mqtt-b:
-	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.upload nodeid=11 nodemac=11
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.b.upload nodeid=11 nodemac=11
+	@echo "Topic: "
+	@echo "emch/mqtt/server/b"
+
+burn-mqtt-c:
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.c.upload nodeid=12 nodemac=12
+	@echo "Topic: "
+	@echo "emch/mqtt/server/c"
 
 burn-coap:
 	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.pow.upload nodeid=2 nodemac=2
@@ -103,9 +114,13 @@ burn-hop-b:
 
 burn-hop-mqtt-a:
 	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-emch-mqtt-a.hop.upload nodeid=10 nodemac=10
+	@echo "Topic: "
+	@echo "emch/mqtt/hop/a"
 
 burn-hop-mqtt-b:
 	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-emch-mqtt-b.hop.upload nodeid=11 nodemac=11
+	@echo "Topic: "
+	@echo "emch/mqtt/hop/b"
 
 burn-hop-coap-a:
 	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-emch-caop-a.hop.upload nodeid=10 nodemac=10

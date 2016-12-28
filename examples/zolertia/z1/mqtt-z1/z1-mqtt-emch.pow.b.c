@@ -37,10 +37,10 @@
  * \Short Description:
  *
  *    e-MCH-APp (Evaluation MQTT, CoAP, HTTP protocol) using Node.Js server.
- * this application uses Zolertia and send message number only on request.
+ * this application uses Zolertia and send 180 Bytes message containing different traces on request.
+ * while request we also compute RTT.
+ * Power traces also computed and stored in data base
  *
- * \Goal:
- * 		This application only compute RTT.it uses PING lib in NodeJs
  */
 
 /*---------------------------------------------------------------------------*/
@@ -57,12 +57,31 @@
 #include <string.h>
 #include <cc2420-radio.h>
 #include <mqtt-conf.h>
+// Powertracing
+#include "powertrace-z1.h"
+char *powertrace_result();
+//char *pow_str = "";
+
+//--- Variable Declaration for e-MCH-APp ----
+
+ static int32_t mid = 0;  // MessageID
+ static int32_t upt = 0;  // UpTime
+
+//---End Variable Declaration e-MCH-APp ---
+
+//--- Function Deffinitions for e-MCH-APp ----
+
+static void get_sensor_time(){
+  upt = clock_seconds();  // UpTime
+}
+
+//---End Function Deffinitions e-MCH-APp ---
 /*---------------------------------------------------------------------------*/
 /*
  * Publish to a local MQTT broker (e.g. mosquitto) running on the host
  */
  static const char *broker_ip = MQTT_Z1_BROKER_IP_ADDR;
- #define DEFAULT_ORG_ID "e-MCH-MQTT-Hop-A Server"
+ #define DEFAULT_ORG_ID "MQTT eMCH-APp Pow Trace Server"
 /*---------------------------------------------------------------------------*/
 /*
  * A timeout used when waiting for something to happen (e.g. to connect or to
@@ -180,7 +199,7 @@
 /*---------------------------------------------------------------------------*/
  static mqtt_client_config_t conf;
 /*---------------------------------------------------------------------------*/
- PROCESS(mqtt_z1_client_process, "e-MCH-MQTT-Hop-A Server");
+ PROCESS(mqtt_z1_client_process, "MQTT eMCH-APp Pow Trace Server");
 /*---------------------------------------------------------------------------*/
  int
  ipaddr_sprintf(char *buf, uint8_t buf_len, const uip_ipaddr_t *addr)
@@ -231,10 +250,10 @@ pub_handler(const char *topic, uint16_t topic_len, const uint8_t *chunk,
 
   /* If we don't like the length, ignore 
   if(topic_len != 23 || chunk_len != 1) {
-    printf("Incorrect topic or chunk len. Ignored topic= %d chunk= %d\n", topic_len, chunk_len);
+    printf("Incorrect topic or chunk len. Ignored\n");
     return;
   }
-  */
+ */
   /* If the format != json, ignore */
   if(strncmp(&topic[topic_len - 4], "json", 4) != 0) {
     printf("Incorrect format\n");
@@ -303,8 +322,7 @@ mqtt_event(struct mqtt_connection *m, mqtt_event_t event, void *data)
 static int
 construct_pub_topic(void)
 {
-  int len = snprintf(pub_topic, BUFFER_SIZE, "emch/mqtt/hop/a");	// <---- Set Topic
-
+  int len = snprintf(pub_topic, BUFFER_SIZE,  "emch/mqtt/server/b");		// <---- Set Topic
 
   /* len < 0: Error. Len >= BUFFER_SIZE: Buffer too small */
   if(len < 0 || len >= BUFFER_SIZE) {
@@ -318,7 +336,7 @@ construct_pub_topic(void)
 static int
 construct_sub_topic(void)
 {
-  int len = snprintf(sub_topic, BUFFER_SIZE, "emch/mqtt/hop/a");		// <---- Set Topic
+  int len = snprintf(sub_topic, BUFFER_SIZE, "emch/mqtt/server/b");	// <---- Set Topic
 
   /* len < 0: Error. Len >= BUFFER_SIZE: Buffer too small */
   if(len < 0 || len >= BUFFER_SIZE) {
@@ -422,15 +440,18 @@ subscribe(void)
 static void
 publish(void)
 {
-
+  //----- Get Data Instance -------
+++mid;  // MessageID
+get_sensor_time();
+//----- End Get Data -------
   /* Publish MQTT topic in IBM quickstart format */
 int len;
 int remaining = APP_BUFFER_SIZE;
   //int16_t value;
 
 buf_ptr = app_buffer;
-
-len = snprintf(buf_ptr, remaining,"e-MCH-MQTT-Hop-A Server\nRSSI: %d LQI: %d", cc2420_last_rssi, cc2420_last_correlation );
+printf("Message %lu Sent on: %lu \n", mid, upt);
+len = snprintf(buf_ptr, remaining,"%lu,%lu,0,0,0,%s", mid, upt, powertrace_result());
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
@@ -614,11 +635,11 @@ state_machine(void)
  {
 
   PROCESS_BEGIN();
-
+  powertrace_start(CLOCK_SECOND * 1);
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
   print_radio_config();
-  printf("e-MCH-MQTT-Hop-A Server\n");
+  printf("MQTT eMCH-APp Pow Trace Server\n");
 
   if(init_config() != 1) {
     PROCESS_EXIT();
@@ -656,7 +677,7 @@ state_machine(void)
     etimer_set(&echo_request_timer, conf.def_rt_ping_interval);
   }
 }
-
+powertrace_stop();
 PROCESS_END();
 }
 /*---------------------------------------------------------------------------*/
@@ -664,3 +685,4 @@ PROCESS_END();
  * @}
  * @}
  */
+
