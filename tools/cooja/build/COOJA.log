@@ -29,3 +29,47 @@
 [17:01:49 - Thread-7] [Simulation.java:253] [INFO] - Simulation main loop started, system time: 1482926509135
 [17:01:57 - Thread-6] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
 [17:01:57 - Thread-8] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:12:16 - Thread-7] [Simulation.java:312] [INFO] - Simulation main loop stopped, system time: 1482927136038	Duration: 626903 ms	Simulated time 621500 ms	Ratio 0.9913814417860498
+[17:12:35 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.b.z1 TARGET=z1 
+[17:12:38 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:12:38 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:12:39 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.b.z1 TARGET=z1 
+[17:12:55 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.b.z1
+[17:13:32 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:13:33 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.c.z1 TARGET=z1 
+[17:13:48 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.c.z1
+[17:14:31 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:14:32 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-emch-mqtt-a.hop.z1 TARGET=z1 
+[17:14:46 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-emch-mqtt-a.hop.z1
+[17:15:57 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[17:15:57 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-emch-mqtt-b.hop.z1 TARGET=z1 
+[17:16:12 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-emch-mqtt-b.hop.z1
+[17:16:29 - Thread-13] [Cooja.java:4260] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.a.z1 with /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.a.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[17:16:29 - Thread-13] [Cooja.java:4139] [WARN] - Path is not portable: '/home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.a.z1
+[17:16:29 - Thread-13] [Cooja.java:4260] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.b.z1 with /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.b.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[17:16:29 - Thread-13] [Cooja.java:4139] [WARN] - Path is not portable: '/home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.b.z1
+[17:16:29 - Thread-13] [Cooja.java:4260] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.c.z1 with /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.c.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[17:16:29 - Thread-13] [Cooja.java:4139] [WARN] - Path is not portable: '/home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.c.z1
+[17:16:29 - Thread-13] [Cooja.java:4260] [WARN] - Replaced [CONTIKI_DIR]/examples/zolertia/z1/mqtt-z1/z1-emch-mqtt-a.hop.z1 with /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-emch-mqtt-a.hop.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[17:16:29 - Thread-13] [Cooja.java:4139] [WARN] - Path is not portable: '/home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-emch-mqtt-a.hop.z1
+[17:16:29 - Thread-6] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:16:29 - Thread-8] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:16:29 - Thread-8] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:16:30 - Thread-13] [Simulation.java:422] [INFO] - Simulation random seed: 123456
+[17:16:30 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[17:16:30 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.a.z1 TARGET=z1 
+[17:16:30 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.b.z1 TARGET=z1 
+[17:16:31 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.c.z1 TARGET=z1 
+[17:16:32 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-emch-mqtt-a.hop.z1 TARGET=z1 
+[17:16:32 - Thread-13] [CompileContiki.java:140] [INFO] - > make z1-emch-mqtt-b.hop.z1 TARGET=z1 
+[17:16:33 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[17:16:33 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.a.z1
+[17:16:34 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.b.z1
+[17:16:35 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.c.z1
+[17:16:35 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-emch-mqtt-a.hop.z1
+[17:16:35 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-emch-mqtt-b.hop.z1
+[17:16:36 - Thread-13] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:16:37 - Thread-13] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:16:38 - Thread-15] [Simulation.java:253] [INFO] - Simulation main loop started, system time: 1482927398979
+[17:16:51 - Thread-16] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:16:51 - Thread-14] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
