@@ -122,9 +122,13 @@ burn-hop-http-b:
 clean:
 	rm -f *.exe
 
-clean-all: 
-	rm -f *.o
-	rm -f *.exe
+clean-all:
+	cd ${CPWD}/examples/zolertia/z1/ && make clean all
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && make clean
+	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && make clean all
+	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && make clean all
+	cd ${CPWD}/examples/ipv6/rpl-border-router/ && make clean all
+	cd ${CPWD}/examples/er-rest-example/ && make clean all
 
 log:
 	vim '/home/${USER}/logs/firelog.log'
@@ -133,6 +137,16 @@ console-mqtt:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t iot-2/evt/status/fmt/json -v
 
 clean-emch:
+	cd ${CPWD}/examples/zolertia/z1/ && make clean
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && make clean
+	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && make clean
+	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && make clean
+	cd ${CPWD}/examples/ipv6/rpl-border-router/ && make clean
+	cd ${CPWD}/examples/ipv6/rpl-collect/ && make clean
+	cd ${CPWD}/examples/er-rest-example/ && make clean
+	cd ${CPWD}/examples/rime/ && make clean
+
+sudo-clean-emch:
 	cd ${CPWD}/examples/zolertia/z1/ && sudo make clean
 	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean
@@ -141,7 +155,6 @@ clean-emch:
 	cd ${CPWD}/examples/ipv6/rpl-collect/ && sudo make clean
 	cd ${CPWD}/examples/er-rest-example/ && sudo make clean
 	cd ${CPWD}/examples/rime/ && sudo make clean
-
 
 ifeq ($(m),)
  m = 'updates'

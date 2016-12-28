@@ -72,7 +72,7 @@
 */
 
 #include <stdio.h>
-#include <cc2420.h>
+#include "dev/cc2420/cc2420.h"
 #include "net/netstack.h"
 
 #ifndef CC2420_RADIO_CONFIG_H
