@@ -1,9 +1,31 @@
-[11:23:07 - main] [Cooja.java:3172] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
-[11:23:07 - AWT-EventQueue-0] [Cooja.java:2856] [INFO] - External tools default settings: /external_tools_linux_64.config
-[11:23:07 - AWT-EventQueue-0] [Cooja.java:2886] [INFO] - External tools user settings: /root/.cooja.user.properties
-[11:23:12 - Thread-0] [Simulation.java:422] [INFO] - Simulation random seed: 123456
-[11:23:13 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
-[11:23:18 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
-[11:23:21 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[11:23:23 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
-[11:23:25 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[16:58:28 - main] [Cooja.java:3172] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[16:58:29 - AWT-EventQueue-0] [Cooja.java:2856] [INFO] - External tools default settings: /external_tools_linux_64.config
+[16:58:29 - AWT-EventQueue-0] [Cooja.java:2886] [INFO] - External tools user settings: /root/.cooja.user.properties
+[16:58:38 - Thread-0] [Simulation.java:422] [INFO] - Simulation random seed: 123456
+[16:58:38 - Thread-0] [Cooja.java:4260] [WARN] - Replaced [CONTIKI_DIR]/examples/ipv6/rpl-border-router/z1-border-router.z1 with /home/ku/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1 (default: ../../..), but could not find it. This does not have to be an error, as the file might be created later.
+[16:58:38 - Thread-0] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[16:58:52 - Thread-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[16:58:53 - Thread-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[16:58:54 - Thread-0] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[16:58:55 - Thread-0] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[16:59:49 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:59:49 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make clean TARGET=z1 
+[16:59:49 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.a.z1 TARGET=z1 
+[17:00:07 - AWT-EventQueue-0] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.a.z1
+[17:00:19 - Thread-3] [Simulation.java:253] [INFO] - Simulation main loop started, system time: 1482926419026
+[17:00:29 - Thread-4] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
+[17:00:29 - Thread-1] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[17:01:44 - Thread-4] [SerialSocketServer.java:497] [INFO] - Socket closed
+[17:01:44 - Thread-4] [SerialSocketServer.java:501] [INFO] - End of Stream
+[17:01:44 - Thread-3] [Simulation.java:312] [INFO] - Simulation main loop stopped, system time: 1482926504069	Duration: 85043 ms	Simulated time 83678 ms	Ratio 0.9839492962383736
+[17:01:44 - Thread-1] [SerialSocketServer.java:429] [INFO] - Listening thread shut down: Socket closed
+[17:01:44 - Thread-5] [Simulation.java:422] [INFO] - Simulation random seed: 123456
+[17:01:44 - Thread-5] [CompileContiki.java:140] [INFO] - > make z1-border-router.z1 TARGET=z1 
+[17:01:45 - Thread-5] [CompileContiki.java:140] [INFO] - > make z1-mqtt-emch.pow.a.z1 TARGET=z1 
+[17:01:45 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/ipv6/rpl-border-router/z1-border-router.z1
+[17:01:46 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/ku/kontiki/examples/zolertia/z1/mqtt-z1/z1-mqtt-emch.pow.a.z1
+[17:01:48 - Thread-5] [TimeLine.java:567] [INFO] - Zoom level: 500.0 microseconds/pixel 
+[17:01:48 - Thread-5] [SerialSocketServer.java:389] [INFO] - Listening on port: 60001
+[17:01:49 - Thread-7] [Simulation.java:253] [INFO] - Simulation main loop started, system time: 1482926509135
+[17:01:57 - Thread-6] [SerialSocketServer.java:425] [INFO] - Client connected: /127.0.0.1
+[17:01:57 - Thread-8] [SerialSocketServer.java:478] [INFO] - Forwarder: socket -> serial port
