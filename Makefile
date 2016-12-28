@@ -66,20 +66,20 @@ burn-mqtt:
 	@echo "Topic: "
 	@echo "iot-2/evt/status/fmt/json"
 
-burn-mqtt-a:
-	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.a.upload nodeid=10 nodemac=10
+burn-mqtt-2:
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.2.upload nodeid=2 nodemac=2
 	@echo "Topic: "
-	@echo "emch/mqtt/server/a"
+	@echo "emch/mqtt/server/2"
 
-burn-mqtt-b:
-	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.b.upload nodeid=11 nodemac=11
+burn-mqtt-3:
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.3.upload nodeid=3 nodemac=3
 	@echo "Topic: "
-	@echo "emch/mqtt/server/b"
+	@echo "emch/mqtt/server/3"
 
-burn-mqtt-c:
-	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.c.upload nodeid=12 nodemac=12
+burn-mqtt-4:
+	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-mqtt-emch.pow.4.upload nodeid=4 nodemac=4
 	@echo "Topic: "
-	@echo "emch/mqtt/server/c"
+	@echo "emch/mqtt/server/4"
 
 burn-coap:
 	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.pow.upload nodeid=2 nodemac=2
@@ -151,13 +151,13 @@ log:
 console-mqtt:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t iot-2/evt/status/fmt/json -v
 
-console-server-mqtt-1:
+console-server-mqtt-2:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/2 -v
 
-console-server-mqtt-2:
+console-server-mqtt-3:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/3 -v
 
-console-server-mqtt-3:
+console-server-mqtt-4:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/4 -v
 
 console-hop-mqtt-a:
