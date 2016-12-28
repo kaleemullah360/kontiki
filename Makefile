@@ -152,13 +152,13 @@ console-mqtt:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t iot-2/evt/status/fmt/json -v
 
 console-server-mqtt-1:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/1 -v
-
-console-server-mqtt-2:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/2 -v
 
-console-server-mqtt-3:
+console-server-mqtt-2:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/3 -v
+
+console-server-mqtt-3:
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/4 -v
 
 console-hop-mqtt-a:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/hop/a -v
