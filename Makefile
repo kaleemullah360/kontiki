@@ -146,7 +146,7 @@ clean-emch:
 	cd ${CPWD}/examples/er-rest-example/ && make clean
 	cd ${CPWD}/examples/rime/ && make clean
 
-sudo-clean-emch:
+clean-emch-f:
 	cd ${CPWD}/examples/zolertia/z1/ && sudo make clean
 	cd ${CPWD}/examples/zolertia/z1/mqtt-z1/ && sudo make clean
 	cd ${CPWD}/examples/zolertia/z1/ipv6/z1-websense/ && sudo make clean
