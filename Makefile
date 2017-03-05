@@ -220,6 +220,9 @@ reset:
 connect:
 	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make z1-reset && sudo make connect-router && cd ~/kontiki/
 
+connect-cooja:
+	cd ${CPWD}/examples/ipv6/rpl-border-router/ && sudo make z1-reset && sudo make connect-router-cooja && cd ~/kontiki/
+
 dialout-user:
 	sudo adduser ${USER} dialout
 
