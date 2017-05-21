@@ -561,7 +561,7 @@ state_machine(void)
         state = STATE_PUBLISHING;
       } else {
         ctimer_set(&ct, PUBLISH_LED_ON_DURATION, publish_led_off, NULL);
-        publish();
+        //publish();
   /*      if(ttem != bat_mv) {
     ttem = bat_mv;   // update the temporary valruable with fresh value
      publish();  // <-- This
