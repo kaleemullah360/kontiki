@@ -5,6 +5,15 @@ ifeq ($(C),)
  C = 'updates'
 endif
 
+submqtt:
+ifeq ($(c),)
+	@echo "make submqtt c=300 h=1 r=10"
+	@echo "make submqtt c=[message-count] h=[hop-count] r=[message-generation-rate]"
+else
+	@echo "Launching...\nHop: $h\nMessage Count: $c\nPacket Per Second: $r\nAddress: aaaa::c30c:0:0:$h\nTopic: emch/mqtt/sub/$(h)/$(r)\n"
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/sub/$(h)/$(r) -C $(c) --quiet | ts '[%Y-%m-%d %H:%M:%.S]' | tee >( grep --line-buffered -v "Client" > ~/mqtt-logs/_`date +%Y_%m_%d_%H_%M`_$(h)H_$(r)PPS.txt)
+endif
+
 n ?= 101
 dortt:
 ifeq ($(USER),root)
@@ -190,15 +199,6 @@ console-server-mqtt-3:
 
 console-server-mqtt-4:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/4 -v
-	
-submqtt:
-ifeq ($(c),)
-	@echo "make submqtt c=300 h=1 r=10"
-	@echo "make submqtt c=[message-count] h=[hop-count] r=[message-generation-rate]"
-else
-	@echo "Connecting Server...\nHop: $h\nMessage Count: $c\nPacket Per Second: $r\nAddress: aaaa::c30c:0:0:$h\n"
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/$(h)/$(r) -C $(c) --quiet | ts '[%Y-%m-%d %H:%M:%.S]' | tee >( grep --line-buffered -v "Client" > ~/mqtt-logs/_`date +%Y_%m_%d_%H_%M`_$(h)H_$(r)PPS.txt)
-endif
 
 console-hop-mqtt-a:
 	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/hop/a -v
