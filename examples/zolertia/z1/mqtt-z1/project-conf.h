@@ -45,7 +45,6 @@
 #define MQTT_DEMO_PUBLISH_TRIGGER &button_right_sensor
 #define MQTT_Z1_BROKER_IP_ADDR "aaaa::1"
 #define BOARD_STRING "SU"	//SuperUser
-#define BOARD_STRING "SU"	//SuperUser
 /*---------------------------------------------------------------------------*/
 #endif /* PROJECT_CONF_H_ */
 /*---------------------------------------------------------------------------*/

@@ -5,7 +5,6 @@ CONTIKI = ../../../../..
 
 SMALL = 1
 
-SMALL=1
 TARGET_LIBFILES += -lm
 
 APPS += webserver webbrowser

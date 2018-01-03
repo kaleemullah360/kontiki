@@ -4,7 +4,39 @@ CPWD = /home/${USER}/kontiki
 ifeq ($(C),)
  C = 'updates'
 endif
-	
+
+n ?= 101
+dortt:
+ifeq ($(USER),root)
+	@echo "root user, not allowed, try with standard user"
+else
+	@#	make push m="Added-some-test"
+	@echo "make dortt m=2 t=0.01 d=2"
+	@echo "you can connect border router now"
+	@while [ -z "$$CONTINUE" ]; do \
+	read -r -p "Is Border Router connected ?. [y/N]: " CONTINUE; \
+	done ; \
+	[ $$CONTINUE = "y" ] || [ $$CONTINUE = "Y" ] || (echo "Exiting."; exit 1;)
+	@echo "..moving on.."
+	@echo "Starting wireshark"
+	@wireshark &
+	@while [ -z "$$CONTINUE" ]; do \
+	read -r -p "Is wireshark started and connected to TunSLIP ?. [y/N]: " CONTINUE; \
+	done ; \
+	[ $$CONTINUE = "y" ] || [ $$CONTINUE = "Y" ] || (echo "Exiting."; exit 1;)
+	@echo "..moving on.."
+	@echo "Current USER: $(USER)"
+	@echo "tail -f ~/coap-logs/coap_$m_hop_$t_sec.txt"
+	n=$(n); \
+	while [ $${n} -gt 0 ] ; do \
+	echo "Get Request $$n Executed."; \
+	n=`expr $$n - 1`; \
+	sleep $t; coap get coap://[aaaa::c30c:0:0:$m]:5683/sens/mote -T -q -t $d >> ~/coap-logs/coap_$m_hop_$t_sec.txt; \
+	done; \
+	true
+endif
+#sleep $t; coap get coap://[aaaa::c30c:0:0:$m]:5683/sens/mote -T | sed '(?<=Request took ).*?(?=\s)'; \
+
 cooja:
 	sudo service mosquitto start
 	sudo gnome-terminal --tab --working-directory='/home/${USER}/kontiki/tools/cooja/' -e "ant run" --tab --working-directory='${CPWD}/examples/ipv6/rpl-border-router/' --tab --working-directory='/home/${USER}/nodev/e-MCH-APp/'
@@ -31,7 +63,7 @@ mqtt:
 	firefox --new-tab http://[aaaa::c30c:0:0:1]/ &
 
 coap:
-	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.pow.upload nodeid=2 nodemac=2
+	cd ${CPWD}/examples/er-rest-example/ && sudo make clean && sudo make TARGET=z1 savetarget && sudo make z1-reset && sudo make z1-coap-emch.rtt.upload nodeid=2 nodemac=2
 	@echo "you can connect border router now"
 	@while [ -z "$$CONTINUE" ]; do \
 	read -r -p "Is Border Router connected ?. [y/N]: " CONTINUE; \
@@ -149,22 +181,22 @@ log:
 	vim '/home/${USER}/logs/firelog.log'
 
 console-mqtt:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t iot-2/evt/status/fmt/json -v
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t iot-2/evt/status/fmt/json -v -C 300 | ts '[%Y-%m-%d %H:%M:%.S]' | tee ~/mqtt-logs/br-output.txt
 
 console-server-mqtt-2:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/2 -v
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/2 -v | ts '[%Y-%m-%d %H:%M:%.S]' | tee ~/mqtt-logs/br-output.txt
 
 console-server-mqtt-3:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/3 -v
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/3 -v | ts '[%Y-%m-%d %H:%M:%.S]' | tee ~/mqtt-logs/br-output.txt
 
 console-server-mqtt-4:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/4 -v
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/4 -C 300 --quiet | ts '[%Y-%m-%d %H:%M:%.S]' | tee >( grep --line-buffered -v "Client" > ~/mqtt-logs/_`date +%Y_%m_%d_%H_%M`_4_h_t.txt)
 
 console-hop-mqtt-a:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/hop/a -v
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/hop/a -v | ts '[%Y-%m-%d %H:%M:%.S]' | tee ~/mqtt-logs/br-output.txt
 
 console-hop-mqtt-b:
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/hop/b -v
+	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/hop/b -v | ts '[%Y-%m-%d %H:%M:%.S]' | tee ~/mqtt-logs/br-output.txt
 
 clean-emch:
 	cd ${CPWD}/examples/zolertia/z1/ && make clean

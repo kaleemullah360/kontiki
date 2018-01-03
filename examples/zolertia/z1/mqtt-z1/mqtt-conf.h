@@ -60,9 +60,6 @@
 #define TIME_INTERVAL_SECONDS 1	// 1 Seconds
 #define MILLISECONDS_CONSTANT 1		// 500 milliseconds = 1 second / 2
 
-#define PUBLISH_TOPIC 					"iot-2/evt/%s/fmt/json"		// NA
-#define SUBSCRIBE_TOPIC 				"iot-2/evt/%s/fmt/json"		// NA
-
 #define MQTT_QOS 						MQTT_QOS_LEVEL_0
 #define	MQTT_MESSAGE_STATE				MQTT_RETAIN_OFF
 	
