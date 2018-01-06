@@ -1,0 +1,2 @@
+#!/bin/bash
+mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/sub/${h}/${r} -C ${c} --quiet | ts '[%Y-%m-%d %H:%M:%.S]'| tee >(grep --line-buffered -v 'Client' > ~/mqtt-logs/_`date +%Y_%m_%d_%H_%M`_${h}H_${r}PPS.txt)

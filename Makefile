@@ -10,8 +10,10 @@ ifeq ($(c),)
 	@echo "make submqtt c=300 h=1 r=10"
 	@echo "make submqtt c=[message-count] h=[hop-count] r=[message-generation-rate]"
 else
-	@echo "Launching...\nHop: $h\nMessage Count: $c\nPacket Per Second: $r\nAddress: aaaa::c30c:0:0:$h\nTopic: emch/mqtt/sub/$(h)/$(r)\n"
-	mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/sub/$(h)/$(r) -C $(c) --quiet | ts '[%Y-%m-%d %H:%M:%.S]' | tee >( grep --line-buffered -v "Client" > ~/mqtt-logs/_`date +%Y_%m_%d_%H_%M`_$(h)H_$(r)PPS.txt)
+	@echo "Launching...\nHop: $h\nMessage Count: $c\nPacket Per Second: $r\nAddress: aaaa::c30c:0:0:$h\nTopic: emch/mqtt/sub/$(h)/$(r)\n";
+	bash ./submqtt.sh c=${c} h=${h} r=${r}
+	@#mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/server/5/1 -C 300 --quiet | ts '[%Y-%m-%d %H:%M:%.S]' | tee >( grep --line-buffered -v "Client" > ~/mqtt-logs/_`date +%Y_%m_%d_%H_%M`_4_h_t.txt)
+	@#mosquitto_sub -u use-token-auth -P AUTHZ -d -t emch/mqtt/sub/$(h)/$(r) -C $(c) --quiet | ts '[%Y-%m-%d %H:%M:%.S]' | tee >( grep --line-buffered -v "Client" > ~/mqtt-logs/_`date +%Y_%m_%d_%H_%M`_$(h)H_$(r)PPS.txt)
 endif
 
 n ?= 101
