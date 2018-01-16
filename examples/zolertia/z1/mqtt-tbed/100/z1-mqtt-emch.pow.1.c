@@ -644,6 +644,8 @@ state_machine(void)
   set_cc2420_channel(0);
   print_radio_config();
   printf("MQTT eMCH-APp Pow Trace Server\n");
+  printf("DEFAULT_PUBLISH_INTERVAL= %lu\n", DEFAULT_PUBLISH_INTERVAL);
+  printf("CLOCK_SECOND= %lu\n", CLOCK_SECOND);
 
   if(init_config() != 1) {
     PROCESS_EXIT();
@@ -662,9 +664,6 @@ state_machine(void)
     //pow_str = powertrace_result();
   //printf("%s\n", pow_str);
   //unsigned long int
-	  printf("DEFAULT_PUBLISH_INTERVAL= %lu\n", DEFAULT_PUBLISH_INTERVAL);
-	  printf("CLOCK_SECOND= %lu\n", CLOCK_SECOND);
-	printf("Publishing At: %lu\n", (1 * (CLOCK_SECOND/20)));
     PROCESS_YIELD();
 
     if(ev == sensors_event && data == PUBLISH_TRIGGER) {
