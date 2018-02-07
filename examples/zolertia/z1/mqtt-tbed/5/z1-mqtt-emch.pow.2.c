@@ -57,6 +57,7 @@
 #include <string.h>
 #include <cc2420-radio.h>
 #include <mqtt-conf.h>
+#include "dev/temperature-sensor.h"
 // Powertracing
 #include "powertrace-z1.h"
 char *powertrace_result();
@@ -73,6 +74,9 @@ char *powertrace_result();
 
 static void get_sensor_time(){
   upt = clock_seconds();  // UpTime
+}
+static float get_mytemp(void) {
+  return (float)((( (int)(temperature_sensor.value(0)) * 2.500) / 4096) - 0.986) * 282;
 }
 
 //---End Function Deffinitions e-MCH-APp ---
@@ -447,6 +451,7 @@ publish(void)
   //----- Get Data Instance -------
 ++mid;  // MessageID
 get_sensor_time();
+float mytemp = get_mytemp();
 //----- End Get Data -------
   /* Publish MQTT topic in IBM quickstart format */
 int len;
@@ -455,7 +460,7 @@ int remaining = APP_BUFFER_SIZE;
 
 buf_ptr = app_buffer;
 printf("Message %lu Sent on: %lu \n", mid, upt);
-len = snprintf(buf_ptr, remaining,"%lu,%lu,0,0,0,%s", mid, upt, powertrace_result());
+len = snprintf(buf_ptr, remaining,"%lu,%lu,%ld.%03d,0,0,%s", mid, upt, (long)mytemp, (unsigned)((mytemp - floor(mytemp)) * 1000), powertrace_result());
 
 if(len < 0 || len >= remaining) {
   printf("Buffer too short. Have %d, need %d + \\0\n", remaining, len);
@@ -643,6 +648,7 @@ state_machine(void)
   set_cc2420_txpower(0);
   set_cc2420_channel(0);
   print_radio_config();
+  SENSORS_ACTIVATE(temperature_sensor);
   printf("MQTT eMCH-APp Pow Trace Server\n");
 
   if(init_config() != 1) {
